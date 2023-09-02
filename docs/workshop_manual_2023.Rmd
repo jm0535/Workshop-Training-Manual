@@ -1,0 +1,1492 @@
+---
+title: 'Workshop Training Manual'
+author:
+    - name: "Dr. Jimmy Moses (Ph.D.)"
+      affiliation: "Department of Forestry, Papua New Guinea University of Technology"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  html_document:
+    theme: darkly
+    highlight: espresso
+    df_print: kable
+    fig_width: 7
+    fig_height: 6
+    fig_caption: true
+    toc: true
+    toc_float: true
+    toc_collapsed: true
+    toc_depth: 4
+    number_sections: true
+urlcolor: blue
+editor_options:
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+\newpage
+
+# Introduction
+
+![Official logos or icons for R, RStudio and Jamovi.](logos.png){alt="Official logos or icons for R, RStudio and Jamovi."}
+
+## Purpose of the Manual
+
+The purpose of this manual is to provide comprehensive step-by-step instructions for the installation of essential data analysis tools: R, RStudio, and Jamovi. These software packages are widely used in various fields for statistical analysis, data visualization, and research.
+
+By following the instructions outlined in this manual, you will be able to:
+
+-   **Install R**: R is a powerful statistical programming language and environment. It is widely used for data analysis, statistical modeling, and graphics. This manual will guide you through the process of installing R on your preferred operating system.
+
+-   **Install RStudio**: RStudio is an integrated development environment (IDE) for R. It provides a user-friendly interface and additional features to enhance your R programming experience. This manual will help you install RStudio.
+
+-   **Install Jamovi**: Jamovi is a user-friendly statistical software that simplifies data analysis and visualization. It is particularly suitable for those who are new to statistical software. This manual will walk you through the installation of Jamovi.
+
+# Prerequisites
+
+Before you begin the installation process, it is essential to ensure that you meet the following prerequisites:
+
+-   **Internet Connection**: You must have a stable and active internet connection to download the required software packages and updates.
+
+-   **Administrator Privileges (Windows)**: If you are using a Windows operating system, you may need administrator privileges to install software. Ensure that you have the necessary permissions.
+
+-   **Operating System Compatibility**: Verify that your operating system is compatible with the software you intend to install. Each software package has specific system requirements, which will be outlined in the installation sections.
+
+-   **Basic Computer Skills**: This manual assumes that you have basic computer skills, including the ability to navigate your operating system and use a web browser.
+
+-   **Storage Space**: Ensure that you have sufficient disk space available to accommodate the software installations. The installation sections will specify the approximate storage requirements.
+
+-   **Hardware Requirements**: Check if your computer meets the hardware requirements specified by the software developers. This information is usually available on the respective software websites.
+
+## Installation
+
+Computers operate on three of the most common operating systems: Windows, Mac OS, and Linux. Depending on your operating system, follow the installation instructions relevant to your specific platform. The process will differ slightly for Windows, macOS, and Linux users, so ensure you select the appropriate set of instructions based on your system.
+
+# Installing R
+
+## Windows
+
+### **Downloading R**:
+
+1.  Open your web browser and navigate to the R download page ([download here](https://cran.r-project.org/bin/windows/base/R-4.3.1-win.exe "Download R for Windows")).
+
+2.  Click on the "Download R for Windows" link.
+
+3.  Choose a CRAN mirror (usually the one geographically closest to you) and click on its link.
+
+4.  Download the base version of R for Windows by clicking on the "install R for the first time" link.
+
+### **Installing R**:
+
+1.  Locate the downloaded R installer (an .exe file) and double-click it.
+
+2.  Follow the installation wizard's instructions:
+
+    -   Choose the language.
+
+    -   Accept the terms of the license.
+
+    -   Select the components you want to install (usually, you can leave the default settings).
+
+    -   Choose the installation location (you can leave the default).
+
+    -   Click "Next" to start the installation.
+
+3.  Once the installation is complete, you can now run R by searching for "R" in the Windows Start menu.
+
+## macOS
+
+### **Downloading R**:
+
+1.  Open your web browser and navigate to the R download page ([download here](https://cran.r-project.org/bin/macosx/big-sur-x86_64/base/R-4.3.1-x86_64.pkg "Download R for macOS")). Note: the use of X11 (including tcltk) requires [XQuartz](http://xquartz.macosforge.org/) (version 2.8.5 or later). Always re-install XQuartz when upgrading your macOS to a new major version.
+
+2.  Click on the "Download R for (Mac) OS X" link.
+
+3.  Download the latest R framework (pkg file) by clicking on the link.
+
+### **Installing R**:
+
+1.  Locate the downloaded R framework (a .pkg file) and double-click it.
+
+2.  Follow the installation instructions in the installer:
+
+    -   Agree to the license terms.
+
+    -   Choose the installation location (you can leave the default).
+
+    -   Click "Install" to start the installation.
+
+3.  Once the installation is complete, you can run R by searching for "R" in the Applications folder.
+
+## Linux (Ubuntu)
+
+### **Downloading R**:
+
+1.  Open a terminal window.
+
+2.  Enter the following commands one by one to add the CRAN repository and the key:
+
+    ``` bash
+    sudo apt update
+    sudo apt install r-base
+    ```
+
+### **Installing R:**
+
+1.  Once the installation is complete, you can run R by opening the terminal and typing **`R`**.
+
+# **Installing RStudio**
+
+## **Windows**
+
+### **Downloading RStudio:**
+
+1.  Open your web browser and navigate to the RStudio download page ([download here](https://download1.rstudio.org/electron/windows/RStudio-2023.06.2-561.exe "RStudio download page")).
+
+2.  Scroll down to the "RStudio Desktop" section.
+
+3.  Click on the "Download" button under the "RStudio Desktop (Free)" option.
+
+4.  Download the RStudio installer for Windows.
+
+### **Installing RStudio:**
+
+1.  Locate the downloaded RStudio installer (an .exe file) and double-click it.
+
+2.  Follow the installation wizard's instructions:
+
+    -   Choose the language.
+
+    -   Accept the license agreement.
+
+    -   Choose the installation location (you can leave the default).
+
+    -   Select additional tasks (optional).
+
+    -   Click "Install" to begin the installation.
+
+3.  Once the installation is complete, you can run RStudio by searching for "RStudio" in the Windows Start menu.
+
+## **macOS**
+
+### **Downloading RStudio:**
+
+1.  Open your web browser and navigate to the RStudio download page ([download here](https://download1.rstudio.org/electron/macos/RStudio-2023.06.2-561.dmg "Download RStudio for macOS")).
+
+2.  Scroll down to the "RStudio Desktop" section.
+
+3.  Click on the "Download" button under the "RStudio Desktop (Free)" option.
+
+4.  Download the RStudio installer for macOS.
+
+### **Installing RStudio:**
+
+1.  Locate the downloaded RStudio installer (a .dmg file) and double-click it.
+
+2.  A new window will open. Drag the RStudio icon into the Applications folder.
+
+3.  Once the copy is complete, you can run RStudio from your Applications folder.
+
+## **Linux (Ubuntu)**
+
+### **Downloading RStudio:**
+
+1.  Open a terminal window.
+
+2.  Enter the following command to download the RStudio package ([download here](https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.4.1717-amd64.deb "Download RStudio for Ubuntu linux")):
+
+    ``` bash
+    sudo apt-get install gdebi-core
+    wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.4.1717-amd64.deb
+    ```
+
+### **Installing RStudio:**
+
+1.  After the download is complete, use the following command to install RStudio:
+
+    ``` bash
+    sudo gdebi rstudio-1.4.1717-amd64.deb
+    ```
+
+2.  Once the installation is complete, you can run RStudio by searching for "RStudio" in the applications menu.
+
+# **Installing Jamovi**
+
+## **Windows**
+
+### **Downloading Jamovi:**
+
+1.  Open your web browser and navigate to the Jamovi download page ([download here](https://www.jamovi.org/downloads/jamovi-2.4.8.0-win64.exe "Jamovi download web page/site")).
+
+2.  Click on the "Download for Windows" button.
+
+3.  Download the Jamovi installer for Windows.
+
+### **Installing Jamovi:**
+
+1.  Locate the downloaded Jamovi installer (an .exe file) and double-click it.
+
+2.  Follow the installation wizard's instructions:
+
+    -   Choose the installation location (you can leave the default).
+
+    -   Select additional tasks (optional).
+
+    -   Click "Install" to begin the installation.
+
+3.  Once the installation is complete, you can run Jamovi by searching for "Jamovi" in the Windows Start menu.
+
+## **macOS**
+
+### **Downloading Jamovi:**
+
+1.  Open your web browser and navigate to the Jamovi download page ([download here](https://www.jamovi.org/download.html/downloads/jamovi-2.4.8.0-macos.dmg "Download Jamovi for macOS")).
+
+2.  Click on the "Download for macOS" button.
+
+3.  Download the Jamovi installer for macOS.
+
+### **Installing Jamovi:**
+
+1.  Locate the downloaded Jamovi installer (a .dmg file) and double-click it.
+
+2.  A new window will open. Drag the Jamovi icon into the Applications folder.
+
+3.  Once the copy is complete, you can run Jamovi from your Applications folder.
+
+## **Linux (Ubuntu)**
+
+### **Downloading Jamovi:**
+
+1.  Open a terminal window.
+
+2.  Enter the following commands to download and install Jamovi ([install via this page](https://flathub.org/apps/org.jamovi.jamovi "Install Jamovi for linux")):
+
+    ``` bash
+    sudo add-apt-repository ppa:jamovi/jamovi
+    sudo apt-get update
+    sudo apt-get install jamovi
+
+    # or install via flatpak
+    flatpak install flathub org.jamovi.jamovi
+    flatpak run org.jamovi.jamovi
+    ```
+
+### **Installing Jamovi:**
+
+1.  Once the installation is complete, you can run Jamovi by searching for "Jamovi" in the applications menu.
+
+# **Verifying Installations**
+
+## **Checking R Installation**
+
+-   **Windows:**
+
+    1.  Open R by searching for "R" in the Start menu.
+
+    2.  The R console should appear. You can start using R by entering commands.
+
+-   **macOS:**
+
+    1.  Open the Applications folder and run R.
+
+    2.  The R console should open, allowing you to use R.
+
+-   **Linux (Ubuntu):**
+
+    1.  Open a terminal and type **`R`**.
+
+    2.  The R console should open.
+
+## **Checking RStudio Installation**
+
+-   **Windows:**
+
+    1.  Open RStudio by searching for "RStudio" in the Start menu.
+
+    2.  The RStudio IDE should open, ready for use.
+
+-   **macOS:**
+
+    1.  Open the Applications folder and run RStudio.
+
+    2.  The RStudio IDE should open.
+
+-   **Linux (Ubuntu):**
+
+    1.  Open the applications menu and search for "RStudio."
+
+    2.  Launch RStudio from the menu.
+
+## **Checking Jamovi Installation**
+
+-   **Windows:**
+
+    1.  Open Jamovi by searching for "Jamovi" in the Start menu.
+
+    2.  The Jamovi interface should open.
+
+-   **macOS:**
+
+    1.  Open the Applications folder and run Jamovi.
+
+    2.  The Jamovi interface should open.
+
+-   **Linux (Ubuntu):**
+
+    1.  Open the applications menu and search for "Jamovi."
+
+    2.  Launch Jamovi from the menu.
+
+## **Updating and Maintaining Software**
+
+### **Updating R**
+
+-   Regularly update R to ensure you have the latest features and bug fixes.
+
+-   Windows and macOS users can download the latest R installer and reinstall R. Your packages and scripts will remain intact.
+
+-   Linux users can use package managers like **`apt`** to update R:
+
+    ``` bash
+    sudo apt-get update
+    sudo apt-get upgrade r-base
+    ```
+
+### **Updating RStudio**
+
+-   For RStudio updates, download the latest version from the RStudio website and reinstall it. Your projects and settings will be preserved.
+
+### **Updating Jamovi**
+
+-   Jamovi typically updates itself automatically when you launch the software. Ensure you have an internet connection for updates to occur.
+
+## **Troubleshooting**
+
+### **Common Installation Issues**
+
+#### Difficulty in Downloading Software
+
+-   If you encounter difficulties downloading R, RStudio, or Jamovi, ensure you have a stable internet connection.
+
+-   Try using an alternative download mirror if the default one is slow or unresponsive.
+
+-   Disable any firewall or security software temporarily, as they may block downloads.
+
+#### Compatibility Issues
+
+-   Ensure that you are downloading the correct version of the software that matches your operating system (Windows, macOS, Linux) and architecture (32-bit or 64-bit).
+
+-   Verify that your operating system meets the minimum requirements for the software.
+
+#### Missing Dependencies
+
+-   On Linux, if you encounter missing dependencies when installing R, RStudio, or Jamovi, you can usually install them using your system's package manager (e.g., **`apt`** for Ubuntu).
+
+### **Package Installation Issues**
+
+#### R Package Installation
+
+-   If you encounter issues when installing R packages using the **`install.packages()`** function, ensure you have an internet connection.
+
+-   Some packages may require additional system libraries. Check the package documentation for any specific requirements.
+
+-   If you receive errors related to permissions, consider running R or RStudio with administrative privileges (e.g., "Run as administrator" on Windows).
+
+#### Jamovi Module Installation
+
+-   When installing Jamovi modules (extensions), ensure that you are using a compatible version of Jamovi.
+
+-   If a module installation fails, check if there are any error messages provided. These messages often indicate the cause of the issue.
+
+### **Resources for Assistance**
+
+-   If you encounter installation or package-related issues that are not covered here, consider seeking help from the following resources:
+
+    -   **Online Forums:** Visit community forums or discussion boards related to R, RStudio, and Jamovi. Experienced users often provide solutions to common problems.
+
+    -   **Official Documentation:** Consult the official documentation for each software. They often include troubleshooting sections.
+
+    -   **User Communities:** Join user communities or mailing lists where you can ask questions and seek assistance from experienced users.
+
+# **Cloud Registration**
+
+RStudio Cloud is a powerful cloud-based platform that allows you to access the RStudio Integrated Development Environment (IDE) from anywhere with an internet connection and a web browser. This means you can work on your data analysis projects without being tied to a specific computer or location.
+
+**Advantages of Using RStudio Cloud and Cloud Computing:**
+
+1.  **Accessibility:** With RStudio Cloud, you can access your projects and data from virtually anywhere, whether you're at home, in the office, or on the go. All you need is an internet connection and a web browser.
+
+2.  **Collaboration:** RStudio Cloud makes collaboration easy. You can share your projects with colleagues or collaborators, allowing them to work on the same analysis, view your code, and provide input in real-time, regardless of their physical location.
+
+3.  **Version Control:** RStudio Cloud often integrates with version control systems like Git and GitHub. This enables you to track changes in your projects, collaborate with others, and maintain a history of your work.
+
+4.  **Resource Scalability:** Cloud computing provides the flexibility to scale your computing resources as needed. If you require more processing power or memory for a specific analysis, you can often adjust your cloud resources accordingly.
+
+5.  **Cost Efficiency:** Many cloud platforms offer a pay-as-you-go pricing model, which can be cost-effective, especially for users who don't require constant high-performance computing. You only pay for the resources you use.
+
+6.  **Security:** Reputable cloud providers invest heavily in security measures to protect your data. They often offer encryption, secure access controls, and data redundancy to safeguard your work.
+
+7.  **Automatic Backups:** Cloud platforms typically provide automated backup solutions, reducing the risk of data loss due to hardware failures or other issues.
+
+8.  **Device Independence:** Since RStudio Cloud runs in a web browser, it's compatible with various devices, including laptops, desktops, tablets, and even smartphones, making it highly versatile.
+
+9.  **Reduced Setup Time:** Setting up and configuring R, RStudio, and packages can be time-consuming on a local machine. RStudio Cloud simplifies this process, allowing you to focus on your analysis rather than software installation and maintenance.
+
+10. **Learning Opportunities:** For educators and trainers, RStudio Cloud offers a convenient way to teach R and data analysis. Students can access a consistent, pre-configured environment, eliminating the need for individual software installations.
+
+In summary, RStudio Cloud and cloud computing provide numerous advantages, including enhanced accessibility, collaboration, cost efficiency, security, and scalability. These benefits make cloud-based platforms like RStudio Cloud valuable tools for data analysts, researchers, educators, and anyone who wants the flexibility of working with data and code from anywhere with ease.
+
+## **Sign Up for a RStudio Cloud Account**
+
+1.  Open your web browser and go to the RStudio Cloud website (<https://posit.cloud/>).
+
+2.  Click the "Sign Up" button to create a new account.
+
+3.  Fill out the required information, including your name, email address, and a password for your RStudio Cloud account.
+
+4.  Read and accept the Terms of Service and Privacy Policy.
+
+5.  Click the "Sign Up" button to complete the registration process.
+
+## **Confirm Your Email Address**
+
+1.  Check your email inbox for a message from RStudio Cloud.
+
+2.  Open the email and click the confirmation link provided. This step verifies your email address and activates your account.
+
+## **Create a New Project**
+
+1.  After confirming your email, log in to your RStudio Cloud account.
+
+2.  Click the "New Project" button on the dashboard.
+
+3.  Give your project a name and, optionally, a description.
+
+4.  Choose a project privacy setting (private or public) based on your preferences.
+
+5.  Click the "Create Project" button.
+
+## **Access Your RStudio Workspace**
+
+1.  Once your project is created, you'll be taken to your RStudio workspace within your web browser.
+
+2.  Here, you have access to the RStudio IDE, which includes a script editor, console, and other tools for data analysis.
+
+## **Working with RStudio Cloud**
+
+You can now start working with R and RStudio within your RStudio Cloud environment. Here are some key points to remember:
+
+-   You can write R scripts, execute code, and work with datasets just like you would in a local RStudio installation.
+
+-   Your work is saved automatically within your RStudio Cloud project.
+
+-   You can upload and download files, including R scripts and datasets, to and from your project.
+
+-   Collaborate with others by sharing your project or working on shared projects.
+
+-   RStudio Cloud provides a flexible environment that allows you to install additional R packages and extensions as needed.
+
+-   To end your session, simply close your web browser. Your work will be saved, and you can resume from where you left off the next time you log in.
+
+## **Managing Your Account**
+
+You can access your account settings, change your password, and manage your projects by clicking on your profile picture or username in the top right corner of the RStudio Cloud interface.
+
+That's it! You've successfully set up and started using RStudio Cloud, which provides a convenient way to work with R and RStudio from any device with an internet connection and a web browser.
+
+# **Testing R Package Installation**
+
+## **Introduction**
+
+To ensure that your R environment is fully functional and equipped with essential packages for data analysis, we will test the installation of key R packages. These packages include devtools, remotes, tidyverse, and rstatix. This process will help verify that the packages can be installed and loaded successfully within RStudio.
+
+## **Installing and Loading Packages**
+
+Follow these steps to install and load the required R packages using RStudio:
+
+1.  **Open RStudio:**
+
+    -   Launch RStudio by searching for "RStudio" in your computer's application menu.
+
+2.  **Installing devtools and remotes:**
+
+    -   In the RStudio console, enter the following commands to install the devtools and remotes packages:
+
+        ``` r
+        install.packages("devtools")
+        install.packages("remotes")
+        ```
+
+    -   Wait for the installations to complete. You may be prompted to select a CRAN mirror; choose a location geographically close to you for faster downloads.
+
+3.  **Loading devtools and remotes:**
+
+    -   After installation, load the devtools and remotes packages by entering these commands in the console:
+
+        ``` r
+        library(devtools)
+        library(remotes)
+        ```
+
+4.  **Installing tidyverse and rstatix:**
+
+    -   With devtools and remotes loaded, you can now install the tidyverse and rstatix packages, which are essential for data manipulation and statistical analysis:
+
+        ``` r
+        install.packages("tidyverse")
+        remotes::install_github("kassambara/rstatix")
+        ```
+
+    -   Allow the installations to proceed. The remotes package is used to install rstatix directly from its GitHub repository.
+
+5.  **Loading tidyverse and rstatix:**
+
+    -   Once installed, load the tidyverse and rstatix packages with the following commands:
+
+        ``` r
+        library(tidyverse)
+        library(rstatix)
+        ```
+
+6.  **Verifying Package Loading**
+
+    -   To confirm that the packages have been successfully loaded, you can execute a simple test. For instance, you can try running the following command, which uses a function from the tidyverse package:
+
+        ``` r
+        ggplot2::qplot(1:10, rnorm(10))
+        ```
+
+If the packages have been loaded correctly, you should see a basic scatterplot generated by ggplot2.
+
+Testing the installation and loading of these packages ensures that your R environment is ready for data analysis tasks. By successfully installing and loading devtools, remotes, tidyverse, and rstatix, you have access to a powerful set of tools for data manipulation, visualization, and statistical analysis within RStudio.
+
+You are now well-equipped to embark on data analysis projects with R, and you can confidently explore additional packages tailored to your specific needs.
+
+# **Conclusion**
+
+## **Summary of Key Steps**
+
+In this manual, we have provided comprehensive guidance on the installation of essential data analysis tools: R, RStudio, and Jamovi. These tools are invaluable for conducting statistical analysis, data visualization, and research in various fields.
+
+To recap the key steps covered in this manual:
+
+1.  **Installing R:**
+
+    -   Choose the appropriate version for your operating system (Windows, macOS, or Linux).
+
+    -   Follow the step-by-step instructions provided to download and install R.
+
+    -   Verify the successful installation of R by launching the R console.
+
+2.  **Installing RStudio:**
+
+    -   Select the correct version of RStudio for your operating system.
+
+    -   Follow the installation instructions to download and install RStudio.
+
+    -   Confirm the successful installation of RStudio and its integration with R.
+
+3.  **Installing Jamovi:**
+
+    -   Download Jamovi for your operating system.
+
+    -   Execute the installation process as guided in the manual.
+
+    -   Validate the installation by launching Jamovi.
+
+4.  **Verifying Installations:**
+
+    -   Ensure that R, RStudio, and Jamovi open without errors.
+
+    -   Confirm that you can access the R console and RStudio IDE smoothly.
+
+5.  **Updating and Maintaining Software:**
+
+    -   Regularly check for updates to R, RStudio, and Jamovi to benefit from the latest features and bug fixes.
+
+    -   Follow the guidelines provided to update each software component.
+
+6.  **Troubleshooting:**
+
+    -   Consult the troubleshooting section if you encounter common installation or package-related issues.
+
+    -   Utilize online forums, official documentation, and user communities to seek assistance for more complex problems.
+
+## **Next Steps**
+
+Now that you have successfully installed R, RStudio, and Jamovi, you are equipped with powerful tools for data analysis, statistical modeling, and research. Your next steps might include:
+
+-   **Learning and Practicing:** Explore online tutorials and resources to enhance your skills in using R, RStudio, and Jamovi for data analysis.
+
+-   **Working on Projects:** Apply your newly acquired knowledge to real-world projects, research, or coursework.
+
+-   **Exploring Packages:** Explore and install additional R packages that cater to your specific analytical needs.
+
+-   **Collaborating:** Share your work with colleagues or collaborate on data analysis projects using these tools.
+
+-   **Staying Informed:** Stay updated with the latest developments and updates for R, RStudio, and Jamovi by subscribing to relevant newsletters or communities.
+
+-   **Supporting Others:** Share your knowledge and help others who are beginning their journey with these tools.
+
+## **Final Remarks**
+
+I hope that this installation manual has been a valuable resource in getting you started with R, RStudio, and Jamovi. These tools offer limitless possibilities for data analysis and research. Remember that practice, exploration, and continuous learning will enhance your proficiency in using these tools effectively. Thank you for choosing this manual as your guide to installing and working with these essential data analysis tools. We wish you success in your data analysis endeavors!
+
+# **R and Jamovi**
+
+We will continue our exploration of data analysis tools by introducing you to two powerful platforms: R and Jamovi. As a brief recap of our previous session, you've learned about the significance of inferential statistics and its applications in forestry research. Furthermore, this section provides an introduction to R and Jamovi, covering the installation of R and RStudio, basic R commands, data structures, and importing data. It also introduces Jamovi's interface, data import, and basic data manipulation. Now, we will dive into the practical aspects of using R and Jamovi for data analysis.
+
+## **Getting Started with R**
+
+### Installing R and RStudio
+
+#### **Installing R:**
+
+You can install R by following these steps:
+
+1.  Visit the CRAN (Comprehensive R Archive Network) website for your operating system (Windows, macOS, or Linux): [**https://cran.r-project.org/mirrors.html**](https://cran.r-project.org/mirrors.html)
+
+2.  Download the R installer for your OS and follow the installation instructions.
+
+#### **Installing RStudio:**
+
+Once R is installed, you can proceed to install RStudio:
+
+1.  Visit the RStudio download page: [**https://www.rstudio.com/products/rstudio/download/**](https://www.rstudio.com/products/rstudio/download/)
+
+2.  Download the appropriate RStudio installer for your OS (RStudio Desktop is recommended for most users).
+
+3.  Install RStudio by following the installation instructions.
+
+### Understanding R Interface and Basics
+
+#### **Launch RStudio:**
+
+Open RStudio by searching for "RStudio" in your computer's application menu.
+
+#### **R Interface:**
+
+-   The RStudio interface consists of several panels, including the script editor, console, environment, and plots.
+
+-   The script editor is where you write and execute R code.
+
+-   The console displays R's output and can be used for direct command entry.
+
+#### **Basic Commands and Data Structures:**
+
+Let's explore some basic commands and data structures:
+
+``` r
+# Basic Arithmetic
+2 + 3       # Addition
+5 - 2       # Subtraction
+4 * 6       # Multiplication
+8 / 4       # Division
+
+# Assigning Values to Variables
+x <- 10     # Assign 10 to the variable x
+y <- 5      # Assign 5 to the variable y
+
+# Vectors
+my_vector <- c(3, 6, 9, 12)  # Create a numeric vector
+length(my_vector)            # Check the length of the vector
+mean(my_vector)              # Calculate the mean of the vector
+
+# Data Frames (a common data structure in R)
+# Create a sample forestry dataset
+forest_data <- data.frame(
+  TreeSpecies = c("Oak", "Pine", "Maple", "Birch"),
+  Height = c(25, 20, 18, 22),
+  Diameter = c(10, 8, 7, 9)
+)
+
+print(forest_data)
+```
+
+### Importing Data into R
+
+R allows you to import data from various file formats, such as CSV, Excel, or databases. Here's an example of importing a CSV file:
+
+``` r
+# Check if the "pacman" package is available; if not, install it and load it
+if (!require("pacman")) {
+  install.packages("pacman")
+  require(pacman)
+}
+
+# Use the "pacman" package to load multiple packages at once
+pacman::p_load(
+  rstatix,        # rstatix: Provides functions for statistical analysis
+  tidyverse,      # tidyverse: A collection of packages for data manipulation and visualization
+  easystats,      # easystats: Provides easy-to-use functions for statistical analysis
+  readr,          # readr: Used for reading data from various file formats
+  magrittr,       # magrittr: Provides a pipe operator (%>%) for easier data manipulation
+  knitr,          # knitr: Used for dynamic report generation
+  report,         # report: A package for creating and formatting reports
+  scatr,          # scatr: Tools for exploratory data analysis and visualization
+  jmv,            # jmv: Tools for statistical analysis and hypothesis testing
+haven,            # haven: A package for reading and writing data in SAS format
+foreign,          # foreign: A package for reading and writing data in various formats
+  performance,    # performance: Provides functions for assessing model performance
+  ggthemes,
+  install = TRUE, # Install packages if not already installed
+  update = TRUE   # Update packages if newer versions are available
+)
+
+# Load the iris dataset
+data("iris")          # Load the built-in iris dataset into the R environment
+
+# Uncomment the following line to view the dataset in a separate window
+# View(iris)
+
+# Display a concise summary of the iris dataset
+tibble::glimpse(iris)
+
+# Create a scatter plot using ggplot2 to visualize the relationship
+# between Sepal.Length and Sepal.Width
+ggplot(data = iris, aes(x = Sepal.Length, y = Sepal.Width)) +
+  geom_point() +                     # Add points to the plot
+  geom_smooth(method = "lm")         # Add a linear regression line
+
+# Read the iris dataset from a CSV file into a variable called iris_import
+iris_import <- read_csv("./data/iris.csv")
+
+# Uncomment the following line to view the imported dataset
+# View(iris_import)
+
+# Export the original iris dataset to a CSV file at the specified file path
+utils::write.csv(
+  x = iris,                            # Dataset to export (iris)
+  file = "./data/iris.csv", # File path to save the CSV
+  fileEncoding = "UTF-8",              # Encoding of the CSV file
+  row.names = FALSE                    # Exclude row names in the CSV
+)
+
+# Use getwd() to show your current working directory path
+```
+
+-   The code first checks if the "pacman" package is available using the **`require`** function. If it's not available, it installs the "pacman" package and then loads it using **`require`**.
+
+-   The **`pacman::p_load`** function is used to load multiple packages at once. Each package listed is loaded, and if any of them are not installed, they will be installed (**`install = TRUE`**). Additionally, if newer versions of packages are available, they will be updated (**`update = TRUE`**).
+
+-   Here's a brief explanation of each package:
+
+    -   **`rstatix`**: Provides functions for statistical analysis, particularly for tidyverse users.
+
+    -   **`tidyverse`**: A collection of packages (e.g., dplyr, ggplot2) for data manipulation and visualization.
+
+    -   **`easystats`**: Provides easy-to-use functions for various statistical analyses.
+
+    -   **`readr`**: Used for reading data from various file formats (e.g., CSV, Excel).
+
+    -   **`magrittr`**: Provides the pipe operator (**`%>%`**) for easier data manipulation.
+
+    -   **`knitr`**: Used for dynamic report generation, often in combination with R Markdown.
+
+    -   **`report`**: A package for creating and formatting reports.
+
+    -   **`scatr`**: Provides tools for exploratory data analysis and visualization.
+
+    -   **`jmv`**: Contains tools for statistical analysis and hypothesis testing.
+
+    -   **`performance`**: Provides functions for assessing model performance.
+
+This code is an efficient way to ensure that all the necessary packages are available and up-to-date for your data analysis and reporting needs.
+
+The next set of R codes above performs the following actions:
+
+1.  Loads the built-in iris dataset and optionally allows you to view its summary using **`tibble::glimpse(iris)`**.
+
+2.  You can uncomment the line **`# View(iris)`** to view the dataset in a separate window.
+
+3.  Creates a scatter plot using **`ggplot2`** to visualize the relationship between Sepal.Length and Sepal.Width.
+
+4.  Imports the iris dataset from a CSV file located at "data/iris.csv" into a variable called **`iris_import`** using the **`read_csv`** function from the **`readr`** package.
+
+5.  Exports the original iris dataset to a CSV file at the specified file path.
+
+6.  The last comment mentions that you can use **`getwd()`** to show your current working directory path.
+
+Please note that some lines of code are commented out and can be uncommented when needed.
+
+## **Introduction to Jamovi**
+
+### Overview of Jamovi Interface and Functionalities
+
+Jamovi is a user-friendly statistical software with an intuitive interface. You can launch it by searching for "Jamovi" in your application menu.
+
+#### **Step 1: Launching Jamovi**
+
+1.  Open your web browser.
+
+2.  In the address bar, type "[**https://www.jamovi.org/**](https://www.jamovi.org/)" and press Enter.
+
+3.  On the Jamovi website, click on the "Download" or "Try Online" button to access Jamovi.
+
+4.  If you choose to "Try Online," it will open the Jamovi online interface in your browser.
+
+#### **Step 2: Interface Overview**
+
+1.  Familiarize yourself with the Jamovi interface.
+
+    -   The top menu contains options for File, Edit, View, Analysis, Data, and more.
+
+    -   The left panel displays the data set (if loaded) and variables.
+
+    -   The right panel shows the analysis output.
+
+### Section 2: Importing Data and Basic Data Manipulation using Jamovi
+
+#### **Step 3: Importing Data**
+
+1.  In the left panel, under the "Data" tab, click "Import Dataset."
+
+2.  Choose the data file you want to import (e.g., CSV, Excel).
+
+3.  Follow the on-screen instructions to configure data import settings and load your dataset.
+
+#### **Step 4: Basic Data Manipulation**
+
+1.  After loading the data, explore the "Data" tab on the left panel.
+
+    -   You can view and manipulate variables, including renaming, recoding, or creating new variables.
+
+2.  To perform basic data manipulation tasks:
+
+    -   Select variables by clicking on their names.
+
+    -   Use the right-click menu or the "Transform" option to apply changes.
+
+#### **Step 5: Saving Your Work**
+
+1.  To save your project:
+
+    -   Click on "File" in the top menu.
+
+    -   Select "Save Project As" and choose a location to save your .omv project file.
+
+### Section 3: Introduction to Statistical Analyses in Jamovi
+
+#### **Step 6: Running Basic Analyses**
+
+1.  Under the "Analysis" tab in the top menu, you'll find a wide range of statistical analyses.
+
+2.  Select an analysis based on your research question (e.g., t-tests, ANOVA, regression).
+
+3.  Configure the analysis by specifying variables, settings, and options.
+
+4.  Click the "Run" button to execute the analysis.
+
+#### **Step 7: Interpreting Results**
+
+1.  After running an analysis, the results will appear in the right panel.
+
+2.  Interpret the output, including statistical measures, p-values, and visualizations.
+
+3.  Jamovi often provides descriptive statistics, charts, and inferential test results.
+
+### Statistical Analyses in Jamovi
+
+Jamovi provides a wide range of statistical analyses, including t-tests, ANOVA, regression, and more. In the following sessions, we will explore these analyses in greater detail.
+
+## **Hands-on EDA: Using R and Jamovi for Data Visualization**
+
+### **Introduction**
+
+Exploratory Data Analysis (EDA) is a crucial step in the data analysis process, especially in the fields of forestry and ecology. EDA involves visually and statistically summarizing, exploring, and interpreting the main characteristics of a dataset. It helps you understand the underlying patterns, relationships, and potential outliers in your data before applying more advanced statistical techniques.
+
+### **Objectives**
+
+1.  **Apply EDA Techniques:** Learn how to apply various EDA techniques using both R and Jamovi software.
+
+2.  **Gain Practical Experience:** Gain practical hands-on experience in importing, visualizing, and summarizing ecological and forestry datasets.
+
+### **Why EDA is Important**
+
+-   **Detect Patterns and Trends:** EDA allows you to detect patterns, trends, and relationships within your data. For instance, you can identify seasonal variations in temperature data or the impact of habitat type on species diversity.
+
+-   **Outlier Detection:** It helps in identifying and handling outliers or anomalies that might skew your analysis results.
+
+-   **Data Cleaning:** EDA helps in understanding data quality issues and assists in data cleaning and preprocessing tasks.
+
+-   **Hypothesis Generation:** EDA often leads to the generation of hypotheses that can be tested using more advanced statistical methods.
+
+## **Tools for EDA: R and Jamovi**
+
+### Using R for EDA
+
+R is a powerful open-source statistical programming language commonly used in ecological and forestry research. It offers a wide range of packages and functions for data manipulation, visualization, and analysis.
+
+#### **Key R Functions for EDA:**
+
+-   **`summary()`**: Provides basic summary statistics for a dataset.
+
+-   **`plot()`**: Generates various types of plots, such as histograms, scatter plots, and box plots.
+
+-   **`cor()`**: Computes correlation matrices.
+
+-   **`ggplot2`**: A versatile package for creating customized data visualizations.
+
+### Using Jamovi for EDA
+
+Jamovi is a user-friendly, open-source statistical software that provides a graphical user interface (GUI) for data analysis. It is particularly suitable for researchers who may not have extensive programming experience.
+
+#### **Key Jamovi Features for EDA:**
+
+-   **Drag-and-Drop Interface:** Jamovi allows users to import data, select analysis options, and create visualizations through an intuitive drag-and-drop interface.
+
+-   **Descriptive Statistics:** It provides easy access to descriptive statistics, including mean, median, standard deviation, and more.
+
+-   **Interactive Plots:** Jamovi offers various interactive plot types, such as scatter plots, histograms, and bar charts, to explore data visually.
+
+### **Hands-On Exercises**
+
+In this section of the workshop, you will actively engage in hands-on exercises to perform EDA using both R and Jamovi. These exercises will cover:
+
+1.  **Data Import:** Learn how to import ecological and forestry datasets into R and Jamovi.
+
+2.  **Data Visualization:** Explore various visualization techniques to represent your data effectively.
+
+3.  **Summary Statistics:** Calculate and interpret summary statistics to understand the central tendencies and variability of your data.
+
+4.  **Identifying Outliers:** Identify and deal with outliers that can affect your analysis.
+
+5.  **Correlation Analysis:** Explore the relationships between variables using correlation matrices and scatter plots.
+
+6.  **Hypothesis Generation:** Use EDA to generate hypotheses that can be tested in subsequent analyses.
+
+### **Conclusion**
+
+Effective EDA is the foundation of successful ecological and forestry research. It empowers you to uncover insights hidden within your data, make informed decisions about data preprocessing, and generate hypotheses for further investigation. By the end of this workshop, you will have practical skills in performing EDA using both R and Jamovi, enabling you to enhance the quality of your research and analysis in the field of ecology and forestry.
+
+# Real-World Dataset Execises
+
+In this exercise will perform a simple hypothesis test using real-world data set. Data used in this exercise was extracted from the mendeley database (Win, Kyaw (2023), "Aboveground Tree Carbon of Teak Plantations in West Bago Mountains, Myanmar", Mendeley Data, V1, doi: 10.17632/3xvcfskhwz.1): [Aboveground Tree Carbon of Teak Plantations in West Bago Mountains, Myanmar](https://data.mendeley.com/datasets/3xvcfskhwz/1).
+
+## Import and explore the dataset in Jamovi
+
+Steps
+
+1.  Open "Filtered.sav" file in Jamovi. The data should already be placed in the "data" sub-directory.
+
+2.  Go to the "Variables" tab and remove the last four columns/ variables as we won't use them.
+
+3.  Go to the "Data" tab and change the "Plantation_age" data/ measure type to "*ordinal*". ![Change data types](images/Screenshot%20from%202023-09-01%2012-48-46.png){width="180mm"}
+
+4.  Navigate to the "Analyses" tab and from the "Exploration" button select "Descriptives". Use the functions from this window to explore the data set. ![Perform data exploration (descriptive) on the selected variable.](images/Screenshot%20from%202023-09-01%2012-55-58.png)
+
+5.  You can further perform data exploration visually. Select the "scatterplot" from the "Exploration button and insert the appropriate variables to generate a scatterplot with linear fits along with density plots. ![Linear and density plots](images/Screenshot%20from%202023-09-01%2013-02-42.png)
+
+## Performing hypothesis test in Jamovi
+
+1.  Create a hypthesis to test based on the data set.
+
+    1.  Ho: There are no differences in above ground tree carbon content among plantation ages.
+
+    2.  Ha: There are differences in above ground tree carbon content among plantation ages.
+
+2.  We decide that the appropriate statistical test required to test the above hypothesis is a two-way ANOVA since we are interested in the differences between plantation ages and also that the predictor/ explanatory variable has more than two sublevels.
+
+3.  First, we perform normality test on the response variable 'Aboveground_Tree_Carbon_ton_per_ha_per_year' using the "shapiro-wilk" test. We see a significant effect (*p \< 0.001*) indicating that the variable is not normally distributed hence we have to select a non-parametric equivalent test and that would be the "Kruska-Wallis" test. ![Perform normality test on the responds variable.](images/Screenshot%20from%202023-09-01%2013-19-11.png)
+
+4.  From the analysis tab, select the ANOVA button and select "Kruskal-Wallis" from the non-parametric section which is appropriate for this case. We found a significant effect of plantation age on the carbon content (p \< .001) indicating that there are signficant differences in carbon content between the plantation ages. A furthe pairwise comparison is needed to show where exactly do these differences exist between the plantation ages. ![Kruskal-Wallis test and pairwise comparison.](images/Screenshot%20from%202023-09-01%2013-36-15.png)
+
+5.  Boxplots can be used to visually display the results. ![Boxplots.](images/Screenshot%20from%202023-09-01%2013-40-03.png)
+
+# Interfacing Jamovi with R
+
+Any analysis in Jamovi has an R interface which means that analysis or plots created in Jamovi has an R syntax. This syntax can be easily copied and used in R.
+
+1.  To set this up, navigate to the far-right indicated by 3 vertical dots.
+
+    ![3 dotts](images/Screenshot%20from%202023-09-01%2013-43-53.png)
+
+2.  From the side pane, check the box for "Syntax mode".
+
+    ![syntax mode](images/Screenshot%20from%202023-09-01%2013-45-41.png)
+
+## Example:
+
+### Plotting
+
+1.  Create a scatter-plot. The syntax should automatically be included in the result section along with plot. Right-click on the syntax area and select syntax to copy for use in R.![syntax example](images/Screenshot%20from%202023-09-01%2014-04-49.png)
+2.  In R, install and load the following packages: **`jmv`** and **`scatr`**. Furthermore, import the data set into R, paste the syntax copied over from Jamovi and run the syntax as shown below.
+
+```{r jamovi syntax in R, echo=TRUE, message=FALSE, warning=FALSE}
+
+# Use pacman::p_load to load packages (jmv, scatr, jmvcore)
+# with optional installation and no package updates
+pacman::p_load(jmv, scatr, jmvcore, install = TRUE, update = FALSE)
+
+# Import above-ground carbon data from a CSV or the SAV file
+carbon <- readr::read_csv("./data/Filtered.csv")
+carbon_spss_data <- haven::read_sav("./data/Filtered.sav")
+
+# Syntax from the scatr package to create a scatterplot with linear regression lines
+# This code visualizes the relationship between Tree Density, Aboveground Carbon, and Management Regime
+scatr::scat(
+    data = carbon,                                           # Specify the dataset (carbon)
+    y = "Aboveground_Tree_Carbon_ton_per_ha_per_year",      # Choose the dependent variable (Y-axis)
+    x = "Tree_Density_per_ha",                              # Choose the independent variable (X-axis)
+    group = "Management_regime",                            # Group the data by Management Regime
+    line = "linear",                                        # Add linear regression lines
+    se = TRUE)                                              # Display standard error bars
+
+```
+
+Explanation:
+
+-   **`pacman::p_load(jmv, scatr, jmvcore, install = TRUE, update = FALSE)`** is used to load three packages: **`jmv`**, **`scatr`**, and **`jmvcore`**. The **`install = TRUE`** parameter ensures that these packages are installed if they are not already installed, and **`update = FALSE`** prevents the packages from being updated.
+
+-   **`carbon <- readr::read_csv("./data/Filtered.csv")`** reads data from a CSV file named "Filtered.csv" located in the "./data" directory and stores it in a variable called "carbon." This line imports the dataset needed for further analysis.
+
+-   **`scatr::scat(...)`** is a function from the **`scatr`** package used to create a scatterplot with linear regression lines. The code specifies the dataset as "carbon," sets the Y-axis variable to "Aboveground_Tree_Carbon_ton_per_ha_per_year," sets the X-axis variable to "Tree_Density_per_ha," groups the data by "Management_regime," adds linear regression lines, and displays standard error bars. This code is used to visualize the relationship between Tree Density, Aboveground Carbon, and Management Regime in the dataset.
+
+Note that plots created using the `scatr` package has limited functions to further tweak plots. A work around for this issue is to use the `ggplot2` package which has more customizable functions. An example is shown below.
+
+```{r custom plot, message=FALSE, warning=FALSE}
+
+# Use pacman::p_load to load packages (ggthemes, ggplot2, patchwork)
+# with optional installation and no package updates
+pacman::p_load(ggthemes,
+               ggplot2,
+               patchwork,
+               install = TRUE,
+               update = FALSE)
+
+# Import dataset from a CSV file
+carbon <- readr::read_csv("./data/Filtered.csv")
+
+# Create a customizable plot using ggplot2
+plot1 <- ggplot2::ggplot(
+  data = carbon,                                             # Specify the dataset (carbon)
+  aes(                                                       # Define aesthetic mappings
+    x = carbon$Tree_Density_per_ha,                         # X-axis variable
+    y = carbon$Aboveground_Tree_Carbon_ton_per_ha_per_year,  # Y-axis variable
+    col = carbon$Management_regime                           # Color by Management Regime
+  )
+) +
+  ggplot2::geom_point(size = 3, pch = 21) +                  # Add points with custom size and shape
+  ggplot2::geom_smooth(method = "lm") +                      # Add a linear regression line
+  ggplot2::labs(x = "Tree density (ha)",                    # Set X-axis label
+                y = "Above-ground tree carbon (tonne/ha/year)", # Set Y-axis label
+                col = "Management Regime") +                 # Set legend title
+  ggplot2::scale_x_continuous(limits = c(0, 1500)) +         # Set X-axis limits
+  ggplot2::scale_y_continuous(limits = c(0, 6)) +            # Set Y-axis limits
+  ggthemes::theme_base(base_size = 15, base_family = "times") +  # Apply custom theme settings
+  ggplot2::theme(
+    panel.grid.minor = element_line(size = 0.5, color = "grey"), # Customize minor grid lines
+    axis.title = element_text(size = 20)                      # Customize axis title text
+  )
+
+# Print the customized plot
+print(plot1)
+```
+
+Explanation:
+
+-   **`pacman::p_load(...)`** is used to load three packages: **`ggthemes`**, **`ggplot2`**, and **`patchwork`**. The **`install = TRUE`** parameter ensures that these packages are installed if they are not already installed, and **`update = FALSE`** prevents the packages from being updated.
+
+-   **`carbon <- readr::read_csv("./data/Filtered.csv")`** reads data from a CSV file named "Filtered.csv" located in the "./data" directory and stores it in a variable called "carbon." This line imports the dataset needed for plotting.
+
+-   The **`ggplot2::ggplot(...)`** function is used to create a customizable plot. It specifies the dataset as "carbon" and defines aesthetic mappings, including X-axis, Y-axis, and color mapping based on the "Management_regime" column.
+
+-   Various **`ggplot2::geom_`** functions are used to add geometrical elements to the plot, such as points and a linear regression line.
+
+-   **`ggplot2::labs(...)`**, **`ggplot2::scale_...`**, and **`ggthemes::theme_...`** functions are used to customize plot labels, axis limits, and theme settings.
+
+-   Finally, **`print(plot1)`** prints the customized plot to the output.
+
+### Combine multiple plots
+
+```{r combine plots, echo=TRUE, message=FALSE, warning=FALSE}
+
+# Modify the first plot (plot1)
+p1 <- plot1 +
+  ggplot2::labs(x = "Tree density (ha)",         # Change the X-axis label
+                y = "Above-ground tree carbon (tonne/ha/year)",  # Change the Y-axis label
+                col = "")                         # Remove the color legend title
+
+# Create another customizable plot using ggplot2
+plot2 <- ggplot2::ggplot(
+  data = carbon,                                           # Specify the dataset (carbon)
+  aes(
+    x = carbon$Management_regime,                         # X-axis variable
+    y = carbon$Aboveground_Tree_Carbon_ton_per_ha_per_year  # Y-axis variable
+  )
+) +
+  ggplot2::geom_boxplot(fill = "grey") +                  # Add a boxplot with grey fill
+  ggplot2::labs(x = "Management Regime",                  # Set X-axis label
+                y = "Above-ground tree carbon (tonne/ha/year)") +  # Set Y-axis label
+  ggplot2::scale_y_continuous(limits = c(0, 6)) +         # Set Y-axis limits
+  ggthemes::theme_base(base_size = 15, base_family = "times") +  # Apply custom theme settings
+  ggplot2::theme(axis.title = element_text(size = 20))     # Customize axis title text
+
+# Print the second plot (plot2)
+print(plot2)
+
+# Modify the second plot (plot2)
+p2 <- plot2 + ggplot2::labs(x = "Management Regime",   # Change the X-axis label
+                            y = "")                    # Remove the Y-axis label
+
+# Combine both modified plots (p1 and p2) using the "&" operator
+# Also, customize the legend position and add plot annotations
+p1 + p2 &
+  theme(
+    legend.position = "bottom"                           # Customize legend position
+  ) &
+  patchwork::plot_annotation(
+    tag_levels = "a", tag_prefix = "(", tag_suffix = ")"  # Add plot annotations with tags
+  )
+```
+
+Explanation:
+
+-   **`p1`** is created by modifying **`plot1`**. The X-axis label is changed, and the color legend title is removed.
+
+-   **`plot2`** is created as a new customizable plot using **`ggplot2`**. It specifies the dataset and aesthetic mappings, creates a boxplot, and customizes the plot labels, axis limits, and theme settings.
+
+-   **`p2`** is created by modifying **`plot2`**. The X-axis label is changed, and the Y-axis label is removed.
+
+-   **`p1 + p2 & ...`** combines both modified plots **`p1`** and **`p2`** using the **`&`** operator. Additional customizations are applied to the combined plot, including changing the legend position and adding plot annotations with tags.
+
+### Analyses Syntax
+
+The following syntax and results (image) below were generated in Jamovi. Syntax is further modified in R.
+
+![Analysis syntax and results from Jamovi.](images/Screenshot%20from%202023-09-01%2016-17-17.png)
+
+```{r}
+
+# Load necessary R packages using pacman
+pacman::p_load(jmv,          # Load the jmv package for statistical analysis
+               magrittr,     # Load the magrittr package for data manipulation
+               install = TRUE,  # Install packages if not already installed
+               update = FALSE   # Do not update packages if newer versions are available
+)
+
+# Perform Kruskal-Wallis test with pairwise comparisons
+kruskal_pairwise <- jmv::anovaNP(
+    formula = Aboveground_Tree_Carbon_ton_per_ha_per_year ~ Plantation_age,  # Specify the formula
+    data = carbon,                        # Specify the dataset (carbon)
+    pairs = TRUE                          # Perform pairwise comparisons
+)
+
+# Display the Kruskal-Wallis significance test results
+kruskal_pairwise %>% print()
+```
+
+Explanation:
+
+-   **`pacman::p_load(...)`** is used to load the required R packages, including **`jmv`** for statistical analysis and **`magrittr`** for data manipulation. The **`install`** parameter is set to **`TRUE`** to install the packages if they are not already installed, and **`update`** is set to **`FALSE`** to prevent updating packages.
+
+-   **`kruskal_pairwise`** stores the result of the Kruskal-Wallis test with pairwise comparisons. It calculates the Kruskal-Wallis test for the specified formula and dataset, and the **`pairs = TRUE`** argument indicates that pairwise comparisons should be performed.
+
+-   **`kruskal_pairwise %>% print()`** is used to display the Kruskal-Wallis significance test results directly without the need to extract them into a data frame.
+
+# Resources
+
+1.  [R for Data Science](https://r4ds.had.co.nz/)
+
+2.  [GGPlot2 Book](https://ggplot2-book.org/)
+
+3.  [R Packages](https://r-pkgs.org/)
+
+4.  [Learning statistics with jamovi](https://davidfoxcroft.github.io/lsj-book/03-Getting-started-with-jamovi.html#analyses)
+
+5.  [Basic statistical tests using rstatix package](https://github.com/kassambara/rstatix)
+
+# Supplementary Information
+
+## **Hypothesis Testing: Parametric and Non-Parametric Tests**
+
+-   Understanding the Foundations of Statistical Testing
+
+### **Introduction**
+
+-   Importance of hypothesis testing in forestry and ecology:
+
+    -   Hypothesis testing helps researchers in forestry and ecology validate theories, make informed decisions about conservation efforts, and understand the impact of environmental factors.
+
+### **Key Concepts**
+
+-   Definition of null and alternative hypotheses:
+
+    -   Null Hypothesis (H0): There is no significant difference in the average height of oak trees between Site A and Site B.
+
+    -   Alternative Hypothesis (H1): There is a significant difference in the average height of oak trees between Site A and Site B.
+
+-   Explanation of the significance level (alpha):
+
+    -   Set at 0.05, it signifies a 5% chance of rejecting the null hypothesis when it's true.
+
+-   Introducing p-values and their interpretation:
+
+    -   A p-value of 0.03 indicates that there's a 3% probability that the observed difference occurred by chance.
+
+-   Type I and Type II errors:
+
+    -   In ecology, a Type I error could involve incorrectly identifying a species as invasive when it's not. A Type II error might mean failing to detect a critically endangered species.
+
+### **Parametric vs. Non-Parametric Tests**
+
+-   Difference between parametric and non-parametric tests:
+
+    -   Parametric tests assume the data follows a specific distribution.
+
+    -   Non-parametric tests are distribution-free and more robust to deviations from normality.
+
+-   Examples in forestry and ecology:
+
+    -   Parametric: Testing if there's a difference in the mean chlorophyll levels between two groups of plant species.
+
+    -   Non-parametric: Comparing the diversity of aquatic invertebrate species in different river habitats.
+
+### **Parametric Tests**
+
+-   When to use parametric tests:
+
+    -   Use parametric tests when data is normally distributed and meets test assumptions.
+
+-   Common parametric tests with forestry/ecology examples:
+
+    -   t-test: Comparing the mean annual precipitation in two different forest ecosystems.
+
+    -   ANOVA: Assessing if there's a significant difference in bird species richness among three different forest types.
+
+    -   Linear Regression: Investigating the relationship between temperature and tree growth in a specific forest region.
+
+### **Non-Parametric Tests**
+
+-   When to use non-parametric tests:
+
+    -   Use non-parametric tests when data doesn't meet parametric assumptions (e.g., non-normality).
+
+-   Common non-parametric tests with forestry/ecology examples:
+
+    -   Mann-Whitney U test: Comparing the diversity of fungi species in two different soil types.
+
+    -   Kruskal-Wallis test: Testing if there's a difference in plant height across various altitudinal zones.
+
+    -   Wilcoxon signed-rank test: Assessing changes in insect abundance before and after a controlled burn in a grassland ecosystem.
+
+### **Choosing the Right Test**
+
+-   Considerations for choosing between parametric and non-parametric tests in forestry and ecology:
+
+    -   Emphasize that test choice depends on data characteristics, research questions, and assumptions.
+
+### **Practical Example**
+
+-   Real-world example:
+
+    -   Research Question: *Does the average tree canopy cover differ significantly between a logged forest and an old-growth forest?*
+
+    -   Data: Canopy cover measurements from both forest types.
+
+    -   Hypotheses: H0: *No difference in canopy cover. H1: Significant difference in canopy cover.*
+
+    -   Perform a t-test or Mann-Whitney U test (based on data distribution) using R or Jamovi.
+
+    -   Interpret results and assess whether to reject the null hypothesis.
+
+### **Summary**
+
+-   Hypothesis testing is a fundamental tool for making data-driven decisions in forestry and ecology.
+
+-   Test choice depends on data characteristics and research objectives.
+
+-   Correct hypothesis formulation and test selection are crucial for meaningful results.
+
+## **Confidence Intervals, p-values Interpretation, and Correlation Test**
+
+-   Unraveling the Mysteries of Statistical Inference
+
+### **Introduction**
+
+-   Importance of understanding confidence intervals, p-values, and correlation tests in forestry and ecology:
+
+    -   These concepts are fundamental for drawing conclusions from data and assessing relationships in ecological and environmental research.
+
+### **Confidence Intervals**
+
+-   Definition of a confidence interval:
+
+    -   A confidence interval provides a range within which the true population parameter is likely to fall.
+
+-   Interpretation:
+
+    -   A 95% confidence interval means that if we were to sample repeatedly and construct intervals, we expect about 95% of those intervals to contain the true parameter.
+
+-   Example: Confidence interval for the average tree height in a forest.
+
+### **Constructing Confidence Intervals**
+
+-   Steps for constructing a confidence interval:
+
+    1.  Collect sample data.
+
+    2.  Calculate sample statistics (e.g., mean and standard error).
+
+    3.  Determine the confidence level (e.g., 95%).
+
+    4.  Calculate the margin of error.
+
+    5.  Formulate the confidence interval.
+
+-   Example: Calculating a 95% confidence interval for the mean plant biomass in a wetland ecosystem.
+
+### **p-values Interpretation**
+
+-   Explanation of p-values:
+
+    -   A p-value represents the probability of obtaining results as extreme as the observed results, assuming the null hypothesis is true.
+
+-   Interpretation:
+
+    -   A small p-value (typically \< 0.05) suggests that there's strong evidence against the null hypothesis.
+
+-   Example: Interpreting a p-value in a study investigating the effect of pollution on amphibian populations.
+
+-   Common thresholds for p-values:
+
+    -   p \< 0.05: Strong evidence to reject the null hypothesis.
+
+    -   p ≥ 0.05: Insufficient evidence to reject the null hypothesis.
+
+-   Example: Evaluating p-values in a study assessing the impact of fire frequency on plant species diversity.
+
+### **Correlation Test**
+
+-   Definition of correlation:
+
+    -   Correlation measures the strength and direction of a linear relationship between two variables.
+
+-   Types of correlation tests:
+
+    -   Pearson correlation coefficient (for linear relationships).
+
+    -   Spearman rank correlation (for non-linear relationships).
+
+-   Example: Examining the correlation between temperature and the number of bird species in a region.
+
+### **Interpreting Correlation Coefficients**
+
+-   Interpretation of correlation coefficients:
+
+    -   Positive correlation: As one variable increases, the other tends to increase.
+
+    -   Negative correlation: As one variable increases, the other tends to decrease.
+
+    -   Zero correlation: No linear relationship between variables.
+
+-   Example: Interpreting a positive correlation between rainfall and plant growth.
+
+### **Practical Example**
+
+-   Real-world example:
+
+    -   Research Question: *Is there a significant correlation between tree canopy density and the number of bird species in a forest?*
+
+    -   Collect canopy density and bird species data.
+
+    -   Perform a correlation test (e.g., Pearson or Spearman) using R or Jamovi.
+
+    -   Interpret the results to assess the strength and direction of the relationship.
+
+### **Summary**
+
+-   Confidence intervals provide a range for population parameters.
+
+-   p-values help assess the strength of evidence against the null hypothesis.
+
+-   Correlation tests quantify the relationship between variables.
+
+## **Advanced R and Jamovi Data Analysis: T-test, ANOVA, and Linear Regression**
+
+-   Unlocking the Power of T-test, ANOVA, and Linear Regression
+
+### **Introduction**
+
+-   Significance of advanced data analysis in forestry and ecology research:
+
+    -   Advanced statistical techniques help uncover complex relationships and patterns in ecological data.
+
+### **T-Test: Introduction**
+
+-   Review of the t-test:
+
+    -   The t-test assesses if there's a significant difference between the means of two groups.
+
+-   Example: Comparing the mean species diversity in two different wetland ecosystems.
+
+### **Types of T-Tests**
+
+-   Explanation of two types of t-tests:
+
+    -   Independent Samples T-Test: Compares means between two independent groups.
+
+    -   Paired Samples T-Test: Compares means within the same group under different conditions.
+
+-   Example: Choosing the appropriate t-test to compare soil nutrient levels before and after fertilization.
+
+### **ANOVA: Introduction**
+
+-   Analysis of variance (ANOVA):
+
+    -   ANOVA assesses if there's a significant difference in means among three or more groups.
+
+-   Example: Analyzing the impact of three different fire frequencies on plant species richness in grasslands.
+
+### **One-Way ANOVA**
+
+-   One-way ANOVA:
+
+    -   Tests for differences in means among three or more groups.
+
+-   Example: Evaluating if there's a significant difference in tree growth across multiple forest types.
+
+### **Two-Way ANOVA**
+
+-   Two-way ANOVA:
+
+    -   Explores the influence of two independent categorical variables on a dependent variable.
+
+-   Example: Investigating the interactive effects of temperature and precipitation on plant growth.
+
+### **Linear Regression: Introduction**
+
+-   Linear regression:
+
+    -   Linear regression assesses the relationship between a dependent variable and one or more independent variables.
+
+-   Example: Analyzing the relationship between temperature and butterfly population size.
+
+### **Multiple Linear Regression**
+
+-   Explanation of multiple linear regression:
+
+    -   Considers the influence of multiple independent variables on a dependent variable.
+
+-   Example: Predicting tree biomass based on factors like soil quality, precipitation, and sunlight.
+
+### **Practical Example**
+
+-   Real-world example:
+
+    -   Research Question: Does soil pH, temperature, and precipitation collectively influence plant growth?
+
+    -   Collect data on soil pH, temperature, precipitation, and plant growth.
+
+    -   Perform a multiple linear regression analysis using R or Jamovi.
+
+    -   Interpret the results to identify significant predictors of plant growth.
+
+### **Summary**
+
+-   T-tests, ANOVA, and linear regression are powerful tools for exploring ecological data.
+
+-   Choose the appropriate test based on the research question and data characteristics.
