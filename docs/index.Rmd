@@ -1,5 +1,5 @@
 ---
-title: 'Workshop Training Manual'
+title: 'Data Analysis Using R and Jamovi'
 author:
     - name: "Jimmy Moses"
       #affiliation: "Department of Forestry, Papua New Guinea University of Technology"
