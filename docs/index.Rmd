@@ -994,7 +994,7 @@ Steps
 
 5.  Boxplots can be used to visually display the results. ![Boxplots.](images/Screenshot%20from%202023-09-01%2013-40-03.png)
 
-# Interfacing Jamovi with R
+# Integration: R in Jamovi & Jamovi in R 
 
 Any analysis in Jamovi has an R interface which means that analysis or plots created in Jamovi has an R syntax. This syntax can be easily copied and used in R.
 
