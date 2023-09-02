@@ -1,2 +1,2 @@
 # Workshop-Training-Manual
-A manual that provides a brief step-by-step instructions on data analysis using R and Jamovi.
+A workshop manual that provides brief step-by-step instructions on data analysis using R and Jamovi.
