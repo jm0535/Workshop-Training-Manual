@@ -1,8 +1,8 @@
 ---
 title: 'Workshop Training Manual'
 author:
-    - name: "Dr. Jimmy Moses (Ph.D.)"
-      affiliation: "Department of Forestry, Papua New Guinea University of Technology"
+    - name: "Jimmy Moses"
+      #affiliation: "Department of Forestry, Papua New Guinea University of Technology"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output:
   html_document:
@@ -30,7 +30,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Introduction
 
-![Official logos or icons for R, RStudio and Jamovi.](logos.png){alt="Official logos or icons for R, RStudio and Jamovi."}
+![Official logos or icons for R, RStudio and Jamovi.](images/logos.png){alt="Official logos or icons for R, RStudio and Jamovi."}
 
 ## Purpose of the Manual
 
