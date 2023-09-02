@@ -565,9 +565,7 @@ Testing the installation and loading of these packages ensures that your R envir
 
 You are now well-equipped to embark on data analysis projects with R, and you can confidently explore additional packages tailored to your specific needs.
 
-# **Conclusion**
-
-## **Summary of Key Steps**
+# **Summary of Key Steps**
 
 In this manual, we have provided comprehensive guidance on the installation of essential data analysis tools: R, RStudio, and Jamovi. These tools are invaluable for conducting statistical analysis, data visualization, and research in various fields.
 
