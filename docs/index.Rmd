@@ -1707,43 +1707,43 @@ In summary, these statistical concepts - confidence intervals, p-values, and cor
         print(correlation_result)
         ```
 
-        -   **R Code Explanations**
+        **R Code Explanations:**
 
-            -   Load Necessary Packages:
+        -   Load Necessary Packages:
 
-                -   **`library(rstatix)`**: Loads the 'rstatix' package, which provides functions for statistical analysis.
+            -   **`library(rstatix)`**: Loads the 'rstatix' package, which provides functions for statistical analysis.
 
-                -   **`library(ggplot2)`**: Loads the 'ggplot2' package, a popular package for data visualization.
+            -   **`library(ggplot2)`**: Loads the 'ggplot2' package, a popular package for data visualization.
 
-            -   Load Your Dataset:
+        -   Load Your Dataset:
 
-                -   **`forest_data <- haven::read_sav("./data/Filtered.sav")`**: Reads a dataset from a SPSS file ('.sav') located in the "./data" directory and assigns it to the variable 'forest_data'. The 'haven' package is used for reading SPSS files.
+            -   **`forest_data <- haven::read_sav("./data/Filtered.sav")`**: Reads a dataset from a SPSS file ('.sav') located in the "./data" directory and assigns it to the variable 'forest_data'. The 'haven' package is used for reading SPSS files.
 
-            -   Perform a Pearson Correlation Test:
+        -   Perform a Pearson Correlation Test:
 
-                -   **`correlation_result <- forest_data %>% rstatix::cor_test(...)`**: Calculates a Pearson correlation test between two variables from the 'forest_data' dataset.
+            -   **`correlation_result <- forest_data %>% rstatix::cor_test(...)`**: Calculates a Pearson correlation test between two variables from the 'forest_data' dataset.
 
-                -   **`vars = "Tree_Density_per_ha"`**: Specifies the first variable for correlation.
+            -   **`vars = "Tree_Density_per_ha"`**: Specifies the first variable for correlation.
 
-                -   **`vars2 = "Aboveground_Tree_Carbon_ton_per_ha"`**: Specifies the second variable for correlation.
+            -   **`vars2 = "Aboveground_Tree_Carbon_ton_per_ha"`**: Specifies the second variable for correlation.
 
-                -   **`alternative = "two.sided"`**: Specifies a two-tailed test to check for correlation in both directions (positive and negative).
+            -   **`alternative = "two.sided"`**: Specifies a two-tailed test to check for correlation in both directions (positive and negative).
 
-                -   **`method = "pearson"`**: Specifies the Pearson correlation method.
+            -   **`method = "pearson"`**: Specifies the Pearson correlation method.
 
-                -   **`conf.level = 0.95`**: Sets the confidence level for the test to 95%.
+            -   **`conf.level = 0.95`**: Sets the confidence level for the test to 95%.
 
-                -   **`use = "pairwise.complete.obs"`**: Handles missing values by using pairwise complete observations.
+            -   **`use = "pairwise.complete.obs"`**: Handles missing values by using pairwise complete observations.
 
-            -   Print the Correlation Result:
+        -   Print the Correlation Result:
 
-                -   **`print(correlation_result)`**: Prints the correlation result.
+            -   **`print(correlation_result)`**: Prints the correlation result.
 
-            The **`correlation_result`** will contain valuable information, including the correlation coefficient (often denoted as 'r') and the p-value. These statistics are crucial for assessing the strength and significance of the relationship between canopy density and the number of bird species in your forest dataset.
+    4.  The **`correlation_result`** will contain valuable information, including the correlation coefficient (often denoted as 'r') and the p-value. These statistics are crucial for assessing the strength and significance of the relationship between canopy density and the number of bird species in your forest dataset.
 
-            Remember that interpreting the results is essential. Look at the correlation coefficient ('r') to understand the direction and strength of the relationship. A positive 'r' indicates a positive linear relationship, while a negative 'r' indicates a negative linear relationship. Additionally, pay attention to the p-value; a small p-value (\< 0.05) suggests statistical significance, indicating that the observed correlation is unlikely to have occurred by chance.
+        Remember that interpreting the results is essential. Look at the correlation coefficient ('r') to understand the direction and strength of the relationship. A positive 'r' indicates a positive linear relationship, while a negative 'r' indicates a negative linear relationship. Additionally, pay attention to the p-value; a small p-value (\< 0.05) suggests statistical significance, indicating that the observed correlation is unlikely to have occurred by chance.
 
-            **Correlation result explanation**
+        **Correlation result explanation**
 
         -   **`var1`** and **`var2`**: These columns specify the variables that were used in the correlation test. In this case:
 
@@ -1761,7 +1761,7 @@ In summary, these statistical concepts - confidence intervals, p-values, and cor
 
         -   **`method`**: This column specifies the method used for the correlation test. In this case, it's "Pearson," indicating that a Pearson correlation test was performed.
 
-        *Interpretation:*
+    5.  *Interpretation:*
 
         -   The Pearson correlation coefficient (r) of approximately 0.2 suggests a weak positive correlation between the variables "Tree_Density_per_ha" and "Aboveground_Tree_Carbon_ton_per_ha." This indicates that as one variable increases, the other tends to increase, but the relationship is not very strong.
 
@@ -1771,7 +1771,7 @@ In summary, these statistical concepts - confidence intervals, p-values, and cor
 
         The results indicate a weak positive correlation between the two variables, but it's not statistically significant at the conventional significance level of 0.05. Researchers would typically interpret this as there being insufficient evidence to conclude that a significant correlation exists between "Tree_Density_per_ha" and "Aboveground_Tree_Carbon_ton_per_ha" in the studied population. However, further investigation or a larger sample size may be needed to draw more definitive conclusions.
 
-    4.  **Interpreting the Results:** The correlation test provides a correlation coefficient, often denoted as 'r.' This coefficient quantifies the strength and direction of the relationship. In our case, if 'r' is positive and close to 1, it indicates a positive linear relationship, implying that as tree density increases, the above-ground tree carbon content tends to increase. If 'r' is negative and close to -1, it suggests a negative linear relationship. If 'r' is close to 0, it indicates a weak or no linear relationship.
+    6.  **Interpreting the Results:** The correlation test provides a correlation coefficient, often denoted as 'r.' This coefficient quantifies the strength and direction of the relationship. In our case, if 'r' is positive and close to 1, it indicates a positive linear relationship, implying that as tree density increases, the above-ground tree carbon content tends to increase. If 'r' is negative and close to -1, it suggests a negative linear relationship. If 'r' is close to 0, it indicates a weak or no linear relationship.
 
         Additionally, the result will typically include a p-value. A small p-value (typically \< 0.05) suggests that the observed correlation is statistically significant.
 
