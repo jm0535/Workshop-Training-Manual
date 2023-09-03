@@ -28,21 +28,43 @@ knitr::opts_chunk$set(echo = TRUE)
 
 \newpage
 
-# Introduction
-
 ![](images/logos.png){alt="Official logos or icons for R, RStudio and Jamovi."}
+
+# Introduction
 
 ## Purpose of the Manual
 
-The purpose of this manual is to provide comprehensive step-by-step instructions for the installation of essential data analysis tools: R, RStudio, and Jamovi. These software packages are widely used in various fields for statistical analysis, data visualization, and research.
+This comprehensive manual serves as a detailed and user-friendly guide, aiming to facilitate the installation and proficient utilization of fundamental data analysis tools: R, RStudio, and Jamovi. These software packages hold pivotal roles in numerous domains, including the fields of forestry and ecology, where they are instrumental for conducting rigorous statistical analysis, crafting insightful data visualizations, and driving impactful research endeavors.
 
-By following the instructions outlined in this manual, you will be able to:
+**Training Success**: Notably, this training manual has played a pivotal role as an integral component of a workshop conducted at the Department of Forestry, Papua New Guinea University of Technology. The foremost aim of this workshop was to empower its participants, the majority of whom were beginners, by equipping them with the essential tools and competencies necessary for proficient data analysis within the specialized domains of forestry and ecology.
 
--   **Install R**: R is a powerful statistical programming language and environment. It is widely used for data analysis, statistical modeling, and graphics. This manual will guide you through the process of installing R on your preferred operating system.
+**Future Enhancements**: Looking ahead, this manual will continually evolve to encompass more advanced data analysis techniques, including spatial mapping and modeling. These enhancements are designed to cater to the growing needs of researchers, professionals, and students in the fields of forestry and ecology.
 
--   **Install RStudio**: RStudio is an integrated development environment (IDE) for R. It provides a user-friendly interface and additional features to enhance your R programming experience. This manual will help you install RStudio.
+**Upcoming Workshops**: Furthermore, this manual will serve as a cornerstone in forthcoming workshops. These workshops are envisioned to delve deeper into complex data analyses, advanced modeling approaches, and the utilization of geospatial data for enhanced ecological insights. We are committed to providing participants with cutting-edge knowledge and practical skills to excel in the dynamic realms of forestry and ecology.
 
--   **Install Jamovi**: Jamovi is a user-friendly statistical software that simplifies data analysis and visualization. It is particularly suitable for those who are new to statistical software. This manual will walk you through the installation of Jamovi.
+Through these future developments and workshops, we aim to foster a community of proficient data analysts and researchers who can make significant contributions to the sustainable management of our natural ecosystems.
+
+**Key Outcomes**:
+
+-   **Tool Proficiency**: Participants are equipped with the proficiency to harness the capabilities of R, RStudio, and Jamovi as powerful aids in their data analysis workflows.
+
+-   **Statistical Analysis**: Through this training, participants gain the knowledge and practical skills needed for in-depth statistical analysis, enabling them to test hypotheses, explore correlations, and draw data-driven conclusions.
+
+-   **Data Visualization**: The manual guides participants in leveraging these tools to create informative and visually compelling data visualizations, a vital aspect of data communication.
+
+-   **Research Empowerment**: Equipped with these indispensable tools and the know-how to wield them effectively, attendees are better positioned to contribute meaningfully to research projects, particularly in the domains of forestry and ecology.
+
+By immersing themselves in the contents of this manual, readers will not only attain the capability to install and navigate these software packages but will also gain valuable insights into their practical applications. This newfound proficiency will not only enhance their ability to conduct sound data analysis but will also empower them to make substantial contributions to the fields of forestry and ecology.
+
+Further, by following the instructions outlined in this manual, you will achieve the following objectives:
+
+-   **Install R: R** is a versatile and widely adopted statistical programming language and environment. It empowers researchers and analysts to perform complex data analysis, build statistical models, and create insightful visualizations. This manual will lead you through the installation process for R on your preferred operating system.
+
+-   **Install RStudio: RStudio** is an integrated development environment (IDE) tailored for R users. It offers an intuitive interface and a host of tools to enhance your R programming experience. Installing RStudio, as guided in this manual, will equip you with a user-friendly platform for efficient data analysis and script development.
+
+-   **Install Jamovi: Jamovi** is a user-centric statistical software designed to streamline data analysis and visualization. It excels at making statistical concepts accessible, making it ideal for users new to statistical software. This manual will provide you with a step-by-step walkthrough of the installation process for Jamovi.
+
+With the installation of these tools, you will be well-prepared to embark on data-driven research, hypothesis testing, correlation analysis, and more, ultimately contributing to advancements in the fields of forestry and ecology.
 
 ## Prerequisites
 
@@ -635,7 +657,45 @@ I hope that this installation manual has been a valuable resource in getting you
 
 # **R and Jamovi**
 
-We will continue our exploration of data analysis tools by introducing you to two powerful platforms: R and Jamovi. As a brief recap of our previous session, you've learned about the significance of inferential statistics and its applications in forestry research. Furthermore, this section provides an introduction to R and Jamovi, covering the installation of R and RStudio, basic R commands, data structures, and importing data. It also introduces Jamovi's interface, data import, and basic data manipulation. Now, we will dive into the practical aspects of using R and Jamovi for data analysis.
+We will continue our exploration of data analysis tools by introducing you to two powerful platforms: R and Jamovi. As a brief recap of our previous session, you've learned about the significance of inferential statistics and its applications in forestry and ecological research (see supplementary section for more detail information). Furthermore, this section provides an introduction to R and Jamovi, covering packages and modules, installation of R and RStudio, basic R commands, data structures, and importing data. It also introduces Jamovi's interface, data import, and basic data manipulation. Now, we will dive into the practical aspects of using R and Jamovi for data analysis.
+
+## R Packages and Modules in Jamovi
+
+R Packages and Jamovi Modules are both essential components of statistical analysis and data manipulation, but they differ in several key ways:
+
+### **R Packages:**
+
+1.  **Language Foundation**: R packages are part of the R programming language. R is a versatile, open-source scripting language and environment explicitly designed for statistical computing and data analysis.
+
+2.  **Community-Driven**: R packages are developed by a diverse community of statisticians, data scientists, and programmers from around the world. Anyone can contribute to or create R packages, leading to a vast ecosystem with thousands of packages.
+
+3.  **Functionality**: R packages provide a wide range of functions and tools for statistical analysis, data visualization, machine learning, and more. These packages can be highly specialized, focusing on specific tasks or domains.
+
+4.  **Flexibility**: R packages offer a high level of customization and flexibility. Users can write their R code, combining functions from various packages to create tailored solutions.
+
+5.  **Syntax**: R uses its syntax, which is based on function calls and assignments. Users need to learn R's specific syntax to work with R packages effectively.
+
+6.  **Integration**: R packages can be integrated with other programming languages like Python and C++, enabling users to harness the capabilities of these languages within R.
+
+7.  **Code-Based**: Using R packages often requires writing code or scripts to perform data analysis and visualization tasks. It's suitable for those comfortable with programming.
+
+### **Jamovi Modules:**
+
+1.  **Graphical User Interface (GUI)**: Jamovi is a statistical software that provides a point-and-click graphical user interface (GUI). Jamovi modules are components within this GUI that allow users to perform specific analyses without writing code.
+
+2.  **Built-In Functionality**: Jamovi modules come pre-installed with the software and cover a wide range of statistical analyses. Users can access these modules through a user-friendly interface, eliminating the need for coding.
+
+3.  **Ease of Use**: Jamovi is designed for users who may not have programming experience. It simplifies statistical analysis by providing intuitive menus, buttons, and options.
+
+4.  **Accessibility**: Jamovi is an excellent choice for beginners and users who prefer not to write code. It offers a low learning curve and helps users quickly perform common statistical tasks.
+
+5.  **Interactivity**: Jamovi allows users to interact with their data visually. Users can load datasets, click through options, and see immediate results in the interface.
+
+6.  **Modular Design**: Jamovi follows a modular design, meaning users can combine different modules to create analysis pipelines. This modular approach promotes reusability and versatility.
+
+7.  **Scripting and R Integration**: While Jamovi emphasizes point-and-click functionality, it also includes an R Syntax mode. This mode enables users to write and execute R code within Jamovi, combining the strengths of both approaches.
+
+R Packages are code libraries for the R programming language, offering extensive functionality and flexibility but requiring coding skills. Jamovi Modules, on the other hand, are part of a user-friendly statistical software with a GUI, designed for ease of use and accessibility, making statistical analysis more accessible to a broader audience, including those without coding experience.
 
 ## **Getting Started with R**
 
@@ -673,7 +733,7 @@ Open RStudio by searching for "RStudio" in your computer's application menu.
 
 -   The console displays R's output and can be used for direct command entry.
 
-#### **Basic Commands and Data Structures:**
+### **Basic Commands and Data Structures:**
 
 Let's explore some basic commands and data structures:
 
@@ -836,7 +896,7 @@ Jamovi is a user-friendly statistical software with an intuitive interface. You 
 
     -   The right panel shows the analysis output.
 
-### Section 2: Importing Data and Basic Data Manipulation using Jamovi
+### Importing Data and Basic Data Manipulation using Jamovi
 
 #### **Step 3: Importing Data**
 
@@ -850,7 +910,7 @@ Jamovi is a user-friendly statistical software with an intuitive interface. You 
 
 1.  After loading the data, explore the "Data" tab on the left panel.
 
-    -   You can view and manipulate variables, including renaming, recoding, or creating new variables.
+    -   You can view and manipulate variables, including renaming, re-coding, or creating new variables.
 
 2.  To perform basic data manipulation tasks:
 
@@ -866,7 +926,7 @@ Jamovi is a user-friendly statistical software with an intuitive interface. You 
 
     -   Select "Save Project As" and choose a location to save your .omv project file.
 
-### Section 3: Introduction to Statistical Analyses in Jamovi
+### Introduction to Statistical Analyses in Jamovi
 
 #### **Step 6: Running Basic Analyses**
 
@@ -960,9 +1020,9 @@ In this section of the workshop, you will actively engage in hands-on exercises 
 
 Effective EDA is the foundation of successful ecological and forestry research. It empowers you to uncover insights hidden within your data, make informed decisions about data preprocessing, and generate hypotheses for further investigation. By the end of this workshop, you will have practical skills in performing EDA using both R and Jamovi, enabling you to enhance the quality of your research and analysis in the field of ecology and forestry.
 
-# Real-World Dataset Execises
+# Real-World Dataset and Exercise
 
-In this exercise will perform a simple hypothesis test using real-world data set. Data used in this exercise was extracted from the mendeley database (Win, Kyaw (2023), "Aboveground Tree Carbon of Teak Plantations in West Bago Mountains, Myanmar", Mendeley Data, V1, doi: 10.17632/3xvcfskhwz.1): [Aboveground Tree Carbon of Teak Plantations in West Bago Mountains, Myanmar](https://data.mendeley.com/datasets/3xvcfskhwz/1).
+In this exercise we will perform a simple hypothesis test using real-world data set. Data used in this exercise was extracted from the mendeley database (Win, Kyaw (2023), "Aboveground Tree Carbon of Teak Plantations in West Bago Mountains, Myanmar", Mendeley Data, V1, doi: 10.17632/3xvcfskhwz.1): [Aboveground Tree Carbon of Teak Plantations in West Bago Mountains, Myanmar](https://data.mendeley.com/datasets/3xvcfskhwz/1).
 
 ## Import and explore the dataset in Jamovi
 
@@ -980,23 +1040,95 @@ Steps
 
 ## Performing hypothesis test in Jamovi
 
-1.  Create a hypthesis to test based on the data set.
+1.  Create a hypothesis to test based on the data set.
 
     1.  Ho: There are no differences in above ground tree carbon content among plantation ages.
 
     2.  Ha: There are differences in above ground tree carbon content among plantation ages.
 
-2.  We decide that the appropriate statistical test required to test the above hypothesis is a two-way ANOVA since we are interested in the differences between plantation ages and also that the predictor/ explanatory variable has more than two sublevels.
+2.  We decide that the appropriate statistical test required to test the above hypothesis is a two-way ANOVA since we are interested in the differences between plantation ages and also that the predictor/ explanatory variable has more than two sub-levels.
 
-3.  First, we perform normality test on the response variable 'Aboveground_Tree_Carbon_ton_per_ha_per_year' using the "shapiro-wilk" test. We see a significant effect (*p \< 0.001*) indicating that the variable is not normally distributed hence we have to select a non-parametric equivalent test and that would be the "Kruska-Wallis" test. ![Perform normality test on the responds variable.](images/Screenshot%20from%202023-09-01%2013-19-11.png)
+3.  First, we perform normality test on the response variable 'Aboveground_Tree_Carbon_ton_per_ha_per_year' using the "Shapiro-Wilk" test. We see a significant effect (*p \< 0.001*) indicating that the variable is not normally distributed hence we have to select a non-parametric equivalent test and that would be the "Kruskal-Wallis" test. ![Perform normality test on the responds variable.](images/Screenshot%20from%202023-09-01%2013-19-11.png)
 
-4.  From the analysis tab, select the ANOVA button and select "Kruskal-Wallis" from the non-parametric section which is appropriate for this case. We found a significant effect of plantation age on the carbon content (p \< .001) indicating that there are signficant differences in carbon content between the plantation ages. A furthe pairwise comparison is needed to show where exactly do these differences exist between the plantation ages. ![Kruskal-Wallis test and pairwise comparison.](images/Screenshot%20from%202023-09-01%2013-36-15.png)
+4.  From the analysis tab, select the ANOVA button and select "Kruskal-Wallis" from the non-parametric section which is appropriate for this case. We found a significant effect of plantation age on the carbon content (p \< .001) indicating that there are significant differences in carbon content between the plantation ages. A further pairwise comparison is needed to show where exactly do these differences exist between the plantation ages. ![Kruskal-Wallis test and pairwise comparison.](images/Screenshot%20from%202023-09-01%2013-36-15.png)
 
-5.  Boxplots can be used to visually display the results. ![Boxplots.](images/Screenshot%20from%202023-09-01%2013-40-03.png)
+5.  Box-plots can be used to visually display the results. ![Boxplots.](images/Screenshot%20from%202023-09-01%2013-40-03.png)
 
-# Integration: R in Jamovi & Jamovi in R 
+# Software Integration
 
-Any analysis in Jamovi has an R interface which means that analysis or plots created in Jamovi has an R syntax. This syntax can be easily copied and used in R.
+**Jamovi**, a user-friendly and open-source statistical analysis software, offers an interface that seamlessly integrates with **R**, a powerful programming language and environment for statistical computing. This integration combines the user-friendly features of Jamovi with the robust statistical capabilities of R, providing a flexible platform for data analysis and visualization.
+
+Key points to consider in integrating R in Jamovi:
+
+1.  **Enhanced Statistical Power**: Jamovi's integration with R allows users to access a wide range of advanced statistical techniques and methods available in the R ecosystem. This includes specialized packages for complex data analysis and modeling.
+
+2.  **Interactive Analysis**: Users can perform analyses in Jamovi using its point-and-click interface while observing the R syntax generated in real-time. This helps users learn and understand the R code associated with their analyses.
+
+3.  **Customization and Automation**: For users familiar with R, the integration enables seamless customization and automation of analyses. R users can extend analyses conducted in Jamovi with additional scripting and package integration.
+
+4.  **Data Visualization**: R's data visualization capabilities are available within Jamovi, allowing users to create custom plots and charts for data exploration and presentation.
+
+5.  **Statistical Reporting**: Users can generate reports in Jamovi, including statistical summaries, tables, and visualizations, which can be customized and exported for publication or sharing.
+
+6.  **Collaboration**: Teams with varying levels of statistical expertise can collaborate effectively. Users can share Jamovi projects with colleagues, even if they are not R proficient, ensuring consistent analyses and results.
+
+7.  **Learning Opportunity**: For those new to R, Jamovi serves as a valuable learning tool. Users can explore the R code generated by Jamovi, helping them transition to more extensive R-based analyses.
+
+In essence, integrating R in Jamovi offers a powerful combination of user-friendly statistical analysis and the versatility of R scripting. It caters to both beginners and experienced statisticians, making it an ideal choice for data analysis, research, and collaboration across diverse domains.
+
+## R as a Backend
+
+1.  **R as a Backend:** Jamovi, a user-friendly statistical analysis software, uses R as its computational backend. This means that when you perform statistical analyses or create plots in Jamovi, the software generates and executes corresponding R code in the background. This allows users who may not be familiar with R to take advantage of its powerful statistical capabilities.
+
+2.  **Point-and-Click Interface:** Jamovi provides a point-and-click interface for performing statistical analyses. Users can easily import datasets, perform various statistical tests, create visualizations, and generate reports without writing any R code.
+
+3.  **Real-Time Syntax Generation:** One of the key features of Jamovi is its ability to generate R syntax in real-time. As you perform actions in the Jamovi interface, such as running a t-test or creating a scatterplot, the corresponding R code is displayed. This provides users with a learning opportunity to understand the R commands associated with the analysis.
+
+4.  **Easy Transition to R:** For users who want to transition to R or have specific customization needs, Jamovi simplifies the process. Users can copy the generated R syntax from Jamovi and use it directly in their R environment for further customization or scripting.
+
+## **Integration of Jamovi in R**
+
+1.  **R Packages for Jamovi:** R users can take advantage of the "jmv" package, which allows them to interact with Jamovi directly from their R environment. This package provides functions to load Jamovi analyses, extract results, and incorporate Jamovi analyses into R scripts.
+
+2.  **Seamless Collaboration:** Researchers or data analysts who prefer R can still collaborate effectively with colleagues or team members using Jamovi. They can create their analyses in Jamovi, export the results as datasets, and then use R for advanced statistical modeling or further data manipulation.
+
+3.  **Customization:** R users can customize and extend the functionality of Jamovi analyses using R packages and scripts. This allows for greater flexibility and advanced data analysis when needed.
+
+4.  **Leveraging the Best of Both Worlds:** The integration of Jamovi in R and R in Jamovi offers the best of both worlds. Users can enjoy the simplicity and user-friendly interface of Jamovi for routine analyses while harnessing the extensive statistical and data manipulation capabilities of R when required.
+
+The integration of R in Jamovi and Jamovi in R provides users with a flexible and powerful ecosystem for conducting statistical analyses. It accommodates users of varying skill levels, from those who prefer a graphical interface to those who are experienced R users, facilitating effective collaboration and streamlined workflows in data analysis and research.
+
+## Setting up R Syntax Mode in Jamovi
+
+Setting up R Syntax mode in Jamovi allows users to harness the full power of R programming within Jamovi's user-friendly interface. This mode enables users to write, execute, and customize R code seamlessly while taking advantage of Jamovi's data visualization and analysis features. Here's how to set up R Syntax mode in Jamovi:
+
+1.  **Install Jamovi**: If you haven't already, download and install Jamovi on your computer from the official Jamovi website ([**https://www.jamovi.org/download.html**](https://www.jamovi.org/download.html)).
+
+2.  **Launch Jamovi**: Open Jamovi and create or open a dataset for analysis. You'll typically start in the default point-and-click mode.
+
+3.  **Enable R Syntax Mode**:
+
+    -   Click on the "Analyses" tab located on the left panel.
+
+    -   In the "Analyses" tab, you'll see a drop-down menu labeled "R." Click on it.
+
+    -   From the drop-down menu, select "R Syntax Mode." This action switches your analysis interface to R Syntax mode.
+
+4.  **R Syntax Console**: Once you enable R Syntax Mode, you'll notice a console at the bottom of the screen. This console is where you'll write and execute R code.
+
+5.  **Writing R Code**: You can start writing R code directly in the console. For example, you can create variables, perform data manipulations, run statistical analyses, and create visualizations using R syntax.
+
+6.  **Running R Code**: To execute the R code you've written, simply press the "Run" button in the R Syntax Console or use the shortcut (typically Ctrl+Enter or Cmd+Enter).
+
+7.  **Output and Visualizations**: As you execute R code, any output, plots, or results will be displayed within the console. You can also create custom visualizations using R packages like ggplot2.
+
+8.  **Combining Point-and-Click and R**: Jamovi's unique feature allows you to switch between Point-and-Click mode and R Syntax mode seamlessly. You can start with a point-and-click analysis and switch to R Syntax mode to access advanced options and customization.
+
+9.  **Saving and Sharing**: You can save your Jamovi project, which includes your dataset, analyses, and R code. This makes it easy to share your work or collaborate with others.
+
+10. **Learning Resources**: If you're new to R, there are plenty of online resources and tutorials available to help you learn R programming within Jamovi. Additionally, the generated R code can serve as a valuable learning tool.
+
+Setting up R Syntax mode in Jamovi empowers users to perform complex analyses and customizations, making it a versatile tool for both beginners and experienced data analysts and researchers. It combines the accessibility of Jamovi with the flexibility of R, offering the best of both worlds for data analysis and visualization.
 
 1.  To set this up, navigate to the far-right indicated by 3 vertical dots.
 
@@ -1035,7 +1167,7 @@ scatr::scat(
 
 ```
 
-Explanation:
+**R Code Explanation:**
 
 -   **`pacman::p_load(jmv, scatr, jmvcore, install = TRUE, update = FALSE)`** is used to load three packages: **`jmv`**, **`scatr`**, and **`jmvcore`**. The **`install = TRUE`** parameter ensures that these packages are installed if they are not already installed, and **`update = FALSE`** prevents the packages from being updated.
 
@@ -1084,7 +1216,7 @@ plot1 <- ggplot2::ggplot(
 print(plot1)
 ```
 
-Explanation:
+**R Code Explanation:**
 
 -   **`pacman::p_load(...)`** is used to load three packages: **`ggthemes`**, **`ggplot2`**, and **`patchwork`**. The **`install = TRUE`** parameter ensures that these packages are installed if they are not already installed, and **`update = FALSE`** prevents the packages from being updated.
 
@@ -1141,11 +1273,11 @@ p1 + p2 &
   )
 ```
 
-Explanation:
+**R Code Explanation:**
 
 -   **`p1`** is created by modifying **`plot1`**. The X-axis label is changed, and the color legend title is removed.
 
--   **`plot2`** is created as a new customizable plot using **`ggplot2`**. It specifies the dataset and aesthetic mappings, creates a boxplot, and customizes the plot labels, axis limits, and theme settings.
+-   **`plot2`** is created as a new customizable plot using **`ggplot2`**. It specifies the dataset and aesthetic mappings, creates a box-plot, and customizes the plot labels, axis limits, and theme settings.
 
 -   **`p2`** is created by modifying **`plot2`**. The X-axis label is changed, and the Y-axis label is removed.
 
@@ -1177,7 +1309,7 @@ kruskal_pairwise <- jmv::anovaNP(
 kruskal_pairwise %>% print()
 ```
 
-Explanation:
+**R Code Explanation:**
 
 -   **`pacman::p_load(...)`** is used to load the required R packages, including **`jmv`** for statistical analysis and **`magrittr`** for data manipulation. The **`install`** parameter is set to **`TRUE`** to install the packages if they are not already installed, and **`update`** is set to **`FALSE`** to prevent updating packages.
 
@@ -1217,7 +1349,7 @@ Hypothesis testing plays a pivotal role in the fields of forestry and ecology, o
 
 5.  **Biodiversity Studies:** Hypothesis testing is instrumental in biodiversity studies. Ecologists can develop hypotheses about the factors contributing to biodiversity, including species interactions, habitat diversity, and environmental conditions. Through hypothesis testing, researchers can identify key drivers of biodiversity patterns and develop strategies to protect and preserve diverse ecosystems.
 
-In summary, hypothesis testing is an indispensable tool in forestry and ecology, providing researchers with a structured approach to explore and validate theories, make informed decisions, assess environmental impacts, conserve species, and study biodiversity. By subjecting hypotheses to rigorous statistical analysis, scientists contribute to a deeper understanding of the natural world and support evidence-based practices in these critical fields.
+Hypothesis testing is an indispensable tool in forestry and ecology, providing researchers with a structured approach to explore and validate theories, make informed decisions, assess environmental impacts, conserve species, and study biodiversity. By subjecting hypotheses to rigorous statistical analysis, scientists contribute to a deeper understanding of the natural world and support evidence-based practices in these critical fields.
 
 ### **Key Concepts**
 
@@ -1287,7 +1419,7 @@ Non-parametric tests should be employed when data doesn't meet parametric assump
 
 -   **Wilcoxon Signed-Rank Test:** Assess changes in insect abundance before and after a controlled burn in a grassland ecosystem. This non-parametric test is used for paired data to determine if the medians are different.
 
-In summary, understanding the choice between parametric and non-parametric tests is essential in forestry and ecology research. Parametric tests make specific assumptions about data distribution, while non-parametric tests are more flexible and suitable when assumptions are not met or when dealing with non-continuous data. The choice of test should align with the nature of the data and the research question.
+Understanding the choice between parametric and non-parametric tests is essential in forestry and ecology research. Parametric tests make specific assumptions about data distribution, while non-parametric tests are more flexible and suitable when assumptions are not met or when dealing with non-continuous data. The choice of test should align with the nature of the data and the research question.
 
 ### **Considerations for Choosing Between Parametric and Non-Parametric Tests in Forestry and Ecology**
 
@@ -1333,7 +1465,7 @@ In summary, understanding the choice between parametric and non-parametric tests
 
     -   **Data Transformations:** If your data doesn't meet parametric assumptions, consider data transformations to achieve normality. However, be cautious with transformations, as they can impact interpretation.
 
-In summary, the choice between parametric and non-parametric tests in forestry and ecology should be driven by a thorough understanding of your data, research questions, and assumptions. While parametric tests offer higher power under specific conditions, non-parametric tests provide robustness when assumptions are in doubt. It's essential to carefully consider these factors to make informed decisions about test selection in your research.
+The choice between parametric and non-parametric tests in forestry and ecology should be driven by a thorough understanding of your data, research questions, and assumptions. While parametric tests offer higher power under specific conditions, non-parametric tests provide robustness when assumptions are in doubt. It's essential to carefully consider these factors to make informed decisions about test selection in your research.
 
 ### **Practical Example**
 
@@ -1493,23 +1625,33 @@ In summary, these statistical concepts - confidence intervals, p-values, and cor
 
         ```{r echo=FALSE, message=FALSE, warning=FALSE}
 
+        # Load necessary packages (if not already loaded)
+        library(rstatix)
+        library(ggplot2)
+        library(haven)
+        library(knitr)
+        library(magrittr)
+
         # Load your dataset (assuming it's loaded into a variable named 'forest_data')
-        forest_data <- readr::read_csv("./data/Filtered.csv")
+        forest_data <- haven::read_sav("./data/Filtered.sav")
 
         # Display the first 15 rows in kable format
         forest_data[1:15, c(1,2,5)] %>% knitr::kable()
         ```
 
+        **R Code Explanation:**
+
+        **`library(haven)`**: In this line, the **`library()`** function is used to load the 'haven' package. The 'haven' package is used for importing and working with data stored in other statistical software formats like SPSS, SAS, and Stata within the R environment. It provides functions to read and manipulate data from these formats.
+
+        **`library(knitr)`**: This line loads the 'knitr' package. 'knitr' is a versatile package used for dynamic report generation and literate programming in R. It allows you to create documents that combine R code, results, and narrative text. This is particularly useful for generating reports, papers, or documents that include live R code and its output.
+
+        **`library(magrittr)`**: Here, the 'magrittr' package is loaded. 'magrittr' provides a pipe operator (**`%>%`**) that simplifies the process of applying a sequence of data manipulation operations to a dataset. It allows you to write code in a more readable and intuitive "pipeline" fashion, making complex operations easier to understand.
+
+        These three lines of code load the specified R packages, making their functions and features available for use in the R script or R Markdown document. This is a common practice at the beginning of an R script to ensure that the required packages are available for use throughout the script.
+
     3.  **Performing a Correlation Test:** You then conduct a correlation test to evaluate whether there's a significant relationship between canopy density and the number of bird species. Depending on the distribution of your data, you can choose between the Pearson correlation test for linear relationships or the Spearman rank correlation for non-linear relationships. Here's how you can perform it using R:
 
         ```{r message=FALSE, warning=FALSE}
-
-        # Load necessary packages (if not already loaded)
-        library(rstatix)
-        library(ggplot2)
-
-        # Load your dataset (assuming it's loaded into a variable named 'forest_data')
-        forest_data <- haven::read_sav("./data/Filtered.sav")
 
         # Perform a Pearson correlation test
         correlation_result <- forest_data %>% 
@@ -1537,7 +1679,7 @@ In summary, these statistical concepts - confidence intervals, p-values, and cor
         print(correlation_result)
         ```
 
-        -   **Code Explanations**
+        -   **R Code Explanations**
 
             -   Load Necessary Packages:
 
@@ -1583,7 +1725,7 @@ In summary, these statistical concepts - confidence intervals, p-values, and cor
 
         -   **`cor`**: This column shows the Pearson correlation coefficient (r) between the two variables. In this case, the correlation coefficient is approximately 0.2.
 
-        -   **`statistic`**: This column displays the test statistic associated with the correlation test. For Pearson correlation, this is often calculated as (correlation coefficient \* sqrt((n-2) / (1 - r\^2))), where 'n' is the sample size. In this case, the test statistic is approximately 1.82.
+        -   **`statistic`**: This column displays the test statistic associated with the correlation test. For Pearson correlation, this is often calculated as (*`correlation coefficient * sqrt((n-2) / (1 - r^2))`*), where 'n' is the sample size. In this case, the test statistic is approximately 1.82.
 
         -   **`p`**: The 'p-value' (probability value) is shown in this column. It represents the probability of obtaining a correlation as extreme as the observed correlation coefficient (0.2) by random chance, assuming there is no real correlation between the variables. In this case, the p-value is approximately 0.0718.
 
@@ -1599,13 +1741,13 @@ In summary, these statistical concepts - confidence intervals, p-values, and cor
 
         -   The confidence interval for the correlation coefficient spans from approximately -0.0182 to 0.404. Since this interval contains zero (0), it further suggests that the correlation is not statistically significant, as it includes the possibility of no correlation (r = 0).
 
-        In summary, the results indicate a weak positive correlation between the two variables, but it's not statistically significant at the conventional significance level of 0.05. Researchers would typically interpret this as there being insufficient evidence to conclude that a significant correlation exists between "Tree_Density_per_ha" and "Aboveground_Tree_Carbon_ton_per_ha" in the studied population. However, further investigation or a larger sample size may be needed to draw more definitive conclusions.
+        The results indicate a weak positive correlation between the two variables, but it's not statistically significant at the conventional significance level of 0.05. Researchers would typically interpret this as there being insufficient evidence to conclude that a significant correlation exists between "Tree_Density_per_ha" and "Aboveground_Tree_Carbon_ton_per_ha" in the studied population. However, further investigation or a larger sample size may be needed to draw more definitive conclusions.
 
-    4.  **Interpreting the Results:** The correlation test provides a correlation coefficient, often denoted as 'r.' This coefficient quantifies the strength and direction of the relationship. In our case, if 'r' is positive and close to 1, it indicates a positive linear relationship, implying that as canopy density increases, the number of bird species tends to increase. If 'r' is negative and close to -1, it suggests a negative linear relationship. If 'r' is close to 0, it indicates a weak or no linear relationship.
+    4.  **Interpreting the Results:** The correlation test provides a correlation coefficient, often denoted as 'r.' This coefficient quantifies the strength and direction of the relationship. In our case, if 'r' is positive and close to 1, it indicates a positive linear relationship, implying that as tree density increases, the above-ground tree carbon content tends to increase. If 'r' is negative and close to -1, it suggests a negative linear relationship. If 'r' is close to 0, it indicates a weak or no linear relationship.
 
         Additionally, the result will typically include a p-value. A small p-value (typically \< 0.05) suggests that the observed correlation is statistically significant.
 
-        Your interpretation might be: "There is a statistically significant positive (or negative) correlation (correlation coefficient 'r') between tree canopy density and the number of bird species in the forest at a significance level of 0.05."
+        Your interpretation might be: "*There is a statistically significant positive (or negative) correlation (correlation coefficient 'r') between tree density and above-ground tree carbon content at a significance level of 0.05.*"
 
         This practical example illustrates how correlation tests are applied in forestry and ecology to assess relationships between ecological variables, providing valuable insights for conservation and management decisions.
 
@@ -1641,7 +1783,7 @@ In summary, these statistical concepts - confidence intervals, p-values, and cor
 
     -   **Practical Use:** Ecologists might use correlation tests to assess if there's a significant relationship between tree canopy density and the number of bird species in a particular forest. A positive correlation would suggest that as canopy density increases, so does the number of bird species.
 
-In summary, confidence intervals provide a way to estimate population parameters, p-values help assess evidence against the null hypothesis, and correlation tests quantify relationships between variables. These tools are fundamental for researchers in forestry and ecology to draw meaningful conclusions from data and make informed decisions.
+Confidence intervals provide a way to estimate population parameters, p-values help assess evidence against the null hypothesis, and correlation tests quantify relationships between variables. These tools are fundamental for researchers in forestry and ecology to draw meaningful conclusions from data and make informed decisions.
 
 ## **Advanced R and Jamovi Data Analysis: T-test, ANOVA, and Linear Regression**
 
@@ -1665,7 +1807,7 @@ Forestry and ecology research often deals with intricate ecosystems, diverse spe
 
 7.  **Interdisciplinary Research:** Forestry and ecology increasingly intersect with other disciplines such as remote sensing, geospatial analysis, and machine learning. Advanced data analysis facilitates interdisciplinary collaboration, enabling researchers to combine expertise and tackle complex environmental challenges.
 
-In summary, advanced data analysis techniques empower forestry and ecology researchers to navigate the intricacies of natural systems, make data-driven decisions, and contribute to our understanding of the complex relationships between ecosystems and the environment. These techniques are essential tools for addressing contemporary ecological and environmental challenges.
+Advanced data analysis techniques empower forestry and ecology researchers to navigate the intricacies of natural systems, make data-driven decisions, and contribute to our understanding of the complex relationships between ecosystems and the environment. These techniques are essential tools for addressing contemporary ecological and environmental challenges.
 
 ### **t-test**
 
@@ -1769,4 +1911,4 @@ In the realm of ecological and environmental research, statistical analysis play
 
     -   *For example, ANOVA may reveal significant differences in plant species richness across different forest types, helping conservationists make informed choices about ecosystem management. Similarly, linear regression can quantify the impact of environmental variables on wildlife populations.*
 
-In summary, T-tests, ANOVA, and linear regression are invaluable tools that empower ecologists to explore, analyze, and understand ecological data. By selecting the appropriate method and conducting rigorous analyses, researchers can unlock insights that contribute to conservation efforts, environmental policies, and a deeper comprehension of the natural world.
+t-tests, ANOVA, and linear regression are invaluable tools that empower ecologists to explore, analyze, and understand ecological data. By selecting the appropriate method and conducting rigorous analyses, researchers can unlock insights that contribute to conservation efforts, environmental policies, and a deeper comprehension of the natural world.
