@@ -739,30 +739,34 @@ Let's explore some basic commands and data structures:
 
 ``` r
 # Basic Arithmetic
-2 + 3       # Addition
-5 - 2       # Subtraction
-4 * 6       # Multiplication
-8 / 4       # Division
+2 + 3       # Addition: Calculates and returns 2 plus 3, which is 5.
+5 - 2       # Subtraction: Calculates and returns 5 minus 2, which is 3.
+4 * 6       # Multiplication: Calculates and returns 4 times 6, which is 24.
+8 / 4       # Division: Calculates and returns 8 divided by 4, which is 2.
 
 # Assigning Values to Variables
-x <- 10     # Assign 10 to the variable x
-y <- 5      # Assign 5 to the variable y
+x <- 10     # Assign 10 to the variable x: Creates a variable 'x' and assigns the value 10 to it.
+y <- 5      # Assign 5 to the variable y: Creates a variable 'y' and assigns the value 5 to it.
 
 # Vectors
-my_vector <- c(3, 6, 9, 12)  # Create a numeric vector
-length(my_vector)            # Check the length of the vector
-mean(my_vector)              # Calculate the mean of the vector
+my_vector <- c(3, 6, 9, 12)  # Create a numeric vector: Constructs a vector 'my_vector' with the values 3, 6, 9, and 12.
+length(my_vector)            # Check the length of the vector: Returns the number of elements in 'my_vector' (4).
+mean(my_vector)              # Calculate the mean of the vector: Computes the average of the values in 'my_vector' (7.5).
 
 # Data Frames (a common data structure in R)
-# Create a sample forestry dataset
+# Create a sample forestry dataset: Generates a data frame 'forest_data' with columns 'TreeSpecies', 'Height', and 'Diameter'.
 forest_data <- data.frame(
   TreeSpecies = c("Oak", "Pine", "Maple", "Birch"),
   Height = c(25, 20, 18, 22),
   Diameter = c(10, 8, 7, 9)
 )
 
-print(forest_data)
+print(forest_data)  # Print the data frame 'forest_data': Displays the content of the data frame.
 ```
+
+**R Code Explanation:**
+
+-   Codes above illustrate basic arithmetic operations, variable assignment, the creation and manipulation of vectors, and the construction of a data frame in R. It demonstrates fundamental operations commonly used in data analysis and manipulation in R.
 
 ### Importing Data into R
 
@@ -825,6 +829,8 @@ utils::write.csv(
 
 # Use getwd() to show your current working directory path
 ```
+
+**R Code Explanation:**
 
 -   The code first checks if the "pacman" package is available using the **`require`** function. If it's not available, it installs the "pacman" package and then loads it using **`require`**.
 
@@ -1030,29 +1036,39 @@ Steps
 
 1.  Open "Filtered.sav" file in Jamovi. The data should already be placed in the "data" sub-directory.
 
+    ![open .sav file](images/Screenshot from 2023-09-03 12-14-50.png)
+
 2.  Go to the "Variables" tab and remove the last four columns/ variables as we won't use them.
 
-3.  Go to the "Data" tab and change the "Plantation_age" data/ measure type to "*ordinal*". ![Change data types](images/Screenshot%20from%202023-09-01%2012-48-46.png){width="180mm"}
+    ![remove columns](images/Screenshot from 2023-09-03 12-27-30.png)
+
+3.  Go to the "Data" tab and change the "Plantation_age" data/ measure type to "*ordinal*" via the "Setup" button. ![Change data types](images/Screenshot%20from%202023-09-01%2012-48-46.png){width="180mm"}
 
 4.  Navigate to the "Analyses" tab and from the "Exploration" button select "Descriptives". Use the functions from this window to explore the data set. ![Perform data exploration (descriptive) on the selected variable.](images/Screenshot%20from%202023-09-01%2012-55-58.png)
 
-5.  You can further perform data exploration visually. Select the "scatterplot" from the "Exploration button and insert the appropriate variables to generate a scatterplot with linear fits along with density plots. ![Linear and density plots](images/Screenshot%20from%202023-09-01%2013-02-42.png)
+5.  You can further perform data exploration visually. Select the "scatterplot" from the "Exploration" button and insert the appropriate variables to generate a scatterplot with linear fits along with density plots. ![Linear and density plots](images/Screenshot%20from%202023-09-01%2013-02-42.png){width="1500"}
+
+6.  You can also perform correlation test including other statistical tests.
+
+![](images/Screenshot from 2023-09-03 12-21-45.png)
 
 ## Performing hypothesis test in Jamovi
 
-1.  Create a hypothesis to test based on the data set.
+1.  **Formulating the Hypothesis**: To assess the impact of plantation age on above-ground tree carbon content, we formulate our hypotheses:
 
-    1.  Ho: There are no differences in above ground tree carbon content among plantation ages.
+    -   Null Hypothesis (Ho): *There are no significant differences in above-ground tree carbon content among different plantation ages.*
 
-    2.  Ha: There are differences in above ground tree carbon content among plantation ages.
+    -   Alternative Hypothesis (Ha): *There are significant differences in above-ground tree carbon content among different plantation ages.*
 
-2.  We decide that the appropriate statistical test required to test the above hypothesis is a two-way ANOVA since we are interested in the differences between plantation ages and also that the predictor/ explanatory variable has more than two sub-levels.
+2.  **Selecting the Appropriate Test**: To scrutinize these hypotheses, we opt for a two-way ANOVA. This choice aligns with our research objectives as we intend to explore variations in above-ground carbon content across multiple plantation ages.
 
-3.  First, we perform normality test on the response variable 'Aboveground_Tree_Carbon_ton_per_ha_per_year' using the "Shapiro-Wilk" test. We see a significant effect (*p \< 0.001*) indicating that the variable is not normally distributed hence we have to select a non-parametric equivalent test and that would be the "Kruskal-Wallis" test. ![Perform normality test on the responds variable.](images/Screenshot%20from%202023-09-01%2013-19-11.png)
+3.  **Addressing Data Normality**: As a prerequisite for conducting an ANOVA, we assess the normality of our response variable, 'Aboveground_Tree_Carbon_ton_per_ha_per_year,' using the Shapiro-Wilk test. The outcome reveals a significant effect (p \< 0.001), implying that this variable doesn't adhere to a normal distribution. Consequently, we pivot to the non-parametric equivalent, the "Kruskal-Wallis" test, as a robust alternative.![Perform normality test on the responds variable.](images/Screenshot%20from%202023-09-01%2013-19-11.png)
 
-4.  From the analysis tab, select the ANOVA button and select "Kruskal-Wallis" from the non-parametric section which is appropriate for this case. We found a significant effect of plantation age on the carbon content (p \< .001) indicating that there are significant differences in carbon content between the plantation ages. A further pairwise comparison is needed to show where exactly do these differences exist between the plantation ages. ![Kruskal-Wallis test and pairwise comparison.](images/Screenshot%20from%202023-09-01%2013-36-15.png)
+4.  **Executing the Kruskal-Wallis Test**: Navigating to the Analysis tab, we select the ANOVA button and then opt for the "Kruskal-Wallis" test from the non-parametric section. The results uncover a significant effect of plantation age on carbon content (*`p < .001`*). This substantiates the presence of meaningful disparities in carbon content across plantation ages.
 
-5.  Box-plots can be used to visually display the results. ![Boxplots.](images/Screenshot%20from%202023-09-01%2013-40-03.png)
+5.  **Unearthing Specific Differences**: To pinpoint where these differences manifest, we proceed with a pairwise comparison. This step elucidates the precise distinctions in carbon content among different plantation ages.![Kruskal-Wallis test and pairwise comparison.](images/Screenshot%20from%202023-09-01%2013-36-15.png)
+
+6.  **Visualizing Results**: To provide a more intuitive understanding, we employ box plots as a visual aid. These plots vividly display the variations in above-ground tree carbon content across different plantation ages, enhancing our ability to interpret and communicate the findings.![Boxplots.](images/Screenshot%20from%202023-09-01%2013-40-03.png)
 
 # Software Integration
 
@@ -1076,7 +1092,7 @@ Key points to consider in integrating R in Jamovi:
 
 In essence, integrating R in Jamovi offers a powerful combination of user-friendly statistical analysis and the versatility of R scripting. It caters to both beginners and experienced statisticians, making it an ideal choice for data analysis, research, and collaboration across diverse domains.
 
-## R as a Backend
+## R as a Backend for Jamovi
 
 1.  **R as a Backend:** Jamovi, a user-friendly statistical analysis software, uses R as its computational backend. This means that when you perform statistical analyses or create plots in Jamovi, the software generates and executes corresponding R code in the background. This allows users who may not be familiar with R to take advantage of its powerful statistical capabilities.
 
@@ -1108,17 +1124,33 @@ Setting up R Syntax mode in Jamovi allows users to harness the full power of R p
 
 3.  **Enable R Syntax Mode**:
 
-    -   Click on the "Analyses" tab located on the left panel.
+    -   Navigate to the far end right corner of Jamovi window and click on the three vertical dots.
 
-    -   In the "Analyses" tab, you'll see a drop-down menu labeled "R." Click on it.
+        ![3 dots](images/Screenshot from 2023-09-03 12-32-43.png)
 
     -   From the drop-down menu, select "R Syntax Mode." This action switches your analysis interface to R Syntax mode.
 
-4.  **R Syntax Console**: Once you enable R Syntax Mode, you'll notice a console at the bottom of the screen. This console is where you'll write and execute R code.
+        ![Syntax mode](images/Screenshot from 2023-09-03 11-38-22.png){width="183"}
 
-5.  **Writing R Code**: You can start writing R code directly in the console. For example, you can create variables, perform data manipulations, run statistical analyses, and create visualizations using R syntax.
+4.  **R Syntax Mode**: Once you enable R Syntax Mode, you'll notice that for any analysis or plotting, R codes will appear next to the results.
 
-6.  **Running R Code**: To execute the R code you've written, simply press the "Run" button in the R Syntax Console or use the shortcut (typically Ctrl+Enter or Cmd+Enter).
+    ![syntax](images/Screenshot from 2023-09-03 12-36-01.png)
+
+5.  **Writing R Code in Jamovi**:
+
+    -   You can write and execute R codes directly from within Jamovi's R editor. This is a module which is called "Rj" and can be accessed from the modules library. It must be installed and pinned to the main menu.
+
+        ![Rj module](images/Screenshot from 2023-09-03 11-50-42.png)
+
+    -   Click on the "Rj" icon and select "Rj editor".
+
+        ![rj editor](images/Screenshot from 2023-09-03 11-53-45.png)
+
+    -   You can start writing R code directly in the console. For example, you can create variables, perform data manipulations, run statistical analyses, and create visualizations using R syntax. Examples are shown below.
+
+        ![codes in Rj editor](images/Screenshot from 2023-09-03 11-55-42.png)
+
+6.  **Running R Code**: To execute the R code you've written, simply press the "Run" button in the R Syntax Console or use the shortcut (typically Ctrl+Shift+Enter or Cmd+Shift+Enter).
 
 7.  **Output and Visualizations**: As you execute R code, any output, plots, or results will be displayed within the console. You can also create custom visualizations using R packages like ggplot2.
 
@@ -1126,17 +1158,13 @@ Setting up R Syntax mode in Jamovi allows users to harness the full power of R p
 
 9.  **Saving and Sharing**: You can save your Jamovi project, which includes your dataset, analyses, and R code. This makes it easy to share your work or collaborate with others.
 
+    ![save project or workspace (.omv)](images/Screenshot from 2023-09-03 12-12-19.png)
+
+    ![copy plots or results](images/Screenshot from 2023-09-03 11-59-47.png)
+
 10. **Learning Resources**: If you're new to R, there are plenty of online resources and tutorials available to help you learn R programming within Jamovi. Additionally, the generated R code can serve as a valuable learning tool.
 
-Setting up R Syntax mode in Jamovi empowers users to perform complex analyses and customizations, making it a versatile tool for both beginners and experienced data analysts and researchers. It combines the accessibility of Jamovi with the flexibility of R, offering the best of both worlds for data analysis and visualization.
-
-1.  To set this up, navigate to the far-right indicated by 3 vertical dots.
-
-    ![3 dotts](images/Screenshot%20from%202023-09-01%2013-43-53.png)
-
-2.  From the side pane, check the box for "Syntax mode".
-
-    ![syntax mode](images/Screenshot%20from%202023-09-01%2013-45-41.png)
+Setting up R Syntax mode and Rj editor module in Jamovi empowers users to perform complex analyses and customizations, making it a versatile tool for both beginners and experienced data analysts and researchers. It combines the accessibility of Jamovi with the flexibility of R, offering the best of both worlds for data analysis and visualization.
 
 ## Example:
 
