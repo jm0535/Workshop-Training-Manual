@@ -28,6 +28,10 @@ editor_options:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+```{r klippy, echo=FALSE, include=TRUE}
+klippy::klippy()
+```
+
 \newpage
 
 ![](images/logos.png){alt="Official logos or icons for R, RStudio and Jamovi."}
@@ -98,7 +102,7 @@ Jamovi, on the other hand, is a user-friendly statistical software designed with
 
 This guide is tailored for:
 
--   Students and researchers entering the field of ecology.
+-   Students and researchers entering the field of ecology or related fields.
 
 -   Conservationists and environmentalists interested in data-driven decision-making.
 
@@ -110,11 +114,11 @@ Embark on your ecological data analysis journey with confidence. This guide aims
 
 This comprehensive manual is intended to serve as a detailed and user-friendly guide to the installation and competent use of core data analysis tools: R, RStudio, and Jamovi. These software programmes play critical roles in a variety of sectors, including forestry and ecology, where they are essential for conducting demanding statistical analysis, creating intelligent data visualizations, and driving significant research initiatives.
 
-Notably, this training manual played an important role as an integral component of a workshop held at the Department of Forestry, Papua New Guinea University of Technology. The primary goal of this course was to empower its participants, the majority of whom were novices, by providing them with the required tools and competences for competent data analysis within the specialized environment.
+Notably, this training manual played an important role as an integral component of a workshop held at the Department of Forestry, Papua New Guinea University of Technology. The primary goal of the workshop was to empower its participants, the majority of whom were novices, by providing them with the required tools and competences for competent data analysis within the specialized environment.
 
-This manual, which will be converted to a handbook in the near future, will be regularly expanded to cover complex data analysis techniques such as geographical mapping and modelling. These planned upgrades will serve as the foundation for a complete manual that will take your data analysis skills to the next level. These changes are intended to address the growing expectations of forestry and ecological researchers, professionals, and students.
+This manual, which will be converted to a handbook in the near future, will be regularly expanded to cover complex data analysis techniques such as geospatial mapping and modelling. These planned upgrades will serve as the foundation for a complete manual that will take your data analysis skills to the next level. These changes are intended to address the growing expectations of forestry and ecological researchers, professionals, and students.
 
-Furthermore, this manual will serve as a foundation for future workshops. These workshops aim to dive further into complicated data analysis, sophisticated modelling methodologies, and the use of geospatial data for improved ecological insights. We are devoted to equipping participants with cutting-edge information and practical skills that will enable them to flourish in the dynamic fields of forestry and ecology.
+Furthermore, this manual will serve as a foundation for future workshops. These workshops aim to dive further into complicated data analysis, sophisticated modelling methodologies, and the use of geospatial data for improved ecological insights. We are devoted to equipping participants with cutting-edge information and practical skills that will enable them to flourish in the dynamic fields of agriculture, environmental science, forestry and ecology.
 
 Through these future developments and workshops, we aim to foster a community of proficient data analysts and researchers who can make significant contributions to the sustainable management of our natural ecosystems.
 
@@ -3778,7 +3782,7 @@ To create ecological maps using geospatial data in R, you can follow these step-
 
 Before creating ecological maps, make sure you have the necessary R packages installed. You can install them using the **`install.packages()`** function if you haven't already:
 
-```{r create sd map, message=FALSE, warning=FALSE, paged.print=FALSE}
+```{r create sd map, message=FALSE, warning=FALSE, paged.print=FALSE, echo=TRUE, include=TRUE}
 # Load packages
 pacman::p_load(rinat,
                tidyverse,
@@ -3787,23 +3791,37 @@ pacman::p_load(rinat,
                update = F)
 
 # Search iNaturalist and download data for species observations
-colibri <- rinat::get_inat_obs(taxon_name = "Colibri",
-                               quality = "research",
-                               maxresults = 500) %>%
-  dplyr::as_tibble()
+# uncomment line below to search and download data
+
+# colibri <- rinat::get_inat_obs(taxon_name = "Colibri",
+#                                quality = "research",
+#                                maxresults = 500) %>%
+#   dplyr::as_tibble()
+
+# save the data to csv file (for later use if internet drops)
+# readr::write_csv(
+#   colibri,
+#   file = here::here("docs", "data", "colibri.csv"),
+#   col_names = TRUE,
+#   append = FALSE
+# )
+
+# Load data if above internet connection drops
+colibri <- readr::read_csv(file = here::here("docs", "data", "colibri.csv"),
+                           col_names = TRUE)
 
 # Create a map of Colibri sp.
 ggplot2::ggplot(data = colibri, aes(x = longitude,
                                     y = latitude,
                                     colour = scientific_name)) +
   ggplot2::geom_polygon(
-    data = map_data("world"),
+    data = ggplot2::map_data("world"),
     aes(x = long, y = lat, group = group),
-    fill = "grey95",
-    color = "gray40",
+    fill = "grey90",
+    color = "gray20",
     size = 0.1
   ) +
-  ggplot2::geom_point(cex = 3, alpha = 0.5) +
+  ggplot2::geom_point(cex = 3.5, alpha = 0.5) +
   ggplot2::coord_fixed(
     xlim = range(colibri$longitude, na.rm = TRUE),
     ylim = range(colibri$latitude, na.rm = TRUE)
