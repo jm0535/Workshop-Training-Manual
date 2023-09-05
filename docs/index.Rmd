@@ -32,7 +32,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ![](images/logos.png){alt="Official logos or icons for R, RStudio and Jamovi."}
 
-# Preface
+#   Preface
 
 Welcome to "Exploring Ecological Data with R and Jamovi: A Beginner's Guide to Statistical Data Analysis." This manual is designed to be your comprehensive companion on the journey to becoming proficient in ecological data analysis using two powerful tools: R and Jamovi.
 
@@ -40,7 +40,7 @@ In the realm of ecology, data analysis is at the heart of understanding the intr
 
 This manual is born out of the belief that mastering these tools should be an accessible and engaging experience for all, whether you are a seasoned ecologist looking to expand your analytical toolkit or a newcomer eager to embark on your ecological research journey.
 
-**What You Will Discover:**
+**What You Will Discover**
 
 -   **Installation and Setup:** In Chapter 1, we provide step-by-step guidance on installing R, RStudio, and Jamovi on your preferred operating system. Get ready to embark on a data analysis adventure!
 
@@ -58,7 +58,7 @@ This manual is born out of the belief that mastering these tools should be an ac
 
 -   **Case Studies:** Throughout this guide, you'll encounter real-world ecological case studies in Chapter 8. These practical examples demonstrate how R and Jamovi are applied to solve ecological problems, offering valuable insights into the application of these tools in ecological research.
 
-**Your Ecological Journey Begins:**
+**Your Ecological Journey Begins**
 
 With this manual as your guide, you're embarking on a journey of discovery, analysis, and ecological understanding. We encourage you to embrace every chapter, practice with real datasets, and apply what you learn to your own ecological questions.
 
@@ -78,12 +78,12 @@ Dr. Jimmy Moses (Ph.D.)
 
 ![](images/pnguot_logo-03.png){width="100"}
 
-\
-\
+<br>
+
+<br>
 
 # Introduction {#sec-introduction}
 
-\
 Ecology, the study of the interactions between organisms and their environment, generates vast amounts of data. Analyzing this data is crucial for understanding ecosystems, making informed conservation decisions, and addressing environmental challenges. Statistical data analysis is the cornerstone of ecological research, enabling scientists to derive meaningful insights from complex ecological datasets.
 
 This guide, "Exploring Ecological Data with R and Jamovi," is tailored for beginners in the field of ecology who are eager to harness the power of statistical analysis to unravel ecological mysteries. Whether you're a budding ecologist, a conservation enthusiast, or a student embarking on ecological research, this guide will serve as your compass through the intricate world of data analysis.
@@ -108,9 +108,9 @@ Embark on your ecological data analysis journey with confidence. This guide aims
 
 ## Purpose of this Manual
 
-This comprehensive manual is intended to serve as a detailed and user-friendly guide to the installation and competent use of core data analysis tools: R, RStudio, and Jamovi. These software programmes play critical roles in a variety of sectors, including forestry and ecology, where they are essential for conducting demanding statistical analysis, creating intelligent data visualisations, and driving significant research initiatives.
+This comprehensive manual is intended to serve as a detailed and user-friendly guide to the installation and competent use of core data analysis tools: R, RStudio, and Jamovi. These software programmes play critical roles in a variety of sectors, including forestry and ecology, where they are essential for conducting demanding statistical analysis, creating intelligent data visualizations, and driving significant research initiatives.
 
-Notably, this training manual played an important role as an integral component of a workshop held at the Department of Forestry, Papua New Guinea University of Technology. The primary goal of this course was to empower its participants, the majority of whom were novices, by providing them with the required tools and competences for competent data analysis within the specialised environment.
+Notably, this training manual played an important role as an integral component of a workshop held at the Department of Forestry, Papua New Guinea University of Technology. The primary goal of this course was to empower its participants, the majority of whom were novices, by providing them with the required tools and competences for competent data analysis within the specialized environment.
 
 This manual, which will be converted to a handbook in the near future, will be regularly expanded to cover complex data analysis techniques such as geographical mapping and modelling. These planned upgrades will serve as the foundation for a complete manual that will take your data analysis skills to the next level. These changes are intended to address the growing expectations of forestry and ecological researchers, professionals, and students.
 
@@ -130,9 +130,9 @@ Through these future developments and workshops, we aim to foster a community of
 
 Readers will not only obtain the skills to set up and utilize the aforementioned programs by immersing themselves in the contents of this handbook, but they will also receive vital insights into their practical applications. This newly acquired skill will not only improve their capacity to perform reliable data analysis but will also enable them to make significant contributions to the domains of forestry and ecology or any other related fields.
 
-# Chapter 1: Installation and Setup
+#   Chapter 1: Installation and Setup
 
-## Prerequisites
+##  Prerequisites
 
 Before you begin the installation process, it is essential to ensure that you meet the following prerequisites:
 
@@ -150,7 +150,7 @@ Before you begin the installation process, it is essential to ensure that you me
 
 Computers operate on three of the most common operating systems: Windows, Mac OS, and Linux. Depending on your operating system, follow the installation instructions relevant to your specific platform. The process will differ slightly for Windows, macOS, and Linux users, so ensure you select the appropriate set of instructions based on your system.
 
-## Installing R
+##  Installing R
 
 ### Windows
 
@@ -271,7 +271,7 @@ sudo apt install r-base
 
 1.  Once the installation is complete, you can run R by opening the terminal and typing **`R`**.
 
-## **Installing RStudio**
+## ** Installing RStudio**
 
 ### **Windows**
 
@@ -344,9 +344,9 @@ wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.4.1717-amd64.d
 sudo gdebi rstudio-1.4.1717-amd64.deb
 ```
 
-1.  Once the installation is complete, you can run RStudio by searching for "RStudio" in the applications menu.\
+1.  Once the installation is complete, you can run RStudio by searching for "RStudio" in the applications menu.
 
-## **Installing Jamovi** 
+## ** Installing Jamovi** 
 
 ### **Windows** 
 
@@ -412,7 +412,7 @@ sudo gdebi rstudio-1.4.1717-amd64.deb
 
 1.  Once the installation is complete, you can run Jamovi by searching for "Jamovi" in the applications menu.
 
-## **Verifying Installations**
+## ** Verifying Installations**
 
 ### **Checking R Installation**
 
@@ -474,7 +474,7 @@ sudo gdebi rstudio-1.4.1717-amd64.deb
 
     2.  Launch Jamovi from the menu.
 
-## Updating and Maintaining Software
+##  Updating and Maintaining Software
 
 ### **Updating R**
 
@@ -497,7 +497,7 @@ sudo gdebi rstudio-1.4.1717-amd64.deb
 
 -   Jamovi typically updates itself automatically when you launch the software. Ensure you have an internet connection for updates to occur.
 
-## Troubleshooting
+##  Troubleshooting
 
 ### **Common Installation Issues**
 
@@ -545,7 +545,7 @@ sudo gdebi rstudio-1.4.1717-amd64.deb
 
     -   **User Communities:** Join user communities or mailing lists where you can ask questions and seek assistance from experienced users.
 
-## Cloud Registration
+##  Cloud Registration
 
 RStudio Cloud is a powerful cloud-based platform that allows you to access the RStudio Integrated Development Environment (IDE) from anywhere with an internet connection and a web browser. This means you can work on your data analysis projects without being tied to a specific computer or location.
 
@@ -631,7 +631,7 @@ You can access your account settings, change your password, and manage your proj
 
 That's it! You've successfully set up and started using RStudio Cloud, which provides a convenient way to work with R and RStudio from any device with an internet connection and a web browser.
 
-## Testing R Package Installation
+##  Testing R Package Installation
 
 ### **Introduction**
 
@@ -699,7 +699,7 @@ Testing the installation and loading of these packages ensures that your R envir
 
 You are now well-equipped to embark on data analysis projects with R, and you can confidently explore additional packages tailored to your specific needs.
 
-## Summary of Key Steps
+##  Summary of Key Steps
 
 In this manual, we have provided comprehensive guidance on the installation of essential data analysis tools: R, RStudio, and Jamovi. These tools are invaluable for conducting statistical analysis, data visualization, and research in various fields.
 
@@ -767,7 +767,7 @@ Now that you have successfully installed R, RStudio, and Jamovi, you are equippe
 
 I hope that this installation manual has been a valuable resource in getting you started with R, RStudio, and Jamovi. These tools offer limitless possibilities for data analysis and research. Remember that practice, exploration, and continuous learning will enhance your proficiency in using these tools effectively. Thank you for choosing this manual as your guide to installing and working with these essential data analysis tools. We wish you success in your data analysis endeavors!
 
-## Introducing R and Jamovi
+##  Introducing R and Jamovi
 
 We will continue our exploration of data analysis tools by introducing you to two powerful platforms: R and Jamovi. As a brief recap of our previous session, you've learned about the significance of inferential statistics and its applications in forestry and ecological research (see supplementary section for more detail information). Furthermore, this section provides an introduction to R and Jamovi, covering packages and modules, installation of R and RStudio, basic R commands, data structures, and importing data. It also introduces Jamovi's interface, data import, and basic data manipulation. Now, we will dive into the practical aspects of using R and Jamovi for data analysis.
 
@@ -1010,7 +1010,7 @@ The next set of R codes above performs the following actions:
 
 Please note that some lines of code are commented out and can be uncommented when needed.
 
-### **Introduction to Jamovi**
+### ** Introduction to Jamovi**
 
 #### Overview of Jamovi Interface and Functionalities
 
@@ -1090,7 +1090,7 @@ Jamovi is a user-friendly statistical software with an intuitive interface. You 
 
 Jamovi provides a wide range of statistical analyses, including t-tests, ANOVA, regression, and more. In the following sessions, we will explore these analyses in greater detail.
 
-## Software Integration
+##  Software Integration
 
 **Jamovi**, a user-friendly and open-source statistical analysis software, offers an interface that seamlessly integrates with **R**, a powerful programming language and environment for statistical computing. This integration combines the user-friendly features of Jamovi with the robust statistical capabilities of R, providing a flexible platform for data analysis and visualization.
 
@@ -1378,9 +1378,9 @@ kruskal_pairwise %>% print()
 
 -   **`kruskal_pairwise %>% print()`** is used to display the Kruskal-Wallis significance test results directly without the need to extract them into a data frame.
 
-# Chapter 2: Data Import and Cleaning
+#   Chapter 2: Data Import and Cleaning
 
-## Introduction
+##  Introduction
 
 Chapter 2 focuses on the critical aspects of data preparation for ecological data analysis. Here, you will learn how to efficiently import ecological datasets into R and Jamovi. Additionally, you'll explore techniques for cleaning and preprocessing data, ensuring that your analyses are based on high-quality, error-free data. By the end of this chapter, you will have:
 
@@ -1390,7 +1390,7 @@ Chapter 2 focuses on the critical aspects of data preparation for ecological dat
 
 -   Applied techniques to handle missing data, outliers, and data transformations.
 
-## Importing Data into R
+##  Importing Data into R
 
 ### **Data Import Overview**
 
@@ -1567,7 +1567,7 @@ Note that structured data management is of paramount importance in ecological re
 
 In summary, structured data management is the foundation upon which ecological research is built. It ensures data quality, facilitates analysis, promotes transparency, and enhances the overall credibility and impact of your research. Researchers who invest in structured data management are better equipped to make significant contributions to the understanding and conservation of ecosystems.
 
-## Importing Data into Jamovi
+##  Importing Data into Jamovi
 
 ### **Jamovi Data Import**
 
@@ -1577,7 +1577,7 @@ Jamovi simplifies data import with its user-friendly interface, making it access
 
 ![import data](images/Screenshot%20from%202023-09-03%2012-14-50.png)
 
-## Data Cleaning
+##  Data Cleaning
 
 ### **Data Cleaning Overview**
 
@@ -1681,7 +1681,7 @@ Outliers are data points that significantly deviate from the rest of the data in
 
 The choice of outlier detection and treatment methods should depend on the nature of the data and the research objectives. It is advisable to perform sensitivity analyses to assess how different outlier strategies impact research findings.
 
-## Data Preprocessing
+##  Data Preprocessing
 
 ### **Data Preprocessing Overview**
 
@@ -1729,7 +1729,7 @@ Transformations can also help in achieving homoscedasticity, where the variance 
 
 When variables have different units or scales, their magnitudes can dominate the results of certain analyses. Scaling ensures that all variables are treated equally, preventing larger variables from unduly influencing the outcomes. It also facilitates the interpretation of coefficients in regression models because the coefficients represent the effect of a one-unit change in the predictor variable while holding other variables constant. Scaling ensures that this one-unit change is consistent across all predictors, regardless of their units or scales.
 
-## Conclusion
+##  Conclusion
 
 Chapter 2 of "Exploring Ecological Data with R and Jamovi" emphasizes the critical importance of successful data import, cleaning, and preprocessing in ecological data analysis. Here are the key takeaways:
 
@@ -1755,9 +1755,9 @@ Chapter 2 of "Exploring Ecological Data with R and Jamovi" emphasizes the critic
 
 By mastering these data management techniques, you are now well-prepared to explore and analyze ecological datasets with confidence, setting the stage for robust ecological research.
 
-# Chapter 3: Exploratory Data Analysis (EDA)
+#   Chapter 3: Exploratory Data Analysis (EDA)
 
-## Introduction
+##  Introduction
 
 In Chapter 3, you will embark on a journey into the world of Exploratory Data Analysis (EDA) for ecological data. EDA is a crucial step that allows you to understand and gain insights from your datasets before diving into formal statistical analyses. By the end of this chapter, you will have:
 
@@ -1767,7 +1767,7 @@ In Chapter 3, you will embark on a journey into the world of Exploratory Data An
 
 -   Discovered patterns, relationships, and outliers within your datasets.
 
-## The Importance of EDA
+##  The Importance of EDA
 
 ### **Understanding EDA**
 
@@ -1823,7 +1823,7 @@ The typical workflow of an EDA process in ecological research involves the follo
 
 In ecological research, EDA serves as a powerful tool for uncovering hidden insights within complex datasets, guiding subsequent analyses, and informing ecological decision-making processes. It enables researchers to make data-driven conclusions and contributes to a deeper understanding of ecological systems and environmental dynamics.
 
-## Data Visualization
+##  Data Visualization
 
 ### **Data Visualization Overview**
 
@@ -2025,7 +2025,7 @@ When this code is executed, it will create an enhanced correlation heatmap that 
 
 In ecological research, these visualization techniques aid in understanding the data, generating hypotheses, and communicating findings effectively. They are essential tools for any ecologist seeking to explore and analyze ecological datasets.
 
-## Summary Statistics
+##  Summary Statistics
 
 ### **Summary Statistics Overview**
 
@@ -2127,7 +2127,7 @@ These codes enhance the data summarization and visualization capabilities for th
 
 Overall, these summary statistics provide ecologists with a toolbox for effectively summarizing, analyzing, and interpreting ecological data. They are fundamental for gaining insights into ecological phenomena and supporting evidence-based decisions in conservation and environmental management.
 
-## Outliers in EDA
+##  Outliers in EDA
 
 Outliers are data points that significantly differ from the majority of the data in a dataset. They are observations that are unusually high or low in value compared to the central tendency of the data. In ecological data analysis:
 
@@ -2236,7 +2236,7 @@ Visual inspection of box plots is an intuitive way to identify outliers, especia
 
 In ecological data analysis, detecting outliers is critical to ensure the integrity and accuracy of analyses. Addressing outliers appropriately, whether by excluding them or using robust statistical methods, is essential to avoid bias and ensure the validity of ecological research findings.
 
-## Conclusion
+##  Conclusion
 
 Exploratory Data Analysis (EDA) is a fundamental step in ecological research, providing essential insights into your datasets:
 
@@ -2256,9 +2256,9 @@ Exploratory Data Analysis (EDA) is a fundamental step in ecological research, pr
 
 In conclusion, EDA is a foundational step in ecological research. By conducting thorough exploratory data analysis, you gain a deep understanding of your ecological datasets. This knowledge empowers you to make informed decisions about subsequent analyses, hypothesis testing, and research directions. EDA is a powerful tool for uncovering the hidden stories within your ecological data.
 
-# Chapter 4: **Statistical Tests**
+#   Chapter 4: **Statistical Tests**
 
-## Introduction
+##  Introduction
 
 Chapter 4 delves into the core of statistical data analysis for ecological research. You will gain a comprehensive understanding of statistical hypothesis testing and learn to perform a variety of tests commonly used in ecology. By the end of this chapter, you will have:
 
@@ -2268,7 +2268,7 @@ Chapter 4 delves into the core of statistical data analysis for ecological resea
 
 -   Gained hands-on experience in conducting these tests using R and Jamovi.
 
-## Hypothesis Testing Fundamentals
+##  Hypothesis Testing Fundamentals
 
 In ecological research, hypothesis testing plays a crucial role in making data-driven decisions and drawing valid conclusions from data. It allows researchers to systematically evaluate whether there is enough evidence to support a particular claim or hypothesis about ecological phenomena. Hypothesis testing helps distinguish between random variation in data and meaningful patterns or effects.
 
@@ -2286,7 +2286,7 @@ In ecological research, hypothesis testing plays a crucial role in making data-d
 
 Understanding these fundamental concepts of hypothesis testing is essential for conducting meaningful ecological research and making valid inferences from data. Researchers design experiments, collect data, and perform statistical tests with the aim of either supporting the alternative hypothesis or failing to reject the null hypothesis, based on the evidence provided by the data. The significance level alpha serves as a critical tool for controlling the balance between making Type I and Type II errors, ensuring that research findings are robust and reliable.
 
-## Parametric vs. Non-Parametric Tests
+##  Parametric vs. Non-Parametric Tests
 
 ### **Distinguishing Parametric and Non-Parametric Tests**
 
@@ -2316,7 +2316,7 @@ Understanding these fundamental concepts of hypothesis testing is essential for 
 
 Understanding when to use parametric and non-parametric tests is crucial for ecological research. Parametric tests are powerful when assumptions are met, while non-parametric tests provide robust alternatives when assumptions are violated or when dealing with non-normally distributed data. The choice between these two types of tests should be based on the nature of the data and the specific research question at hand.
 
-## Performing Statistical Tests in R and Jamovi
+##  Performing Statistical Tests in R and Jamovi
 
 ### **Overview of R and Jamovi for Statistical Tests**
 
@@ -2702,7 +2702,7 @@ In summary, this code loads the necessary packages, specifies the dataset to be 
 
 -   Examine the output for the t-test. Similar to R, look for the p-value. If p \< 0.05 (assuming a significance level of 0.05), you can reject the null hypothesis (H0) and conclude that there is a significant difference between the groups.
 
-## Interpreting Test Results
+##  Interpreting Test Results
 
 Interpreting the results of statistical tests is a critical aspect of ecological research. Here's a general guideline on how to interpret the results, with a focus on understanding p-values and effect sizes:
 
@@ -2734,7 +2734,7 @@ Interpreting the results of statistical tests is a critical aspect of ecological
 
 This is a general overview of performing a t-test, Mann-Whitney u test, anova and Kruskall-Wallis tests in both R and Jamovi. The specific steps may vary depending on your dataset and research question. In ecological research, it's not only important to detect statistically significant results but also to understand their ecological implications. A strong understanding of p-values, effect sizes, and their ecological relevance will contribute to more meaningful and robust ecological research outcomes.
 
-## Conclusion
+##  Conclusion
 
 Chapter 4 provides comprehensive insights into statistical hypothesis testing, which is a fundamental aspect of ecological research.
 
@@ -2754,9 +2754,9 @@ Chapter 4 provides comprehensive insights into statistical hypothesis testing, w
 
 Overall, Chapter 4 equips you with a strong foundation in statistical hypothesis testing, empowering you to conduct a wide range of tests essential for ecological data analysis and make informed ecological conclusions.
 
-# Chapter 5: **Regression Analysis**
+#   Chapter 5: **Regression Analysis**
 
-## Introduction
+##  Introduction
 
 Chapter 5 is a deep dive into regression analysis, a powerful tool for modeling ecological relationships. In this chapter, you will learn about two essential types of regression: linear and logistic. By the end of this chapter, you will have:
 
@@ -2766,7 +2766,7 @@ Chapter 5 is a deep dive into regression analysis, a powerful tool for modeling 
 
 -   The ability to interpret regression outputs and draw meaningful ecological insights.
 
-## Understanding Regression Analysis
+##  Understanding Regression Analysis
 
 Regression analysis is a powerful statistical method used to model relationships between variables. It helps us understand how one or more independent variables are related to a dependent variable and how changes in the independent variables impact the dependent variable. In ecological research, regression analysis plays a crucial role in modeling ecological relationships, making predictions, and understanding the impact of environmental factors on biological phenomena.
 
@@ -2794,7 +2794,7 @@ Regression analysis is a powerful statistical method used to model relationships
 
 Regression analysis is a fundamental tool in ecological research that allows researchers to quantify and understand the relationships between ecological variables. It helps in making predictions, testing hypotheses, and gaining insights into the complex dynamics of ecological systems.
 
-## Linear Regression
+##  Linear Regression
 
 **Definition:** Linear regression is a statistical method used to model the relationship between a dependent variable (DV) and one or more independent variables (IVs) by fitting a linear equation to observed data. It assumes a linear relationship between the IVs and the DV, where changes in the IVs lead to a proportional change in the DV.
 
@@ -3001,7 +3001,7 @@ Let's first export the tooth-growth dataset to a csv flat file for use in Jamovi
 
 In ecological research, linear regression provides valuable insights into the relationships between ecological variables. It helps answer questions about ecological processes and how they are influenced by environmental factors. Proper interpretation of model results and assessment of assumptions are crucial for robust ecological conclusions.
 
-## Logistic Regression
+##  Logistic Regression
 
 **Definition:** Logistic regression is a statistical method used to model the probability of a binary outcome variable (0/1, Yes/No, True/False) as a function of one or more independent variables. It's particularly useful when the dependent variable represents a categorical response with two levels.
 
@@ -3054,19 +3054,19 @@ logistic_mod %>%
 
     -   Here's what the likelihood ratio test (LRT) does in the context of logistic regression:
 
-        1.  It compares two models:
+        -   It compares two models:
 
             -   The null model (reduced model): This is a model that includes only an intercept (no predictors).
 
             -   The full model: This is the logistic regression model you have fitted (**`logistic_mod`**) with one or more predictor variables.
 
-        2.  The LRT assesses whether the full model (with predictors) provides a significantly better fit to the data compared to the null model (with no predictors).
+            -   The LRT assesses whether the full model (with predictors) provides a significantly better fit to the data compared to the null model (with no predictors).
 
-        3.  The test statistic for the LRT follows a chi-squared distribution, and its significance is assessed by comparing it to a chi-squared distribution with degrees of freedom equal to the difference in the number of parameters estimated between the two models.
+            -   The test statistic for the LRT follows a chi-squared distribution, and its significance is assessed by comparing it to a chi-squared distribution with degrees of freedom equal to the difference in the number of parameters estimated between the two models.
 
-        4.  The output typically includes the chi-squared test statistic, degrees of freedom, and the associated p-value. The p-value tells you whether the addition of the predictors significantly improves the model fit.
+            -   The output typically includes the chi-squared test statistic, degrees of freedom, and the associated p-value. The p-value tells you whether the addition of the predictors significantly improves the model fit.
 
-        In summary, the line **`logistic_mod %>% anova(test = "LRT")`** is used to perform a likelihood ratio test on the logistic regression model to assess the overall significance of the predictors in improving the model's fit compared to a null model. If the p-value is below a chosen significance level (e.g., 0.05), it suggests that the predictors collectively have a significant impact on the response variable.
+    -   In summary, the line **`logistic_mod %>% anova(test = "LRT")`** is used to perform a likelihood ratio test on the logistic regression model to assess the overall significance of the predictors in improving the model's fit compared to a null model. If the p-value is below a chosen significance level (e.g., 0.05), it suggests that the predictors collectively have a significant impact on the response variable.
 
 5.  **Data Manipulation**: The **`%>%`** operator is used to pipe the results of the analysis into a series of data manipulation and formatting functions.
 
