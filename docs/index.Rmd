@@ -1,8 +1,8 @@
 ---
-title: "Exploring Ecological Data with R and Jamovi: A Beginner's Guide to Statistical Data Analysis"
+title: 'Exploring Ecological Data with R and Jamovi: A Beginner''s Guide to Statistical
+  Data Analysis'
 author:
-    - name: "Jimmy Moses"
-      # affiliation: "Department of Forestry, Papua New Guinea University of Technology"
+- name: Jimmy Moses
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output:
   html_document:
@@ -11,12 +11,14 @@ output:
     df_print: kable
     fig_width: 7
     fig_height: 6
-    fig_caption: false
-    toc: true
-    toc_float: true
-    toc_collapsed: false
-    toc_depth: 6
-    number_sections: true
+    fig_caption: no
+    toc: yes
+    toc_float: yes
+    toc_collapsed: no
+    toc_depth: '6'
+    number_sections: yes
+    code_folding: show
+    # code_download: true
 urlcolor: blue
 editor_options:
   chunk_output_type: console
@@ -30,7 +32,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ![](images/logos.png){alt="Official logos or icons for R, RStudio and Jamovi."}
 
-# **Preface**
+# Preface
 
 Welcome to "Exploring Ecological Data with R and Jamovi: A Beginner's Guide to Statistical Data Analysis." This manual is designed to be your comprehensive companion on the journey to becoming proficient in ecological data analysis using two powerful tools: R and Jamovi.
 
@@ -66,7 +68,7 @@ Now, let's dive into the fascinating world of ecological data analysis with R an
 
 Happy analyzing!
 
-....................................
+........................
 
 Dr. Jimmy Moses (Ph.D.)
 
@@ -76,8 +78,12 @@ Dr. Jimmy Moses (Ph.D.)
 
 ![](images/pnguot_logo-03.png){width="100"}
 
-# Introduction
+\
+\
 
+# Introduction {#sec-introduction}
+
+\
 Ecology, the study of the interactions between organisms and their environment, generates vast amounts of data. Analyzing this data is crucial for understanding ecosystems, making informed conservation decisions, and addressing environmental challenges. Statistical data analysis is the cornerstone of ecological research, enabling scientists to derive meaningful insights from complex ecological datasets.
 
 This guide, "Exploring Ecological Data with R and Jamovi," is tailored for beginners in the field of ecology who are eager to harness the power of statistical analysis to unravel ecological mysteries. Whether you're a budding ecologist, a conservation enthusiast, or a student embarking on ecological research, this guide will serve as your compass through the intricate world of data analysis.
@@ -124,7 +130,7 @@ Through these future developments and workshops, we aim to foster a community of
 
 Readers will not only obtain the skills to set up and utilize the aforementioned programs by immersing themselves in the contents of this handbook, but they will also receive vital insights into their practical applications. This newly acquired skill will not only improve their capacity to perform reliable data analysis but will also enable them to make significant contributions to the domains of forestry and ecology or any other related fields.
 
-# **Chapter 1: Installation and Setup**
+# Chapter 1: Installation and Setup
 
 ## Prerequisites
 
@@ -148,7 +154,7 @@ Computers operate on three of the most common operating systems: Windows, Mac OS
 
 ### Windows
 
-#### **Downloading R**:
+#### **Downloading R**
 
 1.  Open your web browser and navigate to the R download page ([download here](https://cran.r-project.org/bin/windows/base/R-4.3.1-win.exe "Download R for Windows")).
 
@@ -158,7 +164,7 @@ Computers operate on three of the most common operating systems: Windows, Mac OS
 
 4.  Download the base version of R for Windows by clicking on the "install R for the first time" link.
 
-#### **Installing R**:
+#### **Installing R**
 
 1.  Locate the downloaded R installer (an .exe file) and double-click it.
 
@@ -176,7 +182,7 @@ Computers operate on three of the most common operating systems: Windows, Mac OS
 
 Once the installation is complete, you can now run R by searching for "R" in the Windows Start menu.
 
-#### **Downloading and Installing RTools in Windows:**
+#### **Downloading and Installing RTools in Windows**
 
 RTools is a collection of tools required for building and installing R packages from source on Windows. It is essential for users who want to compile and install R packages from CRAN or other sources. Here are the steps to download and install RTools on a Windows system:
 
@@ -216,17 +222,17 @@ RTools is a collection of tools required for building and installing R packages 
 
 4.  In the R console, you can run the following command to check if RTools is found:
 
-    ``` r
-    Sys.which("make")
-    ```
+``` r
+Sys.which("make")
+```
 
-5.  If the installation was successful, you should see a path to the **`make.exe`** executable associated with RTools.
+1.  If the installation was successful, you should see a path to the **`make.exe`** executable associated with RTools.
 
 That's it! You have successfully downloaded and installed RTools on your Windows system. You are now ready to build and install R packages from source when needed.
 
 ### macOS
 
-#### **Downloading R**:
+#### **Downloading R**
 
 1.  Open your web browser and navigate to the R download page ([download here](https://cran.r-project.org/bin/macosx/big-sur-x86_64/base/R-4.3.1-x86_64.pkg "Download R for macOS")). Note: the use of X11 (including tcltk) requires [XQuartz](http://xquartz.macosforge.org/) (version 2.8.5 or later). Always re-install XQuartz when upgrading your macOS to a new major version.
 
@@ -234,7 +240,7 @@ That's it! You have successfully downloaded and installed RTools on your Windows
 
 3.  Download the latest R framework (pkg file) by clicking on the link.
 
-#### **Installing R**:
+#### **Installing R**
 
 1.  Locate the downloaded R framework (a .pkg file) and double-click it.
 
@@ -250,18 +256,18 @@ That's it! You have successfully downloaded and installed RTools on your Windows
 
 ### Linux (Ubuntu)
 
-#### **Downloading R**:
+#### **Downloading R**
 
 1.  Open a terminal window.
 
 2.  Enter the following commands one by one to add the CRAN repository and the key:
 
-    ``` bash
-    sudo apt update
-    sudo apt install r-base
-    ```
+``` bash
+sudo apt update
+sudo apt install r-base
+```
 
-#### **Installing R:**
+#### **Installing R**
 
 1.  Once the installation is complete, you can run R by opening the terminal and typing **`R`**.
 
@@ -269,7 +275,7 @@ That's it! You have successfully downloaded and installed RTools on your Windows
 
 ### **Windows**
 
-#### **Downloading RStudio:**
+#### **Downloading RStudio**
 
 1.  Open your web browser and navigate to the RStudio download page ([download here](https://download1.rstudio.org/electron/windows/RStudio-2023.06.2-561.exe "RStudio download page")).
 
@@ -279,7 +285,7 @@ That's it! You have successfully downloaded and installed RTools on your Windows
 
 4.  Download the RStudio installer for Windows.
 
-#### **Installing RStudio:**
+#### **Installing RStudio**
 
 1.  Locate the downloaded RStudio installer (an .exe file) and double-click it.
 
@@ -299,7 +305,7 @@ That's it! You have successfully downloaded and installed RTools on your Windows
 
 ### **macOS**
 
-#### **Downloading RStudio:**
+#### **Downloading RStudio**
 
 1.  Open your web browser and navigate to the RStudio download page ([download here](https://download1.rstudio.org/electron/macos/RStudio-2023.06.2-561.dmg "Download RStudio for macOS")).
 
@@ -309,7 +315,7 @@ That's it! You have successfully downloaded and installed RTools on your Windows
 
 4.  Download the RStudio installer for macOS.
 
-#### **Installing RStudio:**
+#### **Installing RStudio**
 
 1.  Locate the downloaded RStudio installer (a .dmg file) and double-click it.
 
@@ -319,32 +325,32 @@ That's it! You have successfully downloaded and installed RTools on your Windows
 
 ### **Linux (Ubuntu)**
 
-#### **Downloading RStudio:**
+#### **Downloading RStudio**
 
 1.  Open a terminal window.
 
 2.  Enter the following command to download the RStudio package ([download here](https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.4.1717-amd64.deb "Download RStudio for Ubuntu linux")):
 
-    ``` bash
-    sudo apt-get install gdebi-core
-    wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.4.1717-amd64.deb
-    ```
+``` bash
+sudo apt-get install gdebi-core
+wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.4.1717-amd64.deb
+```
 
-#### **Installing RStudio:**
+#### **Installing RStudio**
 
 1.  After the download is complete, use the following command to install RStudio:
 
-    ``` bash
-    sudo gdebi rstudio-1.4.1717-amd64.deb
-    ```
+``` bash
+sudo gdebi rstudio-1.4.1717-amd64.deb
+```
 
-2.  Once the installation is complete, you can run RStudio by searching for "RStudio" in the applications menu.
+1.  Once the installation is complete, you can run RStudio by searching for "RStudio" in the applications menu.\
 
-## **Installing Jamovi**
+## **Installing Jamovi** 
 
-### **Windows**
+### **Windows** 
 
-#### **Downloading Jamovi:**
+#### **Downloading Jamovi**
 
 1.  Open your web browser and navigate to the Jamovi download page ([download here](https://www.jamovi.org/downloads/jamovi-2.4.8.0-win64.exe "Jamovi download web page/site")).
 
@@ -352,7 +358,7 @@ That's it! You have successfully downloaded and installed RTools on your Windows
 
 3.  Download the Jamovi installer for Windows.
 
-#### **Installing Jamovi:**
+#### **Installing Jamovi**
 
 1.  Locate the downloaded Jamovi installer (an .exe file) and double-click it.
 
@@ -368,7 +374,7 @@ That's it! You have successfully downloaded and installed RTools on your Windows
 
 ### **macOS**
 
-#### **Downloading Jamovi:**
+#### **Downloading Jamovi**
 
 1.  Open your web browser and navigate to the Jamovi download page ([download here](https://www.jamovi.org/download.html/downloads/jamovi-2.4.8.0-macos.dmg "Download Jamovi for macOS")).
 
@@ -376,7 +382,7 @@ That's it! You have successfully downloaded and installed RTools on your Windows
 
 3.  Download the Jamovi installer for macOS.
 
-#### **Installing Jamovi:**
+#### **Installing Jamovi**
 
 1.  Locate the downloaded Jamovi installer (a .dmg file) and double-click it.
 
@@ -384,9 +390,9 @@ That's it! You have successfully downloaded and installed RTools on your Windows
 
 3.  Once the copy is complete, you can run Jamovi from your Applications folder.
 
-### **Linux (Ubuntu)**
+### \*\* Linux (Ubuntu)\*\*
 
-#### **Downloading Jamovi:**
+#### **Downloading Jamovi**
 
 1.  Open a terminal window.
 
@@ -402,7 +408,7 @@ That's it! You have successfully downloaded and installed RTools on your Windows
     flatpak run org.jamovi.jamovi
     ```
 
-#### **Installing Jamovi:**
+#### **Installing Jamovi**
 
 1.  Once the installation is complete, you can run Jamovi by searching for "Jamovi" in the applications menu.
 
@@ -410,65 +416,65 @@ That's it! You have successfully downloaded and installed RTools on your Windows
 
 ### **Checking R Installation**
 
--   **Windows:**
+-   **Windows**
 
     1.  Open R by searching for "R" in the Start menu.
 
     2.  The R console should appear. You can start using R by entering commands.
 
--   **macOS:**
+-   **macOS**
 
     1.  Open the Applications folder and run R.
 
     2.  The R console should open, allowing you to use R.
 
--   **Linux (Ubuntu):**
+-   **Linux (Ubuntu)**
 
     1.  Open a terminal and type **`R`**.
 
     2.  The R console should open.
 
-### **Checking RStudio Installation**
+### Checking RStudio Installation
 
--   **Windows:**
+-   **Windows**
 
     1.  Open RStudio by searching for "RStudio" in the Start menu.
 
     2.  The RStudio IDE should open, ready for use.
 
--   **macOS:**
+-   **macOS**
 
     1.  Open the Applications folder and run RStudio.
 
     2.  The RStudio IDE should open.
 
--   **Linux (Ubuntu):**
+-   **Linux (Ubuntu)**
 
     1.  Open the applications menu and search for "RStudio."
 
     2.  Launch RStudio from the menu.
 
-### **Checking Jamovi Installation**
+### Checking Jamovi Installation
 
--   **Windows:**
+-   **Windows**
 
     1.  Open Jamovi by searching for "Jamovi" in the Start menu.
 
     2.  The Jamovi interface should open.
 
--   **macOS:**
+-   **macOS**
 
     1.  Open the Applications folder and run Jamovi.
 
     2.  The Jamovi interface should open.
 
--   **Linux (Ubuntu):**
+-   **Linux (Ubuntu)**
 
     1.  Open the applications menu and search for "Jamovi."
 
     2.  Launch Jamovi from the menu.
 
-## **Updating and Maintaining Software**
+## Updating and Maintaining Software
 
 ### **Updating R**
 
@@ -491,7 +497,7 @@ That's it! You have successfully downloaded and installed RTools on your Windows
 
 -   Jamovi typically updates itself automatically when you launch the software. Ensure you have an internet connection for updates to occur.
 
-## **Troubleshooting**
+## Troubleshooting
 
 ### **Common Installation Issues**
 
@@ -539,11 +545,11 @@ That's it! You have successfully downloaded and installed RTools on your Windows
 
     -   **User Communities:** Join user communities or mailing lists where you can ask questions and seek assistance from experienced users.
 
-## **Cloud Registration**
+## Cloud Registration
 
 RStudio Cloud is a powerful cloud-based platform that allows you to access the RStudio Integrated Development Environment (IDE) from anywhere with an internet connection and a web browser. This means you can work on your data analysis projects without being tied to a specific computer or location.
 
-### **Advantages of Using RStudio Cloud and Cloud Computing:**
+### **Advantages of Using RStudio Cloud and Cloud Computing**
 
 1.  **Accessibility:** With RStudio Cloud, you can access your projects and data from virtually anywhere, whether you're at home, in the office, or on the go. All you need is an internet connection and a web browser.
 
@@ -625,7 +631,7 @@ You can access your account settings, change your password, and manage your proj
 
 That's it! You've successfully set up and started using RStudio Cloud, which provides a convenient way to work with R and RStudio from any device with an internet connection and a web browser.
 
-## **Testing R Package Installation**
+## Testing R Package Installation
 
 ### **Introduction**
 
@@ -635,11 +641,11 @@ To ensure that your R environment is fully functional and equipped with essentia
 
 Follow these steps to install and load the required R packages using RStudio:
 
-1.  **Open RStudio:**
+1.  **Open RStudio**
 
     -   Launch RStudio by searching for "RStudio" in your computer's application menu.
 
-2.  **Installing devtools and remotes:**
+2.  **Installing devtools and remotes**
 
     -   In the RStudio console, enter the following commands to install the devtools and remotes packages:
 
@@ -650,7 +656,7 @@ Follow these steps to install and load the required R packages using RStudio:
 
     -   Wait for the installations to complete. You may be prompted to select a CRAN mirror; choose a location geographically close to you for faster downloads.
 
-3.  **Loading devtools and remotes:**
+3.  **Loading devtools and remotes**
 
     -   After installation, load the devtools and remotes packages by entering these commands in the console:
 
@@ -659,7 +665,7 @@ Follow these steps to install and load the required R packages using RStudio:
         library(remotes)
         ```
 
-4.  **Installing tidyverse and rstatix:**
+4.  **Installing tidyverse and rstatix**
 
     -   With devtools and remotes loaded, you can now install the tidyverse and rstatix packages, which are essential for data manipulation and statistical analysis:
 
@@ -670,7 +676,7 @@ Follow these steps to install and load the required R packages using RStudio:
 
     -   Allow the installations to proceed. The remotes package is used to install rstatix directly from its GitHub repository.
 
-5.  **Loading tidyverse and rstatix:**
+5.  **Loading tidyverse and rstatix**
 
     -   Once installed, load the tidyverse and rstatix packages with the following commands:
 
@@ -693,13 +699,13 @@ Testing the installation and loading of these packages ensures that your R envir
 
 You are now well-equipped to embark on data analysis projects with R, and you can confidently explore additional packages tailored to your specific needs.
 
-## **Summary of Key Steps**
+## Summary of Key Steps
 
 In this manual, we have provided comprehensive guidance on the installation of essential data analysis tools: R, RStudio, and Jamovi. These tools are invaluable for conducting statistical analysis, data visualization, and research in various fields.
 
 To recap the key steps covered in this manual:
 
-1.  **Installing R:**
+1.  **Installing R**
 
     -   Choose the appropriate version for your operating system (Windows, macOS, or Linux).
 
@@ -707,7 +713,7 @@ To recap the key steps covered in this manual:
 
     -   Verify the successful installation of R by launching the R console.
 
-2.  **Installing RStudio:**
+2.  **Installing RStudio**
 
     -   Select the correct version of RStudio for your operating system.
 
@@ -715,7 +721,7 @@ To recap the key steps covered in this manual:
 
     -   Confirm the successful installation of RStudio and its integration with R.
 
-3.  **Installing Jamovi:**
+3.  **Installing Jamovi**
 
     -   Download Jamovi for your operating system.
 
@@ -723,19 +729,19 @@ To recap the key steps covered in this manual:
 
     -   Validate the installation by launching Jamovi.
 
-4.  **Verifying Installations:**
+4.  **Verifying Installations**
 
     -   Ensure that R, RStudio, and Jamovi open without errors.
 
     -   Confirm that you can access the R console and RStudio IDE smoothly.
 
-5.  **Updating and Maintaining Software:**
+5.  **Updating and Maintaining Software**
 
     -   Regularly check for updates to R, RStudio, and Jamovi to benefit from the latest features and bug fixes.
 
     -   Follow the guidelines provided to update each software component.
 
-6.  **Troubleshooting:**
+6.  **Troubleshooting**
 
     -   Consult the troubleshooting section if you encounter common installation or package-related issues.
 
@@ -761,7 +767,7 @@ Now that you have successfully installed R, RStudio, and Jamovi, you are equippe
 
 I hope that this installation manual has been a valuable resource in getting you started with R, RStudio, and Jamovi. These tools offer limitless possibilities for data analysis and research. Remember that practice, exploration, and continuous learning will enhance your proficiency in using these tools effectively. Thank you for choosing this manual as your guide to installing and working with these essential data analysis tools. We wish you success in your data analysis endeavors!
 
-## **Introducing R and Jamovi**
+## Introducing R and Jamovi
 
 We will continue our exploration of data analysis tools by introducing you to two powerful platforms: R and Jamovi. As a brief recap of our previous session, you've learned about the significance of inferential statistics and its applications in forestry and ecological research (see supplementary section for more detail information). Furthermore, this section provides an introduction to R and Jamovi, covering packages and modules, installation of R and RStudio, basic R commands, data structures, and importing data. It also introduces Jamovi's interface, data import, and basic data manipulation. Now, we will dive into the practical aspects of using R and Jamovi for data analysis.
 
@@ -769,7 +775,7 @@ We will continue our exploration of data analysis tools by introducing you to tw
 
 R Packages and Jamovi Modules are both essential components of statistical analysis and data manipulation, but they differ in several key ways:
 
-#### **R Packages:**
+#### **R Packages**
 
 1.  **Language Foundation**: R packages are part of the R programming language. R is a versatile, open-source scripting language and environment explicitly designed for statistical computing and data analysis.
 
@@ -785,7 +791,7 @@ R Packages and Jamovi Modules are both essential components of statistical analy
 
 7.  **Code-Based**: Using R packages often requires writing code or scripts to perform data analysis and visualization tasks. It's suitable for those comfortable with programming.
 
-#### **Jamovi Modules:**
+#### **Jamovi Modules**
 
 1.  **Graphical User Interface (GUI)**: Jamovi is a statistical software that provides a point-and-click graphical user interface (GUI). Jamovi modules are components within this GUI that allow users to perform specific analyses without writing code.
 
@@ -807,7 +813,7 @@ R Packages are code libraries for the R programming language, offering extensive
 
 #### Installing R and RStudio
 
-##### **Installing R:**
+##### **Installing R**
 
 You can install R by following these steps:
 
@@ -815,7 +821,7 @@ You can install R by following these steps:
 
 2.  Download the R installer for your OS and follow the installation instructions.
 
-##### **Installing RStudio:**
+##### **Installing RStudio**
 
 Once R is installed, you can proceed to install RStudio:
 
@@ -827,11 +833,11 @@ Once R is installed, you can proceed to install RStudio:
 
 #### Understanding R Interface and Basics
 
-##### **Launch RStudio:**
+##### **Launch RStudio**
 
 Open RStudio by searching for "RStudio" in your computer's application menu.
 
-##### **R Interface:**
+##### **R Interface**
 
 -   The RStudio interface consists of several panels, including the script editor, console, environment, and plots.
 
@@ -873,7 +879,7 @@ forest_data <- data.frame(
 print(forest_data)  # Print the data frame 'forest_data': Displays the content of the data frame.
 ```
 
-**R Code Explanation:**
+**R Code Explanation**
 
 -   Codes above illustrate basic arithmetic operations, variable assignment, the creation and manipulation of vectors, and the construction of a data frame in R. It demonstrates fundamental operations commonly used in data analysis and manipulation in R.
 
@@ -958,7 +964,7 @@ utils::write.csv(
 # Use getwd() to show your current working directory path
 ```
 
-**R Code Explanation:**
+**R Code Explanation**
 
 -   The code first checks if the "pacman" package is available using the **`require`** function. If it's not available, it installs the "pacman" package and then loads it using **`require`**.
 
@@ -1136,7 +1142,7 @@ Setting up R Syntax mode in Jamovi allows users to harness the full power of R p
 
 2.  **Launch Jamovi**: Open Jamovi and create or open a dataset for analysis. You'll typically start in the default point-and-click mode.
 
-3.  **Enable R Syntax Mode**:
+3.  **Enable R Syntax Mode**
 
     -   Navigate to the far end right corner of Jamovi window and click on the three vertical dots.
 
@@ -1150,7 +1156,7 @@ Setting up R Syntax mode in Jamovi allows users to harness the full power of R p
 
     ![syntax](images/Screenshot%20from%202023-09-03%2012-36-01.png){alt="syntax"}
 
-5.  **Writing R Code in Jamovi**:
+5.  **Writing R Code in Jamovi**
 
     -   You can write and execute R codes directly from within Jamovi's R editor. This is a module which is called "Rj" and can be accessed from the modules library. It must be installed and pinned to the main menu.
 
@@ -1180,7 +1186,7 @@ Setting up R Syntax mode in Jamovi allows users to harness the full power of R p
 
 Setting up R Syntax mode and Rj editor module in Jamovi empowers users to perform complex analyses and customizations, making it a versatile tool for both beginners and experienced data analysts and researchers. It combines the accessibility of Jamovi with the flexibility of R, offering the best of both worlds for data analysis and visualization.
 
-### Example:
+### Example
 
 #### Plotting
 
@@ -1217,7 +1223,7 @@ scatr::scat(
 )                                              # Display standard error bars
 ```
 
-**R Code Explanation:**
+**R Code Explanation**
 
 -   **`pacman::p_load(jmv, scatr, jmvcore, install = TRUE, update = FALSE)`** is used to load three packages: **`jmv`**, **`scatr`**, and **`jmvcore`**. The **`install = TRUE`** parameter ensures that these packages are installed if they are not already installed, and **`update = FALSE`** prevents the packages from being updated.
 
@@ -1271,7 +1277,7 @@ plot1 <- ggplot2::ggplot(
 print(plot1)
 ```
 
-**R Code Explanation:**
+**R Code Explanation**
 
 -   **`pacman::p_load(...)`** is used to load three packages: **`ggthemes`**, **`ggplot2`**, and **`patchwork`**. The **`install = TRUE`** parameter ensures that these packages are installed if they are not already installed, and **`update = FALSE`** prevents the packages from being updated.
 
@@ -1328,7 +1334,7 @@ p1 + p2 & theme(legend.position = "bottom") &
                              tag_suffix = ")")
 ```
 
-**R Code Explanation:**
+**R Code Explanation**
 
 -   **`p1`** is created by modifying **`plot1`**. The X-axis label is changed, and the color legend title is removed.
 
@@ -1364,7 +1370,7 @@ kruskal_pairwise <- jmv::anovaNP(
 kruskal_pairwise %>% print()
 ```
 
-**R Code Explanation:**
+**R Code Explanation**
 
 -   **`pacman::p_load(...)`** is used to load the required R packages, including **`jmv`** for statistical analysis and **`magrittr`** for data manipulation. The **`install`** parameter is set to **`TRUE`** to install the packages if they are not already installed, and **`update`** is set to **`FALSE`** to prevent updating packages.
 
@@ -1372,9 +1378,9 @@ kruskal_pairwise %>% print()
 
 -   **`kruskal_pairwise %>% print()`** is used to display the Kruskal-Wallis significance test results directly without the need to extract them into a data frame.
 
-# **Chapter 2: Data Import and Cleaning**
+# Chapter 2: Data Import and Cleaning
 
-## **Introduction**
+## Introduction
 
 Chapter 2 focuses on the critical aspects of data preparation for ecological data analysis. Here, you will learn how to efficiently import ecological datasets into R and Jamovi. Additionally, you'll explore techniques for cleaning and preprocessing data, ensuring that your analyses are based on high-quality, error-free data. By the end of this chapter, you will have:
 
@@ -1384,7 +1390,7 @@ Chapter 2 focuses on the critical aspects of data preparation for ecological dat
 
 -   Applied techniques to handle missing data, outliers, and data transformations.
 
-## **Importing Data into R**
+## Importing Data into R
 
 ### **Data Import Overview**
 
@@ -1450,9 +1456,9 @@ xlsx_data <- readxl::read_excel(file_path, sheet = 1)
 head(xlsx_data)
 ```
 
-**R Code Explanation:**
+**R Code Explanation**
 
--   For Importing a CSV File:
+For Importing a CSV File:
 
 1.  **Load the `readr` Package:** This line (line 2) loads the **`readr`** package, which is used for reading CSV files.
 
@@ -1462,7 +1468,7 @@ head(xlsx_data)
 
 4.  **View the Imported Data:** Line 11 displays the first few rows of the imported CSV data using the **`head`** function, allowing you to inspect the data.
 
--   For Importing an Excel File:
+For Importing an Excel File:
 
 5.  **Load the `readxl` Package:** This line (line 14) loads the **`readxl`** package, which is used for reading Excel files.
 
@@ -1505,19 +1511,19 @@ db_data <- dbGetQuery(db_connection, sql_query)
 head(db_data)
 ```
 
-**R Code Explanation:**
+**R Code Explanation**
 
-1.  **Load DBI and odbc Packages:**
+1.  **Load DBI and odbc Packages**
 
     -   These lines load the necessary R packages for working with databases. **`DBI`** is a database interface, and **`odbc`** is a package for database connectivity.
 
-2.  **Define the Database Connection Details:**
+2.  **Define the Database Connection Details**
 
     -   **`db_connection <- dbConnect(odbc::odbc(), ...)`** sets up a connection to a database. You need to specify details such as the database driver, server address, database name, username, and password.
 
     -   Replace **`"Your_Database_Driver"`**, **`"Your_Server_Address"`**, **`"Your_Database_Name"`**, **`"Your_Username"`**, and **`"Your_Password"`** with your actual database information.
 
-3.  **Check the Database Connection:**
+3.  **Check the Database Connection**
 
     -   **`dbIsValid(db_connection)`** verifies if the database connection is valid. It will return **`TRUE`** if the connection is successful.
 
@@ -1527,11 +1533,11 @@ head(db_data)
 
     -   Replace **`"Your_Table_Name"`** with the actual name of the table you want to query.
 
-5.  **Execute the SQL Query and Import Data:**
+5.  **Execute the SQL Query and Import Data**
 
     -   **`db_data <- dbGetQuery(db_connection, sql_query)`** executes the SQL query on the database server and imports the result into an R data frame called **`db_data`**.
 
-6.  **View the Imported Data:**
+6.  **View the Imported Data**
 
     -   **`head(db_data)`** displays the first few rows of the imported data frame, allowing you to inspect the data.
 
@@ -1561,7 +1567,7 @@ Note that structured data management is of paramount importance in ecological re
 
 In summary, structured data management is the foundation upon which ecological research is built. It ensures data quality, facilitates analysis, promotes transparency, and enhances the overall credibility and impact of your research. Researchers who invest in structured data management are better equipped to make significant contributions to the understanding and conservation of ecosystems.
 
-## **Importing Data into Jamovi**
+## Importing Data into Jamovi
 
 ### **Jamovi Data Import**
 
@@ -1571,7 +1577,7 @@ Jamovi simplifies data import with its user-friendly interface, making it access
 
 ![import data](images/Screenshot%20from%202023-09-03%2012-14-50.png)
 
-## **Data Cleaning**
+## Data Cleaning
 
 ### **Data Cleaning Overview**
 
@@ -1603,7 +1609,7 @@ In ecological analysis, where data are collected in diverse and often challengin
 
 Handling missing data in ecological research is crucial to ensure the integrity and validity of your analyses. Here are techniques for identifying and handling missing data:
 
-1.  **Identifying Missing Data:**
+1.  **Identifying Missing Data**
 
     -   **Summary Statistics:** Calculate summary statistics such as mean, median, and standard deviation for each variable. Missing data will be indicated by "NA" or "NaN" values in R or blank cells in spreadsheets.
 
@@ -1611,7 +1617,7 @@ Handling missing data in ecological research is crucial to ensure the integrity 
 
     -   **Missing Data Packages:** R packages like [**`naniar`**](https://github.com/njtierney/naniar), [`skimr`](https://docs.ropensci.org/skimr/) or [**`VIM`**](https://github.com/statistikat/VIM) provide functions and plots specifically designed for visualizing and understanding missing data patterns.
 
-2.  **Handling Missing Data:**
+2.  **Handling Missing Data**
 
     -   **Removal:** Sometimes, the simplest approach is to remove observations (rows) or variables (columns) with missing data. However, this should be done judiciously, as it can lead to loss of valuable information.
 
@@ -1623,7 +1629,7 @@ Handling missing data in ecological research is crucial to ensure the integrity 
 
     -   **Multiple Imputation:** This advanced technique involves creating multiple datasets with different imputed values for missing data and analyzing each dataset separately. Results are then combined to account for uncertainty due to missing data. The [**`mice`**](https://github.com/amices/mice) package in R is commonly used for multiple imputation.
 
-3.  **Exploring Patterns of Missing Data:**
+3.  **Exploring Patterns of Missing Data**
 
     -   **Missing Data Heatmaps:** Use heat-maps to visualize the patterns of missing data in your dataset. This helps identify if missingness is random or if there are systematic patterns related to specific variables or time periods.
 
@@ -1641,7 +1647,7 @@ Remember that there is no one-size-fits-all approach to handling missing data in
 
 Outliers are data points that significantly deviate from the rest of the data in a dataset. Detecting and addressing outliers is essential in ecological research for several reasons:
 
--   **Importance of Addressing Outliers:**
+**Importance of Addressing Outliers**
 
 1.  **Influence on Statistics:** Outliers can strongly influence summary statistics like the mean and standard deviation, leading to biased estimates. This can affect the interpretation of ecological patterns and relationships.
 
@@ -1649,7 +1655,7 @@ Outliers are data points that significantly deviate from the rest of the data in
 
 3.  **Ecological Significance:** Outliers may represent rare or unusual ecological events that are of particular interest or concern. Identifying and understanding these outliers can be critical for ecological research.
 
--   **Methods for Detecting Outliers:**
+**Methods for Detecting Outliers**
 
 1.  **Visual Inspection:** The simplest method is to create visualizations like scatter plots, box plots, or histograms. Outliers often appear as data points far from the main cluster or as individual points outside the whiskers of a box plot.
 
@@ -1659,7 +1665,7 @@ Outliers are data points that significantly deviate from the rest of the data in
 
 4.  **Modified Z-Scores:** In cases where data are not normally distributed, modified Z-scores like the Median Absolute Deviation (MAD) can be more robust for outlier detection.
 
--   **Techniques for Outlier Treatment:**
+**Techniques for Outlier Treatment**
 
 1.  **Removal:** The simplest approach is to remove outliers from the dataset. However, this should be done cautiously and with justification, as removing data points can lead to information loss.
 
@@ -1675,7 +1681,7 @@ Outliers are data points that significantly deviate from the rest of the data in
 
 The choice of outlier detection and treatment methods should depend on the nature of the data and the research objectives. It is advisable to perform sensitivity analyses to assess how different outlier strategies impact research findings.
 
-## **Data Preprocessing**
+## Data Preprocessing
 
 ### **Data Preprocessing Overview**
 
@@ -1723,7 +1729,7 @@ Transformations can also help in achieving homoscedasticity, where the variance 
 
 When variables have different units or scales, their magnitudes can dominate the results of certain analyses. Scaling ensures that all variables are treated equally, preventing larger variables from unduly influencing the outcomes. It also facilitates the interpretation of coefficients in regression models because the coefficients represent the effect of a one-unit change in the predictor variable while holding other variables constant. Scaling ensures that this one-unit change is consistent across all predictors, regardless of their units or scales.
 
-## **Conclusion**
+## Conclusion
 
 Chapter 2 of "Exploring Ecological Data with R and Jamovi" emphasizes the critical importance of successful data import, cleaning, and preprocessing in ecological data analysis. Here are the key takeaways:
 
@@ -1749,9 +1755,9 @@ Chapter 2 of "Exploring Ecological Data with R and Jamovi" emphasizes the critic
 
 By mastering these data management techniques, you are now well-prepared to explore and analyze ecological datasets with confidence, setting the stage for robust ecological research.
 
-# **Chapter 3: Exploratory Data Analysis (EDA)**
+# Chapter 3: Exploratory Data Analysis (EDA)
 
-## **Introduction**
+## Introduction
 
 In Chapter 3, you will embark on a journey into the world of Exploratory Data Analysis (EDA) for ecological data. EDA is a crucial step that allows you to understand and gain insights from your datasets before diving into formal statistical analyses. By the end of this chapter, you will have:
 
@@ -1761,7 +1767,7 @@ In Chapter 3, you will embark on a journey into the world of Exploratory Data An
 
 -   Discovered patterns, relationships, and outliers within your datasets.
 
-## **The Importance of EDA**
+## The Importance of EDA
 
 ### **Understanding EDA**
 
@@ -1817,7 +1823,7 @@ The typical workflow of an EDA process in ecological research involves the follo
 
 In ecological research, EDA serves as a powerful tool for uncovering hidden insights within complex datasets, guiding subsequent analyses, and informing ecological decision-making processes. It enables researchers to make data-driven conclusions and contributes to a deeper understanding of ecological systems and environmental dynamics.
 
-## **Data Visualization**
+## Data Visualization
 
 ### **Data Visualization Overview**
 
@@ -2019,7 +2025,7 @@ When this code is executed, it will create an enhanced correlation heatmap that 
 
 In ecological research, these visualization techniques aid in understanding the data, generating hypotheses, and communicating findings effectively. They are essential tools for any ecologist seeking to explore and analyze ecological datasets.
 
-## **Summary Statistics**
+## Summary Statistics
 
 ### **Summary Statistics Overview**
 
@@ -2121,7 +2127,7 @@ These codes enhance the data summarization and visualization capabilities for th
 
 Overall, these summary statistics provide ecologists with a toolbox for effectively summarizing, analyzing, and interpreting ecological data. They are fundamental for gaining insights into ecological phenomena and supporting evidence-based decisions in conservation and environmental management.
 
-## **Outliers in EDA**
+## Outliers in EDA
 
 Outliers are data points that significantly differ from the majority of the data in a dataset. They are observations that are unusually high or low in value compared to the central tendency of the data. In ecological data analysis:
 
@@ -2230,7 +2236,7 @@ Visual inspection of box plots is an intuitive way to identify outliers, especia
 
 In ecological data analysis, detecting outliers is critical to ensure the integrity and accuracy of analyses. Addressing outliers appropriately, whether by excluding them or using robust statistical methods, is essential to avoid bias and ensure the validity of ecological research findings.
 
-## **Conclusion**
+## Conclusion
 
 Exploratory Data Analysis (EDA) is a fundamental step in ecological research, providing essential insights into your datasets:
 
@@ -2252,7 +2258,7 @@ In conclusion, EDA is a foundational step in ecological research. By conducting 
 
 # Chapter 4: **Statistical Tests**
 
-## **Introduction**
+## Introduction
 
 Chapter 4 delves into the core of statistical data analysis for ecological research. You will gain a comprehensive understanding of statistical hypothesis testing and learn to perform a variety of tests commonly used in ecology. By the end of this chapter, you will have:
 
@@ -2262,7 +2268,7 @@ Chapter 4 delves into the core of statistical data analysis for ecological resea
 
 -   Gained hands-on experience in conducting these tests using R and Jamovi.
 
-## **Hypothesis Testing Fundamentals**
+## Hypothesis Testing Fundamentals
 
 In ecological research, hypothesis testing plays a crucial role in making data-driven decisions and drawing valid conclusions from data. It allows researchers to systematically evaluate whether there is enough evidence to support a particular claim or hypothesis about ecological phenomena. Hypothesis testing helps distinguish between random variation in data and meaningful patterns or effects.
 
@@ -2280,7 +2286,7 @@ In ecological research, hypothesis testing plays a crucial role in making data-d
 
 Understanding these fundamental concepts of hypothesis testing is essential for conducting meaningful ecological research and making valid inferences from data. Researchers design experiments, collect data, and perform statistical tests with the aim of either supporting the alternative hypothesis or failing to reject the null hypothesis, based on the evidence provided by the data. The significance level alpha serves as a critical tool for controlling the balance between making Type I and Type II errors, ensuring that research findings are robust and reliable.
 
-## **Parametric vs. Non-Parametric Tests:**
+## Parametric vs. Non-Parametric Tests
 
 ### **Distinguishing Parametric and Non-Parametric Tests**
 
@@ -2310,7 +2316,7 @@ Understanding these fundamental concepts of hypothesis testing is essential for 
 
 Understanding when to use parametric and non-parametric tests is crucial for ecological research. Parametric tests are powerful when assumptions are met, while non-parametric tests provide robust alternatives when assumptions are violated or when dealing with non-normally distributed data. The choice between these two types of tests should be based on the nature of the data and the specific research question at hand.
 
-## **Performing Statistical Tests in R and Jamovi**
+## Performing Statistical Tests in R and Jamovi
 
 ### **Overview of R and Jamovi for Statistical Tests**
 
@@ -2696,7 +2702,7 @@ In summary, this code loads the necessary packages, specifies the dataset to be 
 
 -   Examine the output for the t-test. Similar to R, look for the p-value. If p \< 0.05 (assuming a significance level of 0.05), you can reject the null hypothesis (H0) and conclude that there is a significant difference between the groups.
 
-## **Interpreting Test Results:**
+## Interpreting Test Results
 
 Interpreting the results of statistical tests is a critical aspect of ecological research. Here's a general guideline on how to interpret the results, with a focus on understanding p-values and effect sizes:
 
@@ -2722,13 +2728,13 @@ Interpreting the results of statistical tests is a critical aspect of ecological
 
 7.  **Replication and Consistency:** Consider whether the results are consistent with previous research or if they need to be replicated in other studies or under different conditions to strengthen their validity.
 
-8.  **Beware of Multiple Comparisons:** If you are conducting multiple tests on the same dataset, be cautious about the issue of multiple comparisons. Adjusting alpha (e.g., Bonferroni correction) can help control the familywise error rate.
+8.  **Beware of Multiple Comparisons:** If you are conducting multiple tests on the same dataset, be cautious about the issue of multiple comparisons. Adjusting alpha (e.g., Bonferroni correction) can help control the family-wise error rate.
 
 9.  **Consult Experts:** If you are unsure about the interpretation of your results, consider seeking guidance from statistical or ecological experts. Collaborating with colleagues who have expertise in the field can enhance the quality of your interpretation.
 
-This is a general overview of performing a t-test, mann-whitney u test, anova and kruskall-wallis tests in both R and Jamovi. The specific steps may vary depending on your dataset and research question. In ecological research, it's not only important to detect statistically significant results but also to understand their ecological implications. A strong understanding of p-values, effect sizes, and their ecological relevance will contribute to more meaningful and robust ecological research outcomes.
+This is a general overview of performing a t-test, Mann-Whitney u test, anova and Kruskall-Wallis tests in both R and Jamovi. The specific steps may vary depending on your dataset and research question. In ecological research, it's not only important to detect statistically significant results but also to understand their ecological implications. A strong understanding of p-values, effect sizes, and their ecological relevance will contribute to more meaningful and robust ecological research outcomes.
 
-## **Conclusion:**
+## Conclusion
 
 Chapter 4 provides comprehensive insights into statistical hypothesis testing, which is a fundamental aspect of ecological research.
 
@@ -2750,7 +2756,7 @@ Overall, Chapter 4 equips you with a strong foundation in statistical hypothesis
 
 # Chapter 5: **Regression Analysis**
 
-## **Introduction**
+## Introduction
 
 Chapter 5 is a deep dive into regression analysis, a powerful tool for modeling ecological relationships. In this chapter, you will learn about two essential types of regression: linear and logistic. By the end of this chapter, you will have:
 
@@ -2760,7 +2766,7 @@ Chapter 5 is a deep dive into regression analysis, a powerful tool for modeling 
 
 -   The ability to interpret regression outputs and draw meaningful ecological insights.
 
-## **Understanding Regression Analysis**
+## Understanding Regression Analysis
 
 Regression analysis is a powerful statistical method used to model relationships between variables. It helps us understand how one or more independent variables are related to a dependent variable and how changes in the independent variables impact the dependent variable. In ecological research, regression analysis plays a crucial role in modeling ecological relationships, making predictions, and understanding the impact of environmental factors on biological phenomena.
 
@@ -2788,7 +2794,7 @@ Regression analysis is a powerful statistical method used to model relationships
 
 Regression analysis is a fundamental tool in ecological research that allows researchers to quantify and understand the relationships between ecological variables. It helps in making predictions, testing hypotheses, and gaining insights into the complex dynamics of ecological systems.
 
-## **Linear Regression**
+## Linear Regression
 
 **Definition:** Linear regression is a statistical method used to model the relationship between a dependent variable (DV) and one or more independent variables (IVs) by fitting a linear equation to observed data. It assumes a linear relationship between the IVs and the DV, where changes in the IVs lead to a proportional change in the DV.
 
@@ -2882,11 +2888,11 @@ The codes above load necessary packages and the ToothGrowth dataset, defines a l
 
 The provided report output contains detailed information about the linear regression model's performance and parameter estimates. Let's break down the key interpretations:
 
-1.  **Model Explanation**:
+1.  **Model Explanation**
 
     -   A linear regression model was fitted using Ordinary Least Squares (OLS) to predict tooth length (**`len`**) based on two predictors: **`supp`** (supplement type) and **`dose`** (dose level). The formula used for the model is **`len ~ supp + dose`**.
 
-2.  **Model Fit**:
+2.  **Model Fit**
 
     -   The model is statistically significant and explains a substantial proportion of variance. The key statistics include:
 
@@ -2896,7 +2902,7 @@ The provided report output contains detailed information about the linear regres
 
         -   Adjusted R-squared (adj. R²) of 0.69: This adjusts R² for the number of predictors in the model, providing a measure of model fit.
 
-3.  **Model Intercept**:
+3.  **Model Intercept**
 
     -   The model's intercept corresponds to **`supp = OJ`** and **`dose = 0`**.
 
@@ -2906,7 +2912,7 @@ The provided report output contains detailed information about the linear regres
 
     -   This indicates that when **`supp`** is OJ, and **`dose`** is 0, the estimated average tooth length is 9.27.
 
-4.  **Parameter Effects**:
+4.  **Parameter Effects**
 
     -   The report provides information about the effects of individual predictors within the model.
 
@@ -2926,11 +2932,11 @@ The provided report output contains detailed information about the linear regres
 
         -   The standardized beta (Std. beta) is 0.80.
 
-5.  **Standardized Parameters**:
+5.  **Standardized Parameters**
 
     -   The standardized parameters were obtained by fitting the model on a standardized version of the dataset. Standardized parameters allow for comparing the relative importance of predictors in different units.
 
-6.  **Confidence Intervals and p-values**:
+6.  **Confidence Intervals and p-values**
 
     -   95% Confidence Intervals (CIs) and p-values were computed using a Wald t-distribution approximation. These values help assess the precision and statistical significance of parameter estimates.
 
@@ -2979,9 +2985,9 @@ Let's first export the tooth-growth dataset to a csv flat file for use in Jamovi
 
 2.  Open/ import the file in Jamovi. In Jamovi, the variable "`len`" should be a continuous data type, "`supp`" as nominal and "`dose`" as continuous.
 
-3.  Go to "Analyses" tab, click "Regression" button and select "Linear Regression". Perform linear regression by using "len" as the Dependent variable, "supp" in Factors and "dose" as a Covariate. Now compare your results to the previous results generated in R. Interpretations should be the same as those above for R stats.
+3.  Go to "Analyses" tab, click "Regression" button and select "Linear Regression". Perform linear regression by using "`len`" as the Dependent variable, "`supp`" in Factors and "`dose`" as a Covariate. Now compare your results to the previous results generated in R. Interpretations should be the same as those above for R stats.
 
-![](images/Screenshot from 2023-09-05 13-26-17.png)
+![](images/Screenshot%20from%202023-09-05%2013-26-17.png)
 
 ### **Interpreting Linear Regression Outputs**
 
@@ -2995,7 +3001,7 @@ Let's first export the tooth-growth dataset to a csv flat file for use in Jamovi
 
 In ecological research, linear regression provides valuable insights into the relationships between ecological variables. It helps answer questions about ecological processes and how they are influenced by environmental factors. Proper interpretation of model results and assessment of assumptions are crucial for robust ecological conclusions.
 
-## **Logistic Regression**
+## Logistic Regression
 
 **Definition:** Logistic regression is a statistical method used to model the probability of a binary outcome variable (0/1, Yes/No, True/False) as a function of one or more independent variables. It's particularly useful when the dependent variable represents a categorical response with two levels.
 
@@ -3127,7 +3133,7 @@ In summary, the analysis of deviance indicates that the "`dose`" variable is sta
 
 -   From the "Analyses" tab, select 2 Outcomes (binomial under logistic regression). Compare results and interpretation to R outputs.
 
-    ![](images/Screenshot from 2023-09-05 15-42-29.png)
+    ![](images/Screenshot%20from%202023-09-05%2015-42-29.png)
 
 ### **Interpreting Logistic Regression Outputs**
 
@@ -3139,11 +3145,11 @@ In summary, the analysis of deviance indicates that the "`dose`" variable is sta
 
 Logistic regression is a valuable tool in ecological research for modeling binary outcomes and understanding the factors influencing ecological phenomena like species presence, habitat suitability, and disease occurrence. Proper interpretation of model results is essential for making ecologically meaningful conclusions.
 
-## **Model Assessment and Selection**
+## Model Assessment and Selection
 
 ### **Assessing Model Fit**
 
-1.  **Residual Analysis:** Residuals are the differences between the observed and predicted values. In regression analysis, it's crucial to assess the distribution of residuals. A well-fitting model should have residuals that are normally distributed with mean zero. You can visualize residuals using residual plots, such as scatterplots of residuals against predicted values or against independent variables. Deviations from normality or patterns in these plots can indicate issues with model fit.
+1.  **Residual Analysis:** Residuals are the differences between the observed and predicted values. In regression analysis, it's crucial to assess the distribution of residuals. A well-fitting model should have residuals that are normally distributed with mean zero. You can visualize residuals using residual plots, such as scatter-plots of residuals against predicted values or against independent variables. Deviations from normality or patterns in these plots can indicate issues with model fit.
 
 2.  **R-squared (Coefficient of Determination):** R-squared measures the proportion of variance in the dependent variable explained by the model. Higher R-squared values indicate better model fit, but it's important to balance model complexity with model fit.
 
@@ -3360,7 +3366,7 @@ In summary, this code segment allows you to create a Leverage Plot for a linear 
 
 In ecological research, assessing model fit and selecting the most appropriate model are critical steps to ensure that the regression analysis accurately captures the underlying relationships in the data. Residual analysis and information criteria like AIC and BIC provide valuable tools for model evaluation and selection.
 
-## **Conclusion**
+## Conclusion
 
 In conclusion, Chapter 5 has been a comprehensive journey into the world of regression analysis, tailored for ecological research. Here are the key takeaways:
 
@@ -3448,7 +3454,7 @@ Steps
 
 # Supplementary Information
 
-## **Hypothesis Testing: Parametric and Non-Parametric Tests**
+## Hypothesis Testing: Parametric and Non-Parametric Tests
 
 *Understanding the Foundations of Statistical Testing*
 
@@ -3656,7 +3662,7 @@ Remember that the choice between the t-test and Mann-Whitney U test depends on t
 
 In summary, hypothesis testing plays a pivotal role in advancing knowledge in forestry and ecology. It empowers researchers to rigorously assess hypotheses, make data-driven decisions, and contribute to the sustainable management of ecosystems and forests. Proper test selection and hypothesis formulation are essential to derive meaningful insights from data, fostering interdisciplinary collaboration and ethical scientific practice.
 
-## **Confidence Intervals, p-values Interpretation, and Correlation Test**
+## Confidence Intervals, p-values Interpretation, and Correlation Test
 
 *Unraveling the Mysteries of Statistical Inference*
 
@@ -3902,7 +3908,7 @@ In summary, these statistical concepts - confidence intervals, p-values, and cor
 
 Confidence intervals provide a way to estimate population parameters, p-values help assess evidence against the null hypothesis, and correlation tests quantify relationships between variables. These tools are fundamental for researchers in forestry and ecology to draw meaningful conclusions from data and make informed decisions.
 
-## **Advanced R and Jamovi Data Analysis: T-test, ANOVA, and Linear Regression**
+## Advanced R and Jamovi Data Analysis: T-test, ANOVA, and Linear Regression
 
 *Unlocking the Power of t-test, ANOVA, and Linear Regression*
 
