@@ -16,7 +16,7 @@ output:
     toc_float: yes
     toc_collapsed: no
     toc_depth: '6'
-    number_sections: yes
+    number_sections: no
     code_folding: show
     # code_download: true
 urlcolor: blue
