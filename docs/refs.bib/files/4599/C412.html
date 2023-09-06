@@ -1,0 +1,1715 @@
+<!DOCTYPE html>
+<html style="" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulating the Upper St. Johns River for Extreme Events</title>
+    <link rel="shortcut icon" href="https://www.chijournal.org/images/chilogo.ico">
+    
+<link rel="schema.DC" href="http://purl.org/DC/elements/1.0/">
+        <meta name="description" content="The St. Johns River is one of the most important river systems in Florida. The watershed begins in East Central Florida and discharges to the Atlantic Ocean ea…">
+        <meta name="dc.Description" content="The St. Johns River is one of the most important river systems in Florida. The watershed begins in East Central Florida and discharges to the Atlantic Ocean ea…">
+        <meta property="og:description" content="The St. Johns River is one of the most important river systems in Florida. The watershed begins in East Central Florida and discharges to the Atlantic Ocean ea…">
+        <meta name="twitter:description" content="The St. Johns River is one of the most important river systems in Florida. The watershed begins in East Central Florida and discharges to the Atlantic Ocean ea…">
+        <meta name="citation_title" content="Simulating the Upper St. Johns River for Extreme Events">
+        <meta name="dc.Title" content="Simulating the Upper St. Johns River for Extreme Events">
+            <meta name="citation_author" content="Christopher Brown">
+                <meta name="citation_author_institution" content="University of North Florida, Jacksonville, FL, USA">
+            <meta name="dc.Contributor" content="Brown, Christopher ">
+            <meta name="citation_author" content="Amanda E. Tancreto">
+                <meta name="citation_author_institution" content="U.S. Army Corps of Engineers, Jacksonville, FL, USA">
+            <meta name="dc.Contributor" content="Tancreto, Amanda E. ">
+            <meta name="citation_publication_date" content="2016/12/16">
+            <meta name="dc.Date" scheme="WTN8601" content="2016-12-16">
+            <meta name="citation_pdf_url" content="https://www.chijournal.org/Content/Files/C412.pdf">
+            <meta name="dc.Identifier" scheme="original-pdf" content="https://www.chijournal.org/Content/Files/C412.pdf">
+        <meta name="citation_fulltext_html_url" content="https://www.chijournal.org/C412">
+        <meta name="citation_doi" content="10.14796/JWMM.C412">
+        <meta name="dc.Identifier" scheme="doi" content="10.14796/JWMM.C412">
+        <meta name="dc.Source" content="https://doi.org/10.14796/JWMM.C412">
+            <meta name="citation_journal_title" content="Journal of Water Management Modeling">
+            <meta name="citation_journal_abbrev" content="JWMM">
+        <meta name="citation_issn" content="2292-6062">
+        <meta name="citation_language" content="en">
+        <meta name="dc.Language" content="en">
+        <meta name="citation_publisher" content="Computational Hydraulics Int. (CHI)">
+        <meta name="dc.Publisher" content="Computational Hydraulics Int. (CHI)">
+        <meta name="dc.Type" content="research-article">
+        <meta name="dc.Format" content="text/HTML">
+        <meta name="dc.Coverage" content="world">
+        <meta property="og:title" content="Simulating the Upper St. Johns River for Extreme Events">
+        <meta property="og:type" content="article">
+        <meta property="og:url" content="https://www.chijournal.org/C412">
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="Simulating the Upper St. Johns River for Extreme Events">
+        <meta property="twitter:url" content="https://www.chijournal.org/C412">
+
+
+
+<link href="css.css" rel="stylesheet" type="text/css">
+<link href="sprite.css" rel="stylesheet">
+
+<link href="css_002.css" rel="stylesheet">
+
+<!--[if IE 9]>
+<link href="/bundles/ie9?v=SUxu0klXE4fHxk8iEew2swnFPRTeQKbpfDEibOcbxVM1" rel="stylesheet"/>
+
+<![endif]-->
+<script async="" src="analytics.js"></script><script>
+var chiConfig = {"RootURL":"https://www.chijournal.org/","SCREEN_XS_MIN":480,"SCREEN_SM_MIN":768,"SCREEN_MD_MIN":992,"SCREEN_LG_MIN":1200,"SCREEN_XS_MAX":767,"SCREEN_SM_MAX":991,"SCREEN_MD_MAX":1199,"Debug":false};var requestConfig = {"Device":0,"IsMobile":false,"IsAuthenticated":false};
+</script>
+<script src="exceptionhandler"></script>
+
+<!--[if lt IE 9]>
+<script src="/bundles/jquery1?v=I7FYc7uUyUQRigvFtHATTtPKObg9rR_X9HnduBwjLUc1"></script>
+
+<![endif]-->
+<!--[if gte IE 9]><!-->
+<script src="jquery"></script>
+
+<!--<![endif]-->
+<script src="placeholder"></script>
+
+<script src="jqueryplugins"></script>
+
+<script src="bootstrap"></script>
+
+<script src="jqueryval"></script>
+
+<script src="modernizr"></script>
+
+<script src="knockoutjs"></script>
+
+<script src="headerhelper.js"></script>
+<script src="chiscript"></script>
+
+<script>
+    if (chiConfig.RootURL.toLowerCase().indexOf("localhost") !== -1 || location.href.toLowerCase().indexOf("localhost") !== -1) {
+        chiConfig.RootURL = [location.protocol, '//', location.host, '/'].join('');
+    }
+</script>
+
+<link type="text/css" rel="stylesheet" href="theme.css"><link type="text/css" rel="stylesheet" href="theme.css"><style>.cke{visibility:hidden;}</style></head>
+<body>
+    <noscript class="noscript">
+        <div class="container">
+            <div class="row">
+                <div class="primary-col">
+                    <h1>Javascript not supported or is disabled :(</h1><br />
+                    <p>
+                        Our website uses Javascript for richer browsing experience. Unfortunately looks like your browser either doesn't support Javascript or Javascript is disabled.<br /><br />
+                        Please enable Javascript to continue browsing.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </noscript>
+    <div id="unsupported_browser" class="hidden">
+        We noticed that you're not using the latest version of your 
+browser. You'll still be able to use our site, but it might not work or 
+look the way it's supposed to. We recommend upgrading your browser.
+    </div>
+    
+    
+
+<header class="header navbar-fixed-top">
+    <div class="main-header" id="main_header">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-6 col-sm-3 col-md-6 header-logo">
+                    <a href="https://www.chiwater.com/Home" class="nounderline">
+                        <div class="sprite topbar-logo hidden-xs hidden-sm"></div>
+                        <div class="sprite topbar-logo-only hidden-md hidden-lg"></div>
+                    </a>
+                    <img src="topbar_divider.png" class="divider">
+                    <a href="https://www.chijournal.org/" class="nounderline">
+                        <span class="header-center hidden-md hidden-sm hidden-xs">JOURNAL OF WATER MANAGEMENT MODELING</span>
+                        <span class="header-center  hidden-lg">JWMM</span>
+                    </a>
+                </div>
+                <div class="col-xs-6 col-sm-9 col-md-6 header-links">
+                    <div class="link-container hidden-xs">
+                        <a href="https://www.chijournal.org/Home/ForAuthors" class="nounderline">AUTHORS</a>
+                        <div class="hidden-pointer"></div>
+                    </div>
+                    <div class="link-container hidden-xs">
+                        <a href="https://www.chijournal.org/Home/ForReviewers" class="nounderline">REVIEWERS</a>
+                        <div class="hidden-pointer"></div>
+                    </div>
+                    <div class="link-container hidden-xs">
+                        <a href="https://www.chijournal.org/Home/AboutJWMM" class="nounderline">ABOUT</a>
+                        <div class="hidden-pointer"></div>
+                    </div>
+                    <div class="link-container hidden-xs">
+                        <a href="javascript:void(0)" id="header_resources" name="header_resources" class="nounderline">RESOURCES</a>
+                        <div id="resource_pointer" class="hidden-pointer"></div>
+                    </div>                    
+                    <div class="pull-right hidden-print menu-icons">
+                        <a href="javascript:void(0);" id="menu_link" class="nounderline hidden-sm hidden-lg hidden-md"><img src="icon_menu.png" class="header-icon-distance header-icon header-items-padding" alt="Menu"></a>
+                        <a role="menuitem" tabindex="-1" href="https://www.chijournal.org/Home/AdvancedSearch?duration=All&amp;Source=Menu" class="header-right"><img src="icon_search.png" class="header-items-padding" alt="SEARCH"></a>
+                                    <a href="#account-management" data-toggle="modal" class="header-right"><img src="icon_login.png" class="header-items-padding" alt="LOGIN"></a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>    
+    
+<div class="container hidden hidden-sm hidden-xs" id="resource_menu">
+    <div class="row resource-menu">
+        <div class="col-xs-6">
+            <div class="resource-header"></div>
+            <div class="row">
+    <div class="resource-item col-md-4" data-url="https://www.pcswmm.com/">
+        <div class="resource-sub-header">
+            <a href="https://www.pcswmm.com/" class="nounderline">
+                <img src="icon_software.png" class="resource-icon img-responsive"> Software
+            </a>
+        </div>
+            <div class="row hidden-sm hidden-xs">
+                <div class="col-md-12 resource-text">
+                    Tap in to water management modeling that excels. 
+PCSWMM is flexible, easy to use and streamlines your workflow – saving 
+you time and resources.
+                </div>
+            </div>
+    </div>
+    <div class="resource-item col-md-4" data-url="https://www.chiwater.com/Training/">
+        <div class="resource-sub-header">
+            <a href="https://www.chiwater.com/Training/" class="nounderline">
+                <img src="icon_training.png" class="resource-icon img-responsive"> Training
+            </a>
+        </div>
+            <div class="row hidden-sm hidden-xs">
+                <div class="col-md-12 resource-text">
+                    Beginner or seasoned user, our flexible training 
+options help you understand and master the full capabilities of both EPA
+ SWMM5 and PCSWMM.
+                </div>
+            </div>
+    </div>
+    <div class="resource-item col-md-4" data-url="https://www.openswmm.org/">
+        <div class="resource-sub-header">
+            <a href="https://www.openswmm.org/" class="nounderline">
+                <img src="icon_community.png" class="resource-icon img-responsive"> Community
+            </a>
+        </div>
+            <div class="row hidden-sm hidden-xs">
+                <div class="col-md-12 resource-text">
+                    There's a whole community to support you: Open SWMM.
+ Get answers, suggest improvements, share modifications and more with 
+the Knowledge Base and Code Viewer.
+                </div>
+            </div>
+    </div>
+            </div>
+        </div>
+        <div class="col-xs-6 resource-menu-separator">
+            <div class="resource-header"></div>
+            <div class="row">
+    <div class="resource-item col-md-4" data-url="https://www.chijournal.org/">
+        <div class="resource-sub-header">
+            <a href="https://www.chijournal.org/" class="nounderline">
+                <img src="icon_journal.png" class="resource-icon img-responsive"> Journal
+            </a>
+        </div>
+            <div class="row hidden-sm hidden-xs">
+                <div class="col-md-12 resource-text">
+                    Our peer-reviewed, open-access Journal of Water 
+Management Modeling. Expand your knowledge, get insights and discover 
+new approaches that let you work more effectively.
+                </div>
+            </div>
+    </div>
+    <div class="resource-item col-md-4" data-url="https://www.icwmm.org/">
+        <div class="resource-sub-header">
+            <a href="https://www.icwmm.org/" class="nounderline">
+                <img src="icon_conference.png" class="resource-icon img-responsive"> Conference
+            </a>
+        </div>
+            <div class="row hidden-sm hidden-xs">
+                <div class="col-md-12 resource-text">
+                    The International Conference on Water Management 
+Modeling. Meet your colleagues, share your experiences and be on the 
+forefront of advances in our profession.
+                </div>
+            </div>
+    </div>
+    <div class="resource-item col-md-4" data-url="https://www.chiwater.com/Consulting/">
+        <div class="resource-sub-header">
+            <a href="https://www.chiwater.com/Consulting/" class="nounderline">
+                <img src="icon_consulting.png" class="resource-icon img-responsive"> Consulting
+            </a>
+        </div>
+            <div class="row hidden-sm hidden-xs">
+                <div class="col-md-12 resource-text">
+                    Not sure how to solve a complex water management 
+issue? Put our experience, knowledge, and innovation to work for you.
+                </div>
+            </div>
+    </div>
+            </div>
+        </div>
+    </div>
+</div> 
+
+
+<div class="container-fluid menu-small hidden-lg hidden-md hidden" id="menu_small">
+    <div class="row">
+        <div class="col-xs-12">
+            <ul>
+                <li><a href="https://www.chijournal.org/Home/ForAuthors" class="nounderline">AUTHORS</a></li>
+                <li role="presentation" class="divider"></li>
+                <li><a href="https://www.chijournal.org/Home/ForReviewers" class="nounderline">REVIEWERS</a></li>
+                <li role="presentation" class="divider"></li>
+                <li><a href="https://www.chijournal.org/Home/AboutJWMM" class="nounderline">ABOUT</a></li>
+                <li role="presentation" class="divider"></li>
+                <li><a role="menuitem" tabindex="-1" href="https://www.chijournal.org/Home/AdvancedSearch?duration=All&amp;Source=Menu" class="nounderline">
+                    SEARCH</a></li>
+                <li role="presentation" class="divider"></li>
+                <li>
+                    <a role="menuitem" tabindex="-1" id="link_resources" href="javascript:void(0)" class="resources">RESOURCES</a>
+                    <div class="row resource-menu resource-menu-small" id="resource_menu_small">
+    <div class="col-xs-6">
+        <div class="resource-header"></div>
+        <div class="row">
+            <div class="resource-item col-md-4" data-url="https://www.pcswmm.com/">
+                <div class="resource-sub-header">
+                    <a href="https://www.pcswmm.com/" class="nounderline">
+                        <img src="icon_software.png" class="resource-icon img-responsive"> Software
+                    </a>
+                </div>
+            </div>
+            <div class="resource-item col-md-4" data-url="https://www.chiwater.com/Training/">
+                <div class="resource-sub-header">
+                    <a href="https://www.chiwater.com/Training/" class="nounderline">
+                        <img src="icon_training.png" class="resource-icon img-responsive"> Training
+                    </a>
+                </div>
+            </div>
+            <div class="resource-item col-md-4" data-url="https://www.openswmm.org/">
+                <div class="resource-sub-header">
+                    <a href="https://www.openswmm.org/" class="nounderline">
+                        <img src="icon_community.png" class="resource-icon img-responsive"> Community
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-6 resource-menu-separator">
+        <div class="resource-header"></div>
+        <div class="row">
+            <div class="resource-item col-md-4" data-url="https://www.chijournal.org/">
+                <div class="resource-sub-header">
+                    <a href="https://www.chijournal.org/" class="nounderline">
+                        <img src="icon_journal.png" class="resource-icon img-responsive"> Journal
+                    </a>
+                </div>
+            </div>
+            <div class="resource-item col-md-4" data-url="https://www.icwmm.org/">
+                <div class="resource-sub-header">
+                    <a href="https://www.icwmm.org/" class="nounderline">
+                        <img src="icon_conference.png" class="resource-icon img-responsive"> Conference
+                    </a>
+                </div>
+            </div>
+            <div class="resource-item col-md-4" data-url="https://www.chiwater.com/Consulting/">
+                <div class="resource-sub-header">
+                    <a href="https://www.chiwater.com/Consulting/" class="nounderline">
+                        <img src="icon_consulting.png" class="resource-icon img-responsive"> Consulting
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+</header>
+    
+
+<form action="/Papers/Journals" id="frmPapers" method="post" name="frmPapers" novalidate="novalidate"><input name="__RequestVerificationToken" value="mNOHtHgd70dyF-84i1t4HYzJuOLyGjXet7Gvs1ORXw3tw-fG8Cg9vPzbzEYQjXVujC-n-EYjzodnak50_FWytIeTtfgJu8g6oxSfORZkj0Y1" type="hidden"><input data-val="true" data-val-maxlength="The field JournalID must be a string or array type with a maximum length of '8'." data-val-maxlength-max="8" id="JournalID" name="JournalID" value="J001" type="hidden"><input id="CHIReference" name="CHIReference" value="C412" type="hidden"><input id="PaperContentID" name="PaperContentID" value="" type="hidden"></form>
+    
+    
+    
+    <div id="bodycontent" class="container" style="min-height: 566px;">
+        
+
+<link href="journalpaper.css" rel="stylesheet">
+
+<script src="imagesLoaded"></script>
+
+<script src="juicebox.js"></script>
+    <div class="row">
+        
+        <div class="primary-col-with-sidebar">
+            
+            <div id="content">
+                
+                <a href="javascript:void(0);" class="nounderline bookmark-tag bookmark-inside-paper" title="Bookmark this paper" id="Bookmark_Tag_83989" name="Bookmark_Tag_83989">
+                    <div class="bookmark pull-right not-bookmarked"></div>
+                </a>
+                <div class="clearfix"></div>
+                <div class="clearfix"></div>
+                <h1 class="primary-col-padding page-title">Simulating the Upper St. Johns River for Extreme Events</h1>
+                <div class="primary-col-padding">
+<span class="reference inline" rel="#author_885"><a href="javascript:void(0)" class="reference author">Christopher Brown</a> <a href="mailto:christopher.j.brown@unf.edu&amp;subject=Simulating%20the%20Upper%20St.%20Johns%20River%20for%20Extreme%20Events&amp;body%20=" title="Email"><img src="icon_email_blue_002.png"></a></span> and <span class="reference inline" rel="#author_886"><a href="javascript:void(0)" class="reference author">Amanda E. Tancreto</a></span> (2016)
+                    <div class="primary-col-padding affiliations">University of North Florida; U.S. Army Corps of Engineers</div>
+                </div>
+                <div class="primary-col-padding DOI">
+                    DOI: 10.14796/JWMM.C412
+                    <div class="pull-right paper-comment-count">
+                        <a href="javascript:void(0);" class="nounderline comment-count-link">
+                            <img src="icon_comment.png" class="comment-icon">
+                            <span class="comment-count"></span> Comments
+                        </a>
+                    </div>
+                </div>
+                <br>
+                <div class="hidden-md hidden-lg hidden-print pull-right"><a href="javascript:void(0)" class="nounderline" id="toggleAllSections" name="toggleAllSections" data-action-on=".toggle">Collapse all</a><br></div>
+                <div class="hidden-sm hidden-xs hidden-print pull-right"><a href="javascript:void(0)" class="nounderline" id="toggleVisibility" name="toggleVisibility" data-action-on=".collapsible-paper-section">Collapse all</a><br></div>
+                <div id="papercontent" class="papercontent-padding">
+                    <input id="content-id" name="content-id" class="content-id" value="83989" type="hidden">
+                    <input id="chireference-number" name="chireference-number" class="chireference-number" value="C412" type="hidden">
+                    <hr class="h2-separator"><a href="javascript:void(0);" class="toggle nounderline collapsible-paper-section" data-toggle-between="icon-expand-brown icon-collapse-brown" data-update-cookie="false" name="abstract" id="abstract"><h2><span class="sprite icon-collapse-brown toggleicon"></span>ABSTRACT</h2></a>
+
+<div class="togglerow primary-col-contents-padding" style="padding-bottom: 20px;"><p>The
+ St. Johns River is one of the most important river systems in Florida. 
+The watershed begins in East Central Florida and discharges to the 
+Atlantic Ocean east of Jacksonville, Florida. The watershed is 
+susceptible to large rainfall events including tropical storms and 
+hurricanes and is topographically flat such that flooding is a real 
+concern.</p><p>The Upper St. Johns River Basin (USJRB) encompasses an area of approximately 4&nbsp;530 km<sup>2</sup>.
+ USJRB mainly comprises marsh and agricultural land types including 
+man-made storage areas used for flood control and environmental 
+management, and includes numerous water control structures. The Middle 
+St. Johns River Basin (MSJRB) is downstream of the USJRB and covers an 
+area of approximately 3&nbsp;100 km<sup>2</sup>. The land use in this 
+region is dominated by more urbanized areas including parts of Orlando. 
+Recently, researchers at the University of North Florida developed a 
+preliminary HEC–HMS rainfall–runoff model of the USJRB and a portion of 
+the MSJRB. The model domain covers roughly 5&nbsp;200 km<sup>2</sup> and
+ includes numerous subbasins. The model was calibrated and verified 
+against observed data recorded between 2007 and 2011 and including a 
+large tropical storm event.</p><p>This new study expands the use and 
+scope of the model by examining extreme rainfall events and resulting 
+flows that may occur in the future under possible climate change 
+scenarios. First, the model is used to simulate a hypothetical probable 
+maximum precipitation (PMP) event. Then, the model is used to simulate 
+the same PMP event but with future climate change forcing added. Lastly,
+ the model is used to simulate two 100&nbsp;y rainfall events occurring 
+in the same week. This study provides the simulation results, compares 
+them to historical flow data at key locations within the model domain, 
+and then finishes with a discussion of water resources planning 
+considerations for the future.</p></div>
+
+
+
+
+
+<hr class="h2-separator"><a href="javascript:void(0);" class="toggle nounderline collapsible-paper-section" data-toggle-between="icon-expand-brown icon-collapse-brown" data-update-cookie="false" name="1.methodology" id="1.methodology"><h2><span class="sprite icon-collapse-brown toggleicon"></span>1<span class="paper-title-separator">.</span> METHODOLOGY</h2></a>
+
+<div class="togglerow primary-col-contents-padding" style="padding-bottom: 20px;"><h3>1.1 Overview</h3><p>The
+ University of North Florida (UNF) was tasked by the St. Johns River 
+Water Management District (SJRWMD) to complete a research study 
+regarding the “economic valuation of the St. Johns River” as part of 
+SJRWMD research grant 27884. This study focused upon ecological services
+ that the St. Johns River provides for the citizens of Northeast Florida
+ (<a class="reference" rel="#5">Hackney 2015</a>). One portion of the 
+study was devoted to an assessment of flood mitigation services provided
+ by wetlands in the St. Johns River watershed. In order to complete the 
+assessment, a series of existing numerical models were integrated to 
+enable simulations of the entire watershed, including hydrologic drivers
+ such as rainfall, runoff, evapotranspiration, groundwater baseflow and 
+tidal effects. The overall watershed was divided into three primary 
+components including:</p><ul>
+	<li>the upper basin and a portion of the middle basin;</li>
+	<li>the majority of the middle basin; and,</li>
+	<li>the lower basin.</li>
+</ul><p>Figure 1 below shows the general location of the project study 
+area and three simulation basin areas. The portion of the entire model 
+domain that is the focus of this paper and is discussed herein is also 
+illustrated by the red triangle and light red hatching.</p><p>UNF was 
+responsible for simulating the upper basin, a small southern portion of 
+the middle basin, and the lower basin. The University of Central Florida
+ (UCF) was assigned the central portion of the study area which included
+ the remaining portions of the middle basin. This paper will focus upon 
+the upper basin area primarily although the model domain includes a 
+small portion of the middle basin also (as shown on Figure 1 by red 
+hatching). The UNF research team simulated its assigned study area using
+ the public domain hydrology code Hydrologic Engineering Center, 
+Hydrologic Modeling System or HEC–HMS (<a class="reference" rel="#17">USACE 2000</a>; <a class="reference" rel="#11">Scharffenberg and Fleming 2010</a>).
+ This paper will discuss the model development and calibration effort 
+followed by its use for new research regarding extreme precipitation 
+events. This paper will provide an abbreviated summary of the extensive 
+model development and calibration effort herein but the reader is 
+referred to <a class="reference" rel="#16">Tancreto (2015)</a> for complete details regarding the model. The complete thesis study can be downloaded at <a rel="nofollow" target="_blank" href="http://digitalcommons.unf.edu/etd/584/">http://digitalcommons.unf.edu/etd/584/</a>.</p><p class="figure"><div class="image-container"><div class="enlarge-button"></div><img class="paper-img" alt="" src="C412-1.jpg"></div></p><p class="footing">Figure 1 Project study area in Northeast Florida along with three simulation areas.</p><h3>1.2 HEC–HMS Model Development</h3><p>The upper St. Johns River basin (upper basin) encompasses an area of approximately 4&nbsp;530 km<sup>2</sup>.
+ The upper basin includes marsh and agricultural land types with 
+numerous artificial storage areas used for flood control and 
+environmental management. The middle St. Johns River basin (middle 
+basin) is downstream of the upper basin and covers an area of 
+approximately 3&nbsp;100 km<sup>2</sup>. The land use in this region is 
+dominated by more urbanized areas including parts of Orlando, Florida. 
+The UNF research team developed an HEC–HMS model of the entire upper 
+basin and one portion of the middle basin. The model domain covers 
+~5&nbsp;200 km<sup>2</sup> and includes numerous subbasins, reservoirs 
+and channel reaches. The model is designed principally to estimate 
+runoff from the various basins and route the water along the St. Johns 
+River floodplain to the model outlet. The model estimates the discharge 
+for all model elements and the stage in certain storage areas and lakes 
+with a reasonable degree of accuracy. However, the model is not ideally 
+suited for evaluations of the main stem river stage or first floor flood
+ elevations in the same area. Generally, HEC–HMS is not designed to 
+incorporate backwater boundary effects directly and it cannot easily 
+include tidal effects. Therefore for the St. Johns River Economic Study,
+ HEC–HMS was not used in the northern reaches of the middle basin or the
+ lower basin. For the larger basin-wide assessment study, the HEC–HMS 
+model provided boundary inflows to a Soil Water and Assessment Tool 
+(SWAT) (<a class="reference" rel="#2">Arnold and Allen 1993</a>; <a class="reference" rel="#3">Arnold and Fohrer 2005</a>)
+ model developed by UCF covering a majority of the middle basin. UCF in 
+turn provided boundary inflows to a three-dimensional hydrodynamic 
+AdCirc (<a class="reference" rel="#8">Luettich and Westerink 1991</a>) 
+model of the lower basin. The AdCirc model was used to evaluate flood 
+storage ecological benefits in wetland areas in the lower basin.</p><p>HEC–HMS is a widely accepted code and has been used in many model studies throughout the United States (<a class="reference" rel="#1">Anderson et al. 2002</a>; <a class="reference" rel="#6">Knebl et al. 2005</a>).
+ It is ideally suited for evaluating large scale changes in 
+precipitation input or land use changes in a model domain. For this 
+study, the model domain includes subbasin delineation adopted from the 
+U.S. Army Corps of Engineers (USACE) and includes the SJRWMD defined 
+planning units of Fort Drum Creek, Blue Cypress Creek, Fellsmere, Jane 
+Green Creek, St. Johns Marsh, Lake Poinsett, Toschatchee, and Puzzle 
+Lake. The model domain also includes the Econlockhatchee River planning 
+unit located in the middle basin.</p><p>Each planning unit consists of 
+multiple subbasins (e.g. smaller watersheds), which subdivide each 
+planning unit into more detailed areas for hydrologic modeling purposes.
+ These subbasins were delineated using topographic divides, artificial 
+structures (e.g. levees and drainage canals), and drainage paths. In 
+some cases, very small subbasins were combined together for ease of 
+modeling and where such a simplification was not expected to change 
+simulation results significantly. Generally, this approach was deemed 
+satisfactory as the focus of the UNF research was on large scale 
+processes. Figure 2 shows all of the subbasins incorporated into the UNF
+ model by <a class="reference" rel="#16">Tancreto (2015)</a>. Figure 2 
+also highlights six existing stream gauge locations that will be 
+discussed further in this study in regard to model calibration and new 
+simulation results assessing extreme precipitation events. Figure 2 
+highlights the far southern Fort Drum subbasin, Blue Cypress subbasin, 
+and Penneywash subbasin as well as main stem river locations at U.S. 
+192, S.R. 520, and at the inlet to Lake Harney.</p><p class="figure"><div class="image-container"><div class="enlarge-button"></div><img class="paper-img" alt="" src="C412-2.jpg"></div></p><p class="footing">Figure 2 Project study showing subbasins and the locations of key project discharge gauges.</p><p>The
+ subbasin delineations were developed based on projects completed within
+ the upper basin as of the project year of 2008. Therefore the Three 
+Forks Marsh Conservation Area, which was constructed after 2008, is not 
+included in the model. The implications of this omission are discussed 
+in Section 2 of this paper. For the basin land use, 1995 datasets were 
+utilized. Use of the 1995 base year land use permitted the model to be 
+used for simulation of a wide array of historic storms, as well as to 
+simulate the effects of ongoing land use change in the watershed. With 
+the exception of the Three Forks project addition, the upper basin has 
+not changed appreciably between 1995 and 2015. The overall middle basin 
+delineation has not changed significantly since 1995 but flow patterns 
+and runoff lag time have been altered due to the continued increases in 
+urban development. This has caused disruptions in the historical runoff 
+conveyance due to additional drainage ditching, new retention ponds and 
+the inclusion of increased impervious areas. Therefore the model should 
+be used with some caution for future studies involving the middle basin 
+portion of the model.</p><p>HEC–HMS computes outflow by subtracting 
+infiltration and temporary storage losses, transforming excess 
+precipitation into output hydrographs, adding baseflow, and subtracting 
+evapotranspiration from the input precipitation data that is applied to 
+each subbasin. The code also can route water through simple reaches 
+enabling hydrologic connection of the entire model domain. The code has 
+many choices of algorithms to compute infiltration losses as well as 
+transform the remaining excess precipitation (e.g. runoff) into a 
+hydrograph. For the UNF model, the United States Department of 
+Agriculture Soil Conservation Survey (SCS) curve number method (<a class="reference" rel="#19">U.S. Department of Agriculture Soil Conservation Service 1972</a>)
+ was utilized for infiltration losses and the associated SCS unit 
+hydrograph method was used for computing the outflow hydrograph in each 
+subbasin.</p><p>The land use and land cover data were downloaded from the SJRWMD for the project land use baseline year 1995 (<a class="reference" rel="#15">SJRWMD 2014</a>).
+ Data were available for each Florida county, and therefore only 
+counties associated with the project area were downloaded. Each data set
+ was imported into ArcGIS as a shape file until the entire project area 
+contained land use data. Within each shapefile the land use data were 
+classified using the Florida Land Use and Cover Classification System 
+(FLUCCS), with &gt;100 different land cover types included (<a class="reference" rel="#15">SJRWMD 2014</a>).
+ The land use data was then combined with published soil cover data in 
+Florida or the state soil geographic soil classification system 
+(STATSGO) soil group classification data. These data were imported into 
+ArcGIS as a shapefile and combined with the land use data to calculate 
+an appropriate curve number. Then, for each subbasin, an overall 
+weighted curve number was calculated based upon the percent coverage of 
+each soil type and land use type.</p><p>To accurately represent the 
+hydrologic response of each subbasin to a precipitation event, a 
+hydrograph for each subbasin, based on the time of concentration and lag
+ time, was calculated. Many empirical methods are available to estimate 
+the basin lag time or time of concentration. For this study, four 
+different methods were used and averaged to determine a mean value as 
+well as a possible range of the input value. The Natural Resources 
+Conservation Service (NRCS, formerly Soil Conservation Service, SCS) 
+developed two methods similar to the original base SCS method provided 
+as a default in HEC–HMS. These are discussed by <a class="reference" rel="#7">Li and Chibber (2008)</a> and <a class="reference" rel="#13">Sharifi et al. (2011)</a>.
+ Another common methodology recommended by the NRCS is the method known 
+as the velocity method where the time of concentration may be calculated
+ using the Manning’s kinematic solution for sheet flow, shallow 
+concentrated flow, and open channel flow (<a class="reference" rel="#18">U.S. Department of Agriculture Natural Resources Conservation Service 2010</a>).
+ Lastly, a modified version of the Snyder lag time equation was also 
+utilized. This form of the lag equation was originally developed by 
+Snyder but was later revised by USACE and the U.S. Bureau of Reclamation
+ (<a class="reference" rel="#4">City and County of Sacramento 1996</a>).</p><p>Precipitation
+ input data for the study was compiled from two different sources. First
+ existing rain gauge data was assembled from throughout the study area. 
+Gauges were chosen based upon geographic coverage but also on whether 
+they provided data for the various calibration and validation storms 
+used for the study. Besides the rain gauge data, next generation radar 
+(NEXRAD) based rainfall data was also collected and used in the study. 
+Both datasets were used in two different complementary versions of the 
+model, as one of the primary research goals in 2015 was to compare model
+ calibration statistics with each precipitation data type in order to 
+determine the relative value of each for model development in the flat 
+subtropical watershed studied. Further discussion of this effort and the
+ overall results can be found in <a class="reference" rel="#16">Tancreto (2015)</a>.
+ In general, once each model was calibrated using either rain gauge or 
+NEXRAD data, either model was satisfactory for use in predictive 
+simulations, as comparable model discharges are very similar. For this 
+paper the model version with rain gauge data was used for predictive 
+simulations.</p><p>Finally, an overall routing method had to be chosen 
+from the available options in HEC–HMS. The hydrologic routing method 
+chosen for the model was the Muskingum–Cunge routing method because it 
+can be used in reaches with a small slope, and is based on the 
+conservation of mass and the diffusion representation of the 
+conservation of momentum (<a class="reference" rel="#11">Scharffenberg and Fleming 2010</a>). Further, the Muskingum–Cunge method was chosen based on the following model criteria:</p><ul>
+	<li>minimal observed hydrograph data available in the flow way for calibration;</li>
+	<li>flood wave will enter floodplain; and</li>
+	<li>channel slopes are &lt;0.004.</li>
+</ul><p>After all of the model inputs were included in the model and the
+ initial model compiled successfully, model calibration and validation 
+were completed. The model was calibrated and validated against observed 
+stream and river flow data recorded between 2007 and 2011 and including a
+ large tropical storm event.</p><h3>1.3 HEC–HMS Calibration and Validation</h3><p>Four different simulation periods were chosen for the calibration and validation efforts. These include:</p><ul>
+	<li>August 2008: calibration;</li>
+	<li>October 2007: validation;</li>
+	<li>March 2010: validation; and</li>
+	<li>October 2011: validation.</li>
+</ul><p>The smallest precipitation event was in October 2007, which was 
+estimated to have a short recurrence interval of &lt;1&nbsp;y. This 
+storm would be more representative of a routine average wet season 
+event. From a review of detailed NEXRAD data during the March 2010 
+event, it was determined that this event was approximately a 1&nbsp;y 
+recurrence interval. The simulation events of August 2008 and October 
+2011 included much longer recurrence interval events, ranging between 5 y
+ and 25 y recurrence interval for the 24 h storm and between 10 y and 25
+ y recurrence interval for the 48 h storm. Overall, the calibration and 
+validation periods simulate storm events covering a wide range of 
+recurrence intervals and time of year. The August 2008 timeframe also 
+included the landfall of tropical storm Fay with a few small subbasins 
+receiving &gt;50 cm precipitation over 3 d.</p><p>Both the calibration 
+and validation efforts used thirteen existing stream gauges in the 
+watershed for comparison purposes. For this study, results are shown at 
+six of the most important gauges which were selected because they are 
+representative of both smaller subbasin responses as well as the 
+hydrologic response of the main stem river. Figure 2 above depicts the 
+location of all six gauge locations discussed herein. Three of the 
+gauges (Penneywash Creek, Blue Cypress and Fort Drum) are located at the
+ outlets of key subbasins in the upper basin. The remaining three gauges
+ used are located on the main stem of the St. Johns River (US 192, FL 
+520 and the inlet to Lake Harney).</p><p>To ensure that the model 
+simulates the proper physical mechanisms and environmental processes, 
+the model was calibrated to the observed conditions during the period 
+2008-08-01 to 2008-10-08. The process for calibration includes:</p><ol>
+	<li>Establishing the model parameters and determining those that will be changed for calibration;</li>
+	<li>Defining the observed values and locations which the model results should reproduce;</li>
+	<li>Determining statistical goals for the model to be considered calibrated; and</li>
+	<li>Performing iterative solutions and the adjustment of parameters until the calibration goals have been met.</li>
+</ol><p>The primary goal of the calibration process is to match the 
+simulation results to the observed gauge data as closely as possible. 
+The modeled error, as measured by statistical analysis, should be 
+minimized by the calibration process. For calibration and validation 
+efforts, several different statistics were used to assess the overall 
+goodness of fit between simulated discharge and observed discharge. This
+ comparison was completed using three different statistical measures: 
+the correlation coefficient, the coefficient of determination and the 
+Nash–Sutcliffe efficiency coefficient. The coefficient of correlation (<i>r</i>)
+ measures the strength and direction of the linear relationship between 
+variables of the measured gauge data and simulation data. The calculated
+ <i>r</i> value will be between −1 and 1, with 0 representing no correlation. The coefficient of determination (<i>r</i><sup>2</sup>) gives the variance of the data and assesses a goodness of fit at each calibration point for the model. The equation for <i>r</i><sup>2</sup>
+ is provided below in Equation 1. The coefficient of determination is 
+between 0 and 1, with 1 indicating a perfect fit with all variation 
+explained. As the coefficient approaches 1, the overall ability of the 
+model to more accurately produce better predictive simulations 
+increases.</p><table class="equation">
+	<tbody>
+		<tr>
+			<td><img class="paper-img" alt="r to the power of 2 equal open parentheses fraction numerator sum subscript i equal 1 end subscript superscript n left parenthesis O subscript i minus top enclose O right parenthesis left parenthesis S subscript i minus top enclose S right parenthesis over denominator square root of sum subscript i equal 1 end subscript superscript n left parenthesis O subscript i minus top enclose O right parenthesis to the power of 2 end root square root of sum subscript i equal 1 end subscript superscript n left parenthesis S subscript i minus top enclose S right parenthesis to the power of 2 end root end fraction close parentheses to the power of 2" data-mathml="«math xmlns=¨http://www.w3.org/1998/Math/MathML¨»«msup»«mi»r«/mi»«mn»2«/mn»«/msup»«mo»=«/mo»«msup»«mfenced»«mfrac»«mrow»«msubsup»«mo»§#8721;«/mo»«mrow»«mi»i«/mi»«mo»=«/mo»«mn»1«/mn»«/mrow»«mi»n«/mi»«/msubsup»«mo»(«/mo»«msub»«mi»O«/mi»«mi»i«/mi»«/msub»«mo»-«/mo»«menclose notation=¨top¨»«mi»O«/mi»«/menclose»«mo»)«/mo»«mo»(«/mo»«msub»«mi»S«/mi»«mi»i«/mi»«/msub»«mo»-«/mo»«menclose notation=¨top¨»«mi»S«/mi»«/menclose»«mo»)«/mo»«/mrow»«mrow»«msqrt»«msubsup»«mo»§#8721;«/mo»«mrow»«mi»i«/mi»«mo»=«/mo»«mn»1«/mn»«/mrow»«mi»n«/mi»«/msubsup»«mo»(«/mo»«msub»«mi»O«/mi»«mi»i«/mi»«/msub»«mo»-«/mo»«menclose notation=¨top¨»«mi»O«/mi»«/menclose»«msup»«mo»)«/mo»«mn»2«/mn»«/msup»«/msqrt»«msqrt»«msubsup»«mo»§#8721;«/mo»«mrow»«mi»i«/mi»«mo»=«/mo»«mn»1«/mn»«/mrow»«mi»n«/mi»«/msubsup»«mo»(«/mo»«msub»«mi»S«/mi»«mi»i«/mi»«/msub»«mo»-«/mo»«menclose notation=¨top¨»«mi»S«/mi»«/menclose»«msup»«mo»)«/mo»«mn»2«/mn»«/msup»«/msqrt»«/mrow»«/mfrac»«/mfenced»«mn»2«/mn»«/msup»«/math»" src="d99ed0b6f219f9b06fece4f20f254c0d.png"></td>
+			<td>(1)</td>
+		</tr>
+	</tbody>
+</table><p>where:</p><table class="where">
+	<tbody>
+		<tr>
+			<td><i>O<sub>i</sub></i></td>
+			<td>=</td>
+			<td>the observed discharge data on the&nbsp;<i>i</i>th day,</td>
+		</tr>
+		<tr>
+			<td><i>S<sub>i</sub></i></td>
+			<td>=</td>
+			<td>the simulated discharge data on the&nbsp;<i>i</i>th day,</td>
+		</tr>
+		<tr>
+			<td><div class="image-container"><div class="enlarge-button"></div><img class="paper-img" alt="" src="bar-o.png"></div></td>
+			<td>=</td>
+			<td>the observed mean value,</td>
+		</tr>
+		<tr>
+			<td><div class="image-container"><div class="enlarge-button"></div><img class="paper-img" alt="" src="bar-s.png"></div></td>
+			<td>=</td>
+			<td>the simulated mean value, and</td>
+		</tr>
+		<tr>
+			<td><i>n</i></td>
+			<td>=</td>
+			<td>the number of observations.</td>
+		</tr>
+	</tbody>
+</table><p>The Nash–Sutcliffe efficiency coefficient (NSE), (<a class="reference" rel="#9">Nash and Sutcliffe 1970</a>)
+ is a normalized statistic that determines the relative magnitude of the
+ residual variance compared to the measured data variance and indicates 
+how well the plot of the observed data versus the simulated data fits 
+the 1:1 line (<a class="reference" rel="#20">Wang et al. 2009</a>). The NSE equation is shown in Equation 2.</p><table class="equation">
+	<tbody>
+		<tr>
+			<td><img class="paper-img" alt="N S E equal 1 minus fraction numerator sum subscript i equal 1 end subscript superscript n left parenthesis O subscript i minus S subscript i right parenthesis to the power of 2 over denominator sum subscript i equal 1 end subscript superscript n left parenthesis O subscript i minus top enclose O right parenthesis to the power of 2 end fraction" data-mathml="«math xmlns=¨http://www.w3.org/1998/Math/MathML¨»«mi»N«/mi»«mi»S«/mi»«mi»E«/mi»«mo»=«/mo»«mn»1«/mn»«mo»-«/mo»«mfrac»«mrow»«msubsup»«mo»§#8721;«/mo»«mrow»«mi»i«/mi»«mo»=«/mo»«mn»1«/mn»«/mrow»«mi»n«/mi»«/msubsup»«mo»(«/mo»«msub»«mi»O«/mi»«mi»i«/mi»«/msub»«mo»-«/mo»«msub»«mi»S«/mi»«mi»i«/mi»«/msub»«msup»«mo»)«/mo»«mn»2«/mn»«/msup»«/mrow»«mrow»«msubsup»«mo»§#8721;«/mo»«mrow»«mi»i«/mi»«mo»=«/mo»«mn»1«/mn»«/mrow»«mi»n«/mi»«/msubsup»«mo»(«/mo»«msub»«mi»O«/mi»«mi»i«/mi»«/msub»«mo»-«/mo»«menclose notation=¨top¨»«mi»O«/mi»«/menclose»«msup»«mo»)«/mo»«mn»2«/mn»«/msup»«/mrow»«/mfrac»«/math»" src="aeb1803b6f33f9b23032e7997d041807.png"></td>
+			<td>(2)</td>
+		</tr>
+	</tbody>
+</table><p>where:</p><table class="where">
+	<tbody>
+		<tr>
+			<td><i>NSE</i></td>
+			<td>=</td>
+			<td>the Nash–Sutcliffe efficiency coefficient.</td>
+		</tr>
+	</tbody>
+</table><p>The coefficient of determination and NSE results for the 2008
+ calibration event and 2010 validation event are shown in Table 1 and 
+Table 2 respectively. A detailed discussion of these results and the 
+other validation periods is available in <a class="reference" rel="#16">Tancreto (2015)</a>.</p><p class="heading">Table 1 Calibration goodness of fit results for 2008.</p><div class="table-container"><div class="enlarge-button"></div><table class="table-formatting">
+	<tbody>
+		<tr class="table-header">
+			<td class="underline">Gauge Location</td>
+			<td class="underline"><i>r</i><sup>2</sup></td>
+			<td class="underline">NSE</td>
+		</tr>
+		<tr>
+			<td>Fort Drum</td>
+			<td>0.89</td>
+			<td>0.85</td>
+		</tr>
+		<tr>
+			<td>Blue Cypress</td>
+			<td>0.84</td>
+			<td>0.84</td>
+		</tr>
+		<tr>
+			<td>Penneywash</td>
+			<td>0.86</td>
+			<td>0.79</td>
+		</tr>
+		<tr>
+			<td>US 192</td>
+			<td>0.88</td>
+			<td>0.86</td>
+		</tr>
+		<tr>
+			<td>FL 520</td>
+			<td>0.98</td>
+			<td>0.98</td>
+		</tr>
+		<tr>
+			<td>Inlet Lake Harney</td>
+			<td>0.93</td>
+			<td>0.90</td>
+		</tr>
+	</tbody>
+</table></div><p class="heading">Table 2 Validation goodness of fit results for 2010.</p><div class="table-container"><div class="enlarge-button"></div><table class="table-formatting">
+	<tbody>
+		<tr class="table-header">
+			<td class="underline">Gauge Location</td>
+			<td class="underline"><i>r</i><sup>2</sup></td>
+			<td class="underline">NSE</td>
+		</tr>
+		<tr>
+			<td>Fort Drum</td>
+			<td>0.89</td>
+			<td>0.85</td>
+		</tr>
+		<tr>
+			<td>Blue Cypress</td>
+			<td>0.91</td>
+			<td>0.86</td>
+		</tr>
+		<tr>
+			<td>Penneywash</td>
+			<td>0.85</td>
+			<td>0.85</td>
+		</tr>
+		<tr>
+			<td>US 192</td>
+			<td>0.96</td>
+			<td>0.98</td>
+		</tr>
+		<tr>
+			<td>FL 520</td>
+			<td>0.97</td>
+			<td>0.96</td>
+		</tr>
+		<tr>
+			<td>Inlet Lake Harney</td>
+			<td>0.95</td>
+			<td>0.87</td>
+		</tr>
+	</tbody>
+</table></div><p>Based upon the goodness of fit results, both the 
+calibration model and 2010 validation model replicate observed 
+discharges with a high degree of accuracy. The <i>r</i><sup>2</sup> 
+values are &gt;0.84 and the NSE values are all &gt; 0.79 which suggests a
+ strong fit between the simulation results and observed data.</p><h3>1.4 Simulation of Extreme Precipitation Events</h3><p>With
+ the calibrated and validated model, the UNF research team went on to 
+complete some new research work in 2016. This research effort focuses 
+upon the simulation of extreme storm events in the upper basin. Using 
+the model, the UNF team developed three different simulations using 
+different large or extreme precipitation events that could occur in the 
+watershed.</p><p>The first event that was simulated was the application 
+of the 24&nbsp;h probable maximum precipitation (PMP) across the model 
+domain. The PMP event is the largest precipitation that can ever be 
+expected for a given region for worst case soil moisture conditions 
+combined with optimal meteorological conditions (<a class="reference" rel="#12">Schriener and Riedel 1978</a>).
+ The SJRWMD recommends use of the PMP in certain conditions: “Where 
+substantial risk of loss of life exists, it is appropriate to design a 
+structure against what appears to be the worst possible condition” (<a class="reference" rel="#14">SJRWMD 2010</a>).</p><p>This project area, ~ 5&nbsp;200 km<sup>2</sup>, covers a large portion of East Central and Northeast Florida. Using procedures outlined in HMR 51 (<a class="reference" rel="#12">Schriener and Riedel 1978</a>),
+ the raw 24&nbsp;h PMP precipitation was adjusted to the basin size. 
+Essentially, as the basin size gets larger, the mean precipitation 
+intensity across the entire basin gets smaller. The PMP 24&nbsp;h event 
+for Florida is recommended to range from ~120 cm for a 26 km<sup>2</sup> basin to 45 cm for a 26&nbsp;000&nbsp;km<sup>2</sup>
+ basin. For this study, a value of ~71 cm was used as input 
+precipitation across the watershed. Figure 3 shows how the precipitation
+ value was estimated from HMR 51 data.</p><p class="figure"><div class="image-container"><div class="enlarge-button"></div><img class="paper-img" alt="" src="C412-3.jpg"></div></p><p class="footing">Figure 3 Selection procedure for 24&nbsp;h PMP event.</p><p>The
+ second event that was simulated was a modification of the 24&nbsp;h PMP
+ to account for possible climate change variations that are underway in 
+the south-eastern United States. Generally, scientists believe that 
+climate change in the study area may result in more intense 
+precipitation and possibly more frequent precipitation events. With 
+these considerations in mind and based upon some engineering judgment, 
+the PMP precipitation was increased by 5% to account for these possible 
+variations.</p><p>The third event was the rare occurrence of back-to-back 100&nbsp;y return frequency events in the same week. <a class="reference" rel="#10">Perica et al. (2013)</a>
+ completed an up-to-date precipitation frequency analysis of Florida and
+ other south-eastern states. They examined recurrence intervals from 
+1&nbsp;y to 1&nbsp;000&nbsp;y of various durations. The SJRWMD also has 
+recommended precipitation totals for various recurrence intervals but 
+the UNF researchers felt that <a class="reference" rel="#10">Perica et al. (2013)</a>
+ provides the most up-to-date estimates. For this study, the UNF 
+research team applied two 24&nbsp;h 100&nbsp;y precipitation events 
+within 7&nbsp;d based upon the <a class="reference" rel="#10">Perica et al. (2013)</a> dataset.</p></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr class="h2-separator"><a href="javascript:void(0);" class="toggle nounderline collapsible-paper-section" data-toggle-between="icon-expand-brown icon-collapse-brown" data-update-cookie="false" name="2.resultsanddiscussion" id="2.resultsanddiscussion"><h2><span class="sprite icon-collapse-brown toggleicon"></span>2<span class="paper-title-separator">.</span> RESULTS AND DISCUSSION</h2></a>
+
+<div class="togglerow primary-col-contents-padding" style="padding-bottom: 20px;"><h3>2.1 The 24&nbsp;h PMP Event</h3><p>The
+ PMP precipitation totals for Florida are the highest estimates in the 
+continental United States, outside of mountainous zones, subject to 
+orographic precipitation events. Florida has been subjected to many 
+large precipitation events tied to tropical storms and hurricanes. The 
+largest such event on record is the Yankeetown, Florida extreme storm 
+which occurred from 1950-09-03 to 1950-09-07. This hurricane, named 
+Easy, provided one of the largest observed precipitation depths ever 
+recorded in the United States for watershed areas from 26 km<sup>2</sup> to 5&nbsp;200 km<sup>2</sup> for 18&nbsp;h to 72&nbsp;h duration (<a class="reference" rel="#14">SJRWMD 2010</a>). For the size of the present model domain (~5&nbsp;200&nbsp;km<sup>2</sup>),
+ Easy produced 67 cm precipitation in 24&nbsp;h. As described above, 
+HMR51 procedures resulted in a PMP event size of 71 cm, or slightly 
+larger than Easy.</p><p>For the PMP event, the calibrated model period 
+was used and modified. For comparison purposes, the antecedent moisture 
+conditions (AMC) were not changed from the calibrated model in which 
+AMC(II) or <i>average conditions</i> was adopted. Certainly, in very wet
+ years, it could be argued that the wetter moisture conditions, for 
+example AMC(III), might be applicable resulting in even larger discharge
+ values than produced herein. Tropical storm Fay precipitation from 
+2008-08-20 to 2008-08-24 was replaced by the PMP event of 71 cm applied 
+on 2008-08-21 with no precipitation assigned for the other 3 d. 
+Recompiling the calibrated model did provide for some challenges. 
+Several small reservoirs in the headwaters of the upper basin actually 
+become overtopped during the PMP event such that HEC–HMS inputs needed 
+to be changed for these areas. For each of the problematic reservoirs, a
+ hypothetical large overflow weir was added at the design crest to pass 
+the discharge out of the reservoir. This of course was for simulation 
+purposes only; in a real PMP event, it is quite possible that all of 
+these reservoirs could fail due to overtopping flows. Once the debugging
+ process was complete, simulated PMP discharges were reviewed at each of
+ the six stream gauge locations discussed previously in this study. 
+Figures 4 to 9 show the simulated flood events at each location as well 
+as observed flows during the Fay event and calibration flows during the 
+Fay event. Note that the US 192 gauge is also denoted as St. Johns River
+ 20 in HEC–HMS. Similarly, the FL 520 gauge is also known as St. Johns 
+River 35 while the inlet to Lake Harney is known as St. Johns River 52.</p><div id="fig4" style="height: 660px; width: 100%;"><div id="jb-glry-id-0" tabindex="0" class="juicebox-gallery  jb-flag-large-screen-mode" style="width:100%;height:100%;"><div class="jcbx-glry-classic" style="display: none; width: 100%; height: 100%; background-color: rgb(255, 255, 255); font-family: &quot;Quicksand&quot;,sans-serif;"><div class="jb-panel-index jb-classifier-thumb-area" data-layer="300" style="display: block; position: absolute ! important; z-index: 300; opacity: 1; transition-property: none; width: 566px; height: 170px; top: 490px; left: 0px; -moz-user-select: none;"><div class="jb-idx-thumbnail-container" style="height:100% !important;width:100% !important;margin:0;padding:0;position:relative;"><div class="jb-idx-show-area" style="overflow: hidden; margin: 0px; padding: 0px; position: absolute; top: 0px; left: 45px; width: 475px; height: 105px;"><table class="jb-idx-thb-container jb-classifier-thumb-area table_page_0 jb-tbn-current" style="left: 0px; -moz-user-select: none;"><tbody><tr><td style="text-align:center !important;width:auto !important;"><div class="jb-idx-thb-list" style="text-align:center !important;width:475px;margin-left: auto;margin-right: auto; margin-top:0; margin-bottom:0; padding:0;"><div data-position="0" id="jb-glry-id-0_thumb_0" class="jb-idx-thumb jb-thumb-visited jb-thm-thumb-selected" style="overflow:hidden;width:85px;height:85px;padding:0;margin:5px 5px 5px 5px;box-shadow: 0px 0px 5px rgba(0,0,0,0);"><div class="jb-status-thumb-loading" style="color: rgb(255, 255, 255);"><div></div></div></div><div data-position="1" id="jb-glry-id-0_thumb_1" class="jb-idx-thumb" style="overflow:hidden;width:85px;height:85px;padding:0;margin:5px 5px 5px 5px;box-shadow: 0px 0px 5px rgba(0,0,0,0);"><div class="jb-status-thumb-loading" style="color: rgba(0, 0, 0, 0.5);"><div></div></div></div><div data-position="2" id="jb-glry-id-0_thumb_2" class="jb-idx-thumb" style="overflow:hidden;width:85px;height:85px;padding:0;margin:5px 5px 5px 5px;box-shadow: 0px 0px 5px rgba(0,0,0,0);"><div class="jb-status-thumb-loading" style="color: rgba(0, 0, 0, 0.5);"><div></div></div></div><div data-position="3" id="jb-glry-id-0_thumb_3" class="jb-idx-thumb" style="overflow:hidden;width:85px;height:85px;padding:0;margin:5px 5px 5px 5px;box-shadow: 0px 0px 5px rgba(0,0,0,0);"><div class="jb-status-thumb-loading" style="color: rgba(0, 0, 0, 0.5);"><div></div></div></div><div data-position="4" id="jb-glry-id-0_thumb_4" class="jb-idx-thumb" style="overflow:hidden;width:85px;height:85px;padding:0;margin:5px 5px 5px 5px;box-shadow: 0px 0px 5px rgba(0,0,0,0);"><div class="jb-status-thumb-loading" style="color: rgba(0, 0, 0, 0.5);"><div></div></div></div></div></td></tr></tbody></table><table class="jb-idx-thb-container jb-classifier-thumb-area table_page_1 jb-tbn-next" style="left: 475px; -moz-user-select: none;"><tbody><tr><td style="text-align:center !important;width:auto !important;"><div class="jb-idx-thb-list" style="text-align:center !important;width:475px;margin-left: auto;margin-right: auto; margin-top:0; margin-bottom:0; padding:0;"><div data-position="5" id="jb-glry-id-0_thumb_5" class="jb-idx-thumb" style="overflow:hidden;width:85px;height:85px;padding:0;margin:5px 5px 5px 5px;box-shadow: 0px 0px 5px rgba(0,0,0,0);"><div class="jb-status-thumb-loading" style="color: rgba(0, 0, 0, 0.5);"><div></div></div></div></div></td></tr></tbody></table></div><div class="jb-area-caption jb-classifier-layer jb-flag-size-fixed" data-layer="200" style="display: block; position: absolute; overflow: hidden; bottom: 0px; z-index: 400; max-height: 70px; width: 566px; height: auto; top: 100px; left: 0px; opacity: 1; transition-property: none;" quicksand',="" sans-serif;'=""><table class="jb-cap-frame caption_0" style="position:absolute;width:566px;left:0px;"><tbody><tr><td><div data-layer="1000" class="jb-caption jb-classifier-layer" style="overflow: hidden; z-index: 1000; display: block; padding: 12px 18px; max-height: 46px; color: rgb(102, 102, 102); text-shadow: 0px 0px 0px transparent; background-color: transparent;"><div class="jbac-number jb-classifier-layer" data-layer="2000" style="z-index:2000;color:rgba(102,102,102,1);text-shadow:0px 0px 0px rgba(0,0,0,0);font-family:'Quicksand', sans-serif;">1 / 6</div><p class="jb-cap-content jb-caption-title" style="text-align:center;font-family:'Quicksand', sans-serif;"></p><p class="caption">Figure 4 Simulation results for 24 h PMP event at Fort Drum outlet.</p>&nbsp;<p></p></div></td></tr></tbody></table><table class="jb-cap-frame caption_1" style="position:absolute;width:566px;left:626px;"><tbody><tr><td><div data-layer="1000" class="jb-caption jb-classifier-layer" style="overflow: hidden; z-index: 1000; display: block; padding: 12px 18px; max-height: 46px; color: rgb(102, 102, 102); text-shadow: 0px 0px 0px transparent; background-color: transparent;"><div class="jbac-number jb-classifier-layer" data-layer="2000" style="z-index:2000;color:rgba(102,102,102,1);text-shadow:0px 0px 0px rgba(0,0,0,0);font-family:'Quicksand', sans-serif;">2 / 6</div><p class="jb-cap-content jb-caption-title" style="text-align:center;font-family:'Quicksand', sans-serif;"></p><p class="caption">Figure 5 Simulation results for 24 h PMP event at Blue Cypress outlet.</p>&nbsp;<p></p></div></td></tr></tbody></table></div></div><div class="jb-navigation index-navigation jb-classifier-thumb-area" style="-moz-user-select: none;"><div class="jbn-nav-button jbn-left-button jbn-nav-button-icon jb-classifier-layer" data-layer="1000" style="z-index: 1000; display: none; font-size: 20px; height: 24px; width: 24px; padding-left: 2px; padding-right: 2px; padding-top: 4px; border-radius: 20px; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0.5); left: 8px; top: 33px;"></div><div class="jbn-nav-button jbn-right-button jbn-nav-button-icon jb-classifier-layer" data-layer="1000" style="z-index: 1000; display: block; font-size: 20px; height: 24px; width: 24px; padding-left: 2px; padding-right: 2px; padding-top: 4px; border-radius: 20px; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0.5); opacity: 1; transition-property: none; right: 8px; top: 33px;"></div></div><div class="jb-idx-thumbnail-show-more" style="left:10px;bottom:10px;height:30px;width:100%;margin:0;padding:0;position:absolute;display:none;"><a href="#">more...</a></div></div><div class="jb-panel-detail jb-classifier-detail-area jb-classifier-layer" data-layer="50" style="position: absolute ! important; width: 566px; height: 485px; top: 0px; left: 0px; -moz-user-select: none;"><div class="jb-dt-main-frame jb-dt-main-image-0" style="height: 485px; width: 566px; left: 0px; opacity: 1; display: block; transition-property: none;"><div class="jb-status-loading" style="position:absolute;top:0;left:0;width:566px;height:485px;padding:0;margin:0;"></div></div><div class="jb-dt-main-frame jb-dt-main-image-1" style="height:485px;width:566px;left:626px;"><div class="jb-status-loading" style="position:absolute;top:0;left:0;width:566px;height:485px;padding:0;margin:0;"></div></div></div><div class="jb-classifier-link-wrapper jb-classifier-detail-area jb-classifier-layer jb-classifier-show-on-over" data-layer="3000" style="z-index: 3000; display: block; opacity: 1; transition-property: none; right: 0px; top: 10px; width: 78px; -moz-user-select: none;"><div class="jb-bb-bar" style=""><div class="jb-bb-button jb-bb-btn-de-show-list" title="Hide Thumbnails" style="font-size: 20px; border-top: 10px solid transparent; height: 30px; width: 40px; display: none;"></div><div class="jb-bb-button jb-bb-btn-open-url" title="Open Image in New Window" style="font-size: 20px; border-top: 10px solid transparent; height: 30px; width: 40px; display: none;"></div><div class="jb-bb-button jb-bb-btn-full-screen" title="Expand Gallery" style="font-size:20px;border-top:10px solid transparent;height:30px;width:40px;"></div><div class="jb-bb-splitter jb-bb-splitter-1" style="height: 20px; margin: 9px 2px; display: none;"></div><div class="jb-bb-button jb-bb-btn-top-nav jb-bb-btn-top-nav-left" title="Previous Image" style="font-size: 20px; border-top: 10px solid transparent; height: 30px; width: 40px; display: none;"></div><div class="jb-bb-button jb-bb-btn-auto-play" title="Start AutoPlay" style="font-size: 20px; border-top: 10px solid transparent; height: 30px; width: 40px; display: none;"></div><div class="jb-bb-button jb-bb-btn-top-nav jb-bb-btn-top-nav-right" title="Next Image" style="font-size: 20px; border-top: 10px solid transparent; height: 30px; width: 40px; display: none;"></div><div class="jb-bb-splitter jb-bb-splitter-2" style="height: 20px; margin: 9px 2px; display: none;"></div><div class="jb-bb-button jb-bb-btn-show-info" title="Hide Information" style="font-size: 20px; border-top: 10px solid transparent; height: 30px; width: 40px; display: none;"></div><div class="jb-bb-button jb-bb-btn-audio" title="Play Audio" style="font-size: 20px; border-top: 10px solid transparent; height: 30px; width: 40px; display: none;"></div><div class="jb-bb-splitter jb-bb-splitter-3" style="height: 20px; margin: 9px 2px; display: none;"></div><div class="jb-bb-button jb-bb-btn-fotomoto" title="Buy this Image" style="font-size:20px;border-top:10px solid transparent;height:30px;width:40px;;display:none;"></div></div></div><div class="jb-navigation jb-classifier-detail-area jb-classifier-layer" data-layer="500" style="height: 485px; z-index: 500; top: 0px; left: 0px; width: 566px; -moz-user-select: none;"><div class="jb-status-message" style="position: absolute; display: none; -moz-user-select: none;" quicksand',="" sans-serif;'=""></div><div class="jbn-nav-touch-area jbn-nav-left-touch-area" style="-moz-user-select: none;"><div class="jbn-nav-button jb-classifier-show-on-over jb-classifier-layer" data-layer="1000" style="z-index: 1000; position: absolute; left: 20px; height: 28px; width: 28px; opacity: 1; -moz-user-select: none;"><div class="jbn-left-button jbn-nav-button-icon" style="display: none; font-size: 20px; height: 24px; width: 24px; padding-left: 2px; padding-right: 2px; padding-top: 4px; border-radius: 20px; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0.5); -moz-user-select: none;"></div></div></div><div class="jbn-nav-touch-area jbn-nav-right-touch-area" style="-moz-user-select: none;"><div class="jbn-nav-button jb-classifier-show-on-over jb-classifier-layer" data-layer="1000" style="z-index: 1000; position: absolute; right: 20px; height: 28px; width: 28px; opacity: 1; -moz-user-select: none;"><div class="jbn-right-button jbn-nav-button-icon" style="display: none; font-size: 20px; height: 24px; width: 24px; padding-left: 2px; padding-right: 2px; padding-top: 4px; border-radius: 20px; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0.5); -moz-user-select: none;"></div></div></div></div></div></div></div><p>A
+ review of the figures reveals that the peak precipitation rates for the
+ 24&nbsp;h PMP event result in probable maximum flood (PMF) flow rates 
+ranging from a low of 148&nbsp;m<sup>3</sup>/s at the Penneywash Creek outlet to a high of 980 &nbsp;m<sup>3</sup>/s
+ at the inlet to Lake Harney. These flow rates are ~2.75 times greater 
+than tropical storm Fay peak flows along the St. Johns River main stem 
+and &gt;4 times greater for the smaller subbasins (Fort Drum, Blue 
+Cypress and Penneywash Creek). It is also interesting to note that the 
+recommended SJRWMD design PMP event (<a class="reference" rel="#14">SJRWMD 2010</a>)
+ is smaller than that simulated herein. SJRWMD uses the 24&nbsp;h 
+duration PMP storm for design purposes within its regulatory boundaries 
+with a 200 mile<sup>2</sup> (518 km<sup>2</sup>) storm as the standard 
+storm size with 78.74&nbsp;cm of precipitation. Scaling this storm to 
+the model domain size similar to the procedure outlined above results in
+ a recommended design PMP precipitation event of ~63&nbsp;cm which is 
+less than the hurricane Easy 24&nbsp;h event. It is important to note 
+that since the Three Forks Marsh Conservation Area is not included in 
+the current model, the actual hydrographs (e.g. peak discharge rates) 
+predicted using the model are likely a bit higher than would otherwise 
+be observed if this important storage area was included. Additional 
+simulations would be required to determine the degree of flood 
+mitigation provided by the storage area; however, it is not anticipated 
+to be significant at the PMF event.&nbsp;</p><h3>2.2 The 24&nbsp;h PMP Event with Climate Change</h3><p>The
+ 24&nbsp;h PMP event with climate change forcing considered results in 
+small increases in peak flow rates ranging from 3% to 6% at different 
+stations with peak flow at Lake Harney increasing to 1&nbsp;020&nbsp;m<sup>3</sup>/s.
+ It should be noted that due to the small relative changes recorded, no 
+additional figures were plotted for this particular scenario. Further 
+study of climate change forcing is warranted as the possible changes in 
+extreme events have not really been studied in any detail as yet.</p><h3>2.3 Two 100&nbsp;y Events in Seven Days</h3><p>The
+ last extreme precipitation events that were simulated with the 
+calibrated model included a scenario whereby two 100&nbsp;y recurrence 
+interval precipitation events happened within 7 d. <a class="reference" rel="#10">Perica et al. (2013)</a>
+ provide precipitation recurrence interval estimates from 5 min to 
+72&nbsp;h duration up to a 1&nbsp;000&nbsp;y return period. In reviewing
+ 100&nbsp;y precipitation totals for the upper basin study area, 
+precipitation depths range from ~27.5 cm to 33 cm with a median value of
+ ~30&nbsp;cm. Therefore, for ease of simulation development, a value of 
+30 cm was applied across the model domain on day 2 and day 5 of the same
+ tropical storm Fay week using the August 2008 model calibration event. 
+Essentially, the observed precipitation values from 2008-08-21 to 
+2008-08-27 were replaced with the hypothetical precipitation with 
+2008-08-21 and 2008-08-24 each receiving 30 cm precipitation while the 
+other days of that week were assigned 0 cm precipitation. In addition, 
+no changes to AMC values were made for this model scenario, although it 
+might be reasonably argued that a wetter than average condition could be
+ appropriate after the first 100 y precipitation event; nonetheless, 
+this approach was not taken for this scenario. Figures 10 through 12 
+provide the hydrograph results over plotted with the previous PMP, 
+calibration, and observed 2008 data discussed previously. The peak flood
+ rates range from ~131 &nbsp;m<sup>3</sup>/s to 676 &nbsp;m<sup>3</sup>/s,
+ or a bit more than twice those observed during tropical storm Fay in 
+2008. The results at the other three stations presented previously are 
+similar in nature to Figures 10 to 12.</p><div id="fig10" style="height: 660px; width: 100%;"><div id="jb-glry-id-1" tabindex="0" class="juicebox-gallery  jb-flag-large-screen-mode" style="width:100%;height:100%;"><div class="jcbx-glry-classic" style="display: none; width: 100%; height: 100%; background-color: rgb(255, 255, 255); font-family: &quot;Quicksand&quot;,sans-serif;"><div class="jb-panel-index jb-classifier-thumb-area" data-layer="300" style="display: block; position: absolute ! important; z-index: 300; opacity: 1; transition-property: none; width: 566px; height: 170px; top: 490px; left: 0px; -moz-user-select: none;"><div class="jb-idx-thumbnail-container" style="height:100% !important;width:100% !important;margin:0;padding:0;position:relative;"><div class="jb-idx-show-area" style="overflow: hidden; margin: 0px; padding: 0px; position: absolute; top: 0px; left: 45px; width: 475px; height: 105px;"><table class="jb-idx-thb-container jb-classifier-thumb-area table_page_0 jb-tbn-current" style="left: 0px; -moz-user-select: none;"><tbody><tr><td style="text-align:center !important;width:auto !important;"><div class="jb-idx-thb-list" style="text-align:center !important;width:285px;margin-left: auto;margin-right: auto; margin-top:0; margin-bottom:0; padding:0;"><div data-position="0" id="jb-glry-id-1_thumb_0" class="jb-idx-thumb jb-thumb-visited jb-thm-thumb-selected" style="overflow:hidden;width:85px;height:85px;padding:0;margin:5px 5px 5px 5px;box-shadow: 0px 0px 5px rgba(0,0,0,0);"><div class="jb-status-thumb-loading" style="color: rgb(255, 255, 255);"><div></div></div></div><div data-position="1" id="jb-glry-id-1_thumb_1" class="jb-idx-thumb" style="overflow:hidden;width:85px;height:85px;padding:0;margin:5px 5px 5px 5px;box-shadow: 0px 0px 5px rgba(0,0,0,0);"><div class="jb-status-thumb-loading" style="color: rgba(0, 0, 0, 0.5);"><div></div></div></div><div data-position="2" id="jb-glry-id-1_thumb_2" class="jb-idx-thumb" style="overflow:hidden;width:85px;height:85px;padding:0;margin:5px 5px 5px 5px;box-shadow: 0px 0px 5px rgba(0,0,0,0);"><div class="jb-status-thumb-loading" style="color: rgba(0, 0, 0, 0.5);"><div></div></div></div></div></td></tr></tbody></table></div><div class="jb-area-caption jb-classifier-layer jb-flag-size-fixed" data-layer="200" style="display: block; position: absolute; overflow: hidden; bottom: 0px; z-index: 400; max-height: 70px; width: 566px; height: auto; top: 100px; left: 0px; opacity: 1; transition-property: none;" quicksand',="" sans-serif;'=""><table class="jb-cap-frame caption_0" style="position:absolute;width:566px;left:0px;"><tbody><tr><td><div data-layer="1000" class="jb-caption jb-classifier-layer" style="overflow: hidden; z-index: 1000; display: block; padding: 12px 18px; max-height: 46px; color: rgb(102, 102, 102); text-shadow: 0px 0px 0px transparent; background-color: transparent;"><div class="jbac-number jb-classifier-layer" data-layer="2000" style="z-index:2000;color:rgba(102,102,102,1);text-shadow:0px 0px 0px rgba(0,0,0,0);font-family:'Quicksand', sans-serif;">1 / 3</div><p class="jb-cap-content jb-caption-title" style="text-align:center;font-family:'Quicksand', sans-serif;"></p><p class="caption">Figure 10 Simulation results for two 100 y rain events in same week at Fort Drum outlet.</p>&nbsp;<p></p></div></td></tr></tbody></table><table class="jb-cap-frame caption_1" style="position:absolute;width:566px;left:626px;"><tbody><tr><td><div data-layer="1000" class="jb-caption jb-classifier-layer" style="overflow: hidden; z-index: 1000; display: block; padding: 12px 18px; max-height: 46px; color: rgb(102, 102, 102); text-shadow: 0px 0px 0px transparent; background-color: transparent;"><div class="jbac-number jb-classifier-layer" data-layer="2000" style="z-index:2000;color:rgba(102,102,102,1);text-shadow:0px 0px 0px rgba(0,0,0,0);font-family:'Quicksand', sans-serif;">2 / 3</div><p class="jb-cap-content jb-caption-title" style="text-align:center;font-family:'Quicksand', sans-serif;"></p><p class="caption">Figure 11 Simulation results for two 100 y rain events in same week at FL 520.</p>&nbsp;<p></p></div></td></tr></tbody></table></div></div><div class="jb-navigation index-navigation jb-classifier-thumb-area" style="-moz-user-select: none;"><div class="jbn-nav-button jbn-left-button jbn-nav-button-icon jb-classifier-layer" data-layer="1000" style="z-index: 1000; display: none; font-size: 20px; height: 24px; width: 24px; padding-left: 2px; padding-right: 2px; padding-top: 4px; border-radius: 20px; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0.5); left: 8px; top: 33px;"></div><div class="jbn-nav-button jbn-right-button jbn-nav-button-icon jb-classifier-layer" data-layer="1000" style="z-index: 1000; display: none; font-size: 20px; height: 24px; width: 24px; padding-left: 2px; padding-right: 2px; padding-top: 4px; border-radius: 20px; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0.5); right: 8px; top: 33px;"></div></div><div class="jb-idx-thumbnail-show-more" style="left:10px;bottom:10px;height:30px;width:100%;margin:0;padding:0;position:absolute;display:none;"><a href="#">more...</a></div></div><div class="jb-panel-detail jb-classifier-detail-area jb-classifier-layer" data-layer="50" style="position: absolute ! important; width: 566px; height: 485px; top: 0px; left: 0px; -moz-user-select: none;"><div class="jb-dt-main-frame jb-dt-main-image-0" style="height: 485px; width: 566px; left: 0px; opacity: 1; display: block; transition-property: none;"><div class="jb-status-loading" style="position:absolute;top:0;left:0;width:566px;height:485px;padding:0;margin:0;"></div></div><div class="jb-dt-main-frame jb-dt-main-image-1" style="height:485px;width:566px;left:626px;"><div class="jb-status-loading" style="position:absolute;top:0;left:0;width:566px;height:485px;padding:0;margin:0;"></div></div></div><div class="jb-classifier-link-wrapper jb-classifier-detail-area jb-classifier-layer jb-classifier-show-on-over" data-layer="3000" style="z-index: 3000; display: block; opacity: 1; transition-property: none; right: 0px; top: 10px; width: 78px; -moz-user-select: none;"><div class="jb-bb-bar" style=""><div class="jb-bb-button jb-bb-btn-de-show-list" title="Hide Thumbnails" style="font-size: 20px; border-top: 10px solid transparent; height: 30px; width: 40px; display: none;"></div><div class="jb-bb-button jb-bb-btn-open-url" title="Open Image in New Window" style="font-size: 20px; border-top: 10px solid transparent; height: 30px; width: 40px; display: none;"></div><div class="jb-bb-button jb-bb-btn-full-screen" title="Expand Gallery" style="font-size:20px;border-top:10px solid transparent;height:30px;width:40px;"></div><div class="jb-bb-splitter jb-bb-splitter-1" style="height: 20px; margin: 9px 2px; display: none;"></div><div class="jb-bb-button jb-bb-btn-top-nav jb-bb-btn-top-nav-left" title="Previous Image" style="font-size: 20px; border-top: 10px solid transparent; height: 30px; width: 40px; display: none;"></div><div class="jb-bb-button jb-bb-btn-auto-play" title="Start AutoPlay" style="font-size: 20px; border-top: 10px solid transparent; height: 30px; width: 40px; display: none;"></div><div class="jb-bb-button jb-bb-btn-top-nav jb-bb-btn-top-nav-right" title="Next Image" style="font-size: 20px; border-top: 10px solid transparent; height: 30px; width: 40px; display: none;"></div><div class="jb-bb-splitter jb-bb-splitter-2" style="height: 20px; margin: 9px 2px; display: none;"></div><div class="jb-bb-button jb-bb-btn-show-info" title="Hide Information" style="font-size: 20px; border-top: 10px solid transparent; height: 30px; width: 40px; display: none;"></div><div class="jb-bb-button jb-bb-btn-audio" title="Play Audio" style="font-size: 20px; border-top: 10px solid transparent; height: 30px; width: 40px; display: none;"></div><div class="jb-bb-splitter jb-bb-splitter-3" style="height: 20px; margin: 9px 2px; display: none;"></div><div class="jb-bb-button jb-bb-btn-fotomoto" title="Buy this Image" style="font-size:20px;border-top:10px solid transparent;height:30px;width:40px;;display:none;"></div></div></div><div class="jb-navigation jb-classifier-detail-area jb-classifier-layer" data-layer="500" style="height: 485px; z-index: 500; top: 0px; left: 0px; width: 566px; -moz-user-select: none;"><div class="jb-status-message" style="position: absolute; display: none; -moz-user-select: none;" quicksand',="" sans-serif;'=""></div><div class="jbn-nav-touch-area jbn-nav-left-touch-area" style="-moz-user-select: none;"><div class="jbn-nav-button jb-classifier-show-on-over jb-classifier-layer" data-layer="1000" style="z-index: 1000; position: absolute; left: 20px; height: 28px; width: 28px; opacity: 1; -moz-user-select: none;"><div class="jbn-left-button jbn-nav-button-icon" style="display: none; font-size: 20px; height: 24px; width: 24px; padding-left: 2px; padding-right: 2px; padding-top: 4px; border-radius: 20px; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0.5); -moz-user-select: none;"></div></div></div><div class="jbn-nav-touch-area jbn-nav-right-touch-area" style="-moz-user-select: none;"><div class="jbn-nav-button jb-classifier-show-on-over jb-classifier-layer" data-layer="1000" style="z-index: 1000; position: absolute; right: 20px; height: 28px; width: 28px; opacity: 1; -moz-user-select: none;"><div class="jbn-right-button jbn-nav-button-icon" style="display: none; font-size: 20px; height: 24px; width: 24px; padding-left: 2px; padding-right: 2px; padding-top: 4px; border-radius: 20px; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0.5); -moz-user-select: none;"></div></div></div></div></div></div></div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<hr class="h2-separator"><a href="javascript:void(0);" class="toggle nounderline collapsible-paper-section" data-toggle-between="icon-expand-brown icon-collapse-brown" data-update-cookie="false" name="3.conclusions" id="3.conclusions"><h2><span class="sprite icon-collapse-brown toggleicon"></span>3<span class="paper-title-separator">.</span> CONCLUSIONS</h2></a>
+
+<div class="togglerow primary-col-contents-padding" style="padding-bottom: 20px;"><p>This
+ paper has discussed the overall development, calibration, and 
+validation of a large HEC–HMS model of the upper basin and a portion of 
+the middle basin of the St. Johns River in Northeast Florida. The 
+calibrated and validated model was used to simulate the watershed 
+response from three different extreme storm events. The largest of 
+these, the PMP event, provided the largest hydrograph response and 
+maximum expected flood flows in the model domain. The largest flood flow
+ at the inlet of Lake Harney is predicted to be ~980 &nbsp;m<sup>3</sup>/s,
+ which is about three times greater than flood flows observed during 
+tropical storm Fay in 2008. The second extreme event was simply a 
+modification of the PMP event to include possible future climate change 
+forcing that may further increase PMP flood flows by 3% to 6% with a 5% 
+increase in precipitation. A final scenario that was simulated included 
+the application of two 100&nbsp;y precipitation events of ~30 cm each 
+during the same week. These predicted flood flows were more than twice 
+those observed during tropical storm Fay. One important observation from
+ the modeling effort was that a number of small reservoirs located in 
+the upper basin may fail under these extreme loadings. These reservoirs 
+include:</p><ul>
+	<li>BC East;</li>
+	<li>Kensansville Lake;</li>
+	<li>Tucker;</li>
+	<li>Mary A Groves;</li>
+	<li>Mary A. Groves Restoration; and</li>
+	<li>Taylor Creek.</li>
+</ul><p>In addition, the outlet of Lake Harney also appeared to be 
+subject to overtopping flows. All of these water control projects should
+ be further investigated to determine their resiliency to manage extreme
+ flood events without catastrophic failure.</p></div>
+
+
+
+
+
+<hr class="h2-separator"><a href="javascript:void(0);" class="toggle nounderline collapsible-paper-section" data-toggle-between="icon-expand-brown icon-collapse-brown" data-update-cookie="false" name="references" id="references"><h2><span class="sprite icon-collapse-brown toggleicon"></span>REFERENCES</h2></a>
+
+<div class="togglerow primary-col-contents-padding" style="padding-bottom: 20px;"><ol class="reference-ol-list">
+	<li id="1">Anderson, M., Z. Chen, M. Kavvas and A. Feldman. 2002. 
+“Coupling HEC–HMS with Atmospheric Models for Prediction of Watershed 
+Runoff.” <i>Journal of Hydrologic Engineering </i>7&nbsp;(4):&nbsp;312–8. <a href="https://doi.org/10.1061/%28ASCE%291084-0699%282002%29" target="_blank" rel="noopener noreferrer">https://doi.org/10.1061/(ASCE)1084-0699(2002)</a>.</li>
+	<li id="2">Arnold, J. G. and P. M. Allen. 1993. “A Comprehensive Surface–Groundwater Flow Model.” <i>Journal of Hydrology</i> 142&nbsp;(1–4):&nbsp;47–69.</li>
+	<li id="3">Arnold, J. G. and N. Fohrer. 2005. “SWAT2000: Current Capabilities and Research Opportunities in Applied Watershed Modeling.” <i>Hydrologic Processes</i> 19&nbsp;(3):&nbsp;563–72.</li>
+	<li id="4">City and County of Sacramento. 1996. “Lag Time.” In <i>Drainage Manual Volume 2: Hydrology Standards</i>, ch. 7. <a href="http://www.waterresources.saccounty.net/DrainageManual_Volume2/V2_Chap07.PDF" target="_blank" rel="noopener noreferrer">http://www.waterresources.saccounty.net/DrainageManual_Volume2/V2_Chap07.PDF</a>.</li>
+	<li id="5">Hackney, C., ed. 2015. <i>St. Johns River Economic Study</i>. Jacksonville, FL: University of North Florida Office of Research and Sponsored Programs.</li>
+	<li id="6">Knebl, M. R., Z. L. Yanga, K. Hutchison and D. R. Maidment. 
+2005. “Regional Scale Flood Modeling Using NEXRAD Rainfall, GIS, and 
+HEC–HMS/RAS: A Case Study for the San Antonio River Basin Summer 2002 
+Storm Event.” <i>Journal of Environmental Management</i> 75:325–36. <a href="https://doi.org/10.1016/j.jenvman.2004.11.024" target="_blank" rel="noopener noreferrer">https://doi.org/10.1016/j.jenvman.2004.11.024</a>.</li>
+	<li id="7">Li, M. H. and P. Chibber. 2008. “Overland Flow Time of Concentration on Very Flat Terrains.” <i>Journal of the Transportation Research Board</i> 2060:133–40. <a href="https://doi.org/10.3141/2060-15" target="_blank" rel="noopener noreferrer">https://doi.org/10.3141/2060-15</a>.</li>
+	<li id="8">Luettich, R. A. and J. J. Westerink. 1991. “A Solution for 
+the Vertical Variation of Stress, Rather Than Velocity, in a 
+Three-Dimensional Circulation Model.” <i>International Journal for Numerical Methods in Fluids</i> 12:911–28.</li>
+	<li id="9">Nash, J. E. and J. V. Sutcliffe, 1970. “River Flow Forecasting Through Conceptual Models: Part I, A Discussion of Principles.” <i>Journal of Hydrology</i> 10:282–90.</li>
+	<li id="10">Perica, S., D. Martin, S. Pavlovic, I. Roy, M. St. Laurent, C. Trypaluk, D. Unruh, M. Yekta and G. Bonnin. 2013. <i>NOAA Atlas 14 Volume 9 Version 2, Precipitation-Frequency Atlas of the United States, Southeastern States</i>. Silver Spring, MD: NOAA, National Weather Service.</li>
+	<li id="11">Scharffenberg, W. A. and M. J. Fleming. 2010. <i>Hydrologic Modeling System HEC–HMS User’s Manual</i>. Davis, CA: U.S. Army Corps of Engineers.</li>
+	<li id="12">Schriener L. C. and J. C. Riedel. 1978. <i>Probable Maximum Precipitation Estimates, United States East of the 105th Meridian</i>.
+ Washington, DC: U.S. Department of Commerce, National Oceanic and 
+Atmospheric Administration and U.S. Department of the Army, Corps of 
+Engineers. Hydrometeorological Report 51.</li>
+	<li id="13">Sharifi, S. and S. M. Hosseini. 2011. “Methodology for 
+Identifying the Best Equations for Estimating the Time of Concentration 
+of Watersheds in a Particular Region.” <i>Journal of Irrigation and Drainage Engineering</i> 137&nbsp;(11): 712–9.</li>
+	<li id="14">St. Johns River Water Management District (SJRWMD). 2010. <i>Applicant’s Handbook: Management and Storage for Surface Waters</i>. Palatka, FL: St. Johns River Water Management District.</li>
+	<li id="15">St. Johns River Water Management District (SJRWMD). 2014. <i>Land Cover/Land Use 1994–95—SJRWMD [Map]</i>. Palatka, FL: St. Johns River Water Management District.</li>
+	<li id="16">Tancreto, A. E. 2015. <i>Comparison of Hydrologic Model 
+Performance Statistics Using Thiessen Polygon Rain Gauge and NEXRAD 
+Precipitation Input Methods at Different Watershed Spatial Scales and 
+Rainfall Return Frequencies</i>. Jacksonville, FL: University of North Florida. Master’s Thesis. <a rel="nofollow" target="_blank" href="http://digitalcommons.unf.edu/etd/584">http://digitalcommons.unf.edu/etd/584</a>.</li>
+	<li id="17">U.S. Army Corps of Engineers (USACE). 2000. <i>Hydrologic Modeling System HEC–HMS</i>. Davis, CA: USACE. Report No. CPD-74B.</li>
+	<li id="18">U.S. Department of Agriculture Natural Resources Conservation Service. 2010. “Time of Concentration.” In <i>National Engineering Handbook</i>, ch. 15. Washington, DC: U.S. Department of Agriculture.</li>
+	<li id="19">U.S. Department of Agriculture Soil Conservation Service. 1972. <i>National Engineering Handbook, Section 4, Hydrology</i>. Washington, DC: U.S. Department of Agriculture.</li>
+	<li id="20">Wang, W. C., K. W. Chau, C. T. Cheng and L. Qiu. 2009. “A 
+Comparison of Performance of Several Artificial Intelligence Methods for
+ Forecasting Monthly Discharge Time Series.” <i>Journal of Hydrology</i> 374&nbsp;(3):&nbsp;294–306.&nbsp;</li>
+</ol><script>
+			new juicebox({
+			    containerId: 'fig4',
+                            galleryWidth: '100%',
+                            galleryHeight: '660',
+			    configUrl: '/Content/gallery/configC412F4-9.xml'
+			});
+			new juicebox({
+			    containerId: 'fig10',
+                            galleryWidth: '100%',
+                            galleryHeight: '660',
+			    configUrl: '/Content/gallery/configC412F10-12.xml'
+			});
+		</script></div>
+
+		
+                </div>
+                
+            </div>
+        </div>
+        <div class="hidden-print sidebar-col-affix">
+            
+            <div class="affix-container affix-container-autoscroll affix" data-spy="affix" style="max-height: 550px; top: 78.8167px;">
+                
+                <div class="affix-inner" style="width: 304px;">
+                    
+                        <div class="hidden-sm hidden-xs"><div class="row">
+    <div class="col-sm-12">
+        <div class="socialmediasharing">
+            <a href="mailto:&amp;subject=Simulating%20the%20Upper%20St.%20Johns%20River%20for%20Extreme%20Events&amp;body=Simulating%20the%20Upper%20St.%20Johns%20River%20for%20Extreme%20Events%20https%3a%2f%2fwww.chijournal.org%2fC412" onclick="javascript:Share('1');" class="anchoroffset nounderline shareusingemail" title="Share using Email"><div class="sprite icon-email-gray "></div></a>
+                <a href="https://www.chijournal.org/Journals/PDF/C412" target="_blank" title="Read in PDF"><div class="sprite pdf "></div></a>
+            <a href="javascript:window.print();" title="Print the paper"><div class="sprite print "></div></a>
+            <div class="pull-right">
+                    <a onclick="javascript:Share('2');" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.chijournal.org%2fC412" title="Share using Facebook" target="_blank"><div class="sprite facebook "></div></a>
+                    <a onclick="javascript:Share('3');" href="https://twitter.com/intent/tweet?text=Simulating+the+Upper+St.+Johns+River+for+Extreme+Events&amp;url=https%3a%2f%2fwww.chijournal.org%2fC412" title="Share using Twitter" target="_blank"><div class="sprite twitter "></div></a>
+                    <a onclick="javascript:Share('4');" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fwww.chijournal.org%2fC412&amp;title=Simulating+the+Upper+St.+Johns+River+for+Extreme+Events&amp;summary=https%3a%2f%2fwww.chijournal.org%2fC412&amp;source=JWMM" title="Share using Linkedin" target="_blank"><div class="sprite linkedin "></div></a>
+                    <a onclick="javascript:Share('5');" href="https://plus.google.com/share?url=https%3a%2f%2fwww.chijournal.org%2fC412" title="Share using Google+" target="_blank"><div class="sprite gplus "></div></a>
+            </div>
+        </div>
+    </div>
+</div>
+<form action="/SharingLog/Shared" id="frmShare" method="post" name="frmShare">    <input name="c" id="c" type="hidden">
+    <input name="surl" id="surl" type="hidden">
+<input name="__RequestVerificationToken" value="TlqzNMlPPUap20-WbF7hbYKa9GphAbDtfYvZUCiqVPdYgcQI6-9RNjG3rs8JAM_REQzTJviaVA-FEDpcCswzpbdlimnHiIqm8e2oX1VWuMI1" type="hidden"></form><br></div>
+    <div class="hidden-sm hidden-xs hidden-print pull-right"><a href="javascript:void(0)" class="nounderline" id="toggleSideBarComponenetsVisibility" name="toggleSideBarComponenetsVisibility" data-action-on=".collapsible-control">Expand all</a><br></div>
+    <hr>
+<a href="javascript:void(0);" class="toggle nounderline collapsible-control" id="paper_info" name="paper_info" data-toggle-between="icon-expand icon-collapse" data-update-cookie="False">
+    <h3 class="inline title-headers"><span class="sprite toggleicon icon-expand"></span>PAPER INFO</h3>
+</a>
+<div class="row togglerow" style="display: none">
+    <div class="col-sm-12">
+
+<div>
+    <table class="article-table">
+        <colgroup>
+            <col width="44%">
+        </colgroup>
+        <tbody>
+            <tr>
+                <td colspan="2">
+                    <h4>Identification</h4>
+                </td>
+            </tr><tr>
+                <td>
+                    CHI ref #:
+                </td>
+                <td>
+C412                    <span class="hidden_contentid">83989</span> 
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Volume:
+                </td>
+                <td>
+24                </td>
+            </tr>
+            <tr>
+                <td>
+                    DOI:
+                </td>
+                <td>
+                    10.14796/JWMM.C412
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Cite as:
+                </td>
+                <td>
+CHI JWMM 2016;C412                </td>
+
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <h4>Publication History</h4>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Received:
+                </td>
+                <td>
+                    March 01, 2016
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Accepted:
+                </td>
+                <td>
+                    September 12, 2016
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    Published:
+                </td>
+                <td>
+                    December 16, 2016
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+            </tr>
+            <tr>
+                <td>
+                    <h4>Status</h4>
+                </td>
+            </tr>
+                <tr>
+                    <td>
+                        # reviewers:
+                    </td>
+                    <td>
+                        2
+                    </td>
+                </tr>
+            <tr>
+                <td>
+                    Version:
+                </td>
+                <td>
+                    Final published
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <h4>Copyright</h4>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+© 2016 CHI.<a href="javascript:void(0);" class="nounderline"><span class="some-rights-reserved" rel="#some-rights-reserved"> Some rights reserved.</span></a>
+
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+    <div id="some-rights-reserved" style="display: none;">
+        <p>
+            The Journal of Water Management Modeling is an open-access 
+(OA) publication. Open access means that articles and papers are 
+available without barriers to all who could benefit from them. 
+Practically speaking, all published works will be available to a 
+worldwide audience, free, immediately on publication.<br><br>
+            JWMM content can be downloaded, printed, copied, 
+distributed, and linked-to, provided full attribution to both CHI and 
+the author is given.<br><br>
+            JWMM content may not be re-published, either online or in 
+print, without prior written consent of CHI. As such, JWMM can be 
+considered a Gold, Gratis OA journal.
+        </p>
+    </div>
+</div>    </div>
+</div>
+    <hr>
+<a href="javascript:void(0);" class="toggle nounderline collapsible-control" id="authors" name="authors" data-toggle-between="icon-expand icon-collapse" data-update-cookie="False">
+    <h3 class="inline title-headers"><span class="sprite toggleicon icon-expand"></span>AUTHORS</h3>
+</a>
+<div class="row togglerow" style="display: none">
+    <div class="col-sm-12">
+<table class="table-hover" style="width: 100%;">
+    <tbody>
+            <tr>
+                <td>
+                    
+                    
+                    <a href="https://www.chijournal.org/Home/AdvancedSearch?AuthorID=885&amp;Source=Author" class="nounderline link-color">
+                        <table class="author-table bottompadding" id="author_885">
+                            <tbody><tr>
+                                <td>
+                                    <h4>Christopher Brown</h4>
+                                </td>
+                            </tr>
+                                <tr>
+                                    <td>
+University of North Florida, Jacksonville, FL, USA
+                                    </td>
+                                </tr>
+                                                            <tr>
+                                    <td>
+                                        
+                                        <span class="subtitle">Contribution:  </span>Conception and design, Analysis and interpretation of data and Drafting or revising article
+                                    </td>
+                                </tr>
+                                    <tr>
+                                        <td>
+                                            <span class="subtitle">For correspondence:  </span> <a href="mailto:christopher.j.brown@unf.edu&amp;subject=Simulating%20the%20Upper%20St.%20Johns%20River%20for%20Extreme%20Events">christopher.j.brown@unf.edu</a>
+                                        </td>
+                                    </tr>
+                                <tr>
+                                    <td>
+                                            <span class="competeinginterest">No competing interests declared</span>
+                                        <br><br>
+                                    </td>
+                                </tr>
+                        </tbody></table>
+
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    
+                    
+                    <a href="https://www.chijournal.org/Home/AdvancedSearch?AuthorID=886&amp;Source=Author" class="nounderline link-color">
+                        <table class="author-table bottompadding" id="author_886">
+                            <tbody><tr>
+                                <td>
+                                    <h4>Amanda E. Tancreto</h4>
+                                </td>
+                            </tr>
+                                <tr>
+                                    <td>
+U.S. Army Corps of Engineers, Jacksonville, FL, USA
+                                    </td>
+                                </tr>
+                                                            <tr>
+                                    <td>
+                                        
+                                        <span class="subtitle">Contribution:  </span>Conception and design, Acquisition of data and Critical review of article
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                            <span class="competeinginterest">No competing interests declared</span>
+                                        <br><br>
+                                    </td>
+                                </tr>
+                        </tbody></table>
+
+                    </a>
+                </td>
+            </tr>
+    </tbody>
+</table>    </div>
+</div>
+    <hr>
+<a href="javascript:void(0);" class="toggle nounderline collapsible-control" id="additional_data" name="additional_data" data-toggle-between="icon-expand icon-collapse" data-update-cookie="False">
+    <h3 class="inline title-headers"><span class="sprite toggleicon icon-expand"></span>ADDITIONAL DATA</h3>
+</a>
+<div class="row togglerow" style="display: none">
+    <div class="col-sm-12">
+<link href="icons.css" rel="stylesheet">
+
+<div class="additional-files" data-bind="with: Files">
+    <ul data-bind="foreach: Data()"></ul>
+    <div data-bind="text: ResultMessage(), css:{error: HasError()}">No additional data available.</div>
+    <div data-bind="visible: ShowProgressBar()" style="display: none;"><div data-bind="text: WaitMessage()" class="inline">Please wait while we retrieve file list</div>&nbsp;<img src="wait.gif"></div>    
+</div>
+<script type="text/javascript">
+    $(function () {
+        GetAdditionalData("C412");
+    });
+</script>    </div>
+</div>
+    <hr>
+<a href="javascript:void(0);" class="toggle nounderline collapsible-control" id="comments" name="comments" data-toggle-between="icon-expand icon-collapse" data-update-cookie="False">
+    <h3 class="inline title-headers"><span class="sprite toggleicon icon-expand"></span>COMMENTS</h3>
+</a>
+<div class="row togglerow" style="display: none">
+    <div class="col-sm-12">
+<script src="commenteditor"></script>
+
+<link href="icons.css" rel="stylesheet">
+
+
+
+
+<script src="ckeditor.js"></script>
+
+<script>
+    
+    if (chiConfig.Debug) {
+        var min, max;
+        min = 1000; max = 5000;
+        CKEDITOR.timestamp = Math.random() * (max - min) + min; 
+    } else {
+        CKEDITOR.timestamp = "v4" + new Date().getDate();
+    }
+
+    CommentSystem.CustomConfig = "/Scripts/ckeditor/customization/chi-config.min.js";
+</script>
+<div class="replaceable-comment-editor">
+    
+        <input class="form-control" placeholder="Share your thoughts" name="comment_login" id="comment_login" type="text">
+        <script>
+            $(document).ready(function () {
+                $("#comment_login").on("focus", function () {
+                    
+                    $("#NextAction").val(NextActionItems.AddComment);
+                    $('.account-management').modal('show');
+                });
+            });
+        </script>
+</div>
+
+<form action="/Contribution/SaveComment" method="post"><div class="current-comments">
+        <div class="no-comments">Be the first to comment.</div>
+</div></form>
+    </div>
+</div>
+    <hr>
+<a href="javascript:void(0);" class="toggle nounderline collapsible-control" id="related_papers" name="related_papers" data-toggle-between="icon-expand icon-collapse" data-update-cookie="False">
+    <h3 class="inline title-headers"><span class="sprite toggleicon icon-expand"></span>RELATED PAPERS</h3>
+</a>
+<div class="row togglerow" style="display: none">
+    <div class="col-sm-12">
+
+<div data-bind="with: Papers">
+    <table class="table-hover" style="width: 100%;">
+        <thead data-bind="visible: ShowProgressBar() || HasError() || ResultMessage() != ''" style="display: none;">
+            <tr>
+                <td class="listpadding">
+                    <div data-bind="text: ResultMessage(), css:{error: HasError()}"></div>
+                    <div data-bind="visible: ShowProgressBar()" style="display: none;"><div data-bind="text: WaitMessage()" class="inline">Please wait while we retrieve papers</div>&nbsp;<img src="wait.gif"></div>
+                </td>
+            </tr>
+        </thead>
+        <tbody data-bind="foreach: Data()">
+            <tr>
+                <td class="listpadding">
+                    <a data-bind="attr: {href: Link()}" class="nounderline" href="https://www.chijournal.org/R235-13">
+                        <span class="listheader" data-bind="text: PaperTitle">Integration of SWMM into a Dam Break, Hurricane, and Extreme Flood Modeling and Damage Assessment Framework</span><br>
+                        <span data-bind="text: AuthorsAndYear" class="link-color">David Judi, Alfred J. Kalyanapu, Timothy McPherson and Steven Burian (2009)</span>
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <td class="listpadding">
+                    <a data-bind="attr: {href: Link()}" class="nounderline" href="https://www.chijournal.org/C366">
+                        <span class="listheader" data-bind="text: PaperTitle">Thermal Effects of the Proposed Water Reclamation Centre Discharge on the East Holland River</span><br>
+                        <span data-bind="text: AuthorsAndYear" class="link-color">Hailiang Shen, Juraj Cunderlik, George Godin, Adrian Coombs, Alan Rimer and Ian Dobrindt (2014)</span>
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <td class="listpadding">
+                    <a data-bind="attr: {href: Link()}" class="nounderline" href="https://www.chijournal.org/R220-24">
+                        <span class="listheader" data-bind="text: PaperTitle">The Use of GIS to Determine a Strategy for the Removal of Urban Litter Upper Lotus and Lower Salt River Catchments, Cape Town</span><br>
+                        <span data-bind="text: AuthorsAndYear" class="link-color">Chris Wise and Neil Armitage (2004)</span>
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <td class="listpadding">
+                    <a data-bind="attr: {href: Link()}" class="nounderline" href="https://www.chijournal.org/R235-21">
+                        <span class="listheader" data-bind="text: PaperTitle">Physical Model Study, CSO Diversion through Bottom Outlet Slot, Site DS-4 Upper Rouge Tunnel System</span><br>
+                        <span data-bind="text: AuthorsAndYear" class="link-color">James Lewis, Steve J. Wright, James D. Sherrill and Mark Pribak (2009)</span>
+                    </a>
+                </td>
+            </tr>
+        
+            <tr>
+                <td class="listpadding">
+                    <a data-bind="attr: {href: Link()}" class="nounderline" href="https://www.chijournal.org/C409">
+                        <span class="listheader" data-bind="text: PaperTitle">Modeling of Transient Pneumatic Events in a Combined Sewer Overflow Storage Tunnel System</span><br>
+                        <span data-bind="text: AuthorsAndYear" class="link-color">Peter Klaver, David Collins, Kurt Robinson and Scott Bell (2016)</span>
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<script type="text/javascript">
+    InitPaperList();
+    $(document).ready(function () {
+        GetPapersList("Journals/GetRelatedPapersList/", "J001", "83989");
+    });
+</script>    </div>
+</div>
+    <hr>
+<a href="javascript:void(0);" class="toggle nounderline collapsible-control" id="tags" name="tags" data-toggle-between="icon-expand icon-collapse" data-update-cookie="False">
+    <h3 class="inline title-headers"><span class="sprite toggleicon icon-expand"></span>TAGS</h3>
+</a>
+<div class="row togglerow" style="display: none">
+    <div class="col-sm-12">
+<div class="tags" data-bind="with: Tags">
+    <ul data-bind="foreach: Data()">
+        <li class="donotapplyli">
+            <a data-bind="attr: {href: Link()}, css: Type, text: Title" href="https://www.chijournal.org/Home/AdvancedSearch?source=tag&amp;tags=1" class="tag-subject">Calibration</a>
+        </li>
+    
+        <li class="donotapplyli">
+            <a data-bind="attr: {href: Link()}, css: Type, text: Title" href="https://www.chijournal.org/Home/AdvancedSearch?source=tag&amp;tags=18" class="tag-subject">Watersheds</a>
+        </li>
+    
+        <li class="donotapplyli">
+            <a data-bind="attr: {href: Link()}, css: Type, text: Title" href="https://www.chijournal.org/Home/AdvancedSearch?source=tag&amp;tags=85" class="tag-subject">Flooding</a>
+        </li>
+    
+        <li class="donotapplyli">
+            <a data-bind="attr: {href: Link()}, css: Type, text: Title" href="https://www.chijournal.org/Home/AdvancedSearch?source=tag&amp;tags=145" class="tag-subject">Rural</a>
+        </li>
+    
+        <li class="donotapplyli">
+            <a data-bind="attr: {href: Link()}, css: Type, text: Title" href="https://www.chijournal.org/Home/AdvancedSearch?source=tag&amp;tags=148" class="tag-subject">Hydrology</a>
+        </li>
+    
+        <li class="donotapplyli">
+            <a data-bind="attr: {href: Link()}, css: Type, text: Title" href="https://www.chijournal.org/Home/AdvancedSearch?source=tag&amp;tags=149" class="tag-subject">Rainfall</a>
+        </li>
+    </ul>
+    <div data-bind="text: ResultMessage(), css:{error: HasError()}"></div>
+    <div data-bind="visible: ShowProgressBar()" style="display: none;"><div data-bind="text: WaitMessage()" class="inline">Please wait while we retrieve tags</div>&nbsp;<img src="wait.gif"></div>    
+</div>
+
+<script type="text/javascript">
+    $(function () {
+        GetTags("83989");
+    });
+</script>    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div><div id="jb-glry-dlg" style="display:none;position:absolute;width:100%;height:100%;left:0;top:0;"></div>
+<footer>
+    <hr class="hidden-md hidden-lg">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 footer-no-left-padding">
+                <span class="footer-title">Connect With Us</span><br><br>
+                <a href="https://www.chijournal.org/">Journal of Water Management Modeling</a><br>
+                ISSN: 2292-6062<br><br>
+                <a href="mailto:info@chijournal.org" class="nounderline"><img src="icon_email_blue.png" height="17" width="24">&nbsp;&nbsp;info@chijournal.org</a><br><br>
+                147 Wyndham St. N., Ste. 202<br>
+                Guelph, Ontario, Canada, N1H 4E9
+            </div>
+            <div class="col-md-3 hidden-xs hidden-sm footer-about-jwmm">
+                <span class="footer-title">About JWMM</span><br>
+                <div class="footer-links">
+                    <p><a onclick="javascript: JumpTo('#missionandintent')" href="https://www.chijournal.org/Home/AboutJWMM#missionandintent">Mission and intent</a></p>
+                    
+                    <p><a onclick="javascript: JumpTo('#editorialboard')" href="https://www.chijournal.org/Home/AboutJWMM#editorialboard">Editorial board</a></p>
+                    <p><a onclick="javascript: JumpTo('#reviewprocess')" href="https://www.chijournal.org/Home/AboutJWMM#reviewprocess">Review process</a></p>
+                    <p><a onclick="javascript: JumpTo('#disclaimer')" href="https://www.chijournal.org/Home/AboutJWMM#disclaimer">Disclaimer</a></p>
+                    <p><a onclick="javascript: JumpTo('#privacypolicy')" href="https://www.chijournal.org/Home/AboutJWMM#privacypolicy">Privacy policy</a></p>
+                </div>
+            </div>
+            <div class="col-md-3 hidden-xs hidden-sm footer-for-authors">
+                <span class="footer-title">For Authors</span><br>
+                <div class="footer-links">
+                    <p><a href="https://www.chijournal.org/Home/ForAuthors#submityourpaper" onclick="javascript: JumpTo('#submityourpaper')">Submit paper</a></p>
+                    <p><a href="https://www.chijournal.org/Home/ForAuthors#authorchecklist" onclick="javascript: JumpTo('#authorchecklist')">Author checklist</a></p>
+                    <p><a href="https://www.chijournal.org/Home/ForAuthors#journalpapertemplate" onclick="javascript: JumpTo('#journalpapertemplate')">Journal paper template</a></p>
+                    <p><a href="https://www.chijournal.org/Home/ForAuthors#referenceguide" onclick="javascript: JumpTo('#referenceguide')">Reference guide</a></p>
+                    <p><a href="https://www.chijournal.org/Home/ForAuthors#transferofcopyright" onclick="javascript: JumpTo('#transferofcopyright')">Transfer of copyright</a></p>
+                    <p><a href="https://www.chijournal.org/Home/ForAuthors#unitconversiontable" onclick="javascript: JumpTo('#unitconversiontable')">Unit conversion table</a></p>
+                </div>
+            </div>
+            <div class="col-md-3 hidden-xs hidden-sm footer-for-reviewers">
+                <span class="footer-title">For Reviewers</span><br>
+                <div class="footer-links">                    
+                    <p><a href="https://www.chijournal.org/Home/ForReviewers#reviewingguidelines">Reviewing guidelines</a></p>
+                    <p><a href="https://www.chijournal.org/Home/ForReviewers#criteriatobeused">Criteria to be used</a></p>
+                    <p><a href="https://www.chijournal.org/Home/ForReviewers#standardsofacceptance">Standards of acceptance</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 footer-no-left-padding">
+                <hr class="footer-separator">
+                <span class="pull-right footer-copyright">Copyright 2019 by CHI</span>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-8955620-4', 'chijournal.org');
+        ga('send', 'pageview');
+
+    </script>
+
+    
+    
+    <script>
+InitPaper();    </script>
+
+    
+    
+
+
+
+        
+
+<script>
+    try {
+        
+        if (typeof jQuery == 'undefined' || jQuery == null || $.fn.jquery.substring(0, 1) === "1") {
+            document.getElementById("unsupported_browser").className = "alert alert-danger alert-not-supported";
+        }
+    } catch (e) {
+        //Do nothing
+    }
+</script><div id="cluetip-waitimage" style="position: absolute; display: none;"></div><div id="cluetip" style="position: absolute; display: none;"><div class="cluetip-outer" style="position: relative; z-index: 1035;"><h3 class="cluetip-title ui-widget-header ui-cluetip-header"></h3><div class="cluetip-inner ui-widget-content ui-cluetip-content"></div></div><div class="cluetip-extra"></div><div class="cluetip-arrows ui-state-default"></div></div><div class="modal account-management" id="account-management">
+        <div class="modal-dialog account-management-modal-dialog">
+            <div class="modal-content" id="account-management-content">
+
+<form action="/Account/Blank" autocomplete="on" dataaction="/Account/ModalLogin" id="frmModalLogin" method="post" name="frmModalLogin" target="loginFrame" novalidate="novalidate">    <div class="login-modal modal-content-container">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+            <div class="form-group">
+                <h1 class="page-title">JWMM Login</h1>
+            </div>
+        </div>
+        <div class="modal-body">
+            <input name="__RequestVerificationToken" value="YvRtRIDgEUwAwiZp1_G1tK2NOM29a2g0hWtYFUROBMxHLjblZxJyU3NyXFV_ozjKaYNFGKNb8gqgvtIixRfp-qCgNUeB4nOSRdPbW9rnjY01" type="hidden">
+            <div class="form-group">
+                <span id="progress" style="display:none">Verifying credentials&nbsp;<img src="wait.gif"></span>
+                <span id="message"></span>
+                <span id="createAccountLink" class="pull-right">
+                    <a href="javascript:void(0);" onclick="javascript:GetPartialForm('/Account/ModalRegister', 'account-management-content')" class="nounderline" tabindex="-1">Don't have an account?</a>
+                </span>
+                <div class="clearfix"></div>
+            </div>
+            <div class="form-group">
+                <label for="Email">Email</label>
+                <input autofocus="" class="form-control" data-val="true" data-val-email="The Email field is not a valid e-mail address." data-val-required="Please enter your email" id="Email" name="Email" placeholder="Email" tabindex="1" type="text">
+                <span class="field-validation-valid text-danger" data-valmsg-for="Email" data-valmsg-replace="true"></span>
+            </div>
+            <div class="form-group">
+                <label for="Password">Password</label>
+                <input class="form-control" data-val="true" data-val-required="Please enter password" id="Password" name="Password" placeholder="Password" tabindex="2" type="password">
+                <span class="field-validation-valid text-danger" data-valmsg-for="Password" data-valmsg-replace="true"></span>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <input checked="checked" data-val="true" data-val-required="The Remember me field is required." id="RememberMe" name="RememberMe" tabindex="3" value="true" type="checkbox"><input name="RememberMe" value="false" type="hidden">
+                    <label for="RememberMe">Remember me</label>
+                    <span class="pull-right"><a href="javascript:void(0);" onclick="avascript:GetPartialForm('/Account/ModalForgotPassword', 'account-management-content')" class="nounderline" tabindex="-1">Forgot your password?</a></span>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="form-group" id="footercontrols">
+                    <div class="pull-right">
+                        <input value="Log in" class="btn btn-default" tabindex="4" type="submit">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<input id="NextAction" name="NextAction" value="" type="hidden"><input id="NextActionValue" name="NextActionValue" value="" type="hidden"></form><iframe name="loginFrame" id="loginFrame" src="/Account/Blank" style="display:none"></iframe>
+<script>
+    if(typeof InitAccountManagement !== "function"){
+        //This is to prevent people accessing https://www.chijournal.org/Account/ModalLogin directly.
+        location.href = [location.protocol, '//', location.host, '?display=login'].join('')
+    }else{
+        InitAccountManagement(LoginSuccess, LoginFailure);
+    }
+</script>
+            </div>
+        </div>
+    </div><div class="modal enlarge" tabindex="-1">
+                    <div class="modal-dialog enlarge-modal-dialog">
+                        <div class="modal-content">
+                            <div class="enlarge-modal">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                                    <h2 class="modal-title" style="display: none;"></h2>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="header-text" style="display: none;"></div>
+                                    <img class="img-placeholder" style="display: none;">
+                                    <div class="tbl-placeholder" style="display: none;"></div>
+                                    <div class="footer-text" style="display: none;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div></body></html>

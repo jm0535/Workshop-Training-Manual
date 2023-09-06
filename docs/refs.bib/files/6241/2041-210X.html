@@ -1,0 +1,1196 @@
+<!DOCTYPE html> <html lang=en class=pb-page data-request-id=b01481bb-1a2f-4c18-b5de-e0dc7834da04 style><!--
+ Page saved with SingleFileZ 
+ url: https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.12841 
+ saved date: Fri Oct 23 2020 15:56:17 GMT+0200 (Central European Summer Time)
+--><head data-pb-dropzone=head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge">
+<meta name=pbContext content=";article:article:doi\:10.1111/2041-210X.12841;issue:issue:doi\:10.1111/mee3.2017.8.issue-12;page:string:Article/Chapter View;ctype:string:Journal Content;requestedJournal:journal:2041210x;website:website:besjournals;wgroup:string:Publication Websites;pageGroup:string:Publication Pages;subPage:string:Full Text;journal:journal:2041210x">
+<meta name=robots content=noarchive><meta name=pb-robots-disabled><meta property=og:title content="ssdm: An r package to predict distribution of species richness and composition based on stacked species distribution models"><meta property=og:type content=Article><meta property=og:url content=https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.12841><meta property=og:image content=https://besjournals.onlinelibrary.wiley.com/cms/asset/cdf8b8ff-7b3c-4a58-858d-c9ca562ce8f2/mee3.2017.8.issue-12.cover.gif><meta property=og:site_name content=besjournals><meta property=og:description content="
+
+
+There is growing interest among conservationists in biodiversity mapping based on stacked species distribution models (SSDMs), a method that combines multiple individual species distribution model..."><meta name=viewport content="width=device-width,initial-scale=1"><meta name=citation_doi content=10.1111/2041-210X.12841><meta name=dc.identifier content=10.1111/2041-210X.12841><meta name=citation_journal_title content="Methods in Ecology and Evolution"><meta name=citation_title content="ssdm: An r package to predict distribution of species richness and composition based on stacked species distribution models"><meta name=citation_keywords content=bioinformatics><meta name=citation_keywords content="community ecology"><meta name=citation_keywords content=conservation><meta name=citation_keywords content=habitats><meta name=citation_keywords content=modelling><meta name=citation_keywords content=software><meta name=citation_volume content=8><meta name=citation_issue content=12><meta name=citation_firstpage content=1795><meta name=citation_lastpage content=1803><meta name=citation_publication_date content=2017/12/01><meta name=citation_online_date content=2017/08/03><meta name=citation_issn content=2041-210X><meta name=citation_language content=en><meta name=citation_author content="Sylvain Schmitt"><meta name=citation_author_institution content="Botany and Applied Plant Ecology Laboratory New Caledonian Agronomic Institute (IAC) Nouméa New Caledonia"><meta name=citation_author content="Robin Pouteau"><meta name=citation_author_institution content="Botany and Applied Plant Ecology Laboratory New Caledonian Agronomic Institute (IAC) Nouméa New Caledonia"><meta name=citation_author content="Dimitri Justeau"><meta name=citation_author_institution content="Botany and Applied Plant Ecology Laboratory New Caledonian Agronomic Institute (IAC) Nouméa New Caledonia"><meta name=citation_author content="Florian de Boissieu"><meta name=citation_author_institution content="Institute for Sustainable Development (IRD) Noumea New Caledonia"><meta name=citation_author content="Philippe Birnbaum"><meta name=citation_author_institution content="CIRAD Languedoc‐Roussillon Montpellier France"><meta name=citation_abstract_html_url content=https://besjournals.onlinelibrary.wiley.com/doi/abs/10.1111/2041-210X.12841><meta name=citation_fulltext_html_url content=https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/2041-210X.12841><meta name=citation_pdf_url content=https://besjournals.onlinelibrary.wiley.com/doi/pdf/10.1111/2041-210X.12841><meta name=citation_publisher content="John Wiley &amp; Sons, Ltd"><meta name=citation_fulltext_world_readable content><meta name=article_references content="
+ Schmitt, S,  Pouteau, R,  Justeau, D,  de Boissieu, F,  Birnbaum, P.  ssdm: An r package to predict distribution of species richness and composition based on stacked species distribution models. Methods Ecol Evol.  2017; 8: 1795– 1803. https://doi.org/10.1111/2041-210X.12841
+"><meta name=epdf_available content=false><meta name=Description content="Abstract There is growing interest among conservationists in biodiversity mapping based on stacked species distribution models (SSDMs), a method that combines multiple individual species distributi..."><title>ssdm: An r package to predict distribution of species richness and composition based on stacked species distribution models - Schmitt - 2017 - Methods in Ecology and Evolution - Wiley Online Library</title><meta name=referrer content=origin-when-cross-origin><meta name=google-site-verification content=ffz4i4DxIJCdGpRXe0XN6KG6o4FYI-nnFW9I_dg8piM><link rel="shortcut icon" href=images/16.ico><style>.sf-hidden{display:none!important}</style><link rel=canonical href=https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.12841><body class=pb-ui><noscript>
+				<a href="/action/clickThrough?id=1011&url=https%3A%2F%2Fpubads.g.doubleclick.net%2Fgampad%2Fjump%3Fiu%3D%24googlePublisherCategory%26amp%3Bsz%3D160x600%7C160x320%7C160x160%7C120x600%26amp%3Btile%3D2%26amp%3Bc%3D%24random&loc=%2Fdoi%2F10.1111%2F2041-210X.12841&pubId=70793071&placeholderId=1014&productId=101018" target="_blank">
+					<img src="https://pubads.g.doubleclick.net/gampad/ad?iu=$googlePublisherCategory&amp;sz=160x600|160x320|160x160|120x600&amp;tile=2&amp;c=$random">
+				</a>
+			</noscript>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<link rel=stylesheet type=text/css href=stylesheet_0.css>
+ <link rel=stylesheet href=stylesheet_1.css>
+<link rel=stylesheet type=text/css href=stylesheet_2.css>
+<link rel=stylesheet type=text/css href=stylesheet_3.css>
+<link rel=stylesheet type=text/css href=stylesheet_4.css>
+<link rel=stylesheet type=text/css href=stylesheet_5.css>
+<style>.publication-cover-info{margin-bottom:20px}.hubpage-menu nav{padding-bottom:0;position:relative}.cover-image__image img{max-width:150px;max-height:150px}h1.citation__title{font-size:1.375rem}@media (max-width:991px){h1.citation__title{font-size:1.125rem}h1.citation__title:after{content:""}}.cart-indicator__wrapper{padding:0}</style>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<link href=stylesheet_6.css type=text/css rel=stylesheet><style>#_atssh{width:1px!important;height:1px!important;border:0!important}</style><style>#MathJax_Message{position:fixed;left:1em;bottom:1.5em;background-color:#E6E6E6;border:1px solid #959595;margin:0px;padding:2px 8px;z-index:102;color:black;font-size:80%;width:auto;white-space:nowrap}</style><link id=altmetric-embed-css rel=stylesheet type=text/css href=stylesheet_7.css>
+<div id=MathJax_Message style=display:none></div>
+<div class=skip-links>
+ <ul class=rlist>
+ 
+ <li><a href=#article__content tabindex=1>Skip to Article Content</a></li>
+ <li><a href=#pane-pcw-detailscon tabindex=1>Skip to Article Information</a></li>
+ 
+ </ul>
+</div>
+ <div id=pb-page-content data-ng-non-bindable>
+ <div data-pb-dropzone=main data-pb-dropzone-name=Main>
+ <div data-widget-def=pageHeader data-widget-id=62175478-b98a-43d5-90f2-1f2045ac1a7e class=pageHeader>
+ 
+ 
+ <header class=page-header>
+ <div data-pb-dropzone=main>
+ 
+ 
+ <div class=container><div class=row><div class="contents col-md-12">
+ 
+ <div class=pull-left>
+ <div data-widget-def=ux3-general-image data-widget-id=ff262197-0fb8-4973-aaa2-2fceba4b5a61 class="logo-container hidden-xs hidden-sm hidden-md">
+ 
+ 
+ <a href=https://besjournals.onlinelibrary.wiley.com/ title=besjournals tabindex=2><img id=mainLogo alt=besjournals src=images/17.png></a>
+ </div>
+ 
+ <div data-widget-def=ux3-general-image data-widget-id=6b601b23-7301-47c8-8889-242d041241c4 class="logo-container-mobile hidden-lg hidden-md hidden-sm sf-hidden">
+ 
+ 
+ 
+ </div>
+ 
+</div><div class=pull-right>
+ <div data-widget-def=UX3QuickSearchWidget data-widget-id=48175bb0-0f70-46e6-bb89-7e2781fdb8e4 class=header-quicksearch>
+ 
+ 
+ <div class=quick-search-wrapper><a href=# title=search aria-label=Search class="quick-search__item sf-hidden"></a><div data-linkto-page=true class="quick-search quickSearchFormContainer"><div class=main-search-field-wrapper style=overflow:hidden><div class="tab clearfix"><input type=search placeholder=Search value tabindex=13 class="fakeQSInput quickSearchFilter"><label for=search-within class=sr-only>Search within</label><select name=search-within id=search-within tabindex=10 class=search-within><option value=#pane-67065c09-4a88-49cd-934c-ac707951d35c0 selected>This Journal<option value=#pane-67065c09-4a88-49cd-934c-ac707951d35c1>Anywhere</select><ul role=tablist class="rlist tab__content"><li id=pane-67065c09-4a88-49cd-934c-ac707951d35c0 aria-labelledby=pane-67065c09-4a88-49cd-934c-ac707951d35c0-con role=tab class="tab__pane quick-search-pane__anywhere active"><form action=/action/doSearch name=thisJournalQuickSearch title="Quick Search"><div class="input-group option-0"><label for=searchField0 class=hiddenLabel>Search term</label><input type=search name=AllField id=searchField0 placeholder=Search data-auto-complete-max-words=7 data-auto-complete-max-chars=32 data-contributors-conf=3 data-topics-conf=3 data-publication-titles-conf=3 data-history-items-conf=3 value tabindex=9 class="autocomplete actualQSInput quickSearchFilter ui-autocomplete-input" autocomplete=off><span role=status aria-live=polite class=ui-helper-hidden-accessible></span><div class="search-options-wrapper quickSearchFilter sf-hidden"></div></div><button id=quick-search-btn type=submit title=Search tabindex=11 aria-label="Submit Search" class="btn quick-search__button icon-search"></button></form><li id=pane-67065c09-4a88-49cd-934c-ac707951d35c1 aria-labelledby=pane-67065c09-4a88-49cd-934c-ac707951d35c1-con role=tab class="tab__pane quick-search-pane__anywhere sf-hidden"></ul></div></div></div></div>
+ </div>
+ 
+ <div data-widget-def=ux3-layout-widget data-widget-id=5ef13ed1-f4ac-4b62-a426-07ec9576a586 class=cart-indicator__wrapper>
+ 
+ 
+ <div class=pull-left>
+ <div data-widget-def=eCommerceCartIndicatorWidget data-widget-id=4a9f7c04-a273-4a25-91fb-8e7bd9970288 class=cart-indicator__wrapper>
+ 
+ 
+ 
+ 
+ 
+ </div>
+ 
+</div><div class=pull-right>
+ <div data-widget-def=literatumNavigationLoginBar data-widget-id=d384ca92-7137-45d6-b3c2-78c9c0a98c2b class=login-bar-container>
+ 
+ 
+ 
+ 
+ 
+ 
+ <div class="loginBar login-open">
+ <a href="https://besjournals.onlinelibrary.wiley.com/action/showLogin?uri=%2Fdoi%2F10.1111%2F2041-210X.12841&amp;aria-label=Log+in+or+Register" class=show-login role=button uri=/doi/10.1111/2041-210X.12841 aria-label="Log in or Register">
+ <span class="icon-profile_empty sf-hidden"></span>
+ <span class=sign-in-label>Login / Register</span>
+ </a>
+ 
+ </div>
+ 
+ </div>
+ 
+</div>
+ </div>
+ 
+ 
+ <a href=#main1 title="menu drawer" data-db-switch=icon-close_thin data-db-target-for=hub-menu class="hubpage-menu__burger hidden-lg sf-hidden"></a>
+</div>
+</div></div></div>
+ </div>
+</header>
+ </div>
+ 
+ <div data-widget-def=pageBody data-widget-id=72100436-7a82-49fc-933b-c6c9d8c42914 class="pageBody hub-page-body body-text">
+ 
+ 
+ <main id=main-content tabindex=-1>
+ 
+ <div class="page-body pagefulltext">
+ <div data-pb-dropzone=main>
+ 
+ 
+ <div>
+ 
+ <div class=hubpage-menu>
+ <nav role=navigation data-db-target-of=hub-menu class="container hubpage-menu__nav visible-lg dropBlock__holder">
+ <ul class="pull-left rlist--inline">
+ <li role=menuitem tabindex=-1 aria-label=Journals class="dropdown menu-parent"><a id=main1-1 href=# title=Journals data-toggle=dropdown data-slide-target=#hubMain-sub-1 class="dropdown__toggle w-slide__btn"><span>Journals</span><i aria-hidden=true class="icon-section_arrow_d pull-right visible-lg"></i></a>
+ <div id=hubMain-sub-1 aria-labelledby=main1-1 aria-hidden=true role=menu class="dropdown__menu sf-hidden">
+ 
+ </div>
+ </li>
+ <li role=menuitem tabindex=-1 aria-label=Topics class="dropdown menu-parent"><a id=main1-2 href=# title=Topics data-toggle=dropdown data-slide-target=#hubMain-sub-2 class="dropdown__toggle w-slide__btn"><span>Topics</span><i aria-hidden=true class="icon-section_arrow_d pull-right visible-lg"></i></a>
+ <div id=hubMain-sub-2 aria-labelledby=main1-1 aria-hidden=true role=menu class="dropdown__menu sf-hidden">
+ 
+ </div>
+ </li>
+ </ul>
+ <div class=pull-right>
+ <ul class="rlist--inline pull-right">
+ <li><a href=http://www.britishecologicalsociety.org/membership-community/join-us/ target=_blank>Join the BES</a></li>
+ <li><a href=http://www.britishecologicalsociety.org/ target=_blank>BES.org</a></li>
+ </ul>
+ </div>
+ </nav>
+</div>
+</div>
+ <section data-widget-def=ux3-layout-widget data-widget-id=0f7bccba-8328-4dbd-a1fa-e84c526dd9ab>
+ 
+ 
+ <div class=container><div class=row><div class=col-md-12>
+ 
+ <div>
+ 
+ <article data-figures="/action/ajaxShowFigures?widgetId=5cf4c79f-0ae9-4dc5-96ce-77f62de7ada9&amp;ajax=true&amp;doi=10.1111%2F2041-210X.12841&amp;pbContext=%3Barticle%3Aarticle%3Adoi%5C%3A10.1111%2F2041-210X.12841%3Bissue%3Aissue%3Adoi%5C%3A10.1111%2Fmee3.2017.8.issue-12%3Bpage%3Astring%3AArticle%2FChapter+View%3Bctype%3Astring%3AJournal+Content%3BrequestedJournal%3Ajournal%3A2041210x%3Bwebsite%3Awebsite%3Abesjournals%3Bwgroup%3Astring%3APublication+Websites%3BpageGroup%3Astring%3APublication+Pages%3BsubPage%3Astring%3AFull+Text%3Bjournal%3Ajournal%3A2041210x&amp;accordionHeadingWrapper=h2" data-references="/action/ajaxShowEnhancedAbstract?widgetId=5cf4c79f-0ae9-4dc5-96ce-77f62de7ada9&amp;ajax=true&amp;doi=10.1111%2F2041-210X.12841&amp;pbContext=%3Barticle%3Aarticle%3Adoi%5C%3A10.1111%2F2041-210X.12841%3Bissue%3Aissue%3Adoi%5C%3A10.1111%2Fmee3.2017.8.issue-12%3Bpage%3Astring%3AArticle%2FChapter+View%3Bctype%3Astring%3AJournal+Content%3BrequestedJournal%3Ajournal%3A2041210x%3Bwebsite%3Awebsite%3Abesjournals%3Bwgroup%3Astring%3APublication+Websites%3BpageGroup%3Astring%3APublication+Pages%3BsubPage%3Astring%3AFull+Text%3Bjournal%3Ajournal%3A2041210x&amp;accordionHeadingWrapper=h2" data-related="/action/ajaxShowRecommended?widgetId=5cf4c79f-0ae9-4dc5-96ce-77f62de7ada9&amp;ajax=true&amp;doi=10.1111%2F2041-210X.12841&amp;pbContext=%3Barticle%3Aarticle%3Adoi%5C%3A10.1111%2F2041-210X.12841%3Bissue%3Aissue%3Adoi%5C%3A10.1111%2Fmee3.2017.8.issue-12%3Bpage%3Astring%3AArticle%2FChapter+View%3Bctype%3Astring%3AJournal+Content%3BrequestedJournal%3Ajournal%3A2041210x%3Bwebsite%3Awebsite%3Abesjournals%3Bwgroup%3Astring%3APublication+Websites%3BpageGroup%3Astring%3APublication+Pages%3BsubPage%3Astring%3AFull+Text%3Bjournal%3Ajournal%3A2041210x&amp;accordionHeadingWrapper=h2&amp;showSubjects=true&amp;taxonomiesCodes=enter+your+taxonomy+codes+here&amp;displayCitedByLink=true&amp;displayAlmetricDropzone=true&amp;taxonomyUri=publication-features&amp;topicUri=hide-issue-metadata" data-details="/action/ajaxShowPubInfo?widgetId=5cf4c79f-0ae9-4dc5-96ce-77f62de7ada9&amp;ajax=true&amp;doi=10.1111%2F2041-210X.12841&amp;pbContext=%3Barticle%3Aarticle%3Adoi%5C%3A10.1111%2F2041-210X.12841%3Bissue%3Aissue%3Adoi%5C%3A10.1111%2Fmee3.2017.8.issue-12%3Bpage%3Astring%3AArticle%2FChapter+View%3Bctype%3Astring%3AJournal+Content%3BrequestedJournal%3Ajournal%3A2041210x%3Bwebsite%3Awebsite%3Abesjournals%3Bwgroup%3Astring%3APublication+Websites%3BpageGroup%3Astring%3APublication+Pages%3BsubPage%3Astring%3AFull+Text%3Bjournal%3Ajournal%3A2041210x&amp;accordionHeadingWrapper=h2&amp;showSubjects=true&amp;taxonomiesCodes=enter+your+taxonomy+codes+here&amp;displayCitedByLink=true&amp;displayAlmetricDropzone=true&amp;taxonomyUri=publication-features&amp;topicUri=hide-issue-metadata" data-mathjax="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML" class=hide_CASA><div class="row article-row"><div id=article__content tabindex=-1 class="col-sm-12 col-md-8 col-lg-8 article__content article-row-left"><div data-pb-dropzone=mrwBannerDropZone class=mrw-banner-dropzone>
+ 
+ 
+</div><div class=article-citation><div class=citation>
+ <div class=pb-dropzone data-pb-dropzone=publicaitonContent-series-title>
+ <div id=journal-banner-text class=journal-banner-text><a href=https://besjournals.onlinelibrary.wiley.com/journal/2041210x title="Methods in Ecology and Evolution homepage">Methods in Ecology and Evolution</a></div><a href=https://besjournals.onlinelibrary.wiley.com/toc/2041210x/2017/8/12 class="volume-issue sf-hidden">Volume 8, Issue 12</a><a href=https://besjournals.onlinelibrary.wiley.com/journal/2041210x title="Methods in Ecology and Evolution homepage" class=citation--logo><img id=journal-banner-image test=test-value alt="Methods in Ecology and Evolution" src=images/18.jpg class=journal-banner-image></a>
+ </div>
+ <div class="doi-access-container clearfix"><span class=primary-heading><span class=primary-heading>APPLICATION</span></span>
+ <div class=doi-access-wrapper><div class="free-access access-type"> <i aria-hidden=true class=icon-icon-lock_open></i> <div class=doi-access> <div class=doi-access tabindex=0>Free Access</div></div></div></div></div>
+ <h1 class=citation__title><span class=smallCaps>ssdm</span>: An <span class=smallCaps>r</span> package to predict distribution of species richness and composition based on stacked species distribution models
+ </h1>
+ <div class="rlist--inline loa comma visible-xs mobile-authors loa-authors-trunc sf-hidden">
+ 
+ 
+ 
+ 
+ 
+ </div>
+ <div class="loa-wrapper loa-authors hidden-xs">
+ <div id=sb-1 class=accordion>
+ <div class=accordion-tabbed>
+ <div class="accordion-tabbed__tab-mobile accordion__closed"><a href="https://besjournals.onlinelibrary.wiley.com/action/doSearch?ContribAuthorStored=Schmitt%2C+Sylvain" class="author-name accordion-tabbed__control" data-id=a1 data-db-target-for=a1 aria-controls=a1 aria-haspopup=true id=a1_Ctrl role=button><span>Sylvain Schmitt<i aria-hidden=true class=icon-mail_outline></i></span><i aria-hidden=true class="icon-section_arrow_d sf-hidden"></i></a><div class="author-info accordion-tabbed__content sf-hidden" data-db-target-of=a1 aria-labelledby=a1_Ctrl role=region id=a1>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ </div>
+ </div>
+ <div class="accordion-tabbed__tab-mobile accordion__closed"><a href="https://besjournals.onlinelibrary.wiley.com/action/doSearch?ContribAuthorStored=Pouteau%2C+Robin" class="author-name accordion-tabbed__control" data-id=a2 data-db-target-for=a2 aria-controls=a2 aria-haspopup=true id=a2_Ctrl role=button><span>Robin Pouteau<i aria-hidden=true class=icon-mail_outline></i></span><i aria-hidden=true class="icon-section_arrow_d sf-hidden"></i></a><div class="author-info accordion-tabbed__content sf-hidden" data-db-target-of=a2 aria-labelledby=a2_Ctrl role=region id=a2>
+ 
+ 
+ 
+ 
+ 
+ 
+ </div>
+ </div>
+ <div class="accordion-tabbed__tab-mobile accordion__closed"><a href="https://besjournals.onlinelibrary.wiley.com/action/doSearch?ContribAuthorStored=Justeau%2C+Dimitri" class="author-name accordion-tabbed__control" data-id=a3 data-db-target-for=a3 aria-controls=a3 aria-haspopup=true id=a3_Ctrl role=button><span>Dimitri Justeau</span><i aria-hidden=true class="icon-section_arrow_d sf-hidden"></i></a><div class="author-info accordion-tabbed__content sf-hidden" data-db-target-of=a3 aria-labelledby=a3_Ctrl role=region id=a3>
+ </div>
+ </div>
+ <div class="accordion-tabbed__tab-mobile accordion__closed"><a href="https://besjournals.onlinelibrary.wiley.com/action/doSearch?ContribAuthorStored=Boissieu%2C+Florian" class="author-name accordion-tabbed__control" data-id=a4 data-db-target-for=a4 aria-controls=a4 aria-haspopup=true id=a4_Ctrl role=button><span>Florian de Boissieu</span><i aria-hidden=true class="icon-section_arrow_d sf-hidden"></i></a><div class="author-info accordion-tabbed__content sf-hidden" data-db-target-of=a4 aria-labelledby=a4_Ctrl role=region id=a4>
+ </div>
+ </div>
+ <div class="accordion-tabbed__tab-mobile accordion__closed"><a href="https://besjournals.onlinelibrary.wiley.com/action/doSearch?ContribAuthorStored=Birnbaum%2C+Philippe" class="author-name accordion-tabbed__control" data-id=a5 data-db-target-for=a5 aria-controls=a5 aria-haspopup=true id=a5_Ctrl role=button><span>Philippe Birnbaum</span><i aria-hidden=true class="icon-section_arrow_d sf-hidden"></i></a><div class="author-info accordion-tabbed__content sf-hidden" data-db-target-of=a5 aria-labelledby=a5_Ctrl role=region id=a5>
+ </div>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div class=epub-sections><div class=epub-section><span class=epub-state>First published: </span><span class=epub-date>27 June 2017</span></div>
+ <div class=epub-section><a class=epub-doi aria-label="Digital Object Identifier" href=https://doi.org/10.1111/2041-210X.12841>https://doi.org/10.1111/2041-210X.12841</a></div><div class="epub-section cited-by-count"><span>Citations: <a href=#citedby-section>28</a></span></div>
+ </div>
+</div></div><div class=fixedCoolBar style=padding-top:39.1667px><nav aria-label="Article navigation and tools" class="coolBar stickybar js--fixed" style=top:0px;width:690px;left:323.444px><div class="stickybar__wrapper coolBar__wrapper clearfix"><div class="rlist coolBar__zone"><div class=coolBar__section><a href=# data-db-target-for=article data-db-switch=icon-close_thin aria-haspopup=true aria-controls=article_Pop role=button id=article_Ctrl class="coolBar__ctrl hidden-lg sf-hidden"></a><div data-db-target-of=article aria-labelledby=article_Ctrl role=menu id=article_Pop class="coolBar__drop fixed rlist dropBlock__holder sf-hidden"></div></div><div class="coolBar__section coolBar--sections"><a href=# data-db-target-for=sections data-db-switch=icon-close_thin aria-haspopup=true aria-controls=sections_Pop role=button id=sections_Ctrl class=coolBar__ctrl><i class=icon-list-unordered></i><span>Sections</span></a><div data-db-target-of=sections aria-labelledby=sections_Ctrl role=menu id=sections_Pop class="coolBar__drop dropBlock__holder rlist fixed sf-hidden"></div></div></div><div class="coolBar__second rlist"><div class="coolBar__section coolBar--download PdfLink scroll-to-target cloned"><a href=https://besjournals.onlinelibrary.wiley.com/doi/epdf/10.1111/2041-210X.12841 title=ePDF class="coolBar__ctrl pdf-download"><img src=images/19.png alt=PDF>PDF</a></div>
+ 
+ <div class=relative><a href=# data-db-target-for=0e406ce9-5c43-4e2d-b741-e0b43d1f1865 data-db-switch=icon-close_thin aria-haspopup=true aria-controls=0e406ce9-5c43-4e2d-b741-e0b43d1f1865_Pop role=button id=0e406ce9-5c43-4e2d-b741-e0b43d1f1865_Ctrl class=article-tools__ctrl><i aria-hidden=true class=icon-Icon_Tools></i><span>Tools</span></a><div data-db-target-of=0e406ce9-5c43-4e2d-b741-e0b43d1f1865 aria-labelledby=0e406ce9-5c43-4e2d-b741-e0b43d1f1865_Ctrl role=menu id=0e406ce9-5c43-4e2d-b741-e0b43d1f1865_Pop class="article-tools__block fixed dropBlock__holder sf-hidden"></div></div>
+ 
+ <div class=relative><a id=share-access__ctrl href=# data-db-target-for=dff42abe-4b17-4fe9-a9c5-625405cd1007 data-db-switch=icon-close_thin aria-haspopup=true aria-controls=share_Pop role=button class=share-access__ctrl><i aria-hidden=true class=icon-Icon_Share></i><span>Share</span></a><a id=share__ctrl href=# data-db-target-for=dff42abe-4b17-4fe9-a9c5-625405cd1007 data-db-switch=icon-close_thin aria-haspopup=true aria-controls=share_Pop role=button class="share__ctrl hidden sf-hidden"></a><div data-db-target-of=dff42abe-4b17-4fe9-a9c5-625405cd1007 aria-labelledby=share-access__ctrl role=menu id=share_Pop class="share__block dropBlock__holder fixed sf-hidden">
+ 
+ 
+</div></div>
+</div></div></nav></div><div id=accessDenialslot class=accessDenialslot></div><div class=article__body><article>
+ 
+ <section class="article-section article-section__abstract" lang=en data-lang=en id=section-1-en>
+ <h2 id=d985822 class="article-section__header section__title main">Abstract</h2>
+ <div class="article-section__content en main">
+ 
+ <p>
+ 
+ <ol start=1>
+ 
+ 
+ <li>There is growing interest among conservationists in biodiversity mapping based on stacked species distribution models (SSDMs), a method that combines multiple individual species distribution models to produce a community‐level model. However, no user‐friendly interface specifically designed to provide the basic tools needed to fit such models was available until now.</li>
+ 
+ 
+ <li>The “<span class=smallCaps>ssdm</span>” package is a computer platform implemented in <span class=smallCaps>r</span> providing a range of methodological approaches and parameterisation at each step in building the SSDM: e.g. pseudo‐absence selection, variable contribution and model accuracy assessment, inter‐model consensus forecasting, species assembly design, and calculation of weighted endemism.
+ </li>
+ 
+ 
+ <li>The object‐oriented design of the package is such that: users can modify existing methods, extend the framework by implementing new methods, and share them to be reproduced by others.</li>
+ 
+ 
+ <li>The package includes a graphical user interface to extend the use of SSDMs to a wide range of conservation scientists and practitioners.</li>
+ 
+ </ol>
+ <p></p>
+ 
+ </div>
+ </section>
+ <div class=pb-dropzone data-pb-dropzone=below-abstract-group>
+ 
+ </div>
+ 
+ <section class="article-section article-section__full">
+ <section class=article-section__content id=mee312841-sec-0001>
+ 
+ <h2 class="article-section__title section__title section1" id=mee312841-sec-0001-title>1 INTRODUCTION</h2>
+ 
+ <p>Understanding how local species richness (α‐diversity) is distributed is a critical prerequisite for effective conservation strategies. Richness maps can provide the basis for selecting reserves (Cañadas et&nbsp;al., <span><a href=#mee312841-bib-0012 class="bibLink tab-link" id=mee312841-bib-0012R data-tab=pane-pcw-references>2014</a></span>; Moraes, Ríos‐Uzeda, Moreno, Huanca‐Huarachi, &amp; Larrea‐Alcázar, <span><a href=#mee312841-bib-0043 class="bibLink tab-link" id=mee312841-bib-0043R data-tab=pane-pcw-references>2014</a></span>; Murray‐Smith et&nbsp;al., <span><a href=#mee312841-bib-0044 class="bibLink tab-link" id=mee312841-bib-0044R data-tab=pane-pcw-references>2009</a></span>; Raes, Roos, Slik, Van Loon, &amp; ter Steege, <span><a href=#mee312841-bib-0054 class="bibLink tab-link" id=mee312841-bib-0054R data-tab=pane-pcw-references>2009</a></span>), prevention of biological invasions (Bellard et&nbsp;al., <span><a href=#mee312841-bib-0004 class="bibLink tab-link" id=mee312841-bib-0004R data-tab=pane-pcw-references>2013</a></span>; Gallardo, Zieritz, &amp; Aldridge, <span><a href=#mee312841-bib-0026 class="bibLink tab-link" id=mee312841-bib-0026R data-tab=pane-pcw-references>2015</a></span>; Kelly, Leach, Cameron, Maggs, &amp; Reid, <span><a href=#mee312841-bib-0033 class="bibLink tab-link" id=mee312841-bib-0033R data-tab=pane-pcw-references>2014</a></span>; Pouteau, Hulme, &amp; Duncan, <span><a href=#mee312841-bib-0052 class="bibLink tab-link" id=mee312841-bib-0052R data-tab=pane-pcw-references>2015</a></span>), and mitigation of future impacts of climate change (Bellard et&nbsp;al., <span><a href=#mee312841-bib-0004 class="bibLink tab-link" id=mee312841-bib-0004R data-tab=pane-pcw-references>2013</a></span>; Brown, Parks, Bethell, Johnson, &amp; Mulligan, <span><a href=#mee312841-bib-0010 class="bibLink tab-link" id=mee312841-bib-0010R data-tab=pane-pcw-references>2015</a></span>; Colombo &amp; Joly, <span><a href=#mee312841-bib-0014 class="bibLink tab-link" id=mee312841-bib-0014R data-tab=pane-pcw-references>2010</a></span>; Fitzpatrick, Gove, Sanders, &amp; Dunn, <span><a href=#mee312841-bib-0025 class="bibLink tab-link" id=mee312841-bib-0025R data-tab=pane-pcw-references>2008</a></span>; Midgley, Hannah, Millar, Thuiller, &amp; Booth, <span><a href=#mee312841-bib-0040 class="bibLink tab-link" id=mee312841-bib-0040R data-tab=pane-pcw-references>2003</a></span>; Ogawa‐Onishi, Berry, &amp; Tanaka, <span><a href=#mee312841-bib-0046 class="bibLink tab-link" id=mee312841-bib-0046R data-tab=pane-pcw-references>2010</a></span>; Siqueira &amp; Peterson, <span><a href=#mee312841-bib-0057 class="bibLink tab-link" id=mee312841-bib-0057R data-tab=pane-pcw-references>2003</a></span>).
+ </p>
+ 
+ <div class=paragraph-element>As it is not always possible to capture the complete variation in species richness over large areas using comprehensive species inventories, a range of more pragmatic methods has been developed to extrapolate scattered local observations. They include:
+ <ol start=1>
+ 
+ <li>Point‐to‐grid maps, that assemble natural history records (e.g. herbarium or museum specimens) within grid cells and count the number of species observed in each cell (Birnbaum et&nbsp;al., <span><a href=#mee312841-bib-0007 class="bibLink tab-link" id=mee312841-bib-0007R data-tab=pane-pcw-references>2015</a></span>; Cañadas et&nbsp;al., <span><a href=#mee312841-bib-0012 class="bibLink tab-link" id=mee312841-bib-0012R data-tab=pane-pcw-references>2014</a></span>; Droissart, Hardy, Sonké, Dahdouh‐Guebas, &amp; Stévart, <span><a href=#mee312841-bib-0021 class="bibLink tab-link" id=mee312841-bib-0021R data-tab=pane-pcw-references>2012</a></span>; Tovaranonte, Blach‐Overgaard, Pongsattayapipat, Svenning, &amp; Barfod, <span><a href=#mee312841-bib-0062 class="bibLink tab-link" id=mee312841-bib-0062R data-tab=pane-pcw-references>2015</a></span>; Wulff et&nbsp;al., <span><a href=#mee312841-bib-0066 class="bibLink tab-link" id=mee312841-bib-0066R data-tab=pane-pcw-references>2013</a></span>). This method has the advantage of not extrapolating data, but as natural history records are seldom evenly sampled, the accuracy of this method tends to decrease with an increase in cell resolution and hence reaches its maximum reliability at a scale that may be too coarse for local decision‐makers (Graham &amp; Hijmans, <span><a href=#mee312841-bib-0027 class="bibLink tab-link" id=mee312841-bib-0027R data-tab=pane-pcw-references>2006</a></span>).
+ </li>
+ 
+ <li>Macroecological models (MEMs), that link species richness observed over a network of comprehensive species inventories (e.g. plots, transects, quadrats) with spatially explicit environmental variables (Bhattarai &amp; Vetaas, <span><a href=#mee312841-bib-0006 class="bibLink tab-link" id=mee312841-bib-0006R data-tab=pane-pcw-references>2003</a></span>; Sánchez‐González &amp; López‐Mata, <span><a href=#mee312841-bib-0056 class="bibLink tab-link" id=mee312841-bib-0056R data-tab=pane-pcw-references>2005</a></span>; Tomasetto, Duncan, &amp; Hulme, <span><a href=#mee312841-bib-0061 class="bibLink tab-link" id=mee312841-bib-0061R data-tab=pane-pcw-references>2013</a></span>). These variables are typically hypothesised to be or correlate with available energy, environmental heterogeneity, disturbance or history, with scale effects and some level of stochasticity. Macroecological models have contributed substantially to our understanding of large‐scale ecology and biodiversity, and predict site‐level richness well, probably better and more consistently than multiple species distribution models (SDMs), which have substantial problems dealing with rare species (Graham &amp; Hijmans, <span><a href=#mee312841-bib-0027 class="bibLink tab-link" id=mee312841-bib-0027R data-tab=pane-pcw-references>2006</a></span>; Guisan &amp; Rahbek, <span><a href=#mee312841-bib-0502 class="bibLink tab-link" id=mee312841-bib-0502R data-tab=pane-pcw-references>2011</a></span>). However, MEMs have the disadvantage of requiring a large number of inventories to be accurately calibrated and appear to be unable to extrapolate beyond known communities (Ferrier &amp; Guisan, <span><a href=#mee312841-bib-0023 class="bibLink tab-link" id=mee312841-bib-0023R data-tab=pane-pcw-references>2006</a></span>).
+ </li>
+ 
+ <li>Stacked species distribution models (SSDMs), that combine multiple individual SDMs to produce a community‐level model (Ferrier &amp; Guisan, <span><a href=#mee312841-bib-0023 class="bibLink tab-link" id=mee312841-bib-0023R data-tab=pane-pcw-references>2006</a></span>). A major strength of an SSDM compared to a point‐to‐grid map or a MEM is that an SSDM can predict species assemblages, which the two others cannot. An SDM (also referred as to “ecological niche model,” “habitat suitability model,” and “predictive habitat distribution models”) refers to the process of using a statistical method to predict the distribution of a species in geographical space on the basis of a mathematical representation of its known distribution in environmental space (Guisan &amp; Thuiller, <span><a href=#mee312841-bib-0029 class="bibLink tab-link" id=mee312841-bib-0029R data-tab=pane-pcw-references>2005</a></span>). Diversity mapping based on multiple SDMs has great potential for conservationists and the growing interest in the method is obvious in the literature (e.g. Benito, Cayuela, &amp; Albuquerque, <span><a href=#mee312841-bib-0005 class="bibLink tab-link" id=mee312841-bib-0005R data-tab=pane-pcw-references>2013</a></span>; Brown et&nbsp;al., <span><a href=#mee312841-bib-0010 class="bibLink tab-link" id=mee312841-bib-0010R data-tab=pane-pcw-references>2015</a></span>; Colombo &amp; Joly, <span><a href=#mee312841-bib-0014 class="bibLink tab-link" id=mee312841-bib-0014R data-tab=pane-pcw-references>2010</a></span>; D'Amen, Dubuis, et&nbsp;al., <span><a href=#mee312841-bib-0017 class="bibLink tab-link" id=mee312841-bib-0017R data-tab=pane-pcw-references>2015</a></span>; D'Amen, Pradervand, &amp; Guisan, <span><a href=#mee312841-bib-0018 class="bibLink tab-link" id=mee312841-bib-0018R data-tab=pane-pcw-references>2015</a></span>; Fitzpatrick et&nbsp;al., <span><a href=#mee312841-bib-0025 class="bibLink tab-link" id=mee312841-bib-0025R data-tab=pane-pcw-references>2008</a></span>; Mateo, de la Estrella, Felicisimo, Muñoz, &amp; Guisan, <span><a href=#mee312841-bib-0038 class="bibLink tab-link" id=mee312841-bib-0038R data-tab=pane-pcw-references>2012</a></span>; Midgley et&nbsp;al., <span><a href=#mee312841-bib-0040 class="bibLink tab-link" id=mee312841-bib-0040R data-tab=pane-pcw-references>2003</a></span>; Moraes et&nbsp;al., <span><a href=#mee312841-bib-0043 class="bibLink tab-link" id=mee312841-bib-0043R data-tab=pane-pcw-references>2014</a></span>; Murray‐Smith et&nbsp;al., <span><a href=#mee312841-bib-0044 class="bibLink tab-link" id=mee312841-bib-0044R data-tab=pane-pcw-references>2009</a></span>; Ogawa‐Onishi et&nbsp;al., <span><a href=#mee312841-bib-0046 class="bibLink tab-link" id=mee312841-bib-0046R data-tab=pane-pcw-references>2010</a></span>; Pérez &amp; Font, <span><a href=#mee312841-bib-0047 class="bibLink tab-link" id=mee312841-bib-0047R data-tab=pane-pcw-references>2012</a></span>; Pouteau, Bayle, et&nbsp;al., <span><a href=#mee312841-bib-0051 class="bibLink tab-link" id=mee312841-bib-0051R data-tab=pane-pcw-references>2015</a></span>; Raes et&nbsp;al., <span><a href=#mee312841-bib-0054 class="bibLink tab-link" id=mee312841-bib-0054R data-tab=pane-pcw-references>2009</a></span>; Schmidt‐Lebuhn, Knerr, &amp; González‐Orozco, <span><a href=#mee312841-bib-0501 class="bibLink tab-link" id=mee312841-bib-0501R data-tab=pane-pcw-references>2012</a></span>; Siqueira &amp; Peterson, <span><a href=#mee312841-bib-0057 class="bibLink tab-link" id=mee312841-bib-0057R data-tab=pane-pcw-references>2003</a></span>).
+ </li>
+ 
+ </ol>
+ </div>
+ 
+ <p>Stacking individual species predictions can be applied to both rough probabilities (pSSDM) and binary predictions from SDMs (bSSDM) (e.g. Calabrese, Certain, Kraan, &amp; Dormann, <span><a href=#mee312841-bib-0011 class="bibLink tab-link" id=mee312841-bib-0011R data-tab=pane-pcw-references>2014</a></span>; D'Amen, Dubuis, et&nbsp;al., <span><a href=#mee312841-bib-0017 class="bibLink tab-link" id=mee312841-bib-0017R data-tab=pane-pcw-references>2015</a></span>; D'Amen, Pradervand, et&nbsp;al., <span><a href=#mee312841-bib-0018 class="bibLink tab-link" id=mee312841-bib-0018R data-tab=pane-pcw-references>2015</a></span>; Dubuis et&nbsp;al., <span><a href=#mee312841-bib-0022 class="bibLink tab-link" id=mee312841-bib-0022R data-tab=pane-pcw-references>2011</a></span>). Macroecological models and pSSDMs both tend to perform similarly and to overestimate at sites with low species richness and underestimate at sites with high species richness (Calabrese et&nbsp;al., <span><a href=#mee312841-bib-0011 class="bibLink tab-link" id=mee312841-bib-0011R data-tab=pane-pcw-references>2014</a></span>). In contrast, bSSDMs tend to overpredict species richness, which is associated with generally higher and asymmetric prediction errors than MEMs, and may be affected by the choice of threshold for making binary predictions (Benito et&nbsp;al., <span><a href=#mee312841-bib-0005 class="bibLink tab-link" id=mee312841-bib-0005R data-tab=pane-pcw-references>2013</a></span>; Calabrese et&nbsp;al., <span><a href=#mee312841-bib-0011 class="bibLink tab-link" id=mee312841-bib-0011R data-tab=pane-pcw-references>2014</a></span>; Cord, Klein, Gernandt, de la Rosa, &amp; Dech, <span><a href=#mee312841-bib-0015 class="bibLink tab-link" id=mee312841-bib-0015R data-tab=pane-pcw-references>2014</a></span>; D'Amen, Pradervand, et&nbsp;al., <span><a href=#mee312841-bib-0018 class="bibLink tab-link" id=mee312841-bib-0018R data-tab=pane-pcw-references>2015</a></span>; Dubuis et&nbsp;al., <span><a href=#mee312841-bib-0022 class="bibLink tab-link" id=mee312841-bib-0022R data-tab=pane-pcw-references>2011</a></span>).
+ </p>
+ 
+ <p>Several authors also reported that SSDMs consistently overpredict species richness compared to MEMs because SSDMs reconstruct communities on the basis of species‐specific abiotic filters without considering macroecological constraints to the general properties of the community as a whole (Guisan and Rahbek, <span><a href=#mee312841-bib-0502 class="bibLink tab-link" id=mee312841-bib-0502R data-tab=pane-pcw-references>2011</a></span>; Hortal, De Marco, Santos, &amp; Diniz‐Filho, <span><a href=#mee312841-bib-0032 class="bibLink tab-link" id=mee312841-bib-0032R data-tab=pane-pcw-references>2012</a></span>). These constraints are thought to be of increasing importance in structuring communities at increasing resolution and should thus be accounted for in fine‐scale biodiversity assessments (Thuiller, Pollock, Gueguen, &amp; Münkemüller, <span><a href=#mee312841-bib-0060 class="bibLink tab-link" id=mee312841-bib-0060R data-tab=pane-pcw-references>2015</a></span>). To remedy this problem, Guisan and Rahbek (<span><a href=#mee312841-bib-0502 class="bibLink tab-link" id=mee312841-bib-0502R data-tab=pane-pcw-references>2011</a></span>) proposed the integrated framework SESAM (spatially explicit species assemblage modelling). The idea is to apply four successive filters in the assembly process: (1) dispersal filtering; (2) abiotic habitat filtering using SDMs; (3) macroecological constraints using MEMs; and (4) biotic filtering by applying ecological assembly rules (e.g. maximum species richness) (Guisan &amp; Rahbek <span><a href=#mee312841-bib-0502 class="bibLink tab-link" id=mee312841-bib-0502R data-tab=pane-pcw-references>2011</a></span>). A commonly used assembly rule is the “probability ranking” rule (PRR): community composition is determined by ranking the species in decreasing order of their predicted probability up to the richness prediction (D'Amen, Dubuis, et&nbsp;al., <span><a href=#mee312841-bib-0017 class="bibLink tab-link" id=mee312841-bib-0017R data-tab=pane-pcw-references>2015</a></span>; D'Amen, Pradervand, et&nbsp;al., <span><a href=#mee312841-bib-0018 class="bibLink tab-link" id=mee312841-bib-0018R data-tab=pane-pcw-references>2015</a></span>). The core assumption behind this rule is that species with the highest habitat suitability are competitively superior. Other assembly rules include the “trait range” rule (D'Amen, Dubuis, et&nbsp;al., <span><a href=#mee312841-bib-0017 class="bibLink tab-link" id=mee312841-bib-0017R data-tab=pane-pcw-references>2015</a></span>) and the “checkerboard unit” rule (D'Amen, Pradervand, et&nbsp;al., <span><a href=#mee312841-bib-0018 class="bibLink tab-link" id=mee312841-bib-0018R data-tab=pane-pcw-references>2015</a></span>).
+ </p>
+ 
+ <p>More recently, the core assumptions on which SESAM is based (SSDMs overpredict richness compared to MEMs) have been called into question by the convincing demonstration based on probability theory performed by Calabrese et&nbsp;al. (<span><a href=#mee312841-bib-0011 class="bibLink tab-link" id=mee312841-bib-0011R data-tab=pane-pcw-references>2014</a></span>). These authors developed an innovative maximum‐likelihood approach to adjust SSDM occurrence probabilities based on an estimate or prediction of site‐level species richness. Supported by this innovative method, they argued that overprediction originates from a statistical rather than an ecological bias introduced using thresholding schemes to produce SSDMs. Thus, this statistical artefact could be caused by species prevalence and/or “regression dilution.”
+ </p>
+ 
+ <p>Since the publication of the SESAM framework, several other comprehensive modelling frameworks linking ecological theory, empirical data, and statistical models have been developed to predict communities, including the integrated framework of Boulangeat, Gravel, and Thuiller (<span><a href=#mee312841-bib-0009 class="bibLink tab-link" id=mee312841-bib-0009R data-tab=pane-pcw-references>2012</a></span>), the metacommunity—space, environment, time model (M‐SET; Mokany, Harwood, Williams, &amp; Ferrier, <span><a href=#mee312841-bib-0042 class="bibLink tab-link" id=mee312841-bib-0042R data-tab=pane-pcw-references>2012</a></span>), and joint species distribution models (JSDMs; Pollock et&nbsp;al., <span><a href=#mee312841-bib-0049 class="bibLink tab-link" id=mee312841-bib-0049R data-tab=pane-pcw-references>2014</a></span>). These frameworks offer innovative ways to improve our understanding of community assembly processes at large spatial scales and for many species at once, based on species co‐occurrence indices obtained from extensive community surveys and sometimes species‐specific dispersal abilities. However, these recent frameworks received no further considerations as it would be virtually impossible to unite all community‐level frameworks in a single software architecture and SESAM is still one of the best known, least complex, and least data‐demanding frameworks produced to date.
+ </p>
+ 
+ <p>While SSDMs provide increasingly promising predictions, no user‐friendly interface specifically designed to provide the basic tools needed to build an SSDM was available until now (Table&nbsp;<a class="tableLink scrollableLink" title="Link to table" href=#mee312841-tbl-0001>1</a>). Here, we present a new package named “<span class=smallCaps>ssdm</span>” which is a free and open source object‐oriented platform for stacked species distribution modelling implemented in <span class=smallCaps>r</span> (R Core Team, <span><a href=#mee312841-bib-0053 class="bibLink tab-link" id=mee312841-bib-0053R data-tab=pane-pcw-references>2015</a></span>). <span class=smallCaps>r</span> is perhaps the most commonly used software for ecological analysis in which state‐of‐the‐art methods can easily be incorporated. The “<span class=smallCaps>ssdm</span>” package provides a standardised and unified structure for visualizing and handling species distribution data and models. It also provides a range of cutting‐edge methods including nine statistical methods and makes it possible to build ensembles of forecasts to account for inter‐model variability. The user‐friendly interface is likely to extend the use of SSDMs to a wide range of conservation scientists and practitioners.
+ </p>
+ 
+ <div class=article-table-content id=mee312841-tbl-0001>
+ <header class=article-table-caption><span class=table-caption__label>Table 1.
+ </span>A non‐exhaustive list of software packages designed to perform species distribution modelling with their main advantages and limitations
+ </header>
+ 
+ 
+ 
+ <div class=article-table-content-wrapper>
+ <table class="table article-section__table">
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <thead>
+ 
+ <tr>
+ 
+ <th class="bottom-bordered-cell right-bordered-cell left-aligned">Software</th>
+ 
+ <th class="bottom-bordered-cell left-aligned">Graphical user interface</th>
+ 
+ <th class="bottom-bordered-cell left-aligned">Developed in <span class=smallCaps>r</span></th>
+ 
+ <th class="bottom-bordered-cell left-aligned">Designed to fit&nbsp;SSDMs</th>
+ 
+ <th class="bottom-bordered-cell left-aligned">Evaluation of species&nbsp;composition</th>
+ 
+ <th class="bottom-bordered-cell left-aligned">References</th>
+ 
+ </tr>
+ 
+ </thead>
+ 
+ <tbody>
+ 
+ <tr>
+ 
+ <td class="right-bordered-cell left-aligned">
+ <span class=smallCaps>bioensembles</span>
+ 
+ </td>
+ 
+ <td class=left-aligned>X</td>
+ 
+ <td class=left-aligned></td>
+ 
+ <td class=left-aligned></td>
+ 
+ <td class=left-aligned></td>
+ 
+ <td class=left-aligned>Diniz‐Filho et&nbsp;al. (<span><a href=#mee312841-bib-0020 class="bibLink tab-link" id=mee312841-bib-0020R data-tab=pane-pcw-references>2009</a></span>)
+ </td>
+ 
+ </tr>
+ 
+ <tr>
+ 
+ <td class="right-bordered-cell left-aligned"><span class=smallCaps>biomod</span>2
+ </td>
+ 
+ <td class=left-aligned></td>
+ 
+ <td class=left-aligned>X</td>
+ 
+ <td class=left-aligned></td>
+ 
+ <td class=left-aligned></td>
+ 
+ <td class=left-aligned>Thuiller et&nbsp;al. (<span><a href=#mee312841-bib-0059 class="bibLink tab-link" id=mee312841-bib-0059R data-tab=pane-pcw-references>2009</a></span>)
+ </td>
+ 
+ </tr>
+ 
+ <tr>
+ 
+ <td class="right-bordered-cell left-aligned">
+ <span class=smallCaps>ModEco</span>
+ 
+ </td>
+ 
+ <td class=left-aligned>X</td>
+ 
+ <td class=left-aligned></td>
+ 
+ <td class=left-aligned></td>
+ 
+ <td class=left-aligned></td>
+ 
+ <td class=left-aligned>Guo and Liu (<span><a href=#mee312841-bib-0030 class="bibLink tab-link" id=mee312841-bib-0030R data-tab=pane-pcw-references>2010</a></span>)
+ </td>
+ 
+ </tr>
+ 
+ <tr>
+ 
+ <td class="right-bordered-cell left-aligned">
+ <span class=smallCaps>Openmodeller</span>
+ 
+ </td>
+ 
+ <td class=left-aligned>X</td>
+ 
+ <td class=left-aligned></td>
+ 
+ <td class=left-aligned></td>
+ 
+ <td class=left-aligned></td>
+ 
+ <td class=left-aligned>de Souza Muñoz et&nbsp;al. (<span><a href=#mee312841-bib-0019 class="bibLink tab-link" id=mee312841-bib-0019R data-tab=pane-pcw-references>2009</a></span>)
+ </td>
+ 
+ </tr>
+ 
+ <tr>
+ 
+ <td class="right-bordered-cell left-aligned">
+ <span class=smallCaps>sdm</span>
+ 
+ </td>
+ 
+ <td class=left-aligned>X<a class="noteLink scrollableLink" title="Link to note" id=mee312841-note-0001_76-controller href=#mee312841-note-0001_76 aria-controls=mee312841-note-0001_76 aria-haspopup=false aria-expanded=true aria-label=Note>a</a><span class="footNotePopup sf-hidden" id=mee312841-note-0001_76 aria-labelledby=mee312841-note-0001_76-controller></span></td>
+ 
+ <td class=left-aligned>X</td>
+ 
+ <td class=left-aligned>X<a class="noteLink scrollableLink" title="Link to note" id=mee312841-note-0001_77-controller href=#mee312841-note-0001_77 aria-controls=mee312841-note-0001_77 aria-haspopup=false aria-expanded=true aria-label=Note>a</a><span class="footNotePopup sf-hidden" id=mee312841-note-0001_77 aria-labelledby=mee312841-note-0001_77-controller></span></td>
+ 
+ <td class=left-aligned></td>
+ 
+ <td class=left-aligned>Naimi and Araújo (<span><a href=#mee312841-bib-0045 class="bibLink tab-link" id=mee312841-bib-0045R data-tab=pane-pcw-references>2016</a></span>)
+ </td>
+ 
+ </tr>
+ 
+ <tr>
+ 
+ <td class="right-bordered-cell left-aligned">
+ <span class=smallCaps>ssdm</span>
+ 
+ </td>
+ 
+ <td class=left-aligned>X</td>
+ 
+ <td class=left-aligned>X</td>
+ 
+ <td class=left-aligned>X</td>
+ 
+ <td class=left-aligned>X</td>
+ 
+ <td class=left-aligned>This article</td>
+ 
+ </tr>
+ 
+ </tbody>
+ 
+ </table>
+ </div>
+ 
+ 
+ 
+ <div class=article-section__table-footnotes>
+ <ul>
+ <li id=mee312841-note-0001 aria-labelledby="Footnote 1" title="Footnote 1"><span><sup><i>a</i></sup> </span>
+ Included in the package description in Naimi and Araújo (<span><a href=#mee312841-bib-0045 class="bibLink tab-link" id=mee312841-bib-0045R data-tab=pane-pcw-references>2016</a></span>) but not available in the latest package release (version 1.0‐10).
+ 
+ </li>
+ </ul>
+ </div>
+ <div class=article-section__table-source></div>
+ </div>
+ 
+ </section>
+ <section class=article-section__content id=mee312841-sec-0002>
+ 
+ <h2 class="article-section__title section__title section1" id=mee312841-sec-0002-title>2 MODEL FLOW</h2>
+ 
+ <p>The workflow of the package “<span class=smallCaps>ssdm</span>” is based on three levels: (1) an individual SDM is fitted by linking the occurrences of a single species to environmental predictor variables based on the response curve of a single statistical method; (2) for each species, an ensemble SDM (ESDM) can be created from the outputs of several statistical methods to create a model that captures components of each; and (3) species assemblage from an SSDM is predicted by stacking several SDM or ESDM outputs (Figure&nbsp;<a href=#mee312841-fig-0001>1</a>).
+ </p>
+ 
+ <section class=article-section__inline-figure>
+ <figure class=figure id=mee312841-fig-0001><a target=_blank href=https://besjournals.onlinelibrary.wiley.com/cms/asset/26d799a1-0346-4b22-922b-e51bfd445760/mee312841-fig-0001-m.jpg>
+ <picture>
+ <img class=figure__image src=images/20.jpg data-lg-src=/cms/asset/26d799a1-0346-4b22-922b-e51bfd445760/mee312841-fig-0001-m.jpg alt=image title=image srcset sizes></picture></a><figcaption class=figure__caption>
+ <div class=figure__caption__header><strong class=figure__title>Figure 1</strong><div class=figure-extra><a href=# class=open-figure-link>Open in figure viewer</a><a href="https://besjournals.onlinelibrary.wiley.com/action/downloadFigures?id=mee312841-fig-0001&amp;doi=10.1111%2F2041-210X.12841" class=ppt-figure-link><i aria-hidden=true class=icon-Icon_Download></i><span>PowerPoint</span></a></div>
+ </div>
+ <div class="figure__caption figure__caption-text">Flow chart of the “<span class=smallCaps>ssdm</span>” package
+ </div>
+ </figcaption>
+ </figure>
+ </section>
+ 
+ <section class=article-section__sub-content id=mee312841-sec-0003>
+ 
+ <h3 class="article-section__sub-title section2" id=mee312841-sec-0003-title>2.1 Data inputs</h3>
+ 
+ <section class=article-section__sub-content id=mee312841-sec-0004>
+ 
+ <h4 class="article-section__sub-title section3" id=mee312841-sec-0004-title>2.1.1 Natural history records</h4>
+ 
+ <p>Most statistical methods included in the “<span class=smallCaps>ssdm</span>” package (introduced below) require presence/absence datasets. When a sampling scheme did not account for species absences (presence‐only data), the package selects pseudo‐absences (randomly selected sites where a species is assumed to be absent) or background data. Three modalities can be set to generate pseudo‐absences: (1) the selection strategy: either within the extent of the set of environmental rasters or within a user‐specified distance from each presence; (2) the number of selected pseudo‐absences: either a user‐specified number or a number equal to the number of presences available for each species; and (3) the number of times the pseudo‐absence selection is repeated to reduce potential errors due to randomisation in selection (Barbet‐Massin, Jiguet, Albert, &amp; Thuiller, <span><a href=#mee312841-bib-0002 class="bibLink tab-link" id=mee312841-bib-0002R data-tab=pane-pcw-references>2012</a></span>). When pseudo‐absences are selected repeatedly, the package merges the results of all runs by averaging habitat suitability probabilities and the associated accuracy metrics. Default parameters have been set to recommendations from Barbet‐Massin et&nbsp;al. (<span><a href=#mee312841-bib-0002 class="bibLink tab-link" id=mee312841-bib-0002R data-tab=pane-pcw-references>2012</a></span>) adapted to each statistical method (e.g. 10 runs of 1,000 randomly selected pseudo‐absences are performed for GLM). The <span class=smallCaps>r</span> package for spatial thinning of species occurrences “<span class=smallCaps>spThin</span>” (Aiello‐Lammens, Boria, Radosavljevic, Vilela, &amp; Anderson, <span><a href=#mee312841-bib-0001 class="bibLink tab-link" id=mee312841-bib-0001R data-tab=pane-pcw-references>2015</a></span>) was integrated to deal with natural history records deviation from opportunistic sampling scheme prone to spatial autocorrelation. The aim of thinning is to remove the fewest possible records needed to reduce the effect of sampling bias, while retaining the greatest possible amount of information.
+ </p>
+ 
+ </section>
+ 
+ <section class=article-section__sub-content id=mee312841-sec-0005>
+ 
+ <h4 class="article-section__sub-title section3" id=mee312841-sec-0005-title>2.1.2 Environmental variables</h4>
+ 
+ <p>All raster formats supported by the <span class=smallCaps>r</span> “<span class=smallCaps>rgdal</span>” package can be used with the “<span class=smallCaps>ssdm</span>” package to describe the environment occupied by the species thereby facilitating data management and exchange with conventional <span class=smallCaps>gis</span> packages (Bivand et&nbsp;al., <span><a href=#mee312841-bib-0008 class="bibLink tab-link" id=mee312841-bib-0008R data-tab=pane-pcw-references>2016</a></span>). The “<span class=smallCaps>ssdm</span>” package accepts both continuous (e.g. climate maps, digital elevation models, bathymetric maps) and categorical environmental variables (e.g. land cover maps, soil type maps) as inputs. The package also allows normalisation of environmental variables, which may be useful to improve the fit of certain statistical methods (e.g. artificial neural networks).
+ </p>
+ 
+ <p>Rasters of environmental variables must have the same coordinate reference system but the spatial extent and resolution of the environmental layers can differ. During processing, the package will deal with between‐variables discrepancies in spatial extent and resolution by rescaling all environmental rasters to the smallest common spatial extent, and then upscaling them to the coarsest resolution using nearest neighbour interpolation.</p>
+ 
+ </section>
+ 
+ </section>
+ 
+ <section class=article-section__sub-content id=mee312841-sec-0006>
+ 
+ <h3 class="article-section__sub-title section2" id=mee312841-sec-0006-title>2.2 Statistical methods</h3>
+ 
+ <section class=article-section__sub-content id=mee312841-sec-0007>
+ 
+ <h4 class="article-section__sub-title section3" id=mee312841-sec-0007-title>2.2.1 Individual species distribution models</h4>
+ 
+ <p>The “<span class=smallCaps>ssdm</span>” package includes the main statistical methods used to model species distributions: general additive models, generalised linear models (GLM), multivariate adaptive regression splines, classification tree analysis, generalised boosted models, maximum entropy, artificial neural networks (ANN), random forests, and support vector machines. The default parameters of the dependent <span class=smallCaps>r</span> package of each statistical method were conserved but most of them can be reset (Table&nbsp;<a class="tableLink scrollableLink" title="Link to table" href=#mee312841-tbl-0002>2</a>).
+ </p>
+ 
+ <div class=article-table-content id=mee312841-tbl-0002>
+ <header class=article-table-caption><span class=table-caption__label>Table 2.
+ </span>Statistical methods implemented in the first release of the “<span class=smallCaps>ssdm</span>” package and their dependent packages
+ </header>
+ 
+ 
+ 
+ <div class=article-table-content-wrapper>
+ <table class="table article-section__table">
+ 
+ 
+ 
+ 
+ <thead>
+ 
+ <tr>
+ 
+ <th class="bottom-bordered-cell right-bordered-cell left-aligned">Statistical method</th>
+ 
+ <th class="bottom-bordered-cell left-aligned">Dependent package</th>
+ 
+ <th class="bottom-bordered-cell left-aligned">References</th>
+ 
+ </tr>
+ 
+ </thead>
+ 
+ <tbody>
+ 
+ <tr>
+ 
+ <td class="right-bordered-cell left-aligned">GAM</td>
+ 
+ <td class=left-aligned>
+ <span class=smallCaps>mgcv</span>
+ 
+ </td>
+ 
+ <td class=left-aligned>Wood (<span><a href=#mee312841-bib-0065 class="bibLink tab-link" id=mee312841-bib-0065R data-tab=pane-pcw-references>2006</a></span>)
+ </td>
+ 
+ </tr>
+ 
+ <tr>
+ 
+ <td class="right-bordered-cell left-aligned">GLM</td>
+ 
+ <td class=left-aligned>
+ <span class=smallCaps>stats</span>
+ 
+ </td>
+ 
+ <td class=left-aligned>R Core Team (<span><a href=#mee312841-bib-0053 class="bibLink tab-link" id=mee312841-bib-0053R data-tab=pane-pcw-references>2015</a></span>)
+ </td>
+ 
+ </tr>
+ 
+ <tr>
+ 
+ <td class="right-bordered-cell left-aligned">MARS</td>
+ 
+ <td class=left-aligned>
+ <span class=smallCaps>earth</span>
+ 
+ </td>
+ 
+ <td class=left-aligned>Milborrow (<span><a href=#mee312841-bib-0041 class="bibLink tab-link" id=mee312841-bib-0041R data-tab=pane-pcw-references>2016</a></span>)
+ </td>
+ 
+ </tr>
+ 
+ <tr>
+ 
+ <td class="right-bordered-cell left-aligned">MAXENT</td>
+ 
+ <td class=left-aligned>
+ <span class=smallCaps>dismo</span>
+ 
+ </td>
+ 
+ <td class=left-aligned>Hijmans, Phillips, Leathwick, and Elith (<span><a href=#mee312841-bib-0031 class="bibLink tab-link" id=mee312841-bib-0031R data-tab=pane-pcw-references>2016</a></span>)
+ </td>
+ 
+ </tr>
+ 
+ <tr>
+ 
+ <td class="right-bordered-cell left-aligned">CTA</td>
+ 
+ <td class=left-aligned>
+ <span class=smallCaps>rpart</span>
+ 
+ </td>
+ 
+ <td class=left-aligned>Therneau, Atkinson, and Ripley (<span><a href=#mee312841-bib-0058 class="bibLink tab-link" id=mee312841-bib-0058R data-tab=pane-pcw-references>2015</a></span>)
+ </td>
+ 
+ </tr>
+ 
+ <tr>
+ 
+ <td class="right-bordered-cell left-aligned">GBM</td>
+ 
+ <td class=left-aligned>
+ <span class=smallCaps>gbm</span>
+ 
+ </td>
+ 
+ <td class=left-aligned>Ridgeway (<span><a href=#mee312841-bib-0055 class="bibLink tab-link" id=mee312841-bib-0055R data-tab=pane-pcw-references>2015</a></span>)
+ </td>
+ 
+ </tr>
+ 
+ <tr>
+ 
+ <td class="right-bordered-cell left-aligned">ANN</td>
+ 
+ <td class=left-aligned>
+ <span class=smallCaps>nnet</span>
+ 
+ </td>
+ 
+ <td class=left-aligned>Venables and Ripley (<span><a href=#mee312841-bib-0064 class="bibLink tab-link" id=mee312841-bib-0064R data-tab=pane-pcw-references>2002</a></span>)
+ </td>
+ 
+ </tr>
+ 
+ <tr>
+ 
+ <td class="right-bordered-cell left-aligned">RF</td>
+ 
+ <td class=left-aligned>
+ <span class=smallCaps>randomForest</span>
+ 
+ </td>
+ 
+ <td class=left-aligned>Liaw and Wiener (<span><a href=#mee312841-bib-0034 class="bibLink tab-link" id=mee312841-bib-0034R data-tab=pane-pcw-references>2002</a></span>)
+ </td>
+ 
+ </tr>
+ 
+ <tr>
+ 
+ <td class="right-bordered-cell left-aligned">SVM</td>
+ 
+ <td class=left-aligned><span class=smallCaps>e</span>1071
+ </td>
+ 
+ <td class=left-aligned>Meyer, Dimitriadou, Hornik, Weingessel, and Leisch (<span><a href=#mee312841-bib-0039 class="bibLink tab-link" id=mee312841-bib-0039R data-tab=pane-pcw-references>2015</a></span>)
+ </td>
+ 
+ </tr>
+ 
+ </tbody>
+ 
+ </table>
+ </div>
+ 
+ 
+ <div class=article-section__table-source></div>
+ </div>
+ 
+ <p>A major assumption behind the concept of SDM is that species are in equilibrium with their environment and so barriers to species dispersal are consequently ignored by the most standard SDM implementations (Guisan &amp; Thuiller, <span><a href=#mee312841-bib-0029 class="bibLink tab-link" id=mee312841-bib-0029R data-tab=pane-pcw-references>2005</a></span>). Hence, an SDM may overestimate the geographical area that a species occupies if its distribution is at least partially shaped by dispersal barriers. In order to account for this potential bias, the package contains an option to restrict SDM predictions to a user‐specified distance around each presence (a habitat suitability of 0 is then assigned to the remainder of the study area) (Crisp, Laffan, Linder, &amp; Monro, <span><a href=#mee312841-bib-0016 class="bibLink tab-link" id=mee312841-bib-0016R data-tab=pane-pcw-references>2001</a></span>).
+ </p>
+ 
+ <p>For each species, the package can store two results in raster format: (1) a continuous raster map giving the habitat suitability for presence‐only data, and the probability of presence for presence/absence data; and (2) a binary presence/absence raster based on the threshold of habitat suitability that maximises a user‐specified accuracy metric (see below).</p>
+ 
+ </section>
+ 
+ <section class=article-section__sub-content id=mee312841-sec-0008>
+ 
+ <h4 class="article-section__sub-title section3" id=mee312841-sec-0008-title>2.2.2 Ensemble species distribution models (ESDMs)</h4>
+ 
+ <p>Because uncertainty in distribution projections can skew policy making and planning, one recommendation is to fit a number of alternative statistical methods and to explore the range of projections across the different SDMs, and then to find a consensus among SDM projections (Gritti, Duputie, Massol, &amp; Chuine, <span><a href=#mee312841-bib-0028 class="bibLink tab-link" id=mee312841-bib-0028R data-tab=pane-pcw-references>2013</a></span>; Marmion, Parviainen, Luoto, Heikkinen, &amp; Thuiller, <span><a href=#mee312841-bib-0037 class="bibLink tab-link" id=mee312841-bib-0037R data-tab=pane-pcw-references>2009</a></span>). Two consensus methods are implemented in the “<span class=smallCaps>ssdm</span>” package: (1) a simple average of the SDM outputs; and (2) a weighted average based on a user‐specified metric or group of metrics (described below). The package also provides an uncertainty map representing the between‐methods variance. The degree of agreement between each pair of statistical methods can be assessed through a correlation matrix that gives the Pearson's coefficient.
+ </p>
+ 
+ </section>
+ 
+ <section class=article-section__sub-content id=mee312841-sec-0009>
+ 
+ <h4 class="article-section__sub-title section3" id=mee312841-sec-0009-title>2.2.3 Stacked species distribution models</h4>
+ 
+ <p>The final maps of local species richness and composition can be computed using six different methods: (1) by summing discrete presence/absence maps (bSSDM) derived from one of the six metrics available to compute binary maps detailed in the next section (e.g. Benito et&nbsp;al., <span><a href=#mee312841-bib-0005 class="bibLink tab-link" id=mee312841-bib-0005R data-tab=pane-pcw-references>2013</a></span>; Brown et&nbsp;al., <span><a href=#mee312841-bib-0010 class="bibLink tab-link" id=mee312841-bib-0010R data-tab=pane-pcw-references>2015</a></span>; Fitzpatrick et&nbsp;al., <span><a href=#mee312841-bib-0025 class="bibLink tab-link" id=mee312841-bib-0025R data-tab=pane-pcw-references>2008</a></span>; Midgley et&nbsp;al., <span><a href=#mee312841-bib-0040 class="bibLink tab-link" id=mee312841-bib-0040R data-tab=pane-pcw-references>2003</a></span>; Moraes et&nbsp;al., <span><a href=#mee312841-bib-0043 class="bibLink tab-link" id=mee312841-bib-0043R data-tab=pane-pcw-references>2014</a></span>; Ogawa‐Onishi et&nbsp;al., <span><a href=#mee312841-bib-0046 class="bibLink tab-link" id=mee312841-bib-0046R data-tab=pane-pcw-references>2010</a></span>; Raes et&nbsp;al., <span><a href=#mee312841-bib-0054 class="bibLink tab-link" id=mee312841-bib-0054R data-tab=pane-pcw-references>2009</a></span>); (2) by summing discrete presence/absence maps obtained by drawing repeatedly from a Bernoulli distribution (see Dubuis et&nbsp;al., <span><a href=#mee312841-bib-0022 class="bibLink tab-link" id=mee312841-bib-0022R data-tab=pane-pcw-references>2011</a></span>; Calabrese et&nbsp;al., <span><a href=#mee312841-bib-0011 class="bibLink tab-link" id=mee312841-bib-0011R data-tab=pane-pcw-references>2014</a></span> for further details); (3) by summing continuous habitat suitability maps (pSSDM) (e.g. Mateo et&nbsp;al., <span><a href=#mee312841-bib-0038 class="bibLink tab-link" id=mee312841-bib-0038R data-tab=pane-pcw-references>2012</a></span>; Murray‐Smith et&nbsp;al., <span><a href=#mee312841-bib-0044 class="bibLink tab-link" id=mee312841-bib-0044R data-tab=pane-pcw-references>2009</a></span>; Pouteau, Bayle, et&nbsp;al., <span><a href=#mee312841-bib-0051 class="bibLink tab-link" id=mee312841-bib-0051R data-tab=pane-pcw-references>2015</a></span>; Schmidt‐Lebuhn et&nbsp;al., <span><a href=#mee312841-bib-0501 class="bibLink tab-link" id=mee312841-bib-0501R data-tab=pane-pcw-references>2012</a></span>); (4) by applying the PRR of the SESAM framework (a number of species equal to the prediction of species richness is selected on the basis of decreasing probability of presence calculated by the SDMs) with species richness as estimated by a pSSDM (referred to as “PRR.pSSDM”) (D'Amen, Dubuis, et&nbsp;al., <span><a href=#mee312841-bib-0017 class="bibLink tab-link" id=mee312841-bib-0017R data-tab=pane-pcw-references>2015</a></span>); (5) by applying the PRR with species richness as estimated by a MEM (“PRR.MEM”) (D'Amen, Dubuis, et&nbsp;al., <span><a href=#mee312841-bib-0017 class="bibLink tab-link" id=mee312841-bib-0017R data-tab=pane-pcw-references>2015</a></span>; D'Amen, Pradervand, et&nbsp;al., <span><a href=#mee312841-bib-0018 class="bibLink tab-link" id=mee312841-bib-0018R data-tab=pane-pcw-references>2015</a></span>; Guisan &amp; Rahbek, <span><a href=#mee312841-bib-0502 class="bibLink tab-link" id=mee312841-bib-0502R data-tab=pane-pcw-references>2011</a></span>); and (6) using the maximum‐likelihood adjustment approach proposed by Calabrese et&nbsp;al. (<span><a href=#mee312841-bib-0011 class="bibLink tab-link" id=mee312841-bib-0011R data-tab=pane-pcw-references>2014</a></span>).
+ </p>
+ 
+ <p>As the computation of multiple ESDM (one per species) can be time consuming, the <span class=smallCaps>r</span> “<span class=smallCaps>parallel</span>” package has been included to optimise the use of a multi‐core processor or a computer cluster (R Core Team, <span><a href=#mee312841-bib-0053 class="bibLink tab-link" id=mee312841-bib-0053R data-tab=pane-pcw-references>2015</a></span>). Computed maps can be exported in GeoTIFF then imported into other <span class=smallCaps>gis</span> software packages for further data analysis and visualisation.
+ </p>
+ 
+ </section>
+ 
+ </section>
+ 
+ <section class=article-section__sub-content id=mee312841-sec-0010>
+ 
+ <h3 class="article-section__sub-title section2" id=mee312841-sec-0010-title>2.3 Additional outputs</h3>
+ 
+ <section class=article-section__sub-content id=mee312841-sec-0011>
+ 
+ <h4 class="article-section__sub-title section3" id=mee312841-sec-0011-title>2.3.1 Model accuracy assessment</h4>
+ 
+ <p>A range of metrics to evaluate models have been integrated in the “<span class=smallCaps>ssdm</span>” package using the “SDM<span class=smallCaps>Tools</span>” package (VanDerWal, Falconi, Januchowski, Shoo, &amp; Storlie, <span><a href=#mee312841-bib-0063 class="bibLink tab-link" id=mee312841-bib-0063R data-tab=pane-pcw-references>2014</a></span>). They include the area under the receiving operating characteristic (ROC) curve (AUC), Cohen's kappa coefficient, the omission rate, the sensitivity (true positive rate) and the specificity (true negative rate) (Fielding &amp; Bell, <span><a href=#mee312841-bib-0024 class="bibLink tab-link" id=mee312841-bib-0024R data-tab=pane-pcw-references>1997</a></span>). These metrics are all based on the confusion matrix (also called “error matrix,” that represents the instances in a predicted class vs. the instances in an actual class) and, consequently, require prior conversion of habitat suitability maps into binary presence/absence maps. The optimal threshold to split presences and absences on the basis of habitat suitability probabilities can be set to the probability that maximises: Cohen's kappa coefficient, the correct classification rate, the true skill statistic (TSS), sensitivity/specificity equality (SES), the lowest prediction occurrence probability or the shortest distance between the ROC curve and the upper left corner of the ROC plot. Recommendations by Liu, Berry, Dawson, and Pearson (<span><a href=#mee312841-bib-0035 class="bibLink tab-link" id=mee312841-bib-0035R data-tab=pane-pcw-references>2005</a></span>), Liu, White, and Newell (<span><a href=#mee312841-bib-0036 class="bibLink tab-link" id=mee312841-bib-0036R data-tab=pane-pcw-references>2013</a></span>) for thresholding were set to default in the package (TSS or SES for presence‐only and presence‐absence datasets respectively). To ensure independence between the training and evaluation sets for cross‐validation, three methods are available to split the initial dataset: (1) “holdout,” in which the initial dataset is partitioned into separate training and evaluation sets by a user‐defined fraction, (2) “<i>k</i>‐folds,” in which the initial dataset is partitioned into <i>k</i> folds being <i>k</i>‐1 times the training set and once the evaluation set, and (3) “leave‐one‐out,” in which each point is successively used for evaluation.
+ </p>
+ 
+ <p>To assess the accuracy of an <span class=smallCaps>ssdm</span>, the package provides the opportunity to compare modelled species assemblages with species pools from independent inventories observed in the field. Six evaluation metrics can be computed: (1) the species richness error, i.e. the difference between the predicted and observed species richness; (2) assemblage prediction success, i.e. the proportion of correct predictions; (3) Cohen's kappa of the assemblage, i.e. the proportion of specific agreement; (4) assemblage specificity, i.e. the proportion of true negatives (species that are both predicted and observed to be absent); (5) assemblage sensitivity, i.e. the proportion of true positives (species that are both predicted and observed as present); and (6) the Jaccard index, a widely used metric of community similarity (Pottier et&nbsp;al., <span><a href=#mee312841-bib-0050 class="bibLink tab-link" id=mee312841-bib-0050R data-tab=pane-pcw-references>2013</a></span>).
+ </p>
+ 
+ </section>
+ 
+ <section class=article-section__sub-content id=mee312841-sec-0012>
+ 
+ <h4 class="article-section__sub-title section3" id=mee312841-sec-0012-title>2.3.2 Importance analysis of environmental variables</h4>
+ 
+ <p>The “<span class=smallCaps>ssdm</span>” package provides two measures of the relative contribution of environmental variables on a species‐by‐species basis, which quantifies the relevance of an environmental variable to determine species distribution. The first measure is based on a jackknife approach that evaluates the change in accuracy between a full model and a model in which each environmental variable is omitted in turn (Phillips, Anderson, &amp; Schapire, <span><a href=#mee312841-bib-0048 class="bibLink tab-link" id=mee312841-bib-0048R data-tab=pane-pcw-references>2006</a></span>). All metrics available in the package can be used to assess the change in accuracy. The second measure is based on Pearson's correlation coefficient between a full model and a model with each environmental variable omitted in turn (Thuiller, Lafourcade, Engler, &amp; Araújo, <span><a href=#mee312841-bib-0059 class="bibLink tab-link" id=mee312841-bib-0059R data-tab=pane-pcw-references>2009</a></span>). These measures, which are calculated on a species‐by‐species basis, are averaged in SSDMs.
+ </p>
+ 
+ </section>
+ 
+ <section class=article-section__sub-content id=mee312841-sec-0013>
+ 
+ <h4 class="article-section__sub-title section3" id=mee312841-sec-0013-title>2.3.3 Endemism mapping</h4>
+ 
+ <div class=paragraph-displayedItem-text-type>In addition to species richness, endemism is an important feature for conservation as it refers to species being unique to the defined geographical location (Crisp et&nbsp;al., <span><a href=#mee312841-bib-0016 class="bibLink tab-link" id=mee312841-bib-0016R data-tab=pane-pcw-references>2001</a></span>; Moraes et&nbsp;al., <span><a href=#mee312841-bib-0043 class="bibLink tab-link" id=mee312841-bib-0043R data-tab=pane-pcw-references>2014</a></span>; Raes et&nbsp;al., <span><a href=#mee312841-bib-0054 class="bibLink tab-link" id=mee312841-bib-0054R data-tab=pane-pcw-references>2009</a></span>). The “<span class=smallCaps>ssdm</span>” package offers the opportunity to map local species endemism using two metrics: (1) the weighted endemism index (WEI); and (2) the corrected weighted endemism index (CWEI) (Crisp et&nbsp;al., <span><a href=#mee312841-bib-0016 class="bibLink tab-link" id=mee312841-bib-0016R data-tab=pane-pcw-references>2001</a></span>):
+ <div class=inline-equation id=mee312841-disp-0001><span class="inline-equation__construct figure"><img src=images/21.png alt=urn:x-wiley:2041210X:media:mee312841:mee312841-math-0001 title=urn:x-wiley:2041210X:media:mee312841:mee312841-math-0001></span><span class=inline-equation__label>(1)</span></div>
+ </div>
+ 
+ <div class=paragraph-displayedItem-text-type>WEI for the cell <i>c</i> is calculated by summing the inverse of the geographical range size <i>r</i><sub><i>i,c</i></sub> for each of the <i>n</i><sub><i>c</i></sub> species. WEI seeks to avoid the problem that an arbitrary region or range‐size threshold is used to define what constitutes an endemic species. WEI avoids using a threshold for endemism by applying a simple continuous weighting function, assigning high weights to species with small ranges, and progressively smaller weights to species with larger ranges.
+ <div class=inline-equation id=mee312841-disp-0002><span class="inline-equation__construct figure"><img src=images/22.png alt=urn:x-wiley:2041210X:media:mee312841:mee312841-math-0002 title=urn:x-wiley:2041210X:media:mee312841:mee312841-math-0002></span><span class=inline-equation__label>(2)</span></div>
+ 
+ </div>
+ 
+ <p>CWEI is an alternative measure to reduce the correlation between richness and endemism. CWEI for cell <i>c</i> is calculated as the weighted endemism index WEI<sub><i>c</i></sub> divided by the richness score RS<sub><i>c</i></sub> so that CWEI<sub><i>c</i></sub> represents the average degree of endemism of the species recorded in an area.
+ </p>
+ 
+ </section>
+ 
+ </section>
+ 
+ </section>
+ <section class=article-section__content id=mee312841-sec-0014>
+ 
+ <h2 class="article-section__title section__title section1" id=mee312841-sec-0014-title>3 GRAPHICAL USER INTERFACE</h2>
+ 
+ <p>The “<span class=smallCaps>ssdm</span>” package offers a user‐friendly interface built with the web application framework for R Shiny (Chang, Cheng, Allaire, Xie, &amp; McPherson, <span><a href=#mee312841-bib-0013 class="bibLink tab-link" id=mee312841-bib-0013R data-tab=pane-pcw-references>2016</a></span>). The graphical user interface is launched with the function <i>gui()</i>. The interface is divided into three steps: data loading, modelling, and results display. The “Load” tab allows a new dataset or a previously saved model to be loaded. The “Modelling” tab proposes three types of models: an individual SDM, an ESDM, or a SSDM. The “Modelling” tab contains three sub‐tabs offering levels of parameterisation that are more or less detailed depending on the user's level of expertise: (1) basic, to select the statistical method(s), the number of runs per statistical method, the model evaluation metric(s), and the methods to be used to map diversity and endemism; (2) intermediate, to set pseudo‐absence selection (number and strategy), the cross‐validation method, the metric used to estimate the relative contribution of environmental variables, the ESDM consensus method, and the SSDM stacking method; and (3) advanced, to set the parameters of the statistical methods. The “Results” tab summarises graphic modelling outputs: model maps (species habitat suitability, species richness and endemism), the relative contributions of environmental variables, assessment of model accuracy, and between‐methods correlation (Figure&nbsp;<a href=#mee312841-fig-0002>2</a>). The interface includes a panel to save results maps in GeoTIFF format (.tif) compatible with most <span class=smallCaps>gis</span> software, and other numerical results as comma separated values (.csv) files.
+ </p>
+ 
+ <section class=article-section__inline-figure>
+ <figure class=figure id=mee312841-fig-0002><a target=_blank href=https://besjournals.onlinelibrary.wiley.com/cms/asset/fe41fe94-a6fd-4454-a094-3f70fdea8a03/mee312841-fig-0002-m.jpg>
+ <picture>
+ <img class=figure__image src=images/23.jpg data-lg-src=/cms/asset/fe41fe94-a6fd-4454-a094-3f70fdea8a03/mee312841-fig-0002-m.jpg alt=image title=image srcset sizes></picture></a><figcaption class=figure__caption>
+ <div class=figure__caption__header><strong class=figure__title>Figure 2</strong><div class=figure-extra><a href=# class=open-figure-link>Open in figure viewer</a><a href="https://besjournals.onlinelibrary.wiley.com/action/downloadFigures?id=mee312841-fig-0002&amp;doi=10.1111%2F2041-210X.12841" class=ppt-figure-link><i aria-hidden=true class=icon-Icon_Download></i><span>PowerPoint</span></a></div>
+ </div>
+ <div class="figure__caption figure__caption-text">Screenshot of the results dashboard displayed by the graphical user interface of the “<span class=smallCaps>ssdm</span>” package
+ </div>
+ </figcaption>
+ </figure>
+ </section>
+ 
+ </section>
+ <section class=article-section__content id=mee312841-sec-0015>
+ 
+ <h2 class="article-section__title section__title section1" id=mee312841-sec-0015-title>4 EXAMPLES</h2>
+ 
+ <section class=article-section__sub-content id=mee312841-sec-0016>
+ 
+ <h3 class="article-section__sub-title section2" id=mee312841-sec-0016-title>4.1 Vulnerability to invasive species at global scale</h3>
+ 
+ <p>The occurrences of 100 of the world's worst invasive alien species (as defined by the Invasive Species Specialist Group of the International Union for Conservation of Nature; <a href=http://www.issg.org/ class=linkBehavior>http://www.issg.org/</a>) were gathered from the Global Biodiversity Information Facility (<a href=http://www.gbif.org/ class=linkBehavior>http://www.gbif.org/</a>). Occurrences flagged as invalid, or doubtful coordinates, or mismatching country, or doubtful taxon, were removed. The set of 19 WorldClim climate variables (all continuous) at a 2.5 arcmin resolution were used as environmental variables (Hijmans, Cameron, Parra, Jones, &amp; Jarvis, <span><a href=#mee312841-bib-0503 class="bibLink tab-link" id=mee312841-bib-0503R data-tab=pane-pcw-references>2005</a></span>). Multicollinearity of variables was addressed by examining cross‐correlations. For variables with Pearson's correlations of <i>r&nbsp;</i>&gt;<i>&nbsp;</i>.8, the variable that decreased model accuracy the most when omitted from the full model (i.e. the most “meaningful” variable) was retained. Next, an SSDM using the sum of individual probabilities (pSSDM) as stacking method and with all other model settings set to default was fitted. The output provides a picture of how richness in 100 of the world's worst invasive alien species could be distributed without any barriers to spread or competitive interactions (Figure&nbsp;<a href=#mee312841-fig-0003>3</a>).
+ </p>
+ 
+ <section class=article-section__inline-figure>
+ <figure class=figure id=mee312841-fig-0003><a target=_blank href=https://besjournals.onlinelibrary.wiley.com/cms/asset/cb43e2f9-d2ec-4141-847a-b5aa062f3223/mee312841-fig-0003-m.jpg>
+ <picture>
+ <img class=figure__image src=images/24.jpg data-lg-src=/cms/asset/cb43e2f9-d2ec-4141-847a-b5aa062f3223/mee312841-fig-0003-m.jpg alt=image title=image srcset sizes></picture></a><figcaption class=figure__caption>
+ <div class=figure__caption__header><strong class=figure__title>Figure 3</strong><div class=figure-extra><a href=# class=open-figure-link>Open in figure viewer</a><a href="https://besjournals.onlinelibrary.wiley.com/action/downloadFigures?id=mee312841-fig-0003&amp;doi=10.1111%2F2041-210X.12841" class=ppt-figure-link><i aria-hidden=true class=icon-Icon_Download></i><span>PowerPoint</span></a></div>
+ </div>
+ <div class="figure__caption figure__caption-text">World map of the vulnerability to the 100 world's worst invasive species generated with the “<span class=smallCaps>ssdm</span>” package
+ </div>
+ </figcaption>
+ </figure>
+ </section>
+ 
+ </section>
+ 
+ <section class=article-section__sub-content id=mee312841-sec-0017>
+ 
+ <h3 class="article-section__sub-title section2" id=mee312841-sec-0017-title>4.2 <i>Endemism of the genus</i> Psychotria <i>in New Caledonia</i></h3>
+ 
+ <p><i>Psychotria</i> (Rubiaceae) is the second most speciose genus on the megadiverse archipelago of New Caledonia (Southwest Pacific Ocean) (Barrabé et&nbsp;al., <span><a href=#mee312841-bib-0003 class="bibLink tab-link" id=mee312841-bib-0003R data-tab=pane-pcw-references>2014</a></span>). Occurrences of all native species described as belonging to this genus were extracted from the Noumea (NOU) VIROT database and the Paris herbaria (P) SONNERAT database. Six environmental variables (five continuous and one categorical) at 100&nbsp;m resolution were used to fit an SSDM: elevation, potential insolation, slope steepness, substrate type, windwarness, and a topographical wetness index (see Pouteau, Bayle, et&nbsp;al., <span><a href=#mee312841-bib-0051 class="bibLink tab-link" id=mee312841-bib-0051R data-tab=pane-pcw-references>2015</a></span> for further details). Continuous variables were correlated with a Pearson's <i>r&nbsp;</i>&lt;<i>&nbsp;</i>.80. A WEI map was built with all model settings set to default. The output provides a picture of how the level of endemism of this focal genus is spatially organised in New Caledonia (Figure&nbsp;<a href=#mee312841-fig-0004>4</a>).
+ </p>
+ 
+ <section class=article-section__inline-figure>
+ <figure class=figure id=mee312841-fig-0004><a target=_blank href=https://besjournals.onlinelibrary.wiley.com/cms/asset/fa0c63bb-f442-4161-b943-2e614ff70cf9/mee312841-fig-0004-m.jpg>
+ <picture>
+ <img class=figure__image src=images/25.jpg data-lg-src=/cms/asset/fa0c63bb-f442-4161-b943-2e614ff70cf9/mee312841-fig-0004-m.jpg alt=image title=image srcset sizes></picture></a><figcaption class=figure__caption>
+ <div class=figure__caption__header><strong class=figure__title>Figure 4</strong><div class=figure-extra><a href=# class=open-figure-link>Open in figure viewer</a><a href="https://besjournals.onlinelibrary.wiley.com/action/downloadFigures?id=mee312841-fig-0004&amp;doi=10.1111%2F2041-210X.12841" class=ppt-figure-link><i aria-hidden=true class=icon-Icon_Download></i><span>PowerPoint</span></a></div>
+ </div>
+ <div class="figure__caption figure__caption-text">Weighted endemism map of the genus Psychotria in New Caledonia generated with the “<span class=smallCaps>ssdm</span>” package
+ </div>
+ </figcaption>
+ </figure>
+ </section>
+ 
+ </section>
+ 
+ </section>
+ <section class=article-section__content id=mee312841-sec-0018>
+ 
+ <h2 class="article-section__title section__title section1" id=mee312841-sec-0018-title>5 INSTALLATION</h2>
+ 
+ <p>The “<span class=smallCaps>ssdm</span>” package is free and open source (version 0.2.3 with GPL v3 license). It is available from the CRAN repository <a href=https://cran.r-project.org/web/packages/SSDM/index.html class=linkBehavior>https://cran.r-project.org/web/packages/SSDM/index.html</a>, and can be installed either from CRAN or within the <span class=smallCaps>r</span> environment using the command <i>install.packages(“</i><span class=smallCaps>ssdm</span><i>”)</i>. The project is hosted on Github (<a href=https://github.com/sylvainschmitt/SSDM class=linkBehavior>https://github.com/sylvainschmitt/SSDM</a>), which allows future users to openly contribute to the project.
+ </p>
+ 
+ </section>
+ <div class=article-section__content>
+ 
+ <h2 class="article-section__title section__title section1" id=mee312841-sec-0019-title> ACKNOWLEDGEMENTS</h2>
+ 
+ <p>We are grateful to Maxime Réjou‐Méchain (IRD) and Thomas Ibanez (IAC) for their useful comments on an earlier draft of the manuscript, to Laure Barrabé (IAC) and Frédéric Rigault (IRD) for gathering and pre‐processing the occurrences of <i>Psychotria</i> used in the second example, to Jérôme Lefèvre (IRD) and the IRD high performance computing platform in Noumea for making the infrastructure available for parallelisation tests, and to Daphne Goodfellow for English revisions. We also would like to thank the “<span class=smallCaps>biomod</span>2” package for inspiration. The implementation of the “<span class=smallCaps>ssdm</span>” package was funded by the Direction for Economic and Environmental Development (DDEE) of the North Province of New Caledonia. This manuscript benefited from the helpful suggestions made by three anonymous referees.
+ </p>
+ 
+ <ol></ol>
+ </div>
+ <section class=article-section__content id=mee312841-sec-0020>
+ 
+ <h2 class="article-section__title section__title section1" id=mee312841-sec-0020-title> AUTHORS’ CONTRIBUTIONS</h2>
+ 
+ <p>S.S., R.P., D.J., and P.B. conceived and designed the software; S.S., D.J., and F.B. implemented the package; S.S. and R.P. led the writing of the manuscript. All the authors contributed critically to the draft and gave final approval for publication.</p>
+ 
+ </section>
+ <section class=article-section__content id=mee312841-sec-0021>
+ 
+ <h2 class="article-section__title section__title section1" id=mee312841-sec-0021-title> DATA ACCESSIBILITY</h2>
+ 
+ <p>The occurrences of 100 of the world's worst invasive alien species: Global Biodiversity Information Facility <a href=https://doi.org/10.15468/dl.2mvxxk class=linkBehavior>https://doi.org/10.15468/dl.2mvxxk</a>. The set of 19 WorldClim climate variables: <a href=http://www.worldclim.org/current class=linkBehavior>http://www.worldclim.org/current</a> (2.5&nbsp;min). Psychotria data has not been archived because the locations of the endangered species cannot be disclosed. The methods used to produce Figure&nbsp;<a href=#mee312841-fig-0004>4</a> can be fully reproduced using the Cryptocaria data included into the “<span class=smallCaps>ssdm</span>” package with the associated vignette.
+ </p>
+ 
+ </section>
+ <section class="article-section article-section__references" id=references-section>
+ <div class="accordion article-accordion">
+ <h2>
+ <div tabindex=0 role=button class=accordion__control aria-controls=idmee312841-bibl-0001 aria-expanded=false data-references="/action/ajaxShowEnhancedAbstract?widgetId=5cf4c79f-0ae9-4dc5-96ce-77f62de7ada9&amp;ajax=true&amp;doi=10.1111%2F2041-210X.12841&amp;pbContext=%3Barticle%3Aarticle%3Adoi%5C%3A10.1111%2F2041-210X.12841%3Bissue%3Aissue%3Adoi%5C%3A10.1111%2Fmee3.2017.8.issue-12%3Bpage%3Astring%3AArticle%2FChapter+View%3Bctype%3Astring%3AJournal+Content%3BrequestedJournal%3Ajournal%3A2041210x%3Bwebsite%3Awebsite%3Abesjournals%3Bwgroup%3Astring%3APublication+Websites%3BpageGroup%3Astring%3APublication+Pages%3BsubPage%3Astring%3AFull+Text%3Bjournal%3Ajournal%3A2041210x&amp;accordionHeadingWrapper=h2&amp;onlyLog=true"><span class=section__title id=references-section-1>REFERENCES</span><i aria-hidden=true class=icon-section_arrow_d></i></div>
+ </h2>
+ <div class=accordion__content style=display:none role=region aria-labelledby=references-section-1 id=mee312841-bibl-0001>
+ 
+ </div>
+ </div>
+ </section>
+ </section>
+ <div style=display:none>
+ 
+ </div>
+ <div class=pb-dropzone data-pb-dropzone=citedBy-dropzone>
+ <section id=cited-by class="article-section article-section__citedBy cited-by"><div class="accordion article-accordion"><h2><div tabindex=0 role=button aria-controls=cited-by__content aria-expanded=false class=accordion__control><span id=citedby-section class=section__title>Citing Literature</span><i aria-hidden=true class=icon-section_arrow_d></i></div></h2><div id=cited-by__content class="accordion__content cited-by__content" style=display:none></div></div></section>
+ </div>
+ 
+</article></div></div><div class="col-lg-4 col-md-4 col-sm-4 hidden-xs hidden-sm hidden-md article-row-right fixed-element" style=top:-180px><div class="publication-cover-info clearfix">
+ 
+ <div class="cover-image-wrapper cover-image__image hasDetails"><a href=https://besjournals.onlinelibrary.wiley.com/toc/2041210x/2017/8/12 title="View Volume 8, Issue 12"><img src=images/26.jpg alt></a></div><div class="extra-info-wrapper cover-image__details"><p class=volume-issue><a href=https://besjournals.onlinelibrary.wiley.com/toc/2041210x/2017/8/12 title="View Volume 8, Issue 12"><span>Volume</span><span class=val>8</span>, <span>Issue</span><span class=val>12</span></a><p>December 2017<p class=page-range><span>Pages</span><span> 1795-1803</span></p>
+ 
+ <div class=publication-cover-extra><label>This article also appears in:</label><ul class=rlist><li><a href=https://besjournals.onlinelibrary.wiley.com/doi/toc/10.1111/(ISSN)2041-210X.CODEVI2018>Policy on Publishing Code Virtual Issue</a></ul></div>
+</div>
+</div>
+ 
+ 
+ <div class="pb-ad sf-hidden">
+ <div id=advert-rail-1 class="advert advert-rail sf-hidden">
+ 
+ 
+ 
+ </div>
+ </div>
+ 
+<div class="sticko__parent scrollThenFix" style="height:calc(100vh - 0px)"><div class="tab tab--slide tab--flex sticko__md tabs--xs dynamic-sticko"><ul data-mobile-toggle=slide role=tablist class="rlist tab__nav w-slide--list cloned"><li role=presentation><a data-slide-clone=self href=#pane-pcw-figures aria-controls=#pane-pcw-figures role=tab data-toggle=tab id=pane-pcw-figurescon data-slide-target=#pane-pcw-figures class="article-row-right__tabLinks w-slide__btn figures-tab empty" tabindex=-1 aria-selected=false><i aria-hidden=true class=icon-multi-figure></i><h2>Figures</h2></a><li role=presentation><a data-slide-clone=self href=#pane-pcw-references aria-controls=#pane-pcw-references role=tab data-toggle=tab id=pane-pcw-referencescon data-slide-target=#pane-pcw-references class="article-row-right__tabLinks w-slide__btn references-tab empty" tabindex=-1 aria-selected=false><i aria-hidden=true class=icon-chain></i><h2>References</h2></a><li role=presentation><a data-slide-clone=self href=#pane-pcw-related aria-controls=#pane-pcw-related role=tab data-toggle=tab id=pane-pcw-relatedcon data-slide-target=#pane-pcw-related class="article-row-right__tabLinks w-slide__btn related-tab empty" tabindex=-1 aria-selected=false><i aria-hidden=true class=icon-related-circles-extend-button></i><h2>Related</h2></a><li role=presentation class=active><a data-slide-clone=self href=#pane-pcw-details aria-controls=#pane-pcw-details role=tab data-toggle=tab id=pane-pcw-detailscon data-slide-target=#pane-pcw-details class="article-row-right__tabLinks w-slide__btn details-tab" tabindex=-1 aria-selected=false><i aria-hidden=true class=icon-Icon_Information></i><h2>Information</h2></a></ul><ul role=presentation class="rlist tab__content sticko__child"><li id=pane-pcw-figures aria-labelledby=pane-pcw-figurescon role=tabpanel class="tab__pane article-row-right__panes empty sf-hidden" aria-hidden=true><li id=pane-pcw-references aria-labelledby=pane-pcw-referencescon role=tabpanel class="tab__pane article-row-right__panes empty sf-hidden" aria-hidden=true><li id=pane-pcw-related aria-labelledby=pane-pcw-relatedcon role=tabpanel class="tab__pane article-row-right__panes empty sf-hidden" aria-hidden=true><li id=pane-pcw-details aria-labelledby=pane-pcw-detailscon role=tabpanel class="tab__pane article-row-right__panes active" aria-hidden=true>
+<section class=info-tab-wrapper>
+<section class=metrics>
+<h3 class=info-header>Metrics</h3>
+<div class=section__body><div class=cited-by-count><label>Citations: </label><span>28</span></div>
+<div class=pb-dropzone data-pb-dropzone=publicaitonContent-info-tab-metrics>
+<div data-badge-popover=left data-badge-type=1 data-doi=10.1111/2041-210X.12841 data-hide-no-mentions=false class=altmetric-embed data-uuid=9febd597-70ed-25f1-be04-3e42ed25062e><a target=_self href="https://www.altmetric.com/details.php?domain=besjournals.onlinelibrary.wiley.com&amp;citation_id=21393164" rel=popover data-content="<div>    <div style='padding-left: 10px; line-height:18px; border-left: 16px solid #ffd140;'>
+      <a class='link-to-altmetric-details-tab' target='_self' href='https://www.altmetric.com/details.php?domain=besjournals.onlinelibrary.wiley.com&amp;citation_id=21393164&amp;tab=blogs'>
+          Blogged by <b>2</b>
+      </a>
+    </div>
+    <div style='padding-left: 10px; line-height:18px; border-left: 16px solid #74CFED;'>
+      <a class='link-to-altmetric-details-tab' target='_self' href='https://www.altmetric.com/details.php?domain=besjournals.onlinelibrary.wiley.com&amp;citation_id=21393164&amp;tab=twitter'>
+          Tweeted by <b>38</b>
+      </a>
+    </div>
+    <div style='padding-left: 10px; line-height:18px; border-left: 16px solid #2445bd;'>
+      <a class='link-to-altmetric-details-tab' target='_self' href='https://www.altmetric.com/details.php?domain=besjournals.onlinelibrary.wiley.com&amp;citation_id=21393164&amp;tab=facebook'>
+          On <b>4</b> Facebook pages
+      </a>
+    </div>
+
+    <div class='altmetric-embed readers' style='margin-top: 10px;'>
+          <div class='altmetric-embed tip_mendeley'
+               style='padding-left: 10px; line-height:18px; border-left: 16px solid #A60000;'>
+              <b>276</b> readers on Mendeley
+          </div>
+    </div>
+    <div style='margin-top: 10px; text-align: center;'>
+        <a class='altmetric_details' target='_self' href='https://www.altmetric.com/details.php?domain=besjournals.onlinelibrary.wiley.com&amp;citation_id=21393164'>
+            See more details
+        </a>
+    </div>
+</div>" style=display:inline-block data-badge-popover=left>
+ <img alt="Article has an altmetric score of 33" src=images/27.png width=110 height=20 style=border:0;margin:0;max-width:none>
+</a></div>
+</div>
+</div>
+</section>
+<section class=details>
+<h3 class=info-header>Details</h3>
+<p class=copyright>© 2017 The Authors. Methods in Ecology and Evolution © 2017 British Ecological Society</p>
+<p></p>
+<ul class="cross-mark rlist">
+</ul>
+</section>
+<section class=keywords>
+<h3 class=info-header>Keywords</h3>
+<ul class="rlist rlist--inline">
+<li><a class=badge-type href="https://besjournals.onlinelibrary.wiley.com/action/doSearch?field1=Keyword&amp;text1=bioinformatics">bioinformatics</a></li>
+<li><a class=badge-type href="https://besjournals.onlinelibrary.wiley.com/action/doSearch?field1=Keyword&amp;text1=community%20ecology">community ecology</a></li>
+<li><a class=badge-type href="https://besjournals.onlinelibrary.wiley.com/action/doSearch?field1=Keyword&amp;text1=conservation">conservation</a></li>
+<li><a class=badge-type href="https://besjournals.onlinelibrary.wiley.com/action/doSearch?field1=Keyword&amp;text1=habitats">habitats</a></li>
+<li><a class=badge-type href="https://besjournals.onlinelibrary.wiley.com/action/doSearch?field1=Keyword&amp;text1=modelling">modelling</a></li>
+<li><a class=badge-type href="https://besjournals.onlinelibrary.wiley.com/action/doSearch?field1=Keyword&amp;text1=software">software</a></li>
+</ul>
+</section>
+<section class=funding-information>
+<h3 class=info-header>Funding Information</h3>
+<ul class=unordered-list>
+<li>Direction for Economic and Environmental Development (DDEE)</li>
+</ul>
+</section>
+<section class=publication-history>
+<h3 class=info-header>Publication History</h3>
+<ul class=rlist>
+<li><label>Issue Online: </label>05 December 2017
+</li>
+<li><label>Version of Record online: </label>03 August 2017
+</li>
+<li><label>Accepted manuscript online: </label>27 June 2017
+</li>
+<li><label>Manuscript accepted: </label>15 May 2017
+</li>
+<li><label>Manuscript received: </label>16 March 2017
+</li>
+</ul>
+</section>
+</section>
+<li class=tab__spinner style=display:none></ul></div></div></div></div></article><div id=figure-viewer data-ux3-wrapper=figure-viewer data-ux3-transformed-by=figureInit data-ux3-role=parent role=dialog class="figure-viewer sf-hidden"></div>
+ 
+ <div style=text-align:right!important><a style=font-weight:300!important;font-size:90% href=https://besjournals.onlinelibrary.wiley.com/doi/pdf/10.1111/2041-210X.12841>Download PDF</a></div>
+</div>
+</div></div></div>
+ </section>
+ 
+ </div>
+ </div>
+<div class="w-slide padding-top"><div class=w-slide_head><a href=# class=w-slide__back><i class=icon-arrow_l aria-hidden=true></i>back</a><span class=w-slide__title></span></div><div class=w-slide__content></div></div></main>
+ </div>
+ 
+ <div data-widget-def=pageFooter data-widget-id=053994f3-7d80-4bb1-97a4-c67fbc4768cd class=pageFooter>
+ 
+ 
+ <footer class=page-footer>
+ <div data-pb-dropzone=main>
+ 
+ <section data-widget-def=ux3-layout-widget data-widget-id=efb69c87-9ba0-4904-93cf-43e770aee16e class="footer-sections padded-content hub-footer hub-first-footer">
+ 
+ 
+ <div class=container><div class=row><div>
+ <div data-widget-def=ux3-layout-widget data-widget-id=cae47753-902f-4371-98d0-422ea9741270>
+ 
+ 
+ <div class=container><div class=row><div class=col-md-3>
+ <div data-widget-def=ux3-general-image data-widget-id=cdd2cb52-dd6b-403e-bac5-424c44c43d67 class=hub-footer-logo>
+ 
+ 
+ <a href=https://besjournals.onlinelibrary.wiley.com/ title="besjournals Logo"><img alt="besjournals Logo" src=images/28.png></a>
+ </div>
+ 
+ 
+ <div class="hub-copyright hidden-xs hidden-sm hidden-md">
+ © 2020 British Ecological Society
+</div>
+</div><div class=col-md-3>
+ <div data-widget-def=UX3HTMLWidget data-widget-id=2c559261-a434-444d-8836-b1967ce4a89e class=hub-links>
+ 
+ 
+ <div class=collapsible-menu>
+ 
+ <ul class=rlist>
+ <li><a href=http://www.britishecologicalsociety.org/ target=_blank>Home</a></li>
+ <li><a href=http://www.britishecologicalsociety.org/policy/ target=_blank>Policy</a></li>
+ <li><a href=http://www.britishecologicalsociety.org/publications/ target=_blank>Publications</a></li>
+ </ul>
+</div>
+ </div>
+ 
+</div><div class=col-md-3>
+ <div data-widget-def=UX3HTMLWidget data-widget-id=4f2c6ddf-29e8-448d-9659-ff1d3c01effd class=hub-links>
+ 
+ 
+ <div class=collapsible-menu>
+ 
+ <ul class=rlist>
+ <li><a href=http://www.britishecologicalsociety.org/membership-community/ target=_blank>Membership &amp; Community</a></li>
+ <li><a href=http://www.britishecologicalsociety.org/learning-and-resources/ target=_blank>Learning &amp; Resources</a></li>
+ <li><a href=http://www.britishecologicalsociety.org/funding/ target=_blank>Funding</a></li>
+ </ul>
+</div>
+ </div>
+ 
+</div><div class=col-md-3>
+ <div data-widget-def=UX3HTMLWidget data-widget-id=f4adb924-08a3-40ee-bbe5-87be44649926 class=hub-links>
+ 
+ 
+ <div class=collapsible-menu>
+ 
+ <ul class=rlist>
+ <li><a href=http://www.britishecologicalsociety.org/news-and-opinion/ target=_blank>News &amp; Opinions</a></li>
+ <li><a href=http://www.britishecologicalsociety.org/events/ target=_blank>Events</a></li>
+ </ul>
+</div>
+ </div>
+ 
+</div></div></div>
+ </div>
+ 
+ 
+ <p style=text-align:right><span style="margin:0px;padding:0px;border:0px;outline:0px;font-size:13px;vertical-align:baseline;background:0px 0px transparent;color:#424242;font-family:'Open Sans',Arial,Helvetica,'Lucida Sans Unicode',sans-serif;text-align:right">British Ecological Society, 42 Wharf Road, London, N1 7GS</span><span style="color:#424242;font-family:'Open Sans',Arial,Helvetica,'Lucida Sans Unicode',sans-serif;font-size:13px;text-align:right;background-color:transparent">&nbsp;|&nbsp;</span><span style="margin:0px;padding:0px;border:0px;outline:0px;font-size:13px;vertical-align:baseline;background:0px 0px transparent;color:#424242;font-family:'Open Sans',Arial,Helvetica,'Lucida Sans Unicode',sans-serif;text-align:right">T: +44 20 3994 8282&nbsp;<br>E: hello@britishecologicalsociety.org</span><span style="color:#424242;font-family:'Open Sans',Arial,Helvetica,'Lucida Sans Unicode',sans-serif;font-size:13px;text-align:right;background-color:transparent">&nbsp;|&nbsp;</span><span style="margin:0px;padding:0px;border:0px;outline:0px;font-size:13px;vertical-align:baseline;background:0px 0px transparent;color:#424242;font-family:'Open Sans',Arial,Helvetica,'Lucida Sans Unicode',sans-serif;text-align:right">Charity Registration Number: 281213</span></p>
+ 
+ <div class=col-md-12>
+ <div class="hub-copyright visible-xs visible-sm visible-md sf-hidden">
+ © 2020 British Ecological Society 
+ </div>
+</div>
+</div></div></div>
+ </section>
+ 
+ 
+ <div class=main-footer>
+ <div data-widget-def=ux3-layout-widget data-widget-id=2753bec1-a79d-4403-827b-6c788ddd6db3 class=footer-sections>
+ 
+ 
+ <h2 class=sr-only>
+ Additional links
+ </h2>
+ 
+ <div class=container><div class=row><div class=col-md-3>
+ 
+ <div class="footer-links mb-3">
+ <h3>About Wiley Online Library</h3>
+ <ul class=rlist>
+ <li><a href=https://www.wiley.com/privacy>Privacy Policy</a></li>
+ <li><a href=https://onlinelibrary.wiley.com/terms-and-conditions>Terms of Use</a></li>
+ <li><a href=https://onlinelibrary.wiley.com/cookies>Cookies</a></li>
+ <li><a href=https://onlinelibrary.wiley.com/accessibility>Accessibility</a></li>
+ </ul>
+</div>
+</div><div class=col-md-3>
+ 
+ <div class="footer-links mb-3">
+ <h3>Help &amp; Support</h3>
+ <ul class=rlist>
+ <li><a href=https://hub.wiley.com/community/support/onlinelibrary>Contact Us</a></li>
+ </ul>
+ </div>
+</div><div class=col-md-3>
+ 
+ <div class="footer-links mb-3">
+ <h3>Opportunities</h3>
+ <ul class=rlist>
+ <li><a href=https://onlinelibrary.wiley.com/agents>Subscription Agents</a></li>
+ <li><a href=https://onlinelibrary.wiley.com/advertisers>Advertisers &amp; Corporate Partners</a></li>
+ </ul>
+ </div>
+</div><div class=col-md-3>
+ 
+ <div class="footer-links mb-3">
+ <h3>Connect with Wiley</h3>
+ <ul class=rlist>
+ <li><a href=https://www.wiley.com/network>The Wiley Network</a></li>
+ <li><a href=https://newsroom.wiley.com/>Wiley Press Room</a></li>
+ </ul>
+ </div>
+</div></div></div>
+ </div>
+ 
+ 
+ <style class=sf-hidden>.footer-links{text-align:center}.footer-links h3{font-weight:300}.footer-links a{font-weight:600}@media (min-width:992px){.footer-links{text-align:left}}</style>
+ <div data-widget-def=ux3-layout-widget data-widget-id=86584e25-e4db-4118-9550-9b4f5341a4ac class=copyright-container>
+ 
+ 
+ <div class=container><div class=row><div class=col-md-12>
+ <div data-widget-def=UX3HTMLWidget data-widget-id=bfbf6c5d-a650-4662-828f-5275fada9120 class=copyright>
+ 
+ 
+ <div class="copyright pull-left">Copyright © 1999-2020 <a href=https://www.wiley.com/>John Wiley &amp; Sons, Inc</a>. All rights reserved</div>
+ </div>
+ 
+ 
+ <div class="footer-logo pull-right">
+ 
+<a href=https://www.wiley.com/ title="Wiley Home Page" aria-label=Wiley><img alt="Wiley Home Page" src=images/29.png></a>
+</div>
+</div></div></div>
+ </div>
+ 
+</div>
+ </div>
+</footer>
+ </div>
+ 
+ 
+ 
+<div class="popup login-popup hidden sf-hidden" role=dialog tabindex=-1 aria-labelledby=loginPopupHead>
+ 
+</div>
+ 
+ 
+<div class="popup change-password-drawer hidden sf-hidden" role=dialog tabindex=-1 aria-labelledby=changePasswordPopupHead>
+ 
+</div>
+ 
+ 
+<div class="popup registration-popup hidden sf-hidden" role=dialog tabindex=-1 aria-labelledby=createAccountPopupHead>
+ 
+</div>
+ 
+ 
+<div class="popup top-drawer request-reset-password-drawer hidden sf-hidden" role=dialog tabindex=-1 aria-labelledby=resetPasswordPopupHead>
+ 
+</div>
+ 
+ 
+<div class="popup top-drawer request-username-drawer username-popup hidden sf-hidden" role=dialog tabindex=-1 aria-labelledby=requestUsernamePopupHead>
+ 
+ 
+</div>
+ 
+ 
+ </div>
+ </div><div class="interesting-jade-owl-XgYroB93js4kI9jotxtT above-blush-bear-qsDNbutaWID8AOEJ-iframe-container" id=gleaming-azure-cat-gRcBok1gi0L6SkGfS8></div>
+ 
+<div id=crossmark-widget style=display:none></div><div id=_atssh style=visibility:hidden;height:1px;width:1px;position:absolute;top:-9999px;z-index:100000></div><img src=images/30.12841><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all quickSearchAutocomplete" id=ui-id-1 tabindex=0 style=display:none;padding-top:0px></ul><ul class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content ui-corner-all quickSearchAutocomplete" id=ui-id-2 tabindex=0 style=display:none;padding-top:0px></ul><div class="altmetric-embed altmetric-popover altmetric-left" data-uuid=9febd597-70ed-25f1-be04-3e42ed25062e id=_altmetric_popover_el_9febd597-70ed-25f1-be04-3e42ed25062e style=margin:0px;display:none;top:522.667px;left:773.444px></div>

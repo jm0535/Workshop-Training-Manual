@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html xml:lang="en"><head>
+        <title>EconStor: Extended Beta Regression in R: Shaken, Stirred, Mixed, and Partitioned</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="Generator" content="DSpace 5.10">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="description" content="EconStor is a publication server for scholarly economic literature, provided as a non-commercial public service by the ZBW." lang="en">
+
+
+		<meta name="title" content="Extended Beta Regression in R: Shaken, Stirred, Mixed, and Partitioned">
+
+
+		<meta name="gwt:property" content="locale=en">
+		<!-- STW suggest GWT Moduldeklaration //-->
+		<meta name="gwt:module" content="eu.zbw.EconStor.InfoPopup.Main=eu.zbw.EconStor.InfoPopup.Main">
+        
+		<meta name="gwt:module" content="eu.zbw.MoreStatsInfo.Main=eu.zbw.MoreStatsInfo.Main">
+        <meta name="gwt:module" content="eu.zbw.RePEcCitEc.Main=eu.zbw.RePEcCitEc.Main">
+
+		<!-- /STW GWT Moduldeklaration //-->
+		<!-- STW suggest Popup und tagcloud //-->
+        <link rel="stylesheet" type="text/css" media="all" href="cssbundle.css">
+
+
+
+        
+        <link href="https://www.econstor.eu/bibtexexport/10419/73505/Grun2011Extended.bib" rel="describedby" type="application/x-bibtex">
+        
+        <link href="https://hdl.handle.net/10419/73505" rel="cite-as">
+        
+        <link href="https://www.econstor.eu/bitstream/10419/73505/1/745130798.pdf" rel="item" type="application/pdf">
+        
+
+		<!--[if lt IE 8]>
+		<link rel="stylesheet"  href="/STWcombined_ie7.css" media="screen" type="text/css" />
+		<![endif]-->
+		<!-- /STW suggest Popup //-->
+
+        <link rel="shortcut icon" href="https://www.econstor.eu/favicon.ico" type="image/x-icon">
+
+        
+
+        <script src="a"></script><script type="text/javascript" src="jQuerylib.js"></script>
+
+
+        <link rel="stylesheet" type="text/css" media="print" href="print.css">
+
+        
+
+        <link rel="search" type="application/opensearchdescription+xml" href="https://www.econstor.eu/open-search/description.xml" title="DSpace">
+
+
+<link rel="schema.DCTERMS" href="http://purl.org/dc/terms/">
+<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/">
+<meta name="DC.creator" content="Grün, Bettina">
+<meta name="DC.creator" content="Kosmidis, Ioannis">
+<meta name="DC.creator" content="Zeileis, Achim">
+<meta name="DCTERMS.issued" content="2011" scheme="DCTERMS.W3CDTF">
+<meta name="DC.identifier" content="http://hdl.handle.net/10419/73505" scheme="DCTERMS.URI">
+<meta name="DCTERMS.abstract" content="Beta regression - an increasingly popular approach for modeling rates and proportions - is extended in various directions: (a) bias correction/reduction of the maximum likelihood estimator, (b) beta regression tree models by means of recursive partitioning, (c) latent class beta regression by means of finite mixture models. All three extensions may be of importance for enhancing the beta regression toolbox in practice to provide more reliable inference and capture both observed and unobserved/latent heterogeneity in the data. Using the analogy of Smithson and Verkuilen (2006), these extensions make beta regression not only a better lemon squeezer (compared to classical least squares regression) but a full-fledged modern juicer offering lemon-based drinks: shaken and stirred (bias correction and reduction), mixed (finite mixture model), or partitioned (tree model). All three extensions are provided in the R package betareg (at least 2.4.0), building on generic algorithms and implementations for bias correction/reduction, model-based recursive partioning, and finite mixture models, respectively. Specifically, the new functions betatree() and betamix() reuse the object-oriented flexible implementation from the R packages party and flexmix, respectively.">
+<meta name="DC.language" content="eng" scheme="DCTERMS.RFC1766">
+<meta name="DC.publisher" content="Innsbruck: University of Innsbruck, Research Platform Empirical and Experimental Economics (eeecon)">
+<meta name="DC.relation" content="Working Papers in Economics and Statistics No.2011-22">
+<meta name="DC.subject" content="C31">
+<meta name="DC.subject" content="C52">
+<meta name="DC.subject" content="C87">
+<meta name="DC.subject" content="330" scheme="DCTERMS.DDC">
+<meta name="DC.subject" content="beta regression">
+<meta name="DC.subject" content="bias correction">
+<meta name="DC.subject" content="bias reduction">
+<meta name="DC.subject" content="recursive partitioning">
+<meta name="DC.subject" content="finite mixture">
+<meta name="DC.subject" content="R">
+<meta name="DC.subject" content="Regression">
+<meta name="DC.subject" content="Theorie">
+<meta name="DC.title" content="Extended Beta Regression in R: Shaken, Stirred, Mixed, and Partitioned">
+<meta name="DC.type" content="Working Paper">
+<meta name="DC.rights" content="http://www.econstor.eu/dspace/Nutzungsbedingungen">
+
+<meta name="citation_keywords" content="Working Paper; beta regression; bias correction; bias reduction; recursive partitioning; finite mixture; R; Regression; Theorie">
+<meta name="citation_publication_date" content="2011">
+<meta name="citation_title" content="Extended Beta Regression in R: Shaken, Stirred, Mixed, and Partitioned">
+<meta name="citation_technical_report_number" content="2011-22">
+<meta name="citation_publisher" content="Innsbruck: University of Innsbruck, Research Platform Empirical and Experimental Economics (eeecon)">
+<meta name="citation_language" content="eng">
+<meta name="citation_author" content="Grün, Bettina">
+<meta name="citation_author" content="Kosmidis, Ioannis">
+<meta name="citation_author" content="Zeileis, Achim">
+<meta name="citation_pdf_url" content="https://www.econstor.eu/bitstream/10419/73505/1/745130798.pdf">
+<meta name="citation_abstract_html_url" content="https://www.econstor.eu/handle/10419/73505">
+<meta name="citation_technical_report_institution" content="Working Papers in Economics and Statistics">
+
+
+
+
+
+
+
+
+
+    
+    
+    
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="/static/js/html5shiv.js"></script>
+  <script src="/static/js/respond.min.js"></script>
+<![endif]-->
+    <script src="8B51C3CB49061BADDA224F4B01906FD4.js"></script><script type="text/javascript" src="jquery-1.js"></script><script async="" type="text/javascript" charset="UTF-8" id="_etCode" src="t.js"></script><style id="holderjs-style" type="text/css">.holderjs-fluid {font-size:16px;font-weight:bold;text-align:center;font-family:sans-serif;margin:0}</style><script type="text/javascript" src="cntcc"></script><link rel="stylesheet" type="text/css" href="cookie-light-bottom.css"></head>
+
+    
+    
+    <body><div class="cc_banner-wrapper "><div class="cc_banner cc_container cc_container--open"><a href="#null" data-cc-event="click:dismiss" target="_blank" class="cc_btn cc_btn_accept_all">OK</a><p class="cc_message">This website uses cookies to ensure you get the best experience. <a data-cc-if="options.link" target="_self" class="cc_more_info" href="https://www.econstor.eu/Datenschutz">More info</a></p><a class="cc_logo" target="_blank" href="http://silktide.com/cookieconsent">Cookie Consent plugin for the EU cookie law</a></div></div>
+<a class="sr-only" href="#content" btattached="true">Skip navigation</a>
+    <div id="sideflag"><div id="sideflagaservice">A service of the</div><div id="sideflagzbw"><a href="http://www.zbw.eu/" class="linksideflag" target="_blank" btattached="true">zbw</a></div></div>
+
+<header class="navbar">
+    <div class="econstorbrandingheader">
+        <div class="container econstorbranding">
+            <div class="row">
+                <div class="col-xs-12  col-sm-5">
+                    
+                    <a href="https://www.econstor.eu/" class="navbar-econstorbrand" btattached="true"><img src="logo-econstor.png" id="brandinglogo"></a>
+                </div>
+                <div class="hidden-xs  col-sm-7">
+                    <div class="hidden-xs econstortopnav"><a href="https://www.econstor.eu/contact" btattached="true">Contact</a> | <a href="https://www.econstor.eu/Impressum" btattached="true">Imprint</a> | <a href="https://www.econstor.eu/Datenschutz" btattached="true">Privacy</a> | <a href="https://www.econstor.eu/staticpagessitemap" btattached="true">Sitemap</a>
+                         | <a onclick="javascript:document.repost.locale.value='de';
+                                document.repost.submit();" href="https://www.econstor.eu/handle/10419/73505?locale=de" btattached="true">
+                            Deutsch
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+            <div class="container js-enabled">
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       <div class="navbar-header navbar-inverse">
+         <button type="button" id="navbutton1" class="navbar-toggle" title="toggle navbar1 dropdown on mobile devices" data-toggle="collapse" data-target="#navbarcollapse1" aria-expanded="false" aria-controls="navbarcollapse1" onclick="$('#navbarcollapse2').collapse('hide')">
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+         </button>
+         <button type="button" id="navbutton2" class="navbar-toggle" title="toggle navbar2 dropdown on mobile devices" data-toggle="collapse" data-target="#navbarcollapse2" aria-expanded="false" aria-controls="navbarcollapse2" onclick="$('#navbarcollapse1').collapse('hide')">
+             <span class="glyphicon glyphicon-option-vertical" style="top:-1px"></span>
+         </button>
+           
+       </div>
+       <nav class="collapse navbar-collapse bs-navbar-collapse navbar-inverse" role="navigation" id="navbarcollapse1" aria-labelledby="navbarcollapse1">
+         <ul class="nav navbar-nav">
+           <li class=""><a href="https://www.econstor.eu/" btattached="true">Home</a></li>
+           <li class="dropdown">
+             <a href="#" class="dropdown-toggle" data-toggle="dropdown" btattached="true">About EconStor <b class="caret"></b></a>
+             <ul class="dropdown-menu">
+               <li><a href="https://www.econstor.eu/about" btattached="true">About EconStor</a></li>
+               <li><a href="https://www.econstor.eu/policy" btattached="true">Policy</a></li>
+               <li><a href="http://blog.econstor.eu/" target="_blank" btattached="true">News</a></li>
+               <li><a href="https://www.econstor.eu/Nutzungsbedingungen" btattached="true">Terms of use</a></li>
+               <li><a href="https://www.econstor.eu/dsinfos/usagestatistics" btattached="true">Usage statistics</a></li>
+             </ul>
+           </li>
+           
+             
+                 <li class="dropdown">
+                     
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" btattached="true">Submit <b class="caret"></b></a>
+                     
+                     <ul class="dropdown-menu">
+                     
+                         <li class="dropdown-header">for:</li>
+                         <li><a href="https://www.econstor.eu/pubinfo/institutions" btattached="true">institutions</a></li>
+                         <li><a href="https://www.econstor.eu/pubinfo/authors" btattached="true">authors</a></li>
+                         
+                         
+                     </ul>
+                 </li>
+             
+           <li class=""><a href="https://www.econstor.eu/econbiz-search" btattached="true">Search</a></li>
+           <li class="dropdown">
+             <a href="#" class="dropdown-toggle" data-toggle="dropdown" btattached="true">Browse by <b class="caret"></b></a>
+             <ul class="dropdown-menu">
+
+				
+				
+				
+                 <li><a href="https://www.econstor.eu/browse?type=author" btattached="true">Author</a></li>
+                 <li><a href="https://www.econstor.eu/browse?type=dateissuedes" btattached="true">Year of Publication</a></li>
+                 <li><a href="https://www.econstor.eu/browse?type=doctype" btattached="true">Document Type</a></li>
+				
+                 <li><a href="https://www.econstor.eu/community-list" btattached="true">Communities&nbsp;&amp;&nbsp;Collections</a></li>
+                 <li><a href="https://www.econstor.eu/journal-list" btattached="true">Journals</a></li>
+                 <li><a href="https://www.econstor.eu/monograph-list" btattached="true">Monographs (by Publishers)</a></li>
+            </ul>
+          </li>
+       </ul>
+       <ul class="nav navbar-nav">
+         <li class=""><a href="https://www.econstor.eu/participants" btattached="true">References</a></li>
+         <li class=""><a href="https://www.econstor.eu/faq" btattached="true">FAQ</a></li>
+         <li class=""><a href="https://www.econstor.eu/openaccess" btattached="true">Open Access</a></li>
+          
+       </ul>
+
+
+    </nav>
+<!-- only visible on devices with a xs screensize according to Bootstrap -->
+    <nav class="collapse navbar-collapse bs-navbar-collapse navbar-inverse" role="navigation" id="navbarcollapse2" aria-labelledby="navbarcollapse2">
+        <ul class="nav navbar-nav">
+            <li class=" visible-xs-block"><a href="https://www.econstor.eu/contact" btattached="true">Contact</a></li>
+            <li class=" visible-xs-block"><a href="https://www.econstor.eu/Impressum" btattached="true">Imprint</a></li>
+            <li class=" visible-xs-block"><a href="https://www.econstor.eu/Datenschutz" btattached="true">Privacy</a></li>
+            <li class=" visible-xs-block"><a href="https://www.econstor.eu/staticpagessitemap" btattached="true">Sitemap</a></li>
+            <li class="visible-xs-block"><a onclick="javascript:document.repost.locale.value='de';
+                document.repost.submit();" href="https://www.econstor.eu/handle/10419/73505?locale=de" btattached="true">
+            <img src="de.png" alt="image of flag of de">
+            Deutsch
+        </a></li>
+            
+        </ul>
+    </nav>
+<!-- /only visible on devices with a xs screensize according to Bootstrap -->
+            </div>
+            <noscript>
+                <div class="container js-disabled">
+                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <link type="text/css" rel="stylesheet" href="/nav-nojs.css" />
+
+       <nav class="collapse navbar-collapse bs-navbar-collapse navbar-inverse" role="navigation">
+         <ul class="nav navbar-nav">
+           <li class=""><a href="/">Home</a></li>
+           <li><a href="/about">About EconStor</a></li>
+           <li><a href="/policy">Policy</a></li>
+             
+                 <li><a href="/pubinfo/institutions">submit for&nbsp;institutions</a></li>
+                 <li><a href="/pubinfo/authors">submit for&nbsp;authors</a></li>
+             
+             
+           <li class=""><a href="/simple-search">Search</a></li>
+			
+                 <li><a href="/browse?type=author">Author</a></li>
+                 <li><a href="/browse?type=dateissuedes">Year of Publication</a></li>
+                 <li><a href="/browse?type=doctype">Document Type</a></li>
+            
+                 <li><a href="/community-list">browse by&nbsp;Communities&nbsp;&amp;&nbsp;Collections</a></li>
+                 <li><a href="/journal-list">browse by&nbsp;Journals</a></li>
+                 <li><a href="/monograph-list">browse by&nbsp;Monographs (by Publishers)</a></li>
+       </ul>
+       <ul class="nav navbar-nav">
+         <li><a href="http://blog.econstor.eu/" target="_blank">News</a></li>
+         <li><a href="/Nutzungsbedingungen">Terms of use</a></li>
+         <li><a href="/dsinfos/usagestatistics">Usage statistics</a></li>
+         <li class=""><a href="/participants">References</a></li>
+         <li class=""><a href="/faq">FAQ</a></li>
+         <li class=""><a href="/openaccess">Open Access</a></li>
+       </ul>
+    </nav>
+
+                </div>
+            </noscript>
+
+</header>
+<main id="content" role="main">
+
+
+                
+
+<div class="container">
+                
+
+
+
+  
+
+<ol class="breadcrumb">
+
+  <li><a href="https://www.econstor.eu/" btattached="true">EconStor</a></li>
+
+  <li><a href="https://www.econstor.eu/handle/10419/71909" btattached="true">Universität Innsbruck</a></li>
+
+  <li><a href="https://www.econstor.eu/handle/10419/71910" btattached="true">Institut für Finanzwissenschaft, Universität Innsbruck</a></li>
+
+  <li><a href="https://www.econstor.eu/handle/10419/71911" btattached="true">Working Papers in Economics and Statistics, Universität Innsbruck</a></li>
+
+</ol>
+
+</div>                
+
+
+
+        
+<div class="container">
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="col-xs-12">
+
+
+    <script type="text/javascript" src="eu.js"></script>
+    <form action="" id="controllServiceID">
+        <input name="snsconnectorsServiceURLN" id="snsconnectorsServiceURLID" value="/socialservices/index.php" type="hidden">
+    </form>
+    <form action="" name="RePEcCitEcConfig" id="RePEcCitEcConfig">
+        <input id="ZitiertVonLabel" value="Is cited by:" type="hidden">
+        <input id="ZitierteQuellenLabel" value="Cites the following sources:" type="hidden">
+        <input id="AnzahlDerZitationenLabel" value="%ANZAHL% documents." type="hidden">
+        <input id="AnzahlDerZitationLabel" value="one document." type="hidden">
+        <input id="AnzahlDerQuellenLabel" value="%ANZAHL% sources." type="hidden">
+        <input id="AnzahlDerQuelleLabel" value="one source." type="hidden">
+        <input id="RePEcHandle" value="RePEc:inn:wpaper:2011-22" type="hidden">
+    </form>
+		
+		
+		
+		
+
+                
+                <div class="well">Please use this identifier to cite or link to this item:
+                <code id="citationhandle">http://hdl.handle.net/<wbr>10419/73505</code></div>
+
+
+
+    
+    <div class="metadatacontainer" id="itemmetadatacontainer">
+<div class="row"><div class="col-xs-12 col-sm-4 metadataFieldLabel">Title:&nbsp;</div><div class="col-xs-12 col-sm-8 metadataFieldValue"><h1 id="itemtitle"><a href="https://www.econstor.eu/bitstream/10419/73505/1/745130798.pdf" target="_blank" btattached="true">Extended Beta Regression in R: Shaken, Stirred, Mixed, and Partitioned&nbsp;<img src="Adobe_Acrobat_Logo_25x25.png" alt="PDF Logo" style="border:0px;margin:0px;padding:0px;width:13px;height:13px;"></a></h1></div></div>
+<div class="row"><div class="col-xs-12 col-sm-4 metadataFieldLabel">Authors:&nbsp;</div><div class="col-xs-12 col-sm-8 metadataFieldValue">Grün, Bettina<br>Kosmidis, Ioannis<br>Zeileis, Achim</div></div>
+<div class="row"><div class="col-xs-12 col-sm-4 metadataFieldLabel">Year of Publication:&nbsp;</div><div class="col-xs-12 col-sm-8 metadataFieldValue">2011</div></div>
+<div class="row"><div class="col-xs-12 col-sm-4 metadataFieldLabel">Series/Report no.:&nbsp;</div><div class="col-xs-12 col-sm-8 metadataFieldValue">Working Papers in Economics and Statistics 2011-22</div></div>
+<div class="row"><div class="col-xs-12 col-sm-4 metadataFieldLabel">Abstract:&nbsp;</div><div class="col-xs-12 col-sm-8 metadataFieldValue">Beta
+ regression - an increasingly popular approach for modeling rates and 
+proportions - is extended in various directions: (a) bias 
+correction/reduction of the maximum likelihood estimator, (b) beta 
+regression tree models by means of recursive partitioning, (c) latent 
+class beta regression by means of finite mixture models. All three 
+extensions may be of importance for enhancing the beta regression 
+toolbox in practice to provide more reliable inference and capture both 
+observed and unobserved/latent heterogeneity in the data. Using the 
+analogy of Smithson and Verkuilen (2006), these extensions make beta 
+regression not only a better lemon squeezer (compared to classical least
+ squares regression) but a full-fledged modern juicer offering 
+lemon-based drinks: shaken and stirred (bias correction and reduction), 
+mixed (finite mixture model), or partitioned (tree model). All three 
+extensions are provided in the R package betareg (at least 2.4.0), 
+building on generic algorithms and implementations for bias 
+correction/reduction, model-based recursive partioning, and finite 
+mixture models, respectively. Specifically, the new functions betatree()
+ and betamix() reuse the object-oriented flexible implementation from 
+the R packages party and flexmix, respectively.</div></div>
+<div class="row"><div class="col-xs-12 col-sm-4 metadataFieldLabel">Subjects:&nbsp;</div><div class="col-xs-12 col-sm-8 metadataFieldValue">beta regression<br>bias correction<br>bias reduction<br>recursive partitioning<br>finite mixture<br>R</div></div>
+<div class="row"><div class="col-xs-12 col-sm-4 metadataFieldLabel">JEL:&nbsp;</div><div class="col-xs-12 col-sm-8 metadataFieldValue">C31<br>C52<br>C87</div></div>
+<div class="row"><div class="col-xs-12 col-sm-4 metadataFieldLabel">Document Type:&nbsp;</div><div class="col-xs-12 col-sm-8 metadataFieldValue">Working Paper</div></div>
+<div class="row"><div class="col-xs-12 col-sm-4 metadataFieldLabel">Appears in Collections:</div><div class="col-xs-12 col-sm-8 metadataFieldValue"><a href="https://www.econstor.eu/escollectionhome/10419/71911" btattached="true">Working Papers in Economics and Statistics, Universität Innsbruck</a><br></div></div>
+<div class="row"><div class="col-xs-12 col-sm-4 metadataFieldLabel"><div style="display: none;" aria-hidden="true"><div class="gwt-Label">Is cited by:</div></div></div> <div class="col-xs-12 col-sm-8 metadataFieldValue"><table class="gwt-DisclosurePanel gwt-DisclosurePanel-closed" style="display: none;" aria-hidden="true" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align: top;" align="left"><a href="javascript:void(0);" style="display: block;" class="header"><table><tbody><tr><td style="width: 16px;" align="center"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAfklEQVR42mNgoDZITk4WosiAtLS0M6mpqb1Amp9cAy4B8X8gfpWenp5MiQEwfB6IbSgxAIaXArEcJQaA8Ddg+NQVFhZykmsADG8MDQ1lJseA5wQDFocBP0FRm5WVxUNOGGwEJi4VcmLhKtC5HuSkg8NA5+bjDCRCAG8UDUoAAIw8kVdwMG+3AAAAAElFTkSuQmCC" class="gwt-Image" width="16" height="16"></td><td>cited by</td></tr></tbody></table></a></td></tr><tr><td style="vertical-align: top;" align="left"><div style="padding: 0px; overflow: hidden; display: none;" aria-hidden="true"><table class="content" cellspacing="0" cellpadding="0"><tbody></tbody></table></div></td></tr></tbody></table></div></div><div class="row"><div class="col-xs-12 col-sm-4 metadataFieldLabel"><div style=""><div class="gwt-Label">Cites the following sources:</div></div></div> <div class="col-xs-12 col-sm-8 metadataFieldValue"><table class="gwt-DisclosurePanel gwt-DisclosurePanel-closed" style="" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align: top;" align="left"><a href="javascript:void(0);" style="display: block;" class="header"><table><tbody><tr><td style="width: 16px;" align="center"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAfklEQVR42mNgoDZITk4WosiAtLS0M6mpqb1Amp9cAy4B8X8gfpWenp5MiQEwfB6IbSgxAIaXArEcJQaA8Ddg+NQVFhZykmsADG8MDQ1lJseA5wQDFocBP0FRm5WVxUNOGGwEJi4VcmLhKtC5HuSkg8NA5+bjDCRCAG8UDUoAAIw8kVdwMG+3AAAAAElFTkSuQmCC" class="gwt-Image" width="16" height="16"></td><td>24 sources.</td></tr></tbody></table></a></td></tr><tr><td style="vertical-align: top;" align="left"><div style="padding: 0px; overflow: hidden; display: none;" aria-hidden="true"><table class="content" cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align: top;" align="left"><div class="citEcSourceEven"><div class="gwt-Label">Andrews
+ DWK (1993). “Tests for Parameter Instability and Structural Change with
+ Unknown Change Point.” Econometrica, 61, 821–856.</div></div></td></tr><tr><td style="vertical-align: top;" align="left"><div class="citEcSourceOdd"><div class="gwt-Label">Bettina
+ Gr un, Ioannis Kosmidis, Achim Zeileis 21 Leisch F (2004). “FlexMix: A 
+General Framework for Finite Mixture Models and Latent Class Regression 
+in R.” Journal of Statistical Software, 11(8), 1–18. URL http://www. 
+jstatsoft.org/v11/i08/.</div></div></td></tr><tr><td style="vertical-align: top;" align="left"><div class="citEcSourceEven"><div class="gwt-Label">Breiman L, Friedman J, Olshen RA, Stone CJ (1984). Classification and Regression Trees. Chapman and Hall, New York.</div></div></td></tr><tr><td style="vertical-align: top;" align="left"><div class="citEcSourceOdd"><div class="gwt-Label">Efron
+ B (1975). “Defining the Curvature of a Statistical Problem (with 
+Applications to Second Order Efficiency).” The Annals of Statistics, 
+3(6), 1189–1217.</div></div></td></tr><tr><td style="vertical-align: top;" align="left"><div class="citEcSourceEven"><a class="gwt-Anchor" target="_blank" href="http://econpapers.repec.org/RePEc:taf:japsta:v:31:y:2004:i:7:p:799-815">Ferrari
+ SLP, Cribari-Neto F (2004). “Beta Regression for Modelling Rates and 
+Proportions.” Journal of Applied Statistics, 31(7), 799–815.</a></div></td></tr><tr><td style="vertical-align: top;" align="left"><div class="citEcSourceOdd"><div class="gwt-Label">Fr uhwirth-Schnatter S (2006). Finite Mixture and Markov Switching Models. Springer-Verlag, New York.</div></div></td></tr><tr><td style="vertical-align: top;" align="left"><div class="citEcSourceEven"><a class="gwt-Anchor" target="_blank" href="http://econpapers.repec.org/RePEc:jss:jstsof:v:028:i04">Gr
+ un B, Leisch F (2008). “FlexMix Version 2: Finite Mixtures with 
+Concomitant Variables and Varying and Constant Parameters.” Journal of 
+Statistical Software, 28(4), 1–35. URL 
+http://www.jstatsoft.org/v28/i04/.</a></div></td></tr><tr><td style="vertical-align: top;" align="left"><div class="citEcSourceOdd"><div class="gwt-Label">Hjort NL, Koning A (2002). “Tests for Constancy of Model Parameters Over Time.” Nonparametric Statistics, 14, 113–132.</div></div></td></tr><tr><td style="vertical-align: top;" align="left"><div class="citEcSourceEven"><div class="gwt-Label">Hothorn
+ T, Bretz F, Westfall P (2008). “Simultaneous Inference in General 
+Parametric Models. ” Biometrical Journal, 50(3), 346–363.</div></div></td></tr><tr><td style="vertical-align: top;" align="left"><div class="citEcSourceOdd"><div class="gwt-Label">Hothorn
+ T, Hornik K, Strobl C, Zeileis A (2011). party: A Laboratory for 
+Recursive Partytioning. R package version 0.9-99994, URL 
+http://CRAN.R-project.org/package=party.</div></div></td></tr><tr><td style="vertical-align: top;" align="left"><div class="citEcSourceEven"><div class="gwt-Label">Hothorn
+ T, Hornik K, Zeileis A (2006). “Unbiased Recursive Partitioning: A 
+Conditional Inference Framework.” Journal of Computational and Graphical
+ Statistics, 15(3), 651–674.</div></div></td></tr><tr><td style="vertical-align: top;" align="left"><div class="citEcSourceOdd"><div class="gwt-Label">Kosmidis I, Firth D (2010). “A Generic Algorithm for Reducing Bias in Parametric Estimation.</div></div></td></tr><tr><td style="vertical-align: top;" align="left"><div class="citEcSourceEven"><div class="gwt-Label">Leisch
+ F, Gr un B (2011). flexmix: Flexible Mixture Modeling. R package 
+version 2.3-5, URL http://CRAN.R-project.org/package=flexmix.</div></div></td></tr><tr><td style="vertical-align: top;" align="left"><div class="citEcSourceOdd"><div class="gwt-Label">McLachlan GJ, Peel D (2000). Finite Mixture Models. John Wiley &amp;amp; Sons, New York.</div></div></td></tr><tr><td style="vertical-align: top;" align="left"><div class="citEcSourceEven"><a class="gwt-Anchor" target="_blank" href="http://econpapers.repec.org/RePEc:eee:csdana:v:51:y:2006:i:2:p:960-981">Ospina
+ R, Cribari-Neto F, Vasconcellos KLP (2006). “Improved Point and 
+Interval Estimation for a Beta Regression Model.” Computational 
+Statistics &amp;amp; Data Analysis, 51(2), 960–981.</a></div></td></tr><tr><td style="vertical-align: top;" align="left"><div class="citEcSourceOdd"><div class="gwt-Label">Simas
+ AB, Barreto-Souza W, Rocha AV (2010). “Improved Estimators for a 
+General Class of Beta Regression Models.” Computational Statistics 
+&amp;amp; Data Analysis, 54(2), 348–366.</div></div></td></tr><tr><td style="vertical-align: top;" align="left"><div class="citEcSourceEven"><div class="gwt-Label">Smithson
+ M, Merkle EC, Verkuilen J (2011). “Beta Regression Finite Mixture 
+Models of Polarization and Priming.” Journal of Educational and 
+Behavioral Statistics. doi:10.3102/1076998610396893. Forthcoming.</div></div></td></tr><tr><td style="vertical-align: top;" align="left"><div class="citEcSourceOdd"><div class="gwt-Label">Smithson
+ M, Segale C (2009). “Partition Priming in Judgments of Imprecise 
+Probabilities.” Journal of Statistical Theory and Practice, 3(1), 
+169–181.</div></div></td></tr><tr><td style="vertical-align: top;" align="left"><div class="citEcSourceEven"><a class="gwt-Anchor" target="_blank" href="http://econpapers.repec.org/RePEc:jss:jstsof:v:034:i01">Zeileis
+ A, Croissant Y (2010). “Extended Model Formulas in R: Multiple Parts 
+and Multiple Responses.” Journal of Statistical Software, 34(1), 1–13. 
+URL http://www.jstatsoft. org/v34/i01/.</a></div></td></tr><tr><td style="vertical-align: top;" align="left"><div class="citEcSourceOdd"><a class="gwt-Anchor" target="_blank" href="http://econpapers.repec.org/RePEc:bla:stanee:v:61:y:2007:i:4:p:488-508">Zeileis A, Hornik K (2007). “Generalized M-Fluctuation Tests for Parameter Instability.” Statistica Neerlandica, 61(4), 488–508.</a></div></td></tr><tr><td style="vertical-align: top;" align="left"><div class="citEcSourceEven"><div class="gwt-Label">Zeileis
+ A, Hothorn T (2002). “Diagnostic Checking in Regression Relationships.”
+ R News, 2(3), 7–10. URL http://CRAN.R-project.org/doc/Rnews/.</div></div></td></tr><tr><td style="vertical-align: top;" align="left"><div class="citEcSourceOdd"><div class="gwt-Label">Zeileis
+ A, Hothorn T, Hornik K (2008). “Model-Based Recursive Partitioning.” 
+Journal of Computational and Graphical Statistics, 17(2), 492–514.</div></div></td></tr><tr><td style="vertical-align: top;" align="left"><div class="citEcSourceEven"><a class="gwt-Anchor" target="_blank" href="http://econpapers.repec.org/RePEc:jss:jstsof:v:007:i02">Zeileis
+ A, Leisch F, Hornik K, Kleiber C (2002). “strucchange: An R Package for
+ Testing for Structural Change in Linear Regression Models.” Journal of 
+Statistical Software, 7(2), 1–38. URL http://www.jstatsoft.org/v07/i02/.</a></div></td></tr><tr><td style="vertical-align: top;" align="left"><div class="citEcSourceOdd"><a class="gwt-Anchor" target="_blank" href="http://econpapers.repec.org/RePEc:zbw:sfb475:200126">Zeileis
+ A, Leisch F, Hornik K, Kleiber C (2002). “strucchange: An R Package for
+ Testing for Structural Change in Linear Regression Models.” Journal of 
+Statistical Software, 7(2), 1–38. URL http://www.jstatsoft.org/v07/i02/.</a></div></td></tr><tr><td style="vertical-align: top;" align="left"><table cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align: top;" align="left"><div class="gwt-HTML"><br></div></td></tr><tr><td style="vertical-align: top;" align="left"><table cellspacing="0" cellpadding="0"><tbody><tr><td style="vertical-align: top;" align="left"><span class="gwt-InlineHTML">Powered by&nbsp;</span></td><td style="vertical-align: top;" align="left"><a class="gwt-Anchor" target="_blank" href="http://citec.repec.org/">CitEc</a></td><td style="vertical-align: top;" align="left"><span class="gwt-InlineHTML">&nbsp;a&nbsp;</span></td><td style="vertical-align: top;" align="left"><a class="gwt-Anchor" target="_blank" href="http://www.repec.org/">RePEc</a></td><td style="vertical-align: top;" align="left"><span class="gwt-InlineHTML">&nbsp;service</span></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table></div></td></tr></tbody></table></div></div></div><br>
+<div class="panel panel-info"><div class="panel-heading">Files in This Item:</div>
+<div class="container"><div class="row"><div id="t1d" class="col-xs-6 col-sm-4 metadataFieldLabel">File</div>
+<div id="t2d" class="hidden-xs col-sm-3 metadataFieldLabel">Description</div>
+<div id="t3d" class="col-xs-6 col-sm-2 metadataFieldLabel">Size</div><div id="t4d" class="hidden-xs col-sm-3 metadataFieldLabel">Format</div></div>
+<div class="row"><div class="col-xs-6 col-sm-4 metadataFieldValue"><a target="_blank" href="https://www.econstor.eu/bitstream/10419/73505/1/745130798.pdf" btattached="true">745130798.pdf</a><br><a class="download btn btn-primary" target="_blank" href="https://www.econstor.eu/bitstream/10419/73505/1/745130798.pdf" btattached="true">download file</a></div><div class="hidden-xs col-sm-3 metadataFieldValue"></div><div class="col-xs-6 col-sm-2 metadataFieldValue">696.22 kB</div><div class="hidden-xs col-sm-3 metadataFieldValue">Adobe PDF</div></div></div>
+</div>
+<div class="container row">
+<div class="col-xs-12 col-sm-3 blcontainer"><a class="statisticsLink btn btn-primary" href="https://www.econstor.eu/esstatistics/10419/73505?year=2020&amp;month=7" btattached="true">Download Statistics</a></div>
+<div class="col-xs-12 col-sm-3 blcontainer"><a class="bibtexLink btn btn-primary" href="https://www.econstor.eu/bibtexexport/10419/73505/Grun2011Extended.bib" btattached="true">BibTeX-Export</a></div>
+</div><br>
+<div class="container row">
+<div class="shariff" data-services="[&quot;twitter&quot;,&quot;facebook&quot;,&quot;reddit&quot;]" data-title="Extended Beta Regression in R: Shaken, Stirred, Mixed, and Partitioned" data-url="https://hdl.handle.net/10419/73505"><ul class="theme-color orientation-horizontal button-style-standard shariff-col-3"><li class="shariff-button twitter"><a href="https://twitter.com/intent/tweet?text=Extended%20Beta%20Regression%20in%20R%3A%20Shaken%2C%20Stirred%2C%20Mixed%2C%20and%20Partitioned&amp;url=https%3A%2F%2Fhdl.handle.net%2F10419%2F73505" data-rel="popup" rel="nofollow" title="Bei Twitter teilen" role="button" aria-label="Bei Twitter teilen" btattached="true"><span class="fab fa-twitter"></span><span class="share_text">tweet</span></a></li><li class="shariff-button facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhdl.handle.net%2F10419%2F73505" data-rel="popup" rel="nofollow" title="Bei Facebook teilen" role="button" aria-label="Bei Facebook teilen" btattached="true"><span class="fab fa-facebook-f"></span><span class="share_text">teilen</span></a></li><li class="shariff-button reddit"><a href="https://reddit.com/submit?url=https%3A%2F%2Fhdl.handle.net%2F10419%2F73505&amp;title=Extended%20Beta%20Regression%20in%20R%3A%20Shaken%2C%20Stirred%2C%20Mixed%2C%20and%20Partitioned" data-rel="popup" rel="nofollow" title="Bei Reddit teilen" role="button" aria-label="Bei Reddit teilen" btattached="true"><span class="fab fa-reddit-alien"></span><span class="share_text">teilen</span></a></li></ul></div>
+</div><br><br>
+
+<div class="container row">
+
+
+    
+
+</div>
+<br>
+    
+
+<br>
+    
+
+    <p class="submitFormHelp alert alert-info">Items in EconStor are protected by copyright, with all rights reserved, unless otherwise indicated.</p>
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+
+
+
+</div>
+</main>
+            
+             <footer>
+                 <div id="econstorfooter">
+                     <div class="container econstorfootercontainer">
+                        <div id="es_footer" class="row">
+                            <div class="col-12"><a href="https://www.econstor.eu/htmlmap" btattached="true"></a>
+                     <a href="https://www.econstor.eu/contact" btattached="true">Contact</a> | <a href="https://www.econstor.eu/Impressum" btattached="true">Imprint</a> | <a href="https://www.econstor.eu/Datenschutz" btattached="true">Privacy</a> | <a href="https://www.econstor.eu/staticpagessitemap" btattached="true">Sitemap</a>
+                      | <a onclick="javascript:document.repost.locale.value='de';
+                         document.repost.submit();" href="https://www.econstor.eu/handle/10419/73505?locale=de" btattached="true">
+                     Deutsch
+                 </a>
+                     
+                            </div>
+                        </div>
+                     </div>
+                 </div>
+
+    </footer>
+
+<!-- Copyright (c) 2000-2020 etracker GmbH. All rights reserved. -->
+<!-- This material may not be reproduced, displayed, modified or distributed -->
+<!-- without the express prior written permission of the copyright holder. -->
+<!-- etracker tracklet 4.0 -->
+<script type="text/javascript">
+var et_easy = 1;
+var et_pagename = 'Item%3A+Extended+Beta+Regression+in+R%3A+Shaken%2C+Stirred%2C+Mixed%2C+and+Partitioned+-+hdl%3A10419%2F73505';
+var et_areas = '%2FEconStor%2FUniversit%E4t+Innsbruck%2FInstitut+f%FCr+Finanzwissenschaft%2C+Universit%E4t+Innsbruck%2FWorking+Papers+in+Economics+and+Statistics%2C+Universit%E4t+Innsbruck';
+</script>
+<script id="_etLoader" type="text/javascript" charset="UTF-8" data-secure-code="b9xphs" src="e.js"></script>
+<!-- etracker tracklet 4.0 -->
+
+
+
+<script type="text/javascript">
+    window.cookieconsent_options = {
+        "message":"This website uses cookies to ensure you get the best experience.",
+        "dismiss":"OK",
+        "learnMore":"More info",
+        "link":"/Datenschutz",
+        "theme":"/static/css/cookie-light-bottom.css"};
+</script>
+
+<script type="text/javascript" src="lib1.js"></script>
+
+
+    
+
+<iframe src='javascript:""' id="eu.zbw.RePEcCitEc.Main" style="position: absolute; width: 0px; height: 0px; border: medium none; left: -1000px; top: -1000px;" tabindex="-1"></iframe><div style="display: none;" aria-hidden="true"></div></body></html>

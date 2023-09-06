@@ -2260,7 +2260,7 @@ Exploratory Data Analysis (EDA) is a fundamental step in ecological research, pr
 
 In conclusion, EDA is a foundational step in ecological research. By conducting thorough exploratory data analysis, you gain a deep understanding of your ecological datasets. This knowledge empowers you to make informed decisions about subsequent analyses, hypothesis testing, and research directions. EDA is a powerful tool for uncovering the hidden stories within your ecological data.
 
-# Chapter 4: **Statistical Tests**
+# Chapter 4: Statistical Tests
 
 ## Introduction
 
@@ -2758,7 +2758,7 @@ Chapter 4 provides comprehensive insights into statistical hypothesis testing, w
 
 Overall, Chapter 4 equips you with a strong foundation in statistical hypothesis testing, empowering you to conduct a wide range of tests essential for ecological data analysis and make informed ecological conclusions.
 
-# Chapter 5: **Regression Analysis**
+# Chapter 5: Regression Analysis
 
 ## Introduction
 
@@ -3388,7 +3388,7 @@ In conclusion, Chapter 5 has been a comprehensive journey into the world of regr
 
 This chapter empowers you with the skills to navigate and model ecological relationships effectively. Whether you're exploring linear associations or tackling binary outcomes, you now have the tools to build, assess, and interpret regression models. These models are invaluable for gaining insights in ecological research, enabling you to make data-driven decisions and contribute to the understanding of complex ecological systems.
 
-# Chapter 6: **Data Visualization**
+# Chapter 6: Data Visualization
 
 ## **Introduction**
 
@@ -3736,7 +3736,7 @@ ggplot2::ggplot(data = lynx_df, aes(x = Year, y = Lynx)) +
 
 This line plot provides a visual representation of the trend in lynx population over time, which is a common scenario in ecological time series data analysis. You can adapt this code to explore other ecological time series datasets and visualize trends in various ecological variables over time.
 
-## **Spatial Data Visualization:**
+## **Spatial Data Visualization**
 
 ### **Spatial Data in Ecology**
 
@@ -3886,7 +3886,7 @@ Effective data visualization practices are essential for communicating findings 
 
 -   **Clear Labels:** Ensure that labels for axes, data points, and legends are concise and easy to read.
 
--   **Minimize Distractions:** Remove distracting gridlines, background colors, and decorations that don't add value to the visualization.
+-   **Minimize Distractions:** Remove distracting grid-lines, background colors, and decorations that don't add value to the visualization.
 
 **2. Clarity**
 
@@ -3922,7 +3922,7 @@ Effective data visualization practices are essential for communicating findings 
 
 **7. Interactivity (when appropriate)**
 
--   **Interactive Elements:** Consider adding interactivity to allow viewers to explore data further. Interactive elements like tooltips can provide additional information without cluttering the initial view.
+-   **Interactive Elements:** Consider adding interactivity to allow viewers to explore data further. Interactive elements like tool-tips can provide additional information without cluttering the initial view.
 
 **8. Testing and Feedback**
 
@@ -4018,11 +4018,11 @@ In this comprehensive journey through ecological data visualization, we've cover
 
 In conclusion, Chapter 6 empowers you with the skills to create compelling and informative visualizations that effectively communicate your ecological research findings. Whether you are presenting data distributions, exploring spatial patterns, or telling ecological stories, the tools and principles covered in this chapter will help you enhance the impact of your ecological research and foster a deeper understanding of the natural world.
 
-# Chapter 7: **Advanced Topics**
+# Chapter 7: Advanced Topics
 
 ## .... [in progress]
 
-# Chapter 8: **Case Studies**
+# Chapter 8: Case Studies
 
 ## .... [in progress]
 

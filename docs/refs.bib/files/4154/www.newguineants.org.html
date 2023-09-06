@@ -1,0 +1,237 @@
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="content-language" content="en">
+
+    <title>NewGuineAnts</title>
+
+    <meta name="keywords" content="_your_keywords_">
+    <meta name="description" content="_description_of_this_page_">
+
+    <!-- base href="http://www.newguineants.org/" -->
+
+    <link rel="shortcut icon" href="http://www.newguineants.org/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="front.css" media="screen">
+    <!--[if IE]>
+    <link rel="stylesheet" href="ext/frontIE.css" media="screen"/>
+    <![endif]-->
+
+    <script type="text/javascript" src="jquery_005.js"></script>
+    <script type="text/javascript" src="jquery_004.js"></script>
+    <script type="text/javascript" src="jquery_003.js"></script>
+    <script type="text/javascript" src="tablesorter.js"></script>
+    <script type="text/javascript" src="jquery_002.js"></script>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="front.js"></script>
+
+    
+</head>
+
+
+<body id="ants">
+
+<div id="canvas">
+    <div id="topCanvas">
+
+        <!--<div id="menuRight"></div>-->
+
+        <div id="title">
+            <a href="">
+                ANTS OF NEW GUINEA
+            </a>
+        </div>
+
+        <ul id="menuTop">
+            <li class="menuTopL1">
+                <a href="#" class="firstLineHref">Taxonomy</a>
+                <ul class="menuTopL2">
+                    <li><a href="">Home Page</a></li>
+                    <li><a href="http://www.newguineants.org/subfamily">Subfamily Page</a></li>
+                    <li><a href="http://www.newguineants.org/genera">Genera Page</a></li>
+                    <li><a href="http://www.newguineants.org/species">Species Page</a></li>
+                </ul>
+            </li>
+            <li class="menuTopL1">
+                <a href="#" class="firstLineHref">Maps</a>
+                <ul class="menuTopL2">
+                    <li><a href="http://www.newguineants.org/study-sites">Study Sites</a></li>
+                </ul>
+            </li>
+            <!--<li class="spacer"></li>-->
+            <li class="menuTopL1">
+                <a href="#" class="firstLineHref">New Guinea</a>
+                <ul class="menuTopL2">
+                    <li><a href="http://www.newguineants.org/new-guinea">New Guinea</a></li>
+                    <li><a href="http://www.newguineants.org/ant-research">Ant Research</a></li>
+                    <li><a href="http://www.newguineants.org/methods">Methods</a></li>
+                </ul>
+            </li>
+            <!--<li class="spacer"></li>-->
+            <li class="menuTopL1">
+                <a href="#" class="firstLineHref">About</a>
+                <ul class="menuTopL2">
+                    <li><a href="http://www.newguineants.org/how-to">How to use</a></li>
+                    <li><a href="http://www.newguineants.org/support">Support</a></li>
+                    <li><a href="http://www.newguineants.org/web-team">Web Team</a></li>
+                    <li><a href="http://www.newguineants.org/contacts">Contacts &amp; Links</a></li>
+                </ul>
+            </li>
+            <!--<li class="spacer"></li>-->
+            <li class="menuTopL1">
+                <a href="#" class="firstLineHref">Gallery</a>
+                <ul class="menuTopL2">
+                    <li><a href="http://www.newguineants.org/ants">Ants</a></li>
+                    <li><a href="http://www.newguineants.org/habitat">Habitats</a></li>
+                    <li><a href="http://www.newguineants.org/nest">Nests</a></li>
+                    <li><a href="http://www.newguineants.org/fieldwork">Fieldwork</a></li>
+                </ul>
+            </li>
+            <!--<li class="spacer"></li>-->
+            <li class="menuTopL1 advancedSearch">
+                <a href="http://www.newguineants.org/search/advanced" class="firstLineHref">Advanced search</a>
+            </li>
+        </ul>
+
+        <div id="basicSearch">
+            <div id="basicSearchForm">
+                <form method="post" action="search">
+                    <input name="basicSearch" value="Type in taxon..." title="Searching by genus name, species name and specimen accession number." type="text">
+                </form>
+            </div>
+            <a id="basicSearchBut"></a>
+
+        </div>
+
+    </div>
+</div>
+<div id="bottomCanvas">
+    <div id="leftCanvas">
+
+        <!-- BASKET -->
+                <div id="basket">
+            <div id="basketHeader">
+                COMPARE BASKET
+                <a href="http://www.newguineants.org/basket" id="basketGo" target="_blank" title="Shows basket in new window."></a>
+                <a href="http://www.newguineants.org/basket/clear" id="basketClear" title="Clear basket - removes all specimens."></a>
+            </div>
+            <div id="basketMiddle" class="ui-droppable">
+                <div class="leftBoxTitle" id="basketCount">0 specimen</div>
+                <ul id="basketList"></ul>
+                <p id="basketEmptyText">Drag&amp;drop here specimen or species from table.</p>
+            </div>
+            
+            <div id="basketFooter"></div>
+        </div>
+        <!-- /BASKET -->
+
+        <!-- TAX TREE -->
+        <div id="taxTree">
+            <div id="taxTreeHeader">SPECIES DIRECTORY</div>
+            <div id="taxTreeMiddle" style="height: 220px;">
+
+                <div class="leftBoxTitle">Double Click to jump</div>
+
+                <ul id="tree" class="treeview last" style="height: 205px;">
+
+                <li id="subfamily-5" class="hasChildren expandable" naveseno="true"><div class="hitarea"></div><span>Amblyoponinae</span><ul style="display: none;"><li id="placeholder" class="last" naveseno="true"><span>placeholder</span></li></ul></li><li id="subfamily-7" class="hasChildren expandable" naveseno="true"><div class="hitarea"></div><span>Dolichoderinae</span><ul style="display: none;"><li id="placeholder" class="last" naveseno="true"><span>placeholder</span></li></ul></li><li id="subfamily-14" class="hasChildren expandable" naveseno="true"><div class="hitarea"></div><span>Dorylinae</span><ul style="display: none;"><li id="placeholder" class="last" naveseno="true"><span>placeholder</span></li></ul></li><li id="subfamily-10" class="hasChildren expandable" naveseno="true"><div class="hitarea"></div><span>Ectatomminae</span><ul style="display: none;"><li id="placeholder" class="last" naveseno="true"><span>placeholder</span></li></ul></li><li id="subfamily-2" class="hasChildren expandable" naveseno="true"><div class="hitarea"></div><span>Formicinae</span><ul style="display: none;"><li id="placeholder" class="last" naveseno="true"><span>placeholder</span></li></ul></li><li id="subfamily-11" class="hasChildren expandable" naveseno="true"><div class="hitarea"></div><span>Leptanillinae</span><ul style="display: none;"><li id="placeholder" class="last" naveseno="true"><span>placeholder</span></li></ul></li><li id="subfamily-3" class="hasChildren expandable" naveseno="true"><div class="hitarea"></div><span>Myrmicinae</span><ul style="display: none;"><li id="placeholder" class="last" naveseno="true"><span>placeholder</span></li></ul></li><li id="subfamily-6" class="hasChildren expandable" naveseno="true"><div class="hitarea"></div><span>Ponerinae</span><ul style="display: none;"><li id="placeholder" class="last" naveseno="true"><span>placeholder</span></li></ul></li><li id="subfamily-9" class="hasChildren expandable" naveseno="true"><div class="hitarea"></div><span>Proceratiinae</span><ul style="display: none;"><li id="placeholder" class="last" naveseno="true"><span>placeholder</span></li></ul></li><li id="subfamily-12" class="hasChildren expandable lastExpandable" naveseno="true"><div class="hitarea"></div><span>Pseudomyrmecinae</span><ul style="display: none;"><li id="placeholder" class="last" naveseno="true"><span>placeholder</span></li></ul></li></ul>
+
+            </div>
+            <div id="taxTreeFooter"></div>
+        </div>
+        <!-- /TAX TREE -->
+
+    </div>
+
+    <div id="middleCanvas">
+
+        <!--  <div id="menuBottom"> is in PHP -->
+        <div id="menuBottom" class="taxBarPresent"><ul id="taxBar"></ul>
+        </div>
+
+        
+<h1>Welcome to the Ants of New Guinea</h1>
+<p>
+    This database provides specimen records, images and other 
+information about the ants of New Guinea and surrounding regions. Our 
+goal is to facilitate access to contemporary and historic collections of
+ Melanesian ants and provide resources for research of their taxonomy 
+and ecology.
+</p><p>
+    The material and data displayed here represents both described and 
+undescribed species. New specimens are gradually updated as new material
+ from ongoing projects is processed.
+</p><p>
+    The Ants of New Guinea are linked with databases <a href="http://www.antwiki.org/wiki/New_Guinea" target="_blank">AntWiki</a>, <a href="http://www.antcat.org/" target="_blank">AntCat</a>, <a href="http://www.antweb.org/" target="_blank">AntWeb</a> and <a href="http://barcodinglife.org/" target="_blank">Barcodes of Life</a>.
+</p>
+
+<!--<div style="float:right;">
+<img src="ext/images/antdrawhome.jpg" />
+</div>-->
+
+<table class="home">
+<tbody><tr>
+<td>Species in database:</td>
+<td>1393</td>
+</tr>
+<tr>
+<td>Species photographed:</td>
+<td>681</td>
+</tr>
+<tr><td colspan="2" style="text-align:center;padding: 10px 5px 5px 5px">
+	<a href="http://www.newguineants.org/ext/files/introduced_ants_PNG.jpg">Introduced ants in Papua New Guinea</a><br>
+	<em>(poster for download and free distribution)</em>
+</td></tr>
+</tbody></table>
+
+<!--
+<div class="last-photos">
+<p>Newest photos:</p>
+</div>
+-->
+<p></p><p>
+    The latest online checklist available at <a href="http://www.antwiki.org/wiki/New_Guinea" target="_blank">AntWiki</a>.
+</p>
+
+
+<p class="moreSpace">
+Contact: <a href="mailto:newguineants@gmail.com">newguineants@gmail.com</a>    Videos: <a href="http://www.youtube.com/user/newguineants">New Guinea Ants on Youtube</a>
+</p>
+<p class="note">
+    The Ants of New Guinea project was funded by grants from the Czech 
+Science Foundation (P505/12/2467) and Marie Curie Fellowship 
+(PIOFGA2009-25448).
+    <br>
+</p><p class="note">
+Disclaimer:
+    Disclaimer: Use of this web site and information available from it 
+is subject to our Attribution-Non Commercial Creative Commons License 
+3.0. For non-commercial use of images, photographs must be attributed to
+ the original photographer and to the 'Ants of New Guinea' website.
+</p>
+<br>
+
+
+
+
+
+
+    </div>
+
+</div>
+
+
+<!--<p id="timePHP"> 0.0074400901794434 </p>-->
+
+<script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="ga" type="text/javascript"></script>
+<script type="text/javascript">
+    try {
+        var pageTracker = _gat._getTracker("UA-7264150-1");
+        pageTracker._trackPageview();
+    } catch (err) {
+    }</script>
+
+
+</body></html>

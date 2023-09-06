@@ -1,0 +1,216 @@
+The Science of Nature - Naturwissenschaften
+ß-diversity partitioning of moth communities within and between different forest types
+Ienco A.*a, Dapporto L.b, Greco S.c, Infusino M.c, Scalercio S.c
+
+a Via Castelvetere 40, 89041 Caulonia, Reggio Calabria, Italy
+b Department of Biology, University of Florence, 50019 Florence, Italy. Email: leondap@gmail.com 
+c Council for Agricultural Research and Economics, Research Centre for Forestry and Wood, 87036 Rende, Italy. Email: silviettagreco@gmail.com; marcoinfusino@tiscali.it; stefano.scalercio@crea.gov.it 
+* Corresponding author: annamaria.ienco@gmail.com 
+
+
+##################################################################################################################
+## R script for simulating the processes                                                                        ##
+##                                                                                                              ##
+## Required packages:                                                                                           ##
+## - betapart, vegan, recluster, ggplot2                                                                        ## 
+##                                                                                                              ##
+## Required data:                                                                                               ##
+## - 'Db_PA_Tot': a stands x species matrix of presence/absence data (Annex B)                                   ##
+## - 'Var_Tot': environmental variables (Annex B)                                                               ## 
+## - 'Db_PA_CC': data for "Catena Costiera" ecosystem obtained by splitting 'Db_PA_Tot' database (Annex B)      ## 
+## - 'Var_CC': environmental variables for "Catena Costiera" obtained by splitting 'Var_Tot' database (Annex B) ##
+##################################################################################################################
+
+##Loading of the libraries necessary for the analysis
+
+library (betapart)
+library (vegan)
+library(recluster)
+library(ggplot2)
+
+##Loading both the databases of species and environmental variables and computing dissimilarity matrices
+
+options(max.print=999999)
+lepid = read.table("Db_PA_Tot.txt")
+tipo<- read.table('Var_Tot.txt', sep = '', header = TRUE)
+attach(tipo)
+
+lep.core<-betapart.core(lepid)
+lep.core$shared
+lep.multi<-beta.multi(lep.core, index.family="sor")
+lep.multi
+lep.pair<-beta.pair(lep.core, index.family="sor")
+lep.pair  
+attach(lep.pair) 
+
+## Cluster analysis
+tree_turn<-recluster.cons(lepid,dist="simpson",method = "average")
+plot(tree_turn$cons, direction="downwards",cex=0.5)
+
+tree_nest<-recluster.cons(lepid,dist="nestedness",method = "average")
+plot(tree_nest$cons, direction="downwards",cex=0.5)
+
+tree_over<-recluster.cons(lepid,dist="sorensen",method = "average")
+plot(tree_over$cons, direction="downwards",cex=0.5)
+
+## Mantel test
+mant.tot<-mantel(beta.sim,beta.sor,method="spearman", permutations=999)
+mant.tot
+
+## NMDS for turnover
+nmds.sim.tot <- metaMDS(beta.sim)
+nmds.sim.tot
+stressplot(nmds.sim.tot, main="stressplot_turnover_TOT_15_16_PA")
+
+### Ordiplot turnover for "stand"
+dev.new(title="Variables")
+op <- ordipointlabel(nmds.sim.tot, display="sites")
+cols = c("#0000FF","#FF0000","#E500E5","#008000")
+points(nmds.sim.tot, cex = 2, pch = 16, col = cols[tipo$stand])
+
+## NMDS for nestedness
+nmds.sne.tot <- metaMDS(beta.sne)
+nmds.sne.tot
+stressplot(nmds.sne.tot, main="stressplot_nestedness_TOT_15_16_PA")
+
+
+### Ordiplot nestedness for "stand"
+dev.new(title="Variables")
+op <- ordipointlabel(nmds.sne.tot, display="sites")
+cols = c("#0000FF","#FF0000","#E500E5","#008000")
+points(nmds.sne.tot, cex = 2, pch = 16, col = cols[tipo$stand])
+
+## NMDS for overall diversity
+nmds.sor.tot <- metaMDS(beta.sor)
+nmds.sor.tot
+stressplot(nmds.sor.tot, main="stressplot_overall_TOT_15_16_PA")
+
+### Ordiplot overall diversity for "stand"
+dev.new(title="Variables")
+op <- ordipointlabel(nmds.sor.tot, display="sites")
+cols = c("#0000FF","#FF0000","#E500E5","#008000")
+points(nmds.sor.tot, cex = 2, pch = 16, col = cols[tipo$site])
+
+
+##Correlation analysis between Bsor/Bsim and difference in the number of species 
+
+ds_tot<-read.table("ds.txt", header=TRUE)
+myvar <- c("ds", "bsim", "bnes")
+ds_new <- ds_tot[myvar]
+ggplot(ds_new, aes(x=ds_new$ds, y=ds_new$bnes))+ geom_point()
+ggplot(ds_new, aes(x=ds_new$ds, y=ds_new$bsim)) + geom_point()
+
+cor.test(ds_new$bnes,ds_new$ds, method = "spearman", exact=FALSE, permutations=999)
+cor.test(ds_new$bsim,ds_new$ds, method = "spearman", exact=FALSE, permutations=999)
+
+##################################################################################################
+## Analysis For "Catena Costiera"
+
+options(max.print=999999)
+cc = read.table("Db_PA_CC.txt")
+tipo.cc<- read.table('Var_CC.txt', sep = '', header = TRUE)
+cc.core<-betapart.core(cc)
+cc.multi<-beta.multi(cc.core, index.family="sor")
+cc.multi
+cc.pair<-beta.pair(cc.core, index.family="sor")
+
+
+##Cluster analysis
+tree_turn_cc<-recluster.cons(cc,dist="simpson",method = "average")
+plot(tree_turn_cc$cons, direction="downwards",cex=0.5)
+
+tree_nest_cc<-recluster.cons(cc,dist="nestedness",method = "average")
+plot(tree_nest_cc$cons, direction="downwards",cex=0.5)
+
+tree_over_cc<-recluster.cons(cc,dist="sorensen",method = "average")
+plot(tree_over_cc$cons, direction="downwards",cex=0.5)
+
+
+## Mantel test
+mant.cc<-mantel(cc.pair$beta.sim,cc.pair$beta.sor,method="spearman", permutations=999)
+mant.cc
+
+## NMDS for turnover
+nmds.sim.cc <- metaMDS(cc.pair$beta.sim)
+nmds.sim.cc
+stressplot(nmds.sim.cc, main="stressplot_turnover_CC_15_16_PA")
+## Ordiplot turnover for "vegetation"
+dev.new(title="Variables")
+op <- ordipointlabel(nmds.sim.cc, display="sites")
+cols = c('orange', 'purple', 'red')
+points(nmds.sim.cc, cex = 2, pch = 16, col = cols[tipo.cc$vegetation])
+ordihull(nmds.sim.cc, groups = tipo.cc$vegetation, lty = 'solid')
+
+##ANOSIM analysis
+d.sim.cc<-anosim(cc.pair$beta.sim,tipo.cc$triplet)
+d.sim.cc
+d2.sim.cc<-anosim(cc.pair$beta.sim,tipo.cc$elev)
+d2.sim.cc
+d3.sim.cc<-anosim(cc.pair$beta.sim,tipo.cc$year)
+d3.sim.cc
+d4.sim.cc<-anosim(cc.pair$beta.sim,tipo.cc$vegetation)
+d4.sim.cc
+
+## NMDS for overall dissimilarity
+nmds.sor.cc <- metaMDS(cc.pair$beta.sor)
+nmds.sor.cc
+stressplot(nmds.sor.cc, main="stressplot_overall_CC_15_16_PA")
+
+## Ordiplot overall dissimilarity for "vegetation"
+dev.new(title="Variables")
+op <- ordipointlabel(nmds.sor.cc, display="sites")
+cols = c('orange', 'purple', 'red')
+points(nmds.sor.cc, cex = 2, pch = 16, col = cols[tipo.cc$vegetation])
+ordihull(nmds.sor.cc, groups = tipo.cc$vegetation, lty = 'solid')
+
+##ANOSIM analysis
+d.sor.cc<-anosim(cc.pair$beta.sor,tipo.cc$triplet)
+d.sor.cc
+d2.sor.cc<-anosim(cc.pair$beta.sor,tipo.cc$elev)
+d2.sor.cc
+d3.sor.cc<-anosim(cc.pair$beta.sor,tipo.cc$year)
+d3.sor.cc
+d4.sor.cc<-anosim(cc.pair$beta.sor,tipo.cc$vegetation)
+d4.sor.cc
+
+
+##NMDS for nestedness
+nmds.nes.cc <- metaMDS(cc.pair$beta.sne)
+nmds.nes.cc
+stressplot(nmds.nes.cc, main="stressplot_nestedness_CC_15_16_PA")
+
+## Ordiplot nestedness for "vegetation"
+dev.new(title="Variables")
+op <- ordipointlabel(nmds.nes.cc, display="sites")
+cols = c('orange', 'purple', 'red')
+points(nmds.nes.cc, cex = 2, pch = 16, col = cols[tipo.cc$vegetation])
+ordihull(nmds.nes.cc, groups = tipo.cc$vegetation, lty = 'solid')
+
+##ANOSIM analysis
+d.nes.cc<-anosim(cc.pair$beta.sne,tipo.cc$triplet)
+d.nes.cc
+d2.nes.cc<-anosim(cc.pair$beta.sne,tipo.cc$elev)
+d2.nes.cc
+d3.nes.cc<-anosim(cc.pair$beta.sne,tipo.cc$year)
+d3.nes.cc
+d4.nes.cc<-anosim(cc.pair$beta.sne,tipo.cc$vegetation)
+d4.nes.cc
+
+
+## The same procedure used for "Catena Costiera" has also been applied to the other 3 sites
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
