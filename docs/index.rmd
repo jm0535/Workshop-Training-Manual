@@ -1,6 +1,5 @@
 ---
-title: 'Exploring Ecological Data with R and Jamovi: A Beginner''s Guide to Statistical
-  Data Analysis'
+title: "xploring Ecological Data with R and Jamovi: A Beginner's Guide to Statistical Data Analysis"
 author:
 - name: Jimmy Moses
 date: "`r format(Sys.time(), '%d %B, %Y')`"
@@ -1336,10 +1335,10 @@ utils::write.csv(
     -   **`easystats`[@easystats]**: Provides easy-to-use functions for various
         statistical analyses.
 
-    -   \*\*`readr`[@readr\*\*]: Used for reading data from various file formats
+    -   **`readr`** [@readr]: Used for reading data from various file formats
         (e.g., CSV, Excel).
 
-    -   **`magrittr`[@magrittr\*\*]: Provides the pipe operator (**`%>%`\*\*)
+    -   **`magrittr`** [@magrittr]**: Provides the pipe operator (**`%>%`\*\*)
         for easier data manipulation.
 
     -   **`knitr`[@knitr2023]**: Used for dynamic report generation, often in
@@ -1353,7 +1352,7 @@ utils::write.csv(
     -   **`jmv`[@jmv]**: Contains tools for statistical analysis and hypothesis
         testing.
 
-    -   \*\*`performance`[@performance\*\*]: Provides functions for assessing
+    -   **`performance`** [@performance-2]: Provides functions for assessing
         model performance.
 
 This code is an efficient way to ensure that all the necessary packages are
