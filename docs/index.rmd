@@ -1,5 +1,5 @@
 ---
-title: "xploring Ecological Data with R and Jamovi: A Beginner's Guide to Statistical Data Analysis"
+title: "Exploring Ecological Data with R and Jamovi: A Beginner's Guide to Statistical Data Analysis"
 author:
 - name: Jimmy Moses
 date: "`r format(Sys.time(), '%d %B, %Y')`"
