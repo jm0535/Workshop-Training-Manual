@@ -23,6 +23,7 @@ bibliography: z-lib.bib
 csl: apa.csl
 link-citations: true
 editor_options:
+                visual
   chunk_output_type: console
   wrap: 80
 ---
@@ -994,7 +995,7 @@ To recap the key steps covered in this manual:
 
     -   Confirm the successful installation of RStudio and its integration with
 
-        R.  
+        R.
 
 3.  **Installing Jamovi**
 
@@ -5649,7 +5650,7 @@ ggplot2::ggplot(data = lynx_df, aes(x = Year, y = Lynx)) +
     the 'lynx' dataset, which is a built-in dataset in R. This dataset contains
     time series data representing the Canadian lynx population from 1821 to
 
-    1934. 
+    1934.
 
 3.  **Converting Time Series to Data Frame:** The next step involves converting
     the time series data from the 'lynx' dataset into a data frame. This is done

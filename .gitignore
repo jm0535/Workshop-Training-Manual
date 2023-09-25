@@ -2,3 +2,6 @@
 .Rhistory
 .RData
 .Ruserdata
+./docs/images
+./docs/data
+./docs/z-lib.bib
