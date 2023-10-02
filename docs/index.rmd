@@ -2597,7 +2597,7 @@ By mastering these data management techniques, you are now well-prepared to
 explore and analyze ecological datasets with confidence, setting the stage for
 robust ecological research.
 
-# Chapter 3: Exploratory Data Analysis (EDA) {#sec-chapter-3-exploratory-data-analysis-(eda}
+# Chapter 3: Exploratory Data Analysis (EDA) {#sec-chapter-3-exploratory-data-analysis-(eda-sec-chapter-3-exploratory-data-analysis-(eda}
 
 ## Introduction
 
