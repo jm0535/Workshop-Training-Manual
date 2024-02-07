@@ -1,0 +1,6 @@
+{
+    "pieces.autocomplete": true,
+    "pieces.cloudCapabilities": "Blended",
+    "pieces.os.automaticLaunching": "Always",
+    "pieces.setCopilotLocation": true
+}
